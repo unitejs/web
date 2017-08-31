@@ -1,6 +1,6 @@
 {
 	"name": "unitejs-web",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/jasmine": "^2.5.54",
@@ -84,9 +84,10 @@
 		"aurelia-templating-resources": "^1.4.0",
 		"aurelia-templating-router": "^1.1.0",
 		"aurelia-validation": "^1.1.1",
+		"bluebird": "^3.5.0",
 		"bootstrap": "4.0.0-beta",
-		"font-awesome": "4.7.0",
-		"moment": "2.18.1",
+		"font-awesome": "^4.7.0",
+		"moment": "^2.18.1",
 		"requirejs": "^2.3.5",
 		"requirejs-text": "^2.0.15",
 		"whatwg-fetch": "^2.0.3"

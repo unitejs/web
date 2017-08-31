@@ -289,6 +289,15 @@
 			"isPackage": false,
 			"includeMode": "both",
 			"scriptIncludeMode": "none"
+		},
+		"bluebird": {
+			"version": "^3.5.0",
+			"main": "/js/release/bluebird.js",
+			"mainMinified": "/js/browser/bluebird.min.js",
+			"preload": false,
+			"isPackage": false,
+			"includeMode": "app",
+			"scriptIncludeMode": "both"
 		}
 	},
 	"cssPre": "Sass",
@@ -333,5 +342,5 @@
 			"assetsSrc": "./assetsSrc/"
 		}
 	},
-	"uniteVersion": "0.9.4"
+	"uniteVersion": "0.9.5"
 }

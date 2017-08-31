@@ -3,7 +3,7 @@
  */
 const path = require("path");
 
-function getModuleIds(uniteConfig, includeModes) {
+function getModuleIds (uniteConfig, includeModes) {
     const pathKeys = [];
 
     Object.keys(uniteConfig.clientPackages).forEach(key => {
@@ -18,7 +18,7 @@ function getModuleIds(uniteConfig, includeModes) {
     return pathKeys;
 }
 
-function getFiles(uniteConfig, includeModes, isBundled, isMinified) {
+function getDistFiles (uniteConfig, includeModes, isBundled, isMinified) {
     const files = {};
 
     Object.keys(uniteConfig.clientPackages).forEach(key => {
@@ -46,7 +46,7 @@ function getFiles(uniteConfig, includeModes, isBundled, isMinified) {
     return files;
 }
 
-function getRequires(uniteConfig, includeModes, isMinified) {
+function getRequires (uniteConfig, includeModes, isMinified) {
     const requires = [];
 
     Object.keys(uniteConfig.clientPackages).forEach(key => {
@@ -63,7 +63,7 @@ function getRequires(uniteConfig, includeModes, isMinified) {
     return requires;
 }
 
-function getAssets(uniteConfig) {
+function getAssets (uniteConfig) {
     const assets = [];
 
     Object.keys(uniteConfig.clientPackages).forEach(key => {
@@ -79,7 +79,7 @@ function getAssets(uniteConfig) {
     return assets;
 }
 
-function buildModuleConfig(uniteConfig, includeModes, isMinified) {
+function buildModuleConfig (uniteConfig, includeModes, isMinified) {
     const moduleConfig = {
         "paths": {},
         "packages": [],
@@ -147,7 +147,7 @@ function buildModuleConfig(uniteConfig, includeModes, isMinified) {
 module.exports = {
     buildModuleConfig,
     getAssets,
-    getFiles,
+    getDistFiles,
     getModuleIds,
     getRequires
 };

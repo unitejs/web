@@ -32,7 +32,10 @@ async function gatherFiles (platformName) {
         path.join(uniteConfig.dirs.www.assets, "**/*")
     ];
 
-    const packageFiles = clientPackages.getFiles(uniteConfig, ["app", "both"], buildConfiguration.bundle, buildConfiguration.minify);
+    const packageFiles = clientPackages.getDistFiles(uniteConfig,
+        ["app", "both"],
+        buildConfiguration.bundle,
+        buildConfiguration.minify);
     Object.keys(packageFiles).forEach((key) => {
         files = files.concat(packageFiles[key]);
     });

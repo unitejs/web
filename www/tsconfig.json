@@ -5,11 +5,11 @@
 		"noImplicitAny": true,
 		"noImplicitThis": true,
 		"noImplicitReturns": true,
-		"experimentalDecorators": true,
 		"lib": [
 			"dom",
 			"es2015"
 		],
+		"experimentalDecorators": true,
 		"module": "amd"
 	}
 }
