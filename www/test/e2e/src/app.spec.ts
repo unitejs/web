@@ -5,12 +5,11 @@ import { $, browser, by } from "protractor";
 
 describe("App", () => {
     it("the title is set", (done) => {
-        const uniteJson = require("../../../../unite.json");
         browser.loadAndWaitForAureliaPage("/")
             .then(() => {
                 browser.getTitle()
                     .then((title) => {
-                        expect(title).toEqual(uniteJson.title);
+                        expect(title).toEqual("Home | UniteJS");
                         done();
                     });
             });
@@ -21,7 +20,7 @@ describe("App", () => {
             .then(() => {
                 $("router-view").getText()
                     .then((routerContent) => {
-                        expect(routerContent).toEqual("Hello UniteJS World!");
+                        expect(routerContent).toContain("How many times");
                         done();
                     });
             });
