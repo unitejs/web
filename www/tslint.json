@@ -1,0 +1,16 @@
+{
+	"extends": "tslint:recommended",
+	"rulesDirectory": [],
+	"rules": {
+		"object-literal-sort-keys": false,
+		"trailing-comma": [
+			true,
+			{
+				"multiline": {
+					"objects": "never"
+				}
+			}
+		],
+		"no-reference": false
+	}
+}

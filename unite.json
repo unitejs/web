@@ -1,0 +1,337 @@
+{
+	"packageName": "unitejs-web",
+	"title": "UniteJS",
+	"license": "MIT",
+	"sourceLanguage": "TypeScript",
+	"moduleType": "Amd",
+	"bundler": "RequireJs",
+	"unitTestRunner": "Karma",
+	"unitTestFramework": "Jasmine",
+	"unitTestEngine": "ChromeHeadless",
+	"e2eTestRunner": "Protractor",
+	"e2eTestFramework": "Jasmine",
+	"linter": "TsLint",
+	"packageManager": "Yarn",
+	"taskManager": "Gulp",
+	"server": "BrowserSync",
+	"applicationFramework": "Aurelia",
+	"clientPackages": {
+		"aurelia-animator-css": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-animator-css.js",
+			"isPackage": false,
+			"version": "^1.0.2",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-binding": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-binding.js",
+			"isPackage": false,
+			"version": "^1.2.2",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-bootstrapper": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-bootstrapper.js",
+			"isPackage": false,
+			"version": "^2.1.1",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-dependency-injection": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-dependency-injection.js",
+			"isPackage": false,
+			"version": "^1.3.2",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-event-aggregator": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-event-aggregator.js",
+			"isPackage": false,
+			"version": "^1.0.1",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-fetch-client": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-fetch-client.js",
+			"isPackage": false,
+			"version": "^1.1.3",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-http-client": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-http-client.js",
+			"isPackage": false,
+			"version": "^1.1.1",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-framework": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-framework.js",
+			"isPackage": false,
+			"version": "^1.1.4",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-history": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-history.js",
+			"isPackage": false,
+			"version": "^1.0.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-history-browser": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-history-browser.js",
+			"isPackage": false,
+			"version": "^1.0.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-loader": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-loader.js",
+			"isPackage": false,
+			"version": "^1.0.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-loader-default": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-loader-default.js",
+			"isPackage": false,
+			"version": "^1.0.2",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-logging": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-logging.js",
+			"isPackage": false,
+			"version": "^1.3.1",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-logging-console": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-logging-console.js",
+			"isPackage": false,
+			"version": "^1.0.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-metadata": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-metadata.js",
+			"isPackage": false,
+			"version": "^1.0.3",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-pal": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-pal.js",
+			"isPackage": false,
+			"version": "^1.4.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-pal-browser": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-pal-browser.js",
+			"isPackage": false,
+			"version": "^1.3.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-path": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-path.js",
+			"isPackage": false,
+			"version": "^1.1.1",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-polyfills": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-polyfills.js",
+			"isPackage": false,
+			"version": "^1.2.2",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-route-recognizer": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-route-recognizer.js",
+			"isPackage": false,
+			"version": "^1.1.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-router": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-router.js",
+			"isPackage": false,
+			"version": "^1.3.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-task-queue": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-task-queue.js",
+			"isPackage": false,
+			"version": "^1.2.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-templating": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-templating.js",
+			"isPackage": false,
+			"version": "^1.4.2",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-templating-binding": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-templating-binding.js",
+			"isPackage": false,
+			"version": "^1.3.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-dialog": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-dialog.js",
+			"isPackage": true,
+			"version": "^1.0.0-rc.1.0.3",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-templating-resources": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-templating-resources.js",
+			"isPackage": true,
+			"version": "^1.4.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-templating-router": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-templating-router.js",
+			"isPackage": true,
+			"version": "^1.1.0",
+			"scriptIncludeMode": "none"
+		},
+		"aurelia-validation": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "dist/amd/aurelia-validation.js",
+			"isPackage": true,
+			"version": "^1.1.1",
+			"scriptIncludeMode": "none"
+		},
+		"whatwg-fetch": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "fetch.js",
+			"isPackage": false,
+			"version": "^2.0.3",
+			"scriptIncludeMode": "none"
+		},
+		"requirejs-text": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "text.js",
+			"isPackage": false,
+			"version": "^2.0.15",
+			"map": {
+				"text": "requirejs-text"
+			},
+			"scriptIncludeMode": "none"
+		},
+		"requirejs": {
+			"includeMode": "both",
+			"preload": false,
+			"main": "require.js",
+			"isPackage": false,
+			"version": "^2.3.5",
+			"scriptIncludeMode": "both"
+		},
+		"font-awesome": {
+			"version": "^4.7.0",
+			"preload": false,
+			"isPackage": false,
+			"includeMode": "both",
+			"scriptIncludeMode": "none",
+			"assets": "fonts/**/*"
+		},
+		"moment": {
+			"version": "^2.18.1",
+			"main": "/moment.js",
+			"preload": false,
+			"isPackage": false,
+			"includeMode": "both",
+			"scriptIncludeMode": "none"
+		},
+		"bootstrap": {
+			"version": "4.0.0-beta",
+			"preload": false,
+			"isPackage": false,
+			"includeMode": "both",
+			"scriptIncludeMode": "none"
+		}
+	},
+	"cssPre": "Sass",
+	"cssPost": "PostCss",
+	"buildConfigurations": {
+		"dev": {
+			"bundle": false,
+			"minify": false,
+			"sourcemaps": true,
+			"variables": {}
+		},
+		"prod": {
+			"bundle": true,
+			"minify": true,
+			"sourcemaps": false,
+			"variables": {}
+		}
+	},
+	"platforms": {
+		"Web": {}
+	},
+	"srcDistReplace": "(define)*?(../src/)",
+	"srcDistReplaceWith": "../dist/",
+	"dirs": {
+		"wwwRoot": "./www/",
+		"packagedRoot": "./packaged/",
+		"www": {
+			"src": "./src/",
+			"dist": "./dist/",
+			"unitTest": "./test/unit/",
+			"unitTestSrc": "./test/unit/src/",
+			"unitTestDist": "./test/unit/dist/",
+			"cssSrc": "./sass/",
+			"cssDist": "./css/",
+			"e2eTest": "./test/e2e/",
+			"e2eTestSrc": "./test/e2e/src/",
+			"e2eTestDist": "./test/e2e/dist/",
+			"reports": "./test/reports/",
+			"package": "./node_modules/",
+			"build": "./build/",
+			"assets": "./assets/",
+			"assetsSrc": "./assetsSrc/"
+		}
+	},
+	"uniteVersion": "0.9.4"
+}

@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "node"
+before_install:
+  - cd www
+install:
+  - npm install
+script: 
+  - gulp build || travis_terminate 1
+  - gulp unit || travis_terminate 1
+  - gulp build --buildConfiguration=prod || travis_terminate 1
+  - gulp platform-web-package --buildConfiguration=prod || travis_terminate 1
+cache:
+  directories:
+  - node_modules

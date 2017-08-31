@@ -1,0 +1,17 @@
+@import "reset";
+
+$brand-color: #339933;
+$brand-light-color: lighten($brand-color, 50%);
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+$fa-font-path: "../node_modules/font-awesome/fonts/";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+@import "brand";
+@import "layout";
+@import "loading";
+@import "app";
+@import "navBar";
+@import "navFooter";
+@import "home";
+
