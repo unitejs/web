@@ -265,7 +265,8 @@
 			"main": "require.js",
 			"isPackage": false,
 			"version": "^2.3.5",
-			"scriptIncludeMode": "both"
+			"scriptIncludeMode": "both",
+			"isModuleLoader": true
 		},
 		"font-awesome": {
 			"version": "^4.7.0",
@@ -274,14 +275,6 @@
 			"includeMode": "both",
 			"scriptIncludeMode": "none",
 			"assets": "fonts/**/*"
-		},
-		"moment": {
-			"version": "^2.18.1",
-			"main": "/moment.js",
-			"preload": false,
-			"isPackage": false,
-			"includeMode": "both",
-			"scriptIncludeMode": "none"
 		},
 		"bootstrap": {
 			"version": "4.0.0-beta",
@@ -292,7 +285,7 @@
 		},
 		"bluebird": {
 			"version": "^3.5.0",
-			"main": "/js/release/bluebird.js",
+			"main": "/js/browser/bluebird.js",
 			"mainMinified": "/js/browser/bluebird.min.js",
 			"preload": false,
 			"isPackage": false,
@@ -342,5 +335,5 @@
 			"assetsSrc": "./assetsSrc/"
 		}
 	},
-	"uniteVersion": "0.9.5"
+	"uniteVersion": "1.0.1"
 }

@@ -6,16 +6,108 @@ const gulp = require("gulp");
 const karma = require("karma");
 const minimist = require("minimist");
 const uc = require("./util/unite-config");
+const jsonHelper = require("./util/json-helper");
+const clientPackages = require("./util/client-packages");
+const util = require("util");
+const fs = require("fs");
+const path = require("path");
+
+function addClientPackageTestFiles (uniteConfig, files) {
+    let newFiles = [];
+    const newModuleLoaders = [];
+
+    if (files) {
+        files.forEach((file => {
+            if (file.includeType === "polyfill") {
+                newFiles.push(file);
+            }
+        }));
+    }
+
+    const testPackages = clientPackages.getTestPackages(uniteConfig);
+    Object.keys(testPackages).forEach(key => {
+        const pkg = testPackages[key];
+        const addArray = pkg.isModuleLoader ? newModuleLoaders : newFiles;
+        const includeType = pkg.isModuleLoader ? "moduleLoader" : "clientPackage";
+        if (pkg.main) {
+            const mainSplit = pkg.main.split("/");
+            let main = mainSplit.pop();
+            let location = mainSplit.join("/");
+
+            if (pkg.isPackage) {
+                addArray.push({
+                    "pattern": `./${path.join(uniteConfig.dirs.www.package, `${key}/${location}/**/*.{js,html,css}`)
+                        .replace(/\\/g, "/")}`,
+                    "included": pkg.scriptIncludeMode === "notBundled" || pkg.scriptIncludeMode === "both",
+                    includeType
+                });
+            } else {
+                location += location.length > 0 ? "/" : "";
+                if (main === "*") {
+                    main = "**/*.{js,html,css}";
+                }
+                addArray.push({
+                    "pattern": `./${path.join(uniteConfig.dirs.www.package, `${key}/${location}${main}`)
+                        .replace(/\\/g, "/")}`,
+                    "included": pkg.scriptIncludeMode === "notBundled" || pkg.scriptIncludeMode === "both",
+                    includeType
+                });
+            }
+
+            if (pkg.testingAdditions) {
+                const additionKeys = Object.keys(pkg.testingAdditions);
+                additionKeys.forEach(additionKey => {
+                    addArray.push({
+                        "pattern": `./${path.join(
+                            uniteConfig.dirs.www.package,
+                            `${key}/${pkg.testingAdditions[additionKey]}`
+                        ).replace(/\\/g, "/")}`,
+                        "included": pkg.scriptIncludeMode === "notBundled" || pkg.scriptIncludeMode === "both",
+                        includeType
+                    });
+                });
+            }
+        }
+
+        if (testPackages[key].assets !== undefined &&
+            testPackages[key].assets !== null &&
+            testPackages[key].assets.length > 0) {
+            const cas = testPackages[key].assets.split(";");
+            cas.forEach((ca) => {
+                addArray.push({
+                    "pattern": `./${path.join(uniteConfig.dirs.www.package, `${key}/${ca}`)
+                        .replace(/\\/g, "/")}`,
+                    "included": false,
+                    includeType
+                });
+            });
+        }
+    });
+
+    newFiles = newFiles.concat(newModuleLoaders);
+
+    if (files) {
+        files.forEach((file => {
+            if (file.includeType === "fixed") {
+                newFiles.push(file);
+            }
+        }));
+    }
+
+    return newFiles;
+}
 
 gulp.task("unit-run-test", async () => {
     display.info("Running", "Karma");
 
     const knownOptions = {
         "default": {
-            "grep": "!(*-bundle|app-module-config|entryPoint)"
+            "grep": "!(*-bundle|app-module-config|entryPoint)",
+            "browser": undefined
         },
         "string": [
-            "grep"
+            "grep",
+            "browser"
         ]
     };
 
@@ -23,52 +115,47 @@ gulp.task("unit-run-test", async () => {
 
     const uniteConfig = await uc.getUniteConfig();
 
-    const server = new karma.Server({
+    try {
+        let conf = await util.promisify(fs.readFile)("./karma.conf.js");
+        conf = conf.toString();
+        const jsonMatches = (/config.set\(((.|\n|\r)*)\)/).exec(conf);
+        if (jsonMatches.length === 3) {
+            const configuration = jsonHelper.parseCode(jsonMatches[1]);
+            configuration.files = addClientPackageTestFiles(uniteConfig, configuration.files);
+            conf = conf.replace(jsonMatches[1], jsonHelper.codify(configuration));
+            await util.promisify(fs.writeFile)("./karma.conf.js", conf);
+        } else {
+            display.error("Parsing karma.conf.js failed");
+            process.exit(1);
+        }
+    } catch (err) {
+        display.error("Parsing karma.conf.js", err);
+        process.exit(1);
+    }
+
+    const karmaConf = {
         "configFile": "../../../karma.conf.js",
         "coverageReporter": {
             "include": `${uniteConfig.dirs.www.dist}**/${options.grep}.js`
         }
-    }, (exitCode) => {
-        if (exitCode !== 0) {
-            display.error(`Karma exited with code ${exitCode}`);
-            process.exit(exitCode);
-        }
-    });
-
-    server.start();
-});
-
-gulp.task("unit-run-test-ui", async () => {
-    display.info("Running", "Karma");
-
-    const knownOptions = {
-        "default": {
-            "grep": "!(*-bundle|app-module-config|entryPoint)"
-        },
-        "string": [
-            "grep"
-        ]
     };
 
-    const options = minimist(process.argv.slice(2), knownOptions);
+    if (options.browser) {
+        karmaConf.singleRun = false;
+        karmaConf.browsers = options.browser.split(",");
+    }
 
-    const uniteConfig = await uc.getUniteConfig();
+    return new Promise((resolve) => {
+        const server = new karma.Server(karmaConf, (exitCode) => {
+            if (exitCode === 0) {
+                resolve();
+            } else {
+                display.error(`Karma exited with code ${exitCode}`);
+                process.exit(exitCode);
+            }
+        });
 
-    const server = new karma.Server({
-        "browsers": ["Chrome"],
-        "configFile": "../../../karma.conf.js",
-        "singleRun": false,
-        "coverageReporter": {
-            "include": `${uniteConfig.dirs.www.dist}**/${options.grep}.js`
-        }
-    }, (exitCode) => {
-        if (exitCode !== 0) {
-            display.error(`Karma exited with code ${exitCode}`);
-            process.exit(exitCode);
-        }
+        server.start();
     });
-
-    server.start();
 });
-
 /* Generated by UniteJS */
