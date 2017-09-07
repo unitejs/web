@@ -291,6 +291,15 @@
 			"isPackage": false,
 			"includeMode": "app",
 			"scriptIncludeMode": "both"
+		},
+		"prismjs": {
+			"version": "^1.6.0",
+			"main": "prism.js",
+			"preload": false,
+			"isPackage": false,
+			"includeMode": "app",
+			"scriptIncludeMode": "none",
+			"assets": "components/prism-javascript.min.js;components/prism-typescript.min.js;components/prism-json.min.js;components/prism-nix.min.js"
 		}
 	},
 	"cssPre": "Sass",

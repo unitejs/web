@@ -11,6 +11,7 @@
 				}
 			}
 		],
-		"no-reference": false
+		"no-reference": false,
+		"variable-name": [true, "allow-leading-underscore"]
 	}
 }
