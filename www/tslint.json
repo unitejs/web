@@ -12,6 +12,8 @@
 			}
 		],
 		"no-reference": false,
-		"variable-name": [true, "allow-leading-underscore"]
+		"variable-name": [true, "allow-leading-underscore"],
+        "no-bitwise": false,
+        "array-type": false
 	}
 }

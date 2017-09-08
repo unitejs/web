@@ -2,12 +2,14 @@
  * Main application class.
  */
 import { Router, RouterConfiguration } from "aurelia-router";
+import { ScrollToTopPipelineStep } from "./pipelineSteps/scrollToTopPipelineStep";
 
 export class App {
     public router: Router;
 
     public configureRouter(config: RouterConfiguration, router: Router): any {
         config.title = "UniteJS";
+        config.addPostRenderStep(ScrollToTopPipelineStep);
         config.map([
             { route: ["", "home"], name: "home", moduleId: "./home/home", nav: true, title: "Home" },
             {

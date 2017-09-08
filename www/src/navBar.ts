@@ -1,7 +1,7 @@
 /**
  * NavBar class.
  */
-import { HttpClient } from "aurelia-fetch-client";
+import { HttpClient } from "aurelia-http-client";
 import { Router } from "aurelia-router";
 import { bindable, customElement } from "aurelia-templating";
 
@@ -14,15 +14,18 @@ export class NavBar {
 
     public attached(): void {
         const httpClient = new HttpClient();
-        httpClient.fetch("https://registry.npmjs.org/unitejs-cli/")
-            .then((response) => response.json())
-            .then((json) => {
-                if (json && json["dist-tags"] && json["dist-tags"].latest) {
-                    this.version = "v" + json["dist-tags"].latest;
+        httpClient.get("https://registry.npmjs.org/unitejs-cli/")
+            .then((response) => {
+                if (response.statusCode === 200) {
+                    if (response.content &&
+                        response.content["dist-tags"] &&
+                        response.content["dist-tags"].latest) {
+                        this.version = "v" + response.content["dist-tags"].latest;
+                    }
                 }
             })
             .catch((err) => {
-                // Just don't display the version
+                // Just don't display the version its not critical
             });
     }
 }

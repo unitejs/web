@@ -1,8 +1,6 @@
 <template>
     <header class="navbar navbar-expand navbar-dark flex-column flex-md-row brand-navbar">
-        <a class="navbar-brand mr-0 mr-md-2" route-href="route: home" href="#">
-            <img class="brand-icon" src="./assets/brand/logo-tile.svg" alt="UniteJS">
-        </a>
+        <a class="navbar-brand mr-0 mr-md-2" route-href="route: home" href="#"><img class="brand-icon" src="./assets/brand/logo-tile.svg" alt="UniteJS"></a>
         <div class="navbar-nav-scroll">
             <ul class="navbar-nav bd-navbar-nav flex-row">
                 <li repeat.for="row of router.navigation" class="nav-item ${row.isActive ? 'active' : ''}">

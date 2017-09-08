@@ -1,0 +1,533 @@
+<template>
+    <main class="brand-masthead">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto col-md-6 order-md-2">
+                    <img src="./assets/brand/logo-transparent.svg" alt="" class="img-fluid mb-3 mb-md-0">
+                </div>
+                <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+                    <h1 class="mb-3 brand-bright-text">UniteJS</h1>
+                    <p class="lead">The zero configuration web application generation tool.</p>
+
+                    <p>How many times have you started a new web project and thought maybe I should try using the latest and
+                        greatest tech stack to see what I am missing?</p>
+
+                    <p>Then the reality check happens and you probably think:</p>
+
+                    <ul>
+                        <li>I don't have time to learn a new technology.</li>
+                        <li>The getting started guides are great but I just want to dive in and code.</li>
+                        <li>I don't want to have to learn all the new tasks/commands/scripts just to give it a try.</li>
+                        <li>How long is it going to take me to get the different technologies to work together gracefully.</li>
+                    </ul>
+
+                    <p>Well concern yourself no more, UniteJS is here to solve these problems!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="brand-masthead-follow">
+        <div class="row m-0 brand-stripe-1">
+            <div class="container padding-top padding-bottom">
+                <h1>Goals</h1>
+                <p>The aim of UniteJS is to provide a CLI tool which you can use to create a ready to roll application with
+                    code, styling, unit tests and e2e tests and zero configuration. All combinations of the chosen technologies
+                    provide the same set of tasks to run and produce the same output.</p>
+
+                <p>We try not to be too opinionated in what is produced but sometimes that can't be helped <i class="fa fa-smile-o"></i></p>
+
+                <p>See which technologies we support below, read the <a route-href="route: documentation" href="#">Documentation</a>                    or jump straight to the <a route-href="route: gettingStarted" href="#">Getting Started guide.</a></p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>Application Framework</h1>
+                <p class="lead">Which one will you choose today ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>Angular</h6>
+                        <a href="https://angular.io/" target="_blank" rel="noopener" aria-label="Angular"><img src="./assets/logos/angular.svg" class="img-fluid img-fluid-max" alt="Angular"></a>
+                        <br/>
+                        <a href="https://angular.io/" target="_blank" rel="noopener" aria-label="Angular">angular.io</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Aurelia</h6>
+                        <a href="http://aurelia.io/" target="_blank" rel="noopener" aria-label="Aurelia"><img src="./assets/logos/aurelia.svg" class="img-fluid img-fluid-max" alt="Aurelia"></a>
+                        <br/>
+                        <a href="http://aurelia.io/" target="_blank" rel="noopener" aria-label="Aurelia">aurelia.io</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>PlainApp</h6>
+                        <a href="http://unitejs.com/" target="_blank" rel="noopener" aria-label="PlainApp"><img src="./assets/logos/plainapp.svg" class="img-fluid img-fluid-max" alt="PlainApp"></a>
+                        <br/>
+                        <a href="http://unitejs.com/" target="_blank" rel="noopener" aria-label="PlainApp">unitejs.com</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>React</h6>
+                        <a href="https://facebook.github.io/react/" target="_blank" rel="noopener" aria-label="React"><img src="./assets/logos/react.svg" class="img-fluid img-fluid-max" alt="React"></a>
+                        <br/>
+                        <a href="https://facebook.github.io/react/" target="_blank" rel="noopener" aria-label="React">facebook.github.io/react/</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>Pick your favourite, try something new or no framework at all with the PlainApp.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-1">
+            <div class="container padding-top padding-bottom">
+                <h1>Source Language</h1>
+                <p class="lead">Which source language do you want to use ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>JavaScript</h6>
+                        <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener" aria-label="JavaScript"><img src="./assets/logos/javascript.svg" class="img-fluid img-fluid-max" alt="JavaScript"></a>
+                        <br/>
+                        <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener" aria-label="JavaScript">en.wikipedia.org/wiki/JavaScript/</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>TypeScript</h6>
+                        <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener" aria-label="TypeScript"><img src="./assets/logos/typescript.svg" class="img-fluid img-fluid-max" alt="TypeScript"></a>
+                        <br/>
+                        <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener" aria-label="TypeScript">www.typescriptlang.org</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>The language choice is yours, when you build it will always be transpiled into JavaScript.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>Module Type</h1>
+                <p class="lead">What sort of modules do you want to load ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>
+                            AMD
+                        </h6>
+                        <br/>
+                        <a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank" rel="noopener" aria-label="AMD">github.com/amdjs/amdjs-api/wiki/AMD</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>
+                            CommonJS
+                        </h6>
+                        <br/>
+                        <a href="http://wiki.commonjs.org/wiki/CommonJS" target="_blank" rel="noopener" aria-label="CommonJS">wiki.commonjs.org/wiki/CommonJS</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>
+                            SystemJS
+                        </h6>
+                        <br/>
+                        <a href="https://github.com/systemjs/systemjs" target="_blank" rel="noopener" aria-label="SystemJS">github.com/systemjs/systemjs</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>We try and make every application framework support all module formats, but this is not always possible.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-1">
+            <div class="container padding-top padding-bottom">
+                <h1>Bundler</h1>
+                <p class="lead">How do you want to bundle the modules at distribution time ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>Browserify</h6>
+                        <a href="http://browserify.org/" target="_blank" rel="noopener" aria-label="Browserify"><img src="./assets/logos/browserify.svg" class="img-fluid img-fluid-max" alt="Browserify"></a>
+                        <br/>
+                        <a href="http://browserify.org/" target="_blank" rel="noopener" aria-label="Browserify">browserify.org</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>RequireJS</h6>
+                        <a href="http://requirejs.org/" target="_blank" rel="noopener" aria-label="RequireJS"><img src="./assets/logos/requirejs.svg" class="img-fluid img-fluid-max" alt="RequireJS"></a>
+                        <br/>
+                        <a href="http://requirejs.org/" target="_blank" rel="noopener" aria-label="RequireJS">requirejs.org</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>SystemJS</h6>
+                        <a href="https://github.com/systemjs" target="_blank" rel="noopener" aria-label="SystemJS"><img src="./assets/logos/systemjs.png" class="img-fluid img-fluid-max" alt="SystemJS"></a>
+                        <br/>
+                        <a href="https://github.com/systemjs" target="_blank" rel="noopener" aria-label="SystemJS">github.com/systemjs</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Webpack</h6>
+                        <a href="https://webpack.github.io/" target="_blank" rel="noopener" aria-label="Webpack"><img src="./assets/logos/webpack.svg" class="img-fluid img-fluid-max" alt="Webpack"></a>
+                        <br/>
+                        <a href="https://webpack.github.io/" target="_blank" rel="noopener" aria-label="Webpack">webpack.github.io</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>We leave the bundling until you create a bundled build, during development we stick to plain modules which
+                    makes it quicker for hot reloading.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>Linter</h1>
+                <p class="lead">Do you want to keep your code clean with a linter ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>ESLint</h6>
+                        <a href="https://eslint.org/" target="_blank" rel="noopener" aria-label="ESLint"><img src="./assets/logos/eslint.svg" class="img-fluid img-fluid-max" alt="ESLint"></a>
+                        <br/>
+                        <a href="https://eslint.org/" target="_blank" rel="noopener" aria-label="ESLint">eslint.org</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>TSLint</h6>
+                        <a href="https://palantir.github.io/tslint/" target="_blank" rel="noopener" aria-label="TSLint"><img src="./assets/logos/tslint.png" class="img-fluid img-fluid-max" alt="TSLint"></a>
+                        <br/>
+                        <a href="https://palantir.github.io/tslint/" target="_blank" rel="noopener" aria-label="TSLint">palantir.github.io/tslint/</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>We just apply the recommended rules, but you can customize to suit your needs.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-1">
+            <div class="container padding-top padding-bottom">
+                <h1>Unit Test Runner</h1>
+                <p class="lead">How do you want to run your unit tests ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>Karma</h6>
+                        <a href="https://karma-runner.github.io/" target="_blank" rel="noopener" aria-label="Karma"><img src="./assets/logos/karma.svg" class="img-fluid img-fluid-max" alt="Karma"></a>
+                        <br/>
+                        <a href="https://karma-runner.github.io/" target="_blank" rel="noopener" aria-label="Karma">karma-runner.github.io</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>All plugins are setup to run the tests and generate multiple reports including code coverage remapped to
+                    your original source language.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>Unit Test Framework</h1>
+                <p class="lead">Which framework do you want to use to write your unit tests ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>Mocha</h6>
+                        <a href="https://mochajs.org/" target="_blank" rel="noopener" aria-label="Mocha"><img src="./assets/logos/mocha.svg" class="img-fluid img-fluid-max" alt="Mocha"></a>
+                        <br/>
+                        <a href="https://mochajs.org/" target="_blank" rel="noopener" aria-label="Mocha">mochajs.org</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Jasmine</h6>
+                        <a href="https://jasmine.github.io/" target="_blank" rel="noopener" aria-label="Jasmine"><img src="./assets/logos/jasmine.svg" class="img-fluid img-fluid-max" alt="Jasmine"></a>
+                        <br/>
+                        <a href="https://jasmine.github.io/" target="_blank" rel="noopener" aria-label="Jasmine">jasmine.github.io</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>For every application framework we create a rudimentary set of example tests based on your choice of framework.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-1">
+            <div class="container padding-top padding-bottom">
+                <h1>Unit Test Engine</h1>
+                <p class="lead">Which engine do you want to execute your unit tests ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>PhantomJS</h6>
+                        <a href="http://phantomjs.org/" target="_blank" rel="noopener" aria-label="PhantomJS"><img src="./assets/logos/phantomjs.png" class="img-fluid img-fluid-max" alt="PhantomJS"></a>
+                        <br/>
+                        <a href="http://phantomjs.org/" target="_blank" rel="noopener" aria-label="PhantomJS">phantomjs.org</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Chrome Headless</h6>
+                        <a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md" target="_blank" rel="noopener" aria-label="ChromeHeadless"><img src="./assets/logos/chromeheadless.svg" class="img-fluid img-fluid-max" alt="ChromeHeadless"></a>
+                        <br/>
+                        <a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md" target="_blank" rel="noopener" aria-label="ChromeHeadless">chromium.googlesource.com</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>We have headless engines as the default but with an additional command line option you can run in your browser
+                    of choice instead.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>E2E Test Runner</h1>
+                <p class="lead">Need to run some visual tests no problem E2E tests can be run with the following ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>Protractor</h6>
+                        <a href="https://github.com/angular/protractor" target="_blank" rel="noopener" aria-label="Protractor"><img src="./assets/logos/protractor.svg" class="img-fluid img-fluid-max" alt="Protractor"></a>
+                        <br/>
+                        <a href="https://github.com/angular/protractor" target="_blank" rel="noopener" aria-label="Protractor">github.com/angular/protractor</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>WebdriverIO</h6>
+                        <a href="http://webdriver.io/" target="_blank" rel="noopener" aria-label="WebdriverIO"><img src="./assets/logos/webdriverio.svg" class="img-fluid img-fluid-max" alt="WebdriverIO"></a>
+                        <br/>
+                        <a href="http://webdriver.io/" target="_blank" rel="noopener" aria-label="WebdriverIO">webdriver.io</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>We have headless engines as the default but with an additional command line option you can run in your browser
+                    of choice instead.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-1">
+            <div class="container padding-top padding-bottom">
+                <h1>E2E Test Framework</h1>
+                <p class="lead">Which framework do you want to use to write your e2e tests ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>Mocha</h6>
+                        <a href="https://mochajs.org/" target="_blank" rel="noopener" aria-label="Mocha"><img src="./assets/logos/mocha.svg" class="img-fluid img-fluid-max" alt="Mocha"></a>
+                        <br/>
+                        <a href="https://mochajs.org/" target="_blank" rel="noopener" aria-label="Mocha">mochajs.org</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Jasmine</h6>
+                        <a href="https://jasmine.github.io/" target="_blank" rel="noopener" aria-label="Jasmine"><img src="./assets/logos/jasmine.svg" class="img-fluid img-fluid-max" alt="Jasmine"></a>
+                        <br/>
+                        <a href="https://jasmine.github.io/" target="_blank" rel="noopener" aria-label="Jasmine">jasmine.github.io</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>For every application framework we create a rudimentary set of example tests based on your choice of framework.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>CSS Pre-Processor</h1>
+                <p class="lead">Which styling language do you want to create your styles with ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>CSS</h6>
+                        <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noopener" aria-label="CSS"><img src="./assets/logos/css.svg" class="img-fluid img-fluid-max" alt="CSS"></a>
+                        <br/>
+                        <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" rel="noopener" aria-label="CSS">www.w3.org/css</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Less</h6>
+                        <a href="http://lesscss.org/" target="_blank" rel="noopener" aria-label="Less"><img src="./assets/logos/less.svg" class="img-fluid img-fluid-max" alt="Less"></a>
+                        <br/>
+                        <a href="http://lesscss.org/" target="_blank" rel="noopener" aria-label="Less">lesscss.org</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Sass</h6>
+                        <a href="http://sass-lang.com/" target="_blank" rel="noopener" aria-label="Sass"><img src="./assets/logos/sass.svg" class="img-fluid img-fluid-max" alt="Sass"></a>
+                        <br/>
+                        <a href="http://sass-lang.com/" target="_blank" rel="noopener" aria-label="Sass">sass-lang.com</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Stylus</h6>
+                        <a href="http://stylus-lang.com/" target="_blank" rel="noopener" aria-label="Stylus"><img src="./assets/logos/stylus.svg" class="img-fluid img-fluid-max" alt="Stylus"></a>
+                        <br/>
+                        <a href="http://stylus-lang.com/" target="_blank" rel="noopener" aria-label="Stylus">stylus-lang.com</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>Everybody has their favourite so pick yours.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-1">
+            <div class="container padding-top padding-bottom">
+                <h1>CSS Post-Processor</h1>
+                <p class="lead">Do you want to post process your css ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>PostCSS</h6>
+                        <a href="http://postcss.org/" target="_blank" rel="noopener" aria-label="PostCSS"><img src="./assets/logos/postcss.svg" class="img-fluid img-fluid-max" alt="PostCSS"></a>
+                        <br/>
+                        <a href="http://postcss.org/" target="_blank" rel="noopener" aria-label="PostCSS">postcss.org</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>Take the headache out of cross browser quirks and more with some post processing.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>Task Runner</h1>
+                <p class="lead">How are all the development tasks run ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>Gulp</h6>
+                        <a href="https://gulpjs.com/" target="_blank" rel="noopener" aria-label="Gulp"><img src="./assets/logos/gulp.svg" class="img-fluid img-fluid-max" alt="Gulp"></a>
+                        <br/>
+                        <a href="https://gulpjs.com/" target="_blank" rel="noopener" aria-label="Gulp">gulpjs.com</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>There can be only one (at the moment anyway).</p>
+                <p>You can see what the app provides out of the box in the <a href="https://github.com/unitejs/cli/blob/master/docs/generated-app.md"
+                        target="_blank" rel="noopener" aria-label="Generated App">Generated App</a> docs.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-1">
+            <div class="container padding-top padding-bottom">
+                <h1>Package Manager</h1>
+                <p class="lead">How do you want to install 3rd party packages ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>Npm</h6>
+                        <a href="https://www.npmjs.com/" target="_blank" rel="noopener" aria-label="Npm"><img src="./assets/logos/npm.svg" class="img-fluid img-fluid-max" alt="Npm"></a>
+                        <br/>
+                        <a href="https://www.npmjs.com/" target="_blank" rel="noopener" aria-label="Npm">www.npmjs.com</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Yarn</h6>
+                        <a href="https://yarnpkg.com/" target="_blank" rel="noopener" aria-label="Yarn"><img src="./assets/logos/yarn.svg" class="img-fluid img-fluid-max" alt="Yarn"></a>
+                        <br/>
+                        <a href="https://yarnpkg.com/" target="_blank" rel="noopener" aria-label="Yarn">yarnpkg.com</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>Management of your packages is very subjective, you choose.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>Packaging</h1>
+                <p class="lead">After you finalise your build how do you want to package the app ?</p>
+                <div class="row">
+                    <div class="col">
+                        <h6>Web App</h6>
+                        <a href="https://en.wikipedia.org/wiki/Web_application" target="_blank" rel="noopener" aria-label="Web App"><img src="./assets/logos/web.svg" class="img-fluid img-fluid-max" alt="Web App"></a>
+                        <br/>
+                        <a href="https://en.wikipedia.org/wiki/Web_application" target="_blank" rel="noopener" aria-label="Web App">en.wikipedia.org/wiki/Web_application</a>
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col">
+                        <h6>Electron</h6>
+                        <a href="https://electron.atom.io/" target="_blank" rel="noopener" aria-label="Electron"><img src="./assets/logos/electron.svg" class="img-fluid img-fluid-max" alt="Electron"></a>
+                        <br/>
+                        <a href="https://electron.atom.io/" target="_blank" rel="noopener" aria-label="Electron">electron.atom.io</a>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <p>Deploy your app on the platform where it is needed.</p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-1">
+            <div class="container padding-top padding-bottom">
+                <h1>Extras</h1>
+                <p>In addition there are some other useful features built-in like <b>fav icon generation</b>, just provide an
+                    svg source of your logo and your theme colour and the task can generate all other images it needs.</p>
+                <div class="row">
+                    <div class="col">
+                        <img src="./assets/favicon/favicon-48x48.png" class="img-fluid img-fluid-max" alt="favicon"></a>
+                    </div>
+                    <div class="col">
+                        <img src="./assets/favicon/favicon-32x32.png" class="img-fluid img-fluid-max" alt="favicon"></a>
+                    </div>
+                    <div class="col">
+                        <img src="./assets/favicon/favicon-16x16.png" class="img-fluid img-fluid-max" alt="favicon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>Future</h1>
+
+                <p>As we add new features to UniteJS you will be able to update your project without losing any changes you
+                    have made.
+                </p>
+
+                <p>You can see what's coming next in the <a href="https://github.com/unitejs/cli/blob/master/docs/roadmap.md"
+                        target="_blank" rel="noopener" aria-label="Roadmap">roadmap</a></p>
+            </div>
+        </div>
+
+        <div class="row m-0 brand-stripe-2">
+            <div class="container padding-top padding-bottom">
+                <h1>Disclaimer</h1>
+
+                <p>UniteJS currently has about 150 dependencies on the libraries it uses to generate the app, while we endeavour
+                    to make sure that every combination works it goes without saying that from time to time something will
+                    break. Just let us know in the <a href="https://github.com/unitejs/cli/issues">Issues</a> and we will
+                    get it fixed ASAP.
+                </p>
+            </div>
+        </div>
+    </div>
+</template>

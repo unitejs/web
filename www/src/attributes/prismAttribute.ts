@@ -1,5 +1,5 @@
 /**
- * Child class.
+ * Prism Attibute class.
  */
 import { inject } from "aurelia-dependency-injection";
 import { DOM } from "aurelia-pal";
