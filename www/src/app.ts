@@ -11,7 +11,13 @@ export class App {
         config.title = "UniteJS";
         config.addPostRenderStep(ScrollToTopPipelineStep);
         config.map([
-            { route: ["", "home"], name: "home", moduleId: "./home/home", nav: true, title: "Home" },
+            {
+                route: ["", "home"],
+                name: "home",
+                moduleId: "./home/home",
+                nav: true,
+                title: "Home"
+            },
             {
                 route: "documentation",
                 name: "documentation",
@@ -20,11 +26,11 @@ export class App {
                 title: "Documentation"
             },
             {
-                route: "gettingStarted",
-                name: "gettingStarted",
-                moduleId: "./gettingStarted/gettingStarted",
+                route: "generator",
+                name: "generator",
+                moduleId: "./generator/generator",
                 nav: true,
-                title: "Getting Started"
+                title: "Generator"
             },
             {
                 route: "examples",
@@ -32,6 +38,27 @@ export class App {
                 moduleId: "./examples/examples",
                 nav: true,
                 title: "Examples"
+            },
+            {
+                route: "about",
+                name: "about",
+                moduleId: "./info/about",
+                nav: false,
+                title: "About"
+            },
+            {
+                route: "the-team",
+                name: "the-team",
+                moduleId: "./info/theTeam",
+                nav: false,
+                title: "The Team"
+            },
+            {
+                route: "license",
+                name: "license",
+                moduleId: "./info/license",
+                nav: false,
+                title: "License"
             }
         ]);
 

@@ -1,7 +1,42 @@
 <template>
-    <footer class="nav-footer row m-0">
+    <footer class="nav-footer navbar-dark">
         <div class="container padding-top padding-bottom">
-            <!-- <a href="https://www.npmjs.com/package/unitejs-cli" target="_blank" rel="noopener" aria-label="NPM"><img src="https://img.shields.io/npm/v/unitejs-cli.svg"/></a> -->
+            <div class="row">
+                <div class="col-4">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" route-href="route: about" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" route-href="route: the-team" href="#">The Team</a></li>
+                        <li class="nav-item">&nbsp;</li>
+                        <li class="nav-item"><a class="nav-link" href="http://obany.com" target="_blank" rel="noopener" aria-label="Obany">&copy; 2017 Obany Ltd.</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" route-href="route: license" href="#">License</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4">
+                    <ul class="navbar-nav vertical">
+                        <li class="nav-item"><a class="nav-link" href="https://www.npmjs.com/package/unitejs-cli" target="_blank" rel="noopener"
+                                aria-label="Npm">Npm</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/unitejs" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://twitter.com/UniteJS" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://gitter.im/unitejs/" target="_blank" rel="noopener" aria-label="Gitter">Gitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col">
+                    <span class="navbar-text">
+                        All product names, logos, and brands are property of their respective owners. All company, product and service names used
+                        in this website are for identification purposes only. Use of these names, logos, and brands does not
+                        imply endorsement.
+                    </span>
+                </div>
+            </div>
         </div>
     </footer>
 </template>

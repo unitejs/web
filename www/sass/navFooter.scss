@@ -1,3 +1,12 @@
 .nav-footer {
-    background-color: $gray-700;
+    background-color: $brand-color;
+    .navbar-nav {
+        &.vertical {
+            flex-direction: column;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 1);
+        }
+    }
 }

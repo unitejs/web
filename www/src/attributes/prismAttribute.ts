@@ -18,7 +18,9 @@ export class PrismAttribute {
     }
 
     public valueChanged(newValue: string, oldValue: string): void {
-        this._element.className = "language-" + newValue;
-        Prism.highlightElement(this._element, false);
+        setTimeout(() => {
+            this._element.className = "language-" + newValue;
+            Prism.highlightElement(this._element, false);
+        }, 0);
     }
 }
