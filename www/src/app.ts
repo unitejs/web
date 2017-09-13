@@ -59,6 +59,13 @@ export class App {
                 moduleId: "./info/license",
                 nav: false,
                 title: "License"
+            },
+            {
+                route: "media",
+                name: "media",
+                moduleId: "./info/media",
+                nav: false,
+                title: "Media"
             }
         ]);
 
