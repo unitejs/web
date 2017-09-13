@@ -2,6 +2,7 @@
  * Main application class.
  */
 import { Router, RouterConfiguration } from "aurelia-router";
+import { GoogleAnalyticsStep } from "./pipelineSteps/googleAnalyticsStep";
 import { ScrollToTopPipelineStep } from "./pipelineSteps/scrollToTopPipelineStep";
 
 export class App {
@@ -10,6 +11,7 @@ export class App {
     public configureRouter(config: RouterConfiguration, router: Router): any {
         config.title = "UniteJS";
         config.addPostRenderStep(ScrollToTopPipelineStep);
+        config.addPostRenderStep(GoogleAnalyticsStep);
         config.map([
             {
                 route: ["", "home"],
