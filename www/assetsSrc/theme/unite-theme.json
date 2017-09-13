@@ -48,6 +48,7 @@
         "<meta property=\"og:url\" content=\"http://unitejs.com\">",
         "<meta property=\"og:site_name\" content=\"UniteJS\">",
         "<meta property=\"og:title\" content=\"UniteJS\">",
+        "<meta property=\"og:type\" content=\"website\" />",
         "<meta property=\"og:description\" content=\"Zero configuration web app creation.\">",
         "<meta property=\"og:image\" content=\"http://unitejs.com/assets/media/banner.png\">",
         "<meta property=\"og:image:width\" content=\"1024\">",
