@@ -211,7 +211,7 @@ export class Generator {
 
     public attached(): void {
         const httpClient = new HttpClient();
-        httpClient.get("./assets/spdx-full.json")
+        httpClient.get("./assets/spdx-lite.json")
             .then((response) => {
                 if (response.statusCode === 200) {
                     const licenses: ISpdx = response.content;
