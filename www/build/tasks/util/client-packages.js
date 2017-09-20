@@ -33,8 +33,10 @@ function getDistFiles (uniteConfig, includeModes, isBundled, isMinified) {
                     const main = mainSplit.pop();
                     const location = mainSplit.join("/");
                     if (pkg.isPackage) {
-                        files[key] = path.join(`${uniteConfig.dirs.www.package}${key}/${location}`,
-                            "**/*.{js,html,css}");
+                        files[key] = path.join(
+                            `${uniteConfig.dirs.www.package}${key}/${location}`,
+                            "**/*.{js,html,css}"
+                        );
                     } else {
                         files[key] = path.join(`${uniteConfig.dirs.www.package}${key}/${location}`, main);
                     }

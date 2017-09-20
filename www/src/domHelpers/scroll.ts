@@ -3,20 +3,26 @@
  */
 export class Scroll {
     public static getOffset(element: HTMLElement | Window): { x: number; y: number } {
-        if (element instanceof Window) {
-            return {x: element.scrollX | element.pageXOffset, y: element.scrollY | element.pageYOffset };
+        if (element) {
+            if (element instanceof Window) {
+                return { x: element.scrollX | element.pageXOffset, y: element.scrollY | element.pageYOffset };
+            } else {
+                return { x: element.scrollLeft, y: element.scrollTop };
+            }
         } else {
-            return {x: element.scrollLeft, y: element.scrollTop };
+            return undefined;
         }
     }
 
     public static smoothScroll(element: HTMLElement | Window, x: number, y: number): void {
-        if (element instanceof Window) {
-            Scroll.step(element, Scroll.now(),
-                element.scrollX | element.pageXOffset,
-                element.scrollY | element.pageYOffset, x, y);
-        } else {
-            Scroll.step(element, Scroll.now(), element.scrollLeft, element.scrollTop, x, y);
+        if (element) {
+            if (element instanceof Window) {
+                Scroll.step(element, Scroll.now(),
+                    element.scrollX | element.pageXOffset,
+                    element.scrollY | element.pageYOffset, x, y);
+            } else {
+                Scroll.step(element, Scroll.now(), element.scrollLeft, element.scrollTop, x, y);
+            }
         }
     }
 

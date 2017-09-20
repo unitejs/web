@@ -8,20 +8,23 @@ export class Documentation {
     @bindable
     public commandDisplay: string;
 
+    @bindable
+    public topOffset: number;
+
     constructor() {
         this.commandDisplay = "intro";
     }
 
-    public displayDocumentation(which: string): void {
-        this.commandDisplay = which;
-
-        const elements = document.getElementsByTagName("hr");
+    public attached(): void {
         const navBars = document.getElementsByTagName("nav-bar");
 
-        if (elements.length > 0 && navBars.length > 0) {
-            const clientRect = elements[0].getBoundingClientRect();
+        if (navBars.length > 0) {
             const navBarRect = navBars[0].getBoundingClientRect();
-            Scroll.smoothScroll(window, 0, clientRect.top - navBarRect.height);
+            this.topOffset = navBarRect.height;
         }
+    }
+
+    public displayDocumentation(which: string): void {
+        this.commandDisplay = which;
     }
 }

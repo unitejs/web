@@ -6,7 +6,7 @@ import { NavigationInstruction, Next } from "aurelia-router";
 
 export class GoogleAnalyticsStep {
     public run(navigationInstruction: NavigationInstruction, next: Next): Promise<any> {
-        if (ga) {
+        if ((window as any).ga !== undefined) {
             ga("send", {
                 hitType: "pageview",
                 page: navigationInstruction.fragment,

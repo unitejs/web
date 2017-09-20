@@ -2,12 +2,24 @@
     <div class="row m-0">
         <div class="container padding-top padding-bottom">
             <h1>Generator</h1>
-            <p>Fill in the form and click the Generate button to produce the command line that you can use to call the
-                UniteJS command line tool.</p>
+            <p>Fill in the form or select a profile and click the Generate button to produce the command line that you can use
+                to call the UniteJS command line tool.</p>
             <div class="alert alert-danger" role="alert" if.bind="status">
                 ${status}
             </div>
             <form novalidate if.bind="!status">
+                <div class="form-group">
+                    <label class="control-label" for="profile">Profile</label>
+                    <select class="form-control form-control-sm" id="profile" value.bind="profile">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="profile of profiles" model.bind="profile.id">
+                            ${profile.id}
+                        </option>
+                    </select>
+                </div>
+
+                <hr/>
+
                 <div class="form-group">
                     <label class="control-label" for="packageName">Package Name</label>
                     <input type="text" class="form-control form-control-sm" id="packageName" placeholder="Package Name" value.bind="packageName & validate">

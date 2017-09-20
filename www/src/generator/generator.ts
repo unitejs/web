@@ -23,6 +23,10 @@ export class Generator {
     public title: string;
 
     @bindable
+    public profile: string;
+    public profiles: { id: string; config: UniteConfiguration }[];
+
+    @bindable
     public license: string;
     public licenses: { id: string; license: ISpdxLicense }[];
 
@@ -134,10 +138,6 @@ export class Generator {
             return obj.moduleType !== "AMD" || obj.bundler === "RequireJS";
         }, `You can only use AMD modules with RequireJS`);
 
-        ValidationRules.customRule("systemJsBuilderModuleTypeRule", (value: string, obj: Generator) => {
-            return obj.moduleType !== "SystemJS" || obj.bundler === "SystemJSBuilder";
-        }, `You can only use SystemJS modules with SystemJSBuilder.`);
-
         ValidationRules.customRule("webpackBrowserifyModuleTypeRule", (value: string, obj: Generator) => {
             return obj.moduleType !== "CommonJS" || (obj.bundler === "Webpack" || obj.bundler === "Browserify");
         }, `You can only use CommonJS modules with Webpack or Browserify.`);
@@ -182,8 +182,6 @@ export class Generator {
             .then()
             .satisfiesRule("requireJsModuleTypeRule")
             .then()
-            .satisfiesRule("systemJsBuilderModuleTypeRule")
-            .then()
             .satisfiesRule("webpackBrowserifyModuleTypeRule")
             .ensure((m: Generator) => m.bundler).displayName("Bundler").required()
             .then()
@@ -192,8 +190,6 @@ export class Generator {
             .satisfiesRule("angularBundlingRule")
             .then()
             .satisfiesRule("requireJsModuleTypeRule")
-            .then()
-            .satisfiesRule("systemJsBuilderModuleTypeRule")
             .then()
             .satisfiesRule("webpackBrowserifyModuleTypeRule")
             .ensure((m: Generator) => m.linter).displayName("Linter").required()
@@ -225,13 +221,28 @@ export class Generator {
                         this.licenses.push({ id: licenseKey, license: licenses[licenseKey] });
                     });
 
-                    const uniteConfiguration = LocalStorage.get<UniteConfiguration>("uniteConfiguration");
+                    const httpClient2 = new HttpClient();
+                    httpClient.get("./assets/profiles/configure.json")
+                        .then((response2) => {
+                            if (response2.statusCode === 200) {
+                                const profiles: { [id: string]: UniteConfiguration } = response2.content;
+                                this.profiles = [];
+                                Object.keys(profiles).forEach((profileKey) => {
+                                    this.profiles.push({ id: profileKey, config: profiles[profileKey] });
+                                });
 
-                    this.defaultValues(uniteConfiguration);
+                                const uniteConfiguration = LocalStorage.get<UniteConfiguration>("uniteConfiguration");
+                                const profile = LocalStorage.get<string>("profile");
 
-                    if (uniteConfiguration) {
-                        this.generate();
-                    }
+                                this.defaultValues(uniteConfiguration, profile);
+
+                                if (uniteConfiguration) {
+                                    this.generate();
+                                }
+                            } else {
+                                this.status = "Unable to load the profile configurations so can not continue.";
+                            }
+                        });
                 } else {
                     this.status = "Unable to load the SPDX licenses so can not continue.";
                 }
@@ -241,7 +252,7 @@ export class Generator {
             });
     }
 
-    public defaultValues(uniteConfiguration?: UniteConfiguration): void {
+    public defaultValues(uniteConfiguration?: UniteConfiguration, profile?: string): void {
         this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "React"];
         this.sourceLanguages = ["JavaScript", "TypeScript"];
         this.moduleTypes = ["AMD", "CommonJS", "SystemJS"];
@@ -256,6 +267,7 @@ export class Generator {
         this.cssPosts = ["None", "PostCss"];
         this.packageManagers = ["Npm", "Yarn"];
 
+        this.profile = profile;
         this.packageName = uniteConfiguration ? uniteConfiguration.packageName : undefined;
         this.title = uniteConfiguration ? uniteConfiguration.title : undefined;
         this.license = uniteConfiguration ? uniteConfiguration.license : undefined;
@@ -276,6 +288,32 @@ export class Generator {
         this.cssPost = uniteConfiguration ? uniteConfiguration.cssPost : undefined;
         this.packageManager = uniteConfiguration ? uniteConfiguration.packageManager : undefined;
         this.outputDirectory = uniteConfiguration ? uniteConfiguration.outputDirectory : undefined;
+    }
+
+    public profileChanged(): void {
+        if (this.profile) {
+            const profile = this.profiles.find((p) => p.id === this.profile);
+
+            if (profile) {
+                this.license = profile.config.license;
+                this.applicationFramework = profile.config.applicationFramework;
+                this.sourceLanguage = profile.config.sourceLanguage;
+                this.moduleType = profile.config.moduleType;
+                this.bundler = profile.config.bundler;
+                this.linter = profile.config.linter;
+                this.unitTestRunner = profile.config.unitTestRunner;
+                this.unitTestFramework = profile.config.unitTestFramework;
+                this.unitTestFrameworkEnabled = this.unitTestFramework !== undefined;
+                this.unitTestEngine = profile.config.unitTestEngine;
+                this.unitTestEngineEnabled = this.unitTestEngine !== undefined;
+                this.e2eTestRunner = profile.config.e2eTestRunner;
+                this.e2eTestFramework = profile.config.e2eTestFramework;
+                this.e2eTestFrameworkEnabled = this.e2eTestFramework !== undefined;
+                this.cssPre = profile.config.cssPre;
+                this.cssPost = profile.config.cssPost;
+                this.packageManager = profile.config.packageManager;
+            }
+        }
     }
 
     public applicationFrameworkChanged(): void {
@@ -343,7 +381,17 @@ export class Generator {
         uniteConfiguration.packageManager = this.packageManager;
         uniteConfiguration.outputDirectory = this.outputDirectory;
 
+        let profile: UniteConfiguration;
+
+        if (this.profile) {
+            const item = this.profiles.find((p) => p.id === this.profile);
+            if (item) {
+                profile = item.config;
+            }
+        }
+
         LocalStorage.set("uniteConfiguration", uniteConfiguration);
+        LocalStorage.set("profile", this.profile);
 
         this.controller.validate()
             .then((result) => {
@@ -351,23 +399,22 @@ export class Generator {
                     this.commandLine = `unite configure` +
                         ` --packageName=${this.packageName}` +
                         ` --title="${this.title}"` +
-                        ` --license=${this.license}` +
-                        ` --appFramework=${this.applicationFramework}` +
-                        ` --moduleType=${this.moduleType}` +
-                        ` --bundler=${this.bundler}` +
-                        ` --sourceLanguage=${this.sourceLanguage}` +
-                        ` --linter=${this.linter}` +
-                        ` --unitTestRunner=${this.unitTestRunner}` +
-                        (this.unitTestFramework === undefined
-                            ? "" : ` --unitTestFramework=${this.unitTestFramework}`) +
-                        (this.unitTestEngine === undefined
-                            ? "" : ` --unitTestEngine=${this.unitTestEngine}`) +
-                        ` --e2eTestRunner=${this.e2eTestRunner}` +
-                        (this.e2eTestFramework === undefined
-                            ? "" : ` --e2eTestFramework=${this.e2eTestFramework}`) +
-                        ` --cssPre=${this.cssPre}` +
-                        ` --cssPost=${this.cssPost}` +
-                        ` --packageManager=${this.packageManager}` +
+                        (this.profile === undefined
+                            ? "" : ` --profile=${this.profile}`) +
+                        this.generateArg(profile, uniteConfiguration, "license") +
+                        this.generateArg(profile, uniteConfiguration, "applicationFramework", "appFramework") +
+                        this.generateArg(profile, uniteConfiguration, "moduleType") +
+                        this.generateArg(profile, uniteConfiguration, "bundler") +
+                        this.generateArg(profile, uniteConfiguration, "sourceLanguage") +
+                        this.generateArg(profile, uniteConfiguration, "linter") +
+                        this.generateArg(profile, uniteConfiguration, "unitTestRunner") +
+                        this.generateArg(profile, uniteConfiguration, "unitTestFramework") +
+                        this.generateArg(profile, uniteConfiguration, "unitTestEngine") +
+                        this.generateArg(profile, uniteConfiguration, "e2eTestRunner") +
+                        this.generateArg(profile, uniteConfiguration, "e2eTestFramework") +
+                        this.generateArg(profile, uniteConfiguration, "cssPre") +
+                        this.generateArg(profile, uniteConfiguration, "cssPost") +
+                        this.generateArg(profile, uniteConfiguration, "packageManager") +
                         (this.outputDirectory === undefined ||
                             this.outputDirectory === null ||
                             this.outputDirectory.length === 0
@@ -378,8 +425,22 @@ export class Generator {
             });
     }
 
+    public generateArg(profile: UniteConfiguration,
+                       uniteConfiguration: UniteConfiguration,
+                       propertyName: keyof UniteConfiguration,
+                       argName?: string): string {
+        if (profile && profile[propertyName] === uniteConfiguration[propertyName]) {
+            return "";
+        } else if (uniteConfiguration[propertyName] === undefined) {
+            return "";
+        } else {
+            return ` --${argName ? argName : propertyName}=${uniteConfiguration[propertyName]}`;
+        }
+    }
+
     public clear(): void {
         LocalStorage.remove("uniteConfiguration");
+        LocalStorage.remove("profile");
 
         this.defaultValues();
         this.commandLine = undefined;

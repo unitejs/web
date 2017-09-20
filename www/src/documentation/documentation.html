@@ -1,5 +1,6 @@
 <template>
     <require from="../attributes/prismAttribute"></require>
+    <require from="../attributes/scrollToElementAttribute"></require>
     <div class="row m-0">
         <div class="container padding-top padding-bottom">
             <h1>Install</h1>
@@ -12,18 +13,18 @@
 
             <pre><code au-prism="nix">unite command --argName&lt;0&gt;=argValue&lt;0&gt; ... --argName&lt;n&gt;=argValue&lt;n&gt;</code></pre>
             <p>where command is one of the following:
-                <li><a href="#" click.trigger="displayDocumentation('help')">help</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('version')">version</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('configure')">configure</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('buildConfiguration')">buildConfiguration</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('clientPackage')">clientPackage</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('platform')">platform</a></li>
+                <li><a href="#" click.trigger="displayDocumentation('help')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">help</a></li>
+                <li><a href="#" click.trigger="displayDocumentation('version')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">version</a></li>
+                <li><a href="#" click.trigger="displayDocumentation('configure')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">configure</a></li>
+                <li><a href="#" click.trigger="displayDocumentation('buildConfiguration')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">buildConfiguration</a></li>
+                <li><a href="#" click.trigger="displayDocumentation('clientPackage')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">clientPackage</a></li>
+                <li><a href="#" click.trigger="displayDocumentation('platform')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">platform</a></li>
             </p>
 
             <p>Argument names are case sensitive but values are case insensitive, argument values with spaces should be enclosed
                 in quotes.</p>
 
-            <hr />
+            <hr id="helpContent" />
 
             <div if.bind="commandDisplay === 'intro'">
                 <p>Select one of the commands above for more details.</p>
@@ -48,6 +49,9 @@
 
                 <p>If there is already a unite.json in the outputDirectory then all of the arguments will be read from the file
                     and are optional, you only need specify the ones that you want to change.</p>
+
+                <p>This is also true if you specify the profile argument, you only need override the arguments that you want
+                    to.</p>
 
                 <table class="table table-striped">
                     <thead>
@@ -141,6 +145,11 @@
                             <td>The package manager to use<br/>optional - defaults to Npm if not already set</td>
                         </tr>
                         <tr>
+                            <td>profile</td>
+                            <td><a au-scroll-to-element="id: configProfiles; y-offset.bind: topOffset" href="#">See Profiles</a></td>
+                            <td>The profile to use<br/>optional - defaults to none</td>
+                        </tr>
+                        <tr>
                             <td>force</td>
                             <td></td>
                             <td>Force overwrite of all existing configuration<br/>optional - defaults to off</td>
@@ -159,12 +168,28 @@
                 <p>Or jump to the <a href="#" route-href="route: generator">Generator</a> to generate a command line script
                     ready to run.</p>
 
+                <hr id="configProfiles"/>
+
+                <h2>Profiles</h2>
+
+                <p>The following configuration profiles are currently available, they provide a set of defaults recommended
+                    by the application framework providers.</p>
+
+                <ul>
+                    <li>AngularJavaScript</li>
+                    <li>AngularTypeScript</li>
+                    <li>AureliaJavaScript</li>
+                    <li>AureliaTypeScript</li>
+                    <li>ReactJavaScript</li>
+                    <li>ReactTypeScript</li>
+                </ul>
+
                 <hr/>
 
                 <h2>Application Frameworks</h2>
 
-                <p>Although we try to support all the different framework and tool combinations this is not always
-                    possible.</p>
+                <p>Although we try to support all the different framework and tool combinations this is not always possible.
+                </p>
 
                 <h3><a name="ng"></a>Angular</h3>
 
@@ -311,6 +336,8 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                 <p>This will add a new clientPackage and modify all the necessary configuration files to include it in your
                     app.
                 </p>
+                <p>You can use the profile parameter to use one of the in-built clientPackage profiles which will configure
+                    the other arguments for you.</p>
                 <br/>
 
                 <table class="table table-striped">
@@ -400,6 +427,11 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                             <td>The package manager to use for the add<br/>optional - defaults to npm if not already set</td>
                         </tr>
                         <tr>
+                            <td>profile</td>
+                            <td><a au-scroll-to-element="id: clientPackageProfiles; y-offset.bind: topOffset" href="#">See Profiles</a></td>
+                            <td>The profile to use<br/>optional - defaults to none</td>
+                        </tr>
+                        <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
                             <td>Location of the unite.json from configure<br/>optional - defaults to current directory</td>
@@ -446,6 +478,20 @@ console.log(window.unite.config["someFlag"]);</code></pre>
 
                 <p>See the <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how
                     to use the command.</p>
+
+                <hr id="clientPackageProfiles"/>
+
+                <h2>Profiles</h2>
+
+                <p>The following clientPackage profiles are currently available, they provide a set of defaults for the libraries.</p>
+
+                <ul>
+                    <li>font-awesome</li>
+                    <li>bootstrap4</li>
+                    <li>bluebird</li>
+                    <li>primsjs</li>
+                    <li>rxjs</li>
+                </ul>
             </div>
 
             <div if.bind="commandDisplay === 'platform'">

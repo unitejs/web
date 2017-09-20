@@ -17,6 +17,7 @@
 	"applicationFramework": "Aurelia",
 	"clientPackages": {
 		"aurelia-animator-css": {
+			"name": "aurelia-animator-css",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-animator-css.js",
@@ -25,6 +26,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-binding": {
+			"name": "aurelia-binding",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-binding.js",
@@ -33,6 +35,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-bootstrapper": {
+			"name": "aurelia-bootstrapper",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-bootstrapper.js",
@@ -41,6 +44,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-dependency-injection": {
+			"name": "aurelia-dependency-injection",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-dependency-injection.js",
@@ -49,6 +53,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-event-aggregator": {
+			"name": "aurelia-event-aggregator",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-event-aggregator.js",
@@ -57,6 +62,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-fetch-client": {
+			"name": "aurelia-fetch-client",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-fetch-client.js",
@@ -65,6 +71,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-http-client": {
+			"name": "aurelia-http-client",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-http-client.js",
@@ -73,6 +80,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-framework": {
+			"name": "aurelia-framework",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-framework.js",
@@ -81,6 +89,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-history": {
+			"name": "aurelia-history",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-history.js",
@@ -89,6 +98,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-history-browser": {
+			"name": "aurelia-history-browser",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-history-browser.js",
@@ -97,6 +107,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-loader": {
+			"name": "aurelia-loader",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-loader.js",
@@ -105,6 +116,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-loader-default": {
+			"name": "aurelia-loader-default",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-loader-default.js",
@@ -113,6 +125,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-logging": {
+			"name": "aurelia-logging",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-logging.js",
@@ -121,6 +134,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-logging-console": {
+			"name": "aurelia-logging-console",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-logging-console.js",
@@ -129,6 +143,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-metadata": {
+			"name": "aurelia-metadata",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-metadata.js",
@@ -137,6 +152,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-pal": {
+			"name": "aurelia-pal",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-pal.js",
@@ -145,6 +161,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-pal-browser": {
+			"name": "aurelia-pal-browser",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-pal-browser.js",
@@ -153,6 +170,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-path": {
+			"name": "aurelia-path",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-path.js",
@@ -161,6 +179,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-polyfills": {
+			"name": "aurelia-polyfills",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-polyfills.js",
@@ -169,6 +188,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-route-recognizer": {
+			"name": "aurelia-route-recognizer",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-route-recognizer.js",
@@ -177,6 +197,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-router": {
+			"name": "aurelia-router",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-router.js",
@@ -185,6 +206,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-task-queue": {
+			"name": "aurelia-task-queue",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-task-queue.js",
@@ -193,6 +215,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-templating": {
+			"name": "aurelia-templating",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-templating.js",
@@ -201,6 +224,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-templating-binding": {
+			"name": "aurelia-templating-binding",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-templating-binding.js",
@@ -209,6 +233,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-dialog": {
+			"name": "aurelia-dialog",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-dialog.js",
@@ -217,6 +242,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-templating-resources": {
+			"name": "aurelia-templating-resources",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-templating-resources.js",
@@ -225,6 +251,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-templating-router": {
+			"name": "aurelia-templating-router",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-templating-router.js",
@@ -233,6 +260,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-validation": {
+			"name": "aurelia-validation",
 			"includeMode": "both",
 			"preload": false,
 			"main": "dist/amd/aurelia-validation.js",
@@ -241,6 +269,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"whatwg-fetch": {
+			"name": "whatwg-fetch",
 			"includeMode": "both",
 			"preload": false,
 			"main": "fetch.js",
@@ -249,6 +278,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"requirejs-text": {
+			"name": "requirejs-text",
 			"includeMode": "both",
 			"preload": false,
 			"main": "text.js",
@@ -260,6 +290,7 @@
 			"scriptIncludeMode": "none"
 		},
 		"requirejs": {
+			"name": "requirejs",
 			"includeMode": "both",
 			"preload": false,
 			"main": "require.js",
@@ -344,5 +375,12 @@
 			"assetsSrc": "./assetsSrc/"
 		}
 	},
-	"uniteVersion": "1.0.1"
+	"uniteVersion": "1.0.2",
+	"sourceExtensions": [
+		"ts"
+	],
+	"viewExtensions": [
+		"html"
+	],
+	"styleExtension": "scss"
 }
