@@ -1,0 +1,1031 @@
+{
+    "Glide": {
+        "name": "3dfx Glide License"
+    },
+    "Abstyles": {
+        "name": "Abstyles License"
+    },
+    "AFL-1.1": {
+        "name": "Academic Free License v1.1"
+    },
+    "AFL-1.2": {
+        "name": "Academic Free License v1.2"
+    },
+    "AFL-2.0": {
+        "name": "Academic Free License v2.0"
+    },
+    "AFL-2.1": {
+        "name": "Academic Free License v2.1"
+    },
+    "AFL-3.0": {
+        "name": "Academic Free License v3.0"
+    },
+    "AMPAS": {
+        "name": "Academy of Motion Picture Arts and Sciences BSD"
+    },
+    "APL-1.0": {
+        "name": "Adaptive Public License 1.0"
+    },
+    "Adobe-Glyph": {
+        "name": "Adobe Glyph List License"
+    },
+    "APAFML": {
+        "name": "Adobe Postscript AFM License"
+    },
+    "Adobe-2006": {
+        "name": "Adobe Systems Incorporated Source Code License Agreement"
+    },
+    "AGPL-1.0": {
+        "name": "Affero General Public License v1.0"
+    },
+    "Afmparse": {
+        "name": "Afmparse License"
+    },
+    "Aladdin": {
+        "name": "Aladdin Free Public License"
+    },
+    "ADSL": {
+        "name": "Amazon Digital Services License"
+    },
+    "AMDPLPA": {
+        "name": "AMD's plpa_map.c License"
+    },
+    "ANTLR-PD": {
+        "name": "ANTLR Software Rights Notice"
+    },
+    "Apache-1.0": {
+        "name": "Apache License 1.0"
+    },
+    "Apache-1.1": {
+        "name": "Apache License 1.1"
+    },
+    "Apache-2.0": {
+        "name": "Apache License 2.0"
+    },
+    "AML": {
+        "name": "Apple MIT License"
+    },
+    "APSL-1.0": {
+        "name": "Apple Public Source License 1.0"
+    },
+    "APSL-1.1": {
+        "name": "Apple Public Source License 1.1"
+    },
+    "APSL-1.2": {
+        "name": "Apple Public Source License 1.2"
+    },
+    "APSL-2.0": {
+        "name": "Apple Public Source License 2.0"
+    },
+    "Artistic-1.0": {
+        "name": "Artistic License 1.0"
+    },
+    "Artistic-1.0-Perl": {
+        "name": "Artistic License 1.0 (Perl)"
+    },
+    "Artistic-1.0-cl8": {
+        "name": "Artistic License 1.0 w/clause 8"
+    },
+    "Artistic-2.0": {
+        "name": "Artistic License 2.0"
+    },
+    "AAL": {
+        "name": "Attribution Assurance License"
+    },
+    "Bahyph": {
+        "name": "Bahyph License"
+    },
+    "Barr": {
+        "name": "Barr License"
+    },
+    "Beerware": {
+        "name": "Beerware License"
+    },
+    "BitTorrent-1.0": {
+        "name": "BitTorrent Open Source License v1.0"
+    },
+    "BitTorrent-1.1": {
+        "name": "BitTorrent Open Source License v1.1"
+    },
+    "BSL-1.0": {
+        "name": "Boost Software License 1.0"
+    },
+    "Borceux": {
+        "name": "Borceux license"
+    },
+    "BSD-2-Clause": {
+        "name": "BSD 2-clause \"Simplified\" License"
+    },
+    "BSD-2-Clause-FreeBSD": {
+        "name": "BSD 2-clause FreeBSD License"
+    },
+    "BSD-2-Clause-NetBSD": {
+        "name": "BSD 2-clause NetBSD License"
+    },
+    "BSD-3-Clause": {
+        "name": "BSD 3-clause \"New\" or \"Revised\" License"
+    },
+    "BSD-3-Clause-Clear": {
+        "name": "BSD 3-clause Clear License"
+    },
+    "BSD-3-Clause-No-Nuclear-License": {
+        "name": "BSD 3-Clause No Nuclear License"
+    },
+    "BSD-3-Clause-No-Nuclear-License-2014": {
+        "name": "BSD 3-Clause No Nuclear License 2014"
+    },
+    "BSD-3-Clause-No-Nuclear-Warranty": {
+        "name": "BSD 3-Clause No Nuclear Warranty"
+    },
+    "BSD-4-Clause": {
+        "name": "BSD 4-clause \"Original\" or \"Old\" License"
+    },
+    "BSD-Protection": {
+        "name": "BSD Protection License"
+    },
+    "BSD-Source-Code": {
+        "name": "BSD Source Code Attribution"
+    },
+    "BSD-3-Clause-Attribution": {
+        "name": "BSD with attribution"
+    },
+    "0BSD": {
+        "name": "BSD Zero Clause License"
+    },
+    "BSD-4-Clause-UC": {
+        "name": "BSD-4-Clause (University of California-Specific)"
+    },
+    "bzip2-1.0.5": {
+        "name": "bzip2 and libbzip2 License v1.0.5"
+    },
+    "bzip2-1.0.6": {
+        "name": "bzip2 and libbzip2 License v1.0.6"
+    },
+    "Caldera": {
+        "name": "Caldera License"
+    },
+    "CECILL-1.0": {
+        "name": "CeCILL Free Software License Agreement v1.0"
+    },
+    "CECILL-1.1": {
+        "name": "CeCILL Free Software License Agreement v1.1"
+    },
+    "CECILL-2.0": {
+        "name": "CeCILL Free Software License Agreement v2.0"
+    },
+    "CECILL-2.1": {
+        "name": "CeCILL Free Software License Agreement v2.1"
+    },
+    "CECILL-B": {
+        "name": "CeCILL-B Free Software License Agreement"
+    },
+    "CECILL-C": {
+        "name": "CeCILL-C Free Software License Agreement"
+    },
+    "ClArtistic": {
+        "name": "Clarified Artistic License"
+    },
+    "MIT-CMU": {
+        "name": "CMU License"
+    },
+    "CNRI-Jython": {
+        "name": "CNRI Jython License"
+    },
+    "CNRI-Python": {
+        "name": "CNRI Python License"
+    },
+    "CNRI-Python-GPL-Compatible": {
+        "name": "CNRI Python Open Source GPL Compatible License Agreement"
+    },
+    "CPOL-1.02": {
+        "name": "Code Project Open License 1.02"
+    },
+    "CDDL-1.0": {
+        "name": "Common Development and Distribution License 1.0"
+    },
+    "CDDL-1.1": {
+        "name": "Common Development and Distribution License 1.1"
+    },
+    "CPAL-1.0": {
+        "name": "Common Public Attribution License 1.0"
+    },
+    "CPL-1.0": {
+        "name": "Common Public License 1.0"
+    },
+    "CATOSL-1.1": {
+        "name": "Computer Associates Trusted Open Source License 1.1"
+    },
+    "Condor-1.1": {
+        "name": "Condor Public License v1.1"
+    },
+    "CC-BY-1.0": {
+        "name": "Creative Commons Attribution 1.0"
+    },
+    "CC-BY-2.0": {
+        "name": "Creative Commons Attribution 2.0"
+    },
+    "CC-BY-2.5": {
+        "name": "Creative Commons Attribution 2.5"
+    },
+    "CC-BY-3.0": {
+        "name": "Creative Commons Attribution 3.0"
+    },
+    "CC-BY-4.0": {
+        "name": "Creative Commons Attribution 4.0"
+    },
+    "CC-BY-ND-1.0": {
+        "name": "Creative Commons Attribution No Derivatives 1.0"
+    },
+    "CC-BY-ND-2.0": {
+        "name": "Creative Commons Attribution No Derivatives 2.0"
+    },
+    "CC-BY-ND-2.5": {
+        "name": "Creative Commons Attribution No Derivatives 2.5"
+    },
+    "CC-BY-ND-3.0": {
+        "name": "Creative Commons Attribution No Derivatives 3.0"
+    },
+    "CC-BY-ND-4.0": {
+        "name": "Creative Commons Attribution No Derivatives 4.0"
+    },
+    "CC-BY-NC-1.0": {
+        "name": "Creative Commons Attribution Non Commercial 1.0"
+    },
+    "CC-BY-NC-2.0": {
+        "name": "Creative Commons Attribution Non Commercial 2.0"
+    },
+    "CC-BY-NC-2.5": {
+        "name": "Creative Commons Attribution Non Commercial 2.5"
+    },
+    "CC-BY-NC-3.0": {
+        "name": "Creative Commons Attribution Non Commercial 3.0"
+    },
+    "CC-BY-NC-4.0": {
+        "name": "Creative Commons Attribution Non Commercial 4.0"
+    },
+    "CC-BY-NC-ND-1.0": {
+        "name": "Creative Commons Attribution Non Commercial No Derivatives 1.0"
+    },
+    "CC-BY-NC-ND-2.0": {
+        "name": "Creative Commons Attribution Non Commercial No Derivatives 2.0"
+    },
+    "CC-BY-NC-ND-2.5": {
+        "name": "Creative Commons Attribution Non Commercial No Derivatives 2.5"
+    },
+    "CC-BY-NC-ND-3.0": {
+        "name": "Creative Commons Attribution Non Commercial No Derivatives 3.0"
+    },
+    "CC-BY-NC-ND-4.0": {
+        "name": "Creative Commons Attribution Non Commercial No Derivatives 4.0"
+    },
+    "CC-BY-NC-SA-1.0": {
+        "name": "Creative Commons Attribution Non Commercial Share Alike 1.0"
+    },
+    "CC-BY-NC-SA-2.0": {
+        "name": "Creative Commons Attribution Non Commercial Share Alike 2.0"
+    },
+    "CC-BY-NC-SA-2.5": {
+        "name": "Creative Commons Attribution Non Commercial Share Alike 2.5"
+    },
+    "CC-BY-NC-SA-3.0": {
+        "name": "Creative Commons Attribution Non Commercial Share Alike 3.0"
+    },
+    "CC-BY-NC-SA-4.0": {
+        "name": "Creative Commons Attribution Non Commercial Share Alike 4.0"
+    },
+    "CC-BY-SA-1.0": {
+        "name": "Creative Commons Attribution Share Alike 1.0"
+    },
+    "CC-BY-SA-2.0": {
+        "name": "Creative Commons Attribution Share Alike 2.0"
+    },
+    "CC-BY-SA-2.5": {
+        "name": "Creative Commons Attribution Share Alike 2.5"
+    },
+    "CC-BY-SA-3.0": {
+        "name": "Creative Commons Attribution Share Alike 3.0"
+    },
+    "CC-BY-SA-4.0": {
+        "name": "Creative Commons Attribution Share Alike 4.0"
+    },
+    "CC0-1.0": {
+        "name": "Creative Commons Zero v1.0 Universal"
+    },
+    "Crossword": {
+        "name": "Crossword License"
+    },
+    "CrystalStacker": {
+        "name": "CrystalStacker License"
+    },
+    "CUA-OPL-1.0": {
+        "name": "CUA Office Public License v1.0"
+    },
+    "Cube": {
+        "name": "Cube License"
+    },
+    "curl": {
+        "name": "curl License"
+    },
+    "D-FSL-1.0": {
+        "name": "Deutsche Freie Software Lizenz"
+    },
+    "diffmark": {
+        "name": "diffmark license"
+    },
+    "WTFPL": {
+        "name": "Do What The F*ck You Want To Public License"
+    },
+    "DOC": {
+        "name": "DOC License"
+    },
+    "Dotseqn": {
+        "name": "Dotseqn License"
+    },
+    "DSDP": {
+        "name": "DSDP License"
+    },
+    "dvipdfm": {
+        "name": "dvipdfm License"
+    },
+    "EPL-1.0": {
+        "name": "Eclipse Public License 1.0"
+    },
+    "ECL-1.0": {
+        "name": "Educational Community License v1.0"
+    },
+    "ECL-2.0": {
+        "name": "Educational Community License v2.0"
+    },
+    "eGenix": {
+        "name": "eGenix.com Public License 1.1.0"
+    },
+    "EFL-1.0": {
+        "name": "Eiffel Forum License v1.0"
+    },
+    "EFL-2.0": {
+        "name": "Eiffel Forum License v2.0"
+    },
+    "MIT-advertising": {
+        "name": "Enlightenment License (e16)"
+    },
+    "MIT-enna": {
+        "name": "enna License"
+    },
+    "Entessa": {
+        "name": "Entessa Public License v1.0"
+    },
+    "ErlPL-1.1": {
+        "name": "Erlang Public License v1.1"
+    },
+    "EUDatagrid": {
+        "name": "EU DataGrid Software License"
+    },
+    "EUPL-1.0": {
+        "name": "European Union Public License 1.0"
+    },
+    "EUPL-1.1": {
+        "name": "European Union Public License 1.1"
+    },
+    "Eurosym": {
+        "name": "Eurosym License"
+    },
+    "Fair": {
+        "name": "Fair License"
+    },
+    "MIT-feh": {
+        "name": "feh License"
+    },
+    "Frameworx-1.0": {
+        "name": "Frameworx Open License 1.0"
+    },
+    "FreeImage": {
+        "name": "FreeImage Public License v1.0"
+    },
+    "FTL": {
+        "name": "Freetype Project License"
+    },
+    "FSFAP": {
+        "name": "FSF All Permissive License"
+    },
+    "FSFUL": {
+        "name": "FSF Unlimited License"
+    },
+    "FSFULLR": {
+        "name": "FSF Unlimited License (with License Retention)"
+    },
+    "Giftware": {
+        "name": "Giftware License"
+    },
+    "GL2PS": {
+        "name": "GL2PS License"
+    },
+    "Glulxe": {
+        "name": "Glulxe License"
+    },
+    "AGPL-3.0": {
+        "name": "GNU Affero General Public License v3.0"
+    },
+    "GFDL-1.1": {
+        "name": "GNU Free Documentation License v1.1"
+    },
+    "GFDL-1.2": {
+        "name": "GNU Free Documentation License v1.2"
+    },
+    "GFDL-1.3": {
+        "name": "GNU Free Documentation License v1.3"
+    },
+    "GPL-1.0": {
+        "name": "GNU General Public License v1.0 only"
+    },
+    "GPL-2.0": {
+        "name": "GNU General Public License v2.0 only"
+    },
+    "GPL-3.0": {
+        "name": "GNU General Public License v3.0 only"
+    },
+    "LGPL-2.1": {
+        "name": "GNU Lesser General Public License v2.1 only"
+    },
+    "LGPL-3.0": {
+        "name": "GNU Lesser General Public License v3.0 only"
+    },
+    "LGPL-2.0": {
+        "name": "GNU Library General Public License v2 only"
+    },
+    "gnuplot": {
+        "name": "gnuplot License"
+    },
+    "gSOAP-1.3b": {
+        "name": "gSOAP Public License v1.3b"
+    },
+    "HaskellReport": {
+        "name": "Haskell Language Report License"
+    },
+    "HPND": {
+        "name": "Historic Permission Notice and Disclaimer"
+    },
+    "IBM-pibs": {
+        "name": "IBM PowerPC Initialization and Boot Software"
+    },
+    "IPL-1.0": {
+        "name": "IBM Public License v1.0"
+    },
+    "ICU": {
+        "name": "ICU License"
+    },
+    "ImageMagick": {
+        "name": "ImageMagick License"
+    },
+    "iMatix": {
+        "name": "iMatix Standard Function Library Agreement"
+    },
+    "Imlib2": {
+        "name": "Imlib2 License"
+    },
+    "IJG": {
+        "name": "Independent JPEG Group License"
+    },
+    "Info-ZIP": {
+        "name": "Info-ZIP License"
+    },
+    "Intel-ACPI": {
+        "name": "Intel ACPI Software License Agreement"
+    },
+    "Intel": {
+        "name": "Intel Open Source License"
+    },
+    "Interbase-1.0": {
+        "name": "Interbase Public License v1.0"
+    },
+    "IPA": {
+        "name": "IPA Font License"
+    },
+    "ISC": {
+        "name": "ISC License"
+    },
+    "JasPer-2.0": {
+        "name": "JasPer License"
+    },
+    "JSON": {
+        "name": "JSON License"
+    },
+    "LPPL-1.0": {
+        "name": "LaTeX Project Public License v1.0"
+    },
+    "LPPL-1.1": {
+        "name": "LaTeX Project Public License v1.1"
+    },
+    "LPPL-1.2": {
+        "name": "LaTeX Project Public License v1.2"
+    },
+    "LPPL-1.3a": {
+        "name": "LaTeX Project Public License v1.3a"
+    },
+    "LPPL-1.3c": {
+        "name": "LaTeX Project Public License v1.3c"
+    },
+    "Latex2e": {
+        "name": "Latex2e License"
+    },
+    "BSD-3-Clause-LBNL": {
+        "name": "Lawrence Berkeley National Labs BSD variant license"
+    },
+    "Leptonica": {
+        "name": "Leptonica License"
+    },
+    "LGPLLR": {
+        "name": "Lesser General Public License For Linguistic Resources"
+    },
+    "Libpng": {
+        "name": "libpng License"
+    },
+    "libtiff": {
+        "name": "libtiff License"
+    },
+    "LAL-1.2": {
+        "name": "Licence Art Libre 1.2"
+    },
+    "LAL-1.3": {
+        "name": "Licence Art Libre 1.3"
+    },
+    "LiLiQ-P-1.1": {
+        "name": "Licence Libre du Québec – Permissive version 1.1"
+    },
+    "LiLiQ-Rplus-1.1": {
+        "name": "Licence Libre du Québec – Réciprocité forte version 1.1"
+    },
+    "LiLiQ-R-1.1": {
+        "name": "Licence Libre du Québec – Réciprocité version 1.1"
+    },
+    "LPL-1.02": {
+        "name": "Lucent Public License v1.02"
+    },
+    "LPL-1.0": {
+        "name": "Lucent Public License Version 1.0"
+    },
+    "MakeIndex": {
+        "name": "MakeIndex License"
+    },
+    "MTLL": {
+        "name": "Matrix Template Library License"
+    },
+    "MS-PL": {
+        "name": "Microsoft Public License"
+    },
+    "MS-RL": {
+        "name": "Microsoft Reciprocal License"
+    },
+    "MirOS": {
+        "name": "MirOS Licence"
+    },
+    "MITNFA": {
+        "name": "MIT +no-false-attribs license"
+    },
+    "MIT": {
+        "name": "MIT License"
+    },
+    "Motosoto": {
+        "name": "Motosoto License"
+    },
+    "MPL-1.0": {
+        "name": "Mozilla Public License 1.0"
+    },
+    "MPL-1.1": {
+        "name": "Mozilla Public License 1.1"
+    },
+    "MPL-2.0": {
+        "name": "Mozilla Public License 2.0"
+    },
+    "MPL-2.0-no-copyleft-exception": {
+        "name": "Mozilla Public License 2.0 (no copyleft exception)"
+    },
+    "mpich2": {
+        "name": "mpich2 License"
+    },
+    "Multics": {
+        "name": "Multics License"
+    },
+    "Mup": {
+        "name": "Mup License"
+    },
+    "NASA-1.3": {
+        "name": "NASA Open Source Agreement 1.3"
+    },
+    "Naumen": {
+        "name": "Naumen Public License"
+    },
+    "NBPL-1.0": {
+        "name": "Net Boolean Public License v1"
+    },
+    "Net-SNMP": {
+        "name": "Net-SNMP License"
+    },
+    "NetCDF": {
+        "name": "NetCDF license"
+    },
+    "NGPL": {
+        "name": "Nethack General Public License"
+    },
+    "NOSL": {
+        "name": "Netizen Open Source License"
+    },
+    "NPL-1.0": {
+        "name": "Netscape Public License v1.0"
+    },
+    "NPL-1.1": {
+        "name": "Netscape Public License v1.1"
+    },
+    "Newsletr": {
+        "name": "Newsletr License"
+    },
+    "NLPL": {
+        "name": "No Limit Public License"
+    },
+    "Nokia": {
+        "name": "Nokia Open Source License"
+    },
+    "NPOSL-3.0": {
+        "name": "Non-Profit Open Software License 3.0"
+    },
+    "NLOD-1.0": {
+        "name": "Norwegian Licence for Open Government Data"
+    },
+    "Noweb": {
+        "name": "Noweb License"
+    },
+    "NRL": {
+        "name": "NRL License"
+    },
+    "NTP": {
+        "name": "NTP License"
+    },
+    "Nunit": {
+        "name": "Nunit License"
+    },
+    "OCLC-2.0": {
+        "name": "OCLC Research Public License 2.0"
+    },
+    "ODbL-1.0": {
+        "name": "ODC Open Database License v1.0"
+    },
+    "PDDL-1.0": {
+        "name": "ODC Public Domain Dedication & License 1.0"
+    },
+    "OCCT-PL": {
+        "name": "Open CASCADE Technology Public License"
+    },
+    "OGTSL": {
+        "name": "Open Group Test Suite License"
+    },
+    "OLDAP-2.2.2": {
+        "name": "Open LDAP Public License  2.2.2"
+    },
+    "OLDAP-1.1": {
+        "name": "Open LDAP Public License v1.1"
+    },
+    "OLDAP-1.2": {
+        "name": "Open LDAP Public License v1.2"
+    },
+    "OLDAP-1.3": {
+        "name": "Open LDAP Public License v1.3"
+    },
+    "OLDAP-1.4": {
+        "name": "Open LDAP Public License v1.4"
+    },
+    "OLDAP-2.0": {
+        "name": "Open LDAP Public License v2.0 (or possibly 2.0A and 2.0B)"
+    },
+    "OLDAP-2.0.1": {
+        "name": "Open LDAP Public License v2.0.1"
+    },
+    "OLDAP-2.1": {
+        "name": "Open LDAP Public License v2.1"
+    },
+    "OLDAP-2.2": {
+        "name": "Open LDAP Public License v2.2"
+    },
+    "OLDAP-2.2.1": {
+        "name": "Open LDAP Public License v2.2.1"
+    },
+    "OLDAP-2.3": {
+        "name": "Open LDAP Public License v2.3"
+    },
+    "OLDAP-2.4": {
+        "name": "Open LDAP Public License v2.4"
+    },
+    "OLDAP-2.5": {
+        "name": "Open LDAP Public License v2.5"
+    },
+    "OLDAP-2.6": {
+        "name": "Open LDAP Public License v2.6"
+    },
+    "OLDAP-2.7": {
+        "name": "Open LDAP Public License v2.7"
+    },
+    "OLDAP-2.8": {
+        "name": "Open LDAP Public License v2.8"
+    },
+    "OML": {
+        "name": "Open Market License"
+    },
+    "OPL-1.0": {
+        "name": "Open Public License v1.0"
+    },
+    "OSL-1.0": {
+        "name": "Open Software License 1.0"
+    },
+    "OSL-1.1": {
+        "name": "Open Software License 1.1"
+    },
+    "OSL-2.0": {
+        "name": "Open Software License 2.0"
+    },
+    "OSL-2.1": {
+        "name": "Open Software License 2.1"
+    },
+    "OSL-3.0": {
+        "name": "Open Software License 3.0"
+    },
+    "OpenSSL": {
+        "name": "OpenSSL License"
+    },
+    "OSET-PL-2.1": {
+        "name": "OSET Public License version 2.1"
+    },
+    "PHP-3.0": {
+        "name": "PHP License v3.0"
+    },
+    "PHP-3.01": {
+        "name": "PHP License v3.01"
+    },
+    "Plexus": {
+        "name": "Plexus Classworlds License"
+    },
+    "PostgreSQL": {
+        "name": "PostgreSQL License"
+    },
+    "psfrag": {
+        "name": "psfrag License"
+    },
+    "psutils": {
+        "name": "psutils License"
+    },
+    "Python-2.0": {
+        "name": "Python License 2.0"
+    },
+    "QPL-1.0": {
+        "name": "Q Public License 1.0"
+    },
+    "Qhull": {
+        "name": "Qhull License"
+    },
+    "Rdisc": {
+        "name": "Rdisc License"
+    },
+    "RPSL-1.0": {
+        "name": "RealNetworks Public Source License v1.0"
+    },
+    "RPL-1.1": {
+        "name": "Reciprocal Public License 1.1"
+    },
+    "RPL-1.5": {
+        "name": "Reciprocal Public License 1.5"
+    },
+    "RHeCos-1.1": {
+        "name": "Red Hat eCos Public License v1.1"
+    },
+    "RSCPL": {
+        "name": "Ricoh Source Code Public License"
+    },
+    "RSA-MD": {
+        "name": "RSA Message-Digest License "
+    },
+    "Ruby": {
+        "name": "Ruby License"
+    },
+    "SAX-PD": {
+        "name": "Sax Public Domain Notice"
+    },
+    "Saxpath": {
+        "name": "Saxpath License"
+    },
+    "SCEA": {
+        "name": "SCEA Shared Source License"
+    },
+    "SWL": {
+        "name": "Scheme Widget Library (SWL) Software License Agreement"
+    },
+    "SMPPL": {
+        "name": "Secure Messaging Protocol Public License"
+    },
+    "Sendmail": {
+        "name": "Sendmail License"
+    },
+    "SGI-B-1.0": {
+        "name": "SGI Free Software License B v1.0"
+    },
+    "SGI-B-1.1": {
+        "name": "SGI Free Software License B v1.1"
+    },
+    "SGI-B-2.0": {
+        "name": "SGI Free Software License B v2.0"
+    },
+    "OFL-1.0": {
+        "name": "SIL Open Font License 1.0"
+    },
+    "OFL-1.1": {
+        "name": "SIL Open Font License 1.1"
+    },
+    "SimPL-2.0": {
+        "name": "Simple Public License 2.0"
+    },
+    "Sleepycat": {
+        "name": "Sleepycat License"
+    },
+    "SNIA": {
+        "name": "SNIA Public License 1.1"
+    },
+    "Spencer-86": {
+        "name": "Spencer License 86"
+    },
+    "Spencer-94": {
+        "name": "Spencer License 94"
+    },
+    "Spencer-99": {
+        "name": "Spencer License 99"
+    },
+    "SMLNJ": {
+        "name": "Standard ML of New Jersey License"
+    },
+    "SugarCRM-1.1.3": {
+        "name": "SugarCRM Public License v1.1.3"
+    },
+    "SISSL": {
+        "name": "Sun Industry Standards Source License v1.1"
+    },
+    "SISSL-1.2": {
+        "name": "Sun Industry Standards Source License v1.2"
+    },
+    "SPL-1.0": {
+        "name": "Sun Public License v1.0"
+    },
+    "Watcom-1.0": {
+        "name": "Sybase Open Watcom Public License 1.0"
+    },
+    "TCL": {
+        "name": "TCL/TK License"
+    },
+    "TCP-wrappers": {
+        "name": "TCP Wrappers License"
+    },
+    "Unlicense": {
+        "name": "The Unlicense"
+    },
+    "TMate": {
+        "name": "TMate Open Source License"
+    },
+    "TORQUE-1.1": {
+        "name": "TORQUE v2.5+ Software License v1.1"
+    },
+    "TOSL": {
+        "name": "Trusster Open Source License"
+    },
+    "Unicode-DFS-2015": {
+        "name": "Unicode License Agreement - Data Files and Software (2015)"
+    },
+    "Unicode-DFS-2016": {
+        "name": "Unicode License Agreement - Data Files and Software (2016)"
+    },
+    "Unicode-TOU": {
+        "name": "Unicode Terms of Use"
+    },
+    "UPL-1.0": {
+        "name": "Universal Permissive License v1.0"
+    },
+    "NCSA": {
+        "name": "University of Illinois/NCSA Open Source License"
+    },
+    "Vim": {
+        "name": "Vim License"
+    },
+    "VOSTROM": {
+        "name": "VOSTROM Public License for Open Source"
+    },
+    "VSL-1.0": {
+        "name": "Vovida Software License v1.0"
+    },
+    "W3C-20150513": {
+        "name": "W3C Software Notice and Document License (2015-05-13)"
+    },
+    "W3C-19980720": {
+        "name": "W3C Software Notice and License (1998-07-20)"
+    },
+    "W3C": {
+        "name": "W3C Software Notice and License (2002-12-31)"
+    },
+    "Wsuipa": {
+        "name": "Wsuipa License"
+    },
+    "Xnet": {
+        "name": "X.Net License"
+    },
+    "X11": {
+        "name": "X11 License"
+    },
+    "Xerox": {
+        "name": "Xerox License"
+    },
+    "XFree86-1.1": {
+        "name": "XFree86 License 1.1"
+    },
+    "xinetd": {
+        "name": "xinetd License"
+    },
+    "xpp": {
+        "name": "XPP License"
+    },
+    "XSkat": {
+        "name": "XSkat License"
+    },
+    "YPL-1.0": {
+        "name": "Yahoo! Public License v1.0"
+    },
+    "YPL-1.1": {
+        "name": "Yahoo! Public License v1.1"
+    },
+    "Zed": {
+        "name": "Zed License"
+    },
+    "Zend-2.0": {
+        "name": "Zend License v2.0"
+    },
+    "Zimbra-1.3": {
+        "name": "Zimbra Public License v1.3"
+    },
+    "Zimbra-1.4": {
+        "name": "Zimbra Public License v1.4"
+    },
+    "Zlib": {
+        "name": "zlib License"
+    },
+    "zlib-acknowledgement": {
+        "name": "zlib/libpng License with Acknowledgement"
+    },
+    "ZPL-1.1": {
+        "name": "Zope Public License 1.1"
+    },
+    "ZPL-2.0": {
+        "name": "Zope Public License 2.0"
+    },
+    "ZPL-2.1": {
+        "name": "Zope Public License 2.1"
+    },
+    "eCos-2.0": {
+        "name": "eCos license version 2.0"
+    },
+    "GPL-1.0+": {
+        "name": "GNU General Public License v1.0 or later"
+    },
+    "GPL-2.0+": {
+        "name": "GNU General Public License v2.0 or later"
+    },
+    "GPL-2.0-with-autoconf-exception": {
+        "name": "GNU General Public License v2.0 w/Autoconf exception"
+    },
+    "GPL-2.0-with-bison-exception": {
+        "name": "GNU General Public License v2.0 w/Bison exception"
+    },
+    "GPL-2.0-with-classpath-exception": {
+        "name": "GNU General Public License v2.0 w/Classpath exception"
+    },
+    "GPL-2.0-with-font-exception": {
+        "name": "GNU General Public License v2.0 w/Font exception"
+    },
+    "GPL-2.0-with-GCC-exception": {
+        "name": "GNU General Public License v2.0 w/GCC Runtime Library exception"
+    },
+    "GPL-3.0+": {
+        "name": "GNU General Public License v3.0 or later"
+    },
+    "GPL-3.0-with-autoconf-exception": {
+        "name": "GNU General Public License v3.0 w/Autoconf exception"
+    },
+    "GPL-3.0-with-GCC-exception": {
+        "name": "GNU General Public License v3.0 w/GCC Runtime Library exception"
+    },
+    "LGPL-2.1+": {
+        "name": "GNU Lesser General Public License v2.1 or later"
+    },
+    "LGPL-3.0+": {
+        "name": "GNU Lesser General Public License v3.0 or later"
+    },
+    "LGPL-2.0+": {
+        "name": "GNU Library General Public License v2 or later"
+    },
+    "StandardML-NJ": {
+        "name": "Standard ML of New Jersey License"
+    },
+    "WXwindows": {
+        "name": "wxWindows Library License"
+    }
+}
