@@ -1,6 +1,6 @@
 {
 	"name": "unitejs-web",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/google.analytics": "^0.0.35",
@@ -54,6 +54,7 @@
 		"remap-istanbul": "^0.9.5",
 		"require-dir": "^0.3.2",
 		"run-sequence": "^2.1.0",
+		"stream-to-promise": "^2.2.0",
 		"tslint": "^5.7.0",
 		"typescript": "^2.5.2",
 		"uglify-js": "^3.1.1",

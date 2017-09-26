@@ -17,6 +17,12 @@
 			"allow-leading-underscore"
 		],
 		"no-bitwise": false,
-		"array-type": false
+		"array-type": false,
+		"no-empty": {
+			"severity": "warning"
+		},
+		"no-empty-interface": {
+			"severity": "warning"
+		}
 	}
 }

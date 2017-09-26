@@ -6,15 +6,17 @@ const util = require("util");
 const fs = require("fs");
 const path = require("path");
 const archiver = require("archiver");
+const streamToPromiseLib = require("stream-to-promise");
 
-function stream (gulpStream, storeMethod) {
+function stream (gulpStream) {
     return new Promise((resolve, reject) => {
         gulpStream.on("error", reject);
         gulpStream.on("end", resolve);
-        if (storeMethod) {
-            storeMethod(resolve, reject);
-        }
     });
+}
+
+function streamToPromise (gulpStream) {
+    return streamToPromiseLib(gulpStream);
 }
 
 async function fileExists (filename) {
@@ -69,6 +71,7 @@ function zipFolder (sourceFolder, destFile) {
 
 module.exports = {
     stream,
+    streamToPromise,
     fileExists,
     zipFolder
 };
