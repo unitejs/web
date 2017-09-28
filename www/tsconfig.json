@@ -11,5 +11,13 @@
 		],
 		"experimentalDecorators": true,
 		"module": "amd"
-	}
+	},
+	"include": [
+		"./src/**/*",
+		"./test/unit/src/**/*",
+		"./test/e2e/src/**/*"
+	],
+	"exclude": [
+		"node_modules"
+	]
 }

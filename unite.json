@@ -375,12 +375,13 @@
 			"assetsSrc": "./assetsSrc/"
 		}
 	},
-	"uniteVersion": "1.0.2",
+	"uniteVersion": "1.2.0",
 	"sourceExtensions": [
 		"ts"
 	],
 	"viewExtensions": [
 		"html"
 	],
-	"styleExtension": "scss"
+	"styleExtension": "scss",
+	"ides": []
 }

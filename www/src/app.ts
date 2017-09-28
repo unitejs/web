@@ -21,6 +21,13 @@ export class App {
                 title: "Home"
             },
             {
+                route: "whatsnew",
+                name: "whatsnew",
+                moduleId: "./whatsNew/whatsNew",
+                nav: true,
+                title: "What's New"
+            },
+            {
                 route: "documentation",
                 name: "documentation",
                 moduleId: "./documentation/documentation",
