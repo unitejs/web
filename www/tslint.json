@@ -12,10 +12,6 @@
 			}
 		],
 		"no-reference": false,
-		"variable-name": [
-			true,
-			"allow-leading-underscore"
-		],
 		"no-bitwise": false,
 		"array-type": false,
 		"no-empty": {
@@ -23,6 +19,10 @@
 		},
 		"no-empty-interface": {
 			"severity": "warning"
-		}
+		},
+		"variable-name": [
+			true,
+			"allow-leading-underscore"
+		]
 	}
 }
