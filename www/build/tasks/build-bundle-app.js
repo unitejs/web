@@ -15,19 +15,35 @@ const requireJs = require("requirejs");
 const insert = require("gulp-insert");
 const sourcemaps = require("gulp-sourcemaps");
 
-function performAppOptimize (uniteConfig, buildConfiguration, moduleConfig, paths) {
+function performAppOptimize (uniteConfig, buildConfiguration, moduleConfig) {
     return new Promise((resolve, reject) => {
         try {
             const map = {"*": {}};
+            const paths = {};
+
             Object.keys(moduleConfig.map).forEach(key => {
                 map["*"][key] = moduleConfig.map[key];
+            });
+
+            for (const key in moduleConfig.paths) {
+                if (key === moduleConfig.map.text) {
+                    moduleConfig.paths[key] = moduleConfig.paths[key].replace(/(\.js)$/, "");
+                } else {
+                    moduleConfig.paths[key] = "empty:";
+                }
+                paths[key] = `${uniteConfig.dirs.www.dist}vendor-bundle`;
+            }
+
+            moduleConfig.packages.forEach(pkg => {
+                moduleConfig.paths[pkg.name] = "empty:";
+                paths[pkg.name] = `${uniteConfig.dirs.www.dist}vendor-bundle`;
             });
 
             requireJs.optimize({
                 "baseUrl": "./",
                 "generateSourceMaps": buildConfiguration.sourcemaps,
                 "logLevel": 2,
-                "name": `${uniteConfig.dirs.www.dist.replace(/\.\//, "")}app-bundle-init`,
+                "name": `${uniteConfig.dirs.www.dist.replace(/^\.\//, "")}app-bundle-init`,
                 "optimize": buildConfiguration.minify ? "uglify" : "none",
                 "out": path.join(uniteConfig.dirs.www.dist, "app-bundle.js"),
                 "paths": moduleConfig.paths,
@@ -43,7 +59,7 @@ function performAppOptimize (uniteConfig, buildConfiguration, moduleConfig, path
                 if (moduleConfig.preload.length > 0) {
                     bootstrap += `require(${JSON.stringify(moduleConfig.preload)}, function() {`;
                 }
-                bootstrap += `require(['${uniteConfig.dirs.www.dist.replace(/\.\//, "")}entryPoint']);`;
+                bootstrap += `require(['${uniteConfig.dirs.www.dist.replace(/^\.\//, "")}entryPoint']);`;
                 if (moduleConfig.preload.length > 0) {
                     bootstrap += "});";
                 }
@@ -80,7 +96,14 @@ gulp.task("build-bundle-app", async () => {
             buildConfiguration.minify
         );
 
-        const files = await bundle.findAppFiles(uniteConfig, true, "text!", "text!");
+        const textPrefix = moduleConfig.map.text === undefined ? "" : "text!";
+        const cssPrefix = moduleConfig.map.css === undefined ? textPrefix
+            : `${clientPackages.getTypeMap(uniteConfig, "css", buildConfiguration.minify)}!`;
+
+        const files = await bundle.findAppFiles(
+            uniteConfig, true, textPrefix, cssPrefix,
+            moduleConfig.map.css !== undefined
+        );
 
         try {
             await util.promisify(fs.writeFile)(
@@ -92,24 +115,8 @@ gulp.task("build-bundle-app", async () => {
             process.exit(1);
         }
 
-        const paths = {};
-        for (const key in moduleConfig.paths) {
-            if (key === moduleConfig.map.text) {
-                moduleConfig.paths[key] = moduleConfig.paths[key].replace(/(\.js)$/, "");
-                paths[key] = `${uniteConfig.dirs.www.dist}vendor-bundle`;
-            } else {
-                moduleConfig.paths[key] = "empty:";
-                paths[key] = `${uniteConfig.dirs.www.dist}vendor-bundle`;
-            }
-        }
-
-        moduleConfig.packages.forEach(pkg => {
-            moduleConfig.paths[pkg.name] = "empty:";
-            paths[pkg.name] = `${uniteConfig.dirs.www.dist}vendor-bundle`;
-        });
-
         try {
-            await performAppOptimize(uniteConfig, buildConfiguration, moduleConfig, paths);
+            await performAppOptimize(uniteConfig, buildConfiguration, moduleConfig);
         } catch (err) {
             display.error("Performing Optimize", err);
             process.exit(1);
