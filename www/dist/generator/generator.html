@@ -1,0 +1,196 @@
+<template>
+    <div class="row m-0">
+        <div class="container padding-top padding-bottom">
+            <h1>Generator</h1>
+            <p>Fill in the form or select a profile and click the Generate button to produce the command line that you can use
+                to call the UniteJS command line tool.</p>
+            <div class="alert alert-danger" role="alert" if.bind="status">
+                ${status}
+            </div>
+            <form novalidate if.bind="!status">
+                <div class="form-group">
+                    <label class="control-label" for="profile">Profile</label>
+                    <select class="form-control form-control-sm" id="profile" value.bind="profile">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="profile of profiles" model.bind="profile.id">
+                            ${profile.id}
+                        </option>
+                    </select>
+                </div>
+
+                <hr/>
+
+                <div class="form-group">
+                    <label class="control-label" for="packageName">Package Name</label>
+                    <input type="text" class="form-control form-control-sm" id="packageName" placeholder="Package Name" value.bind="packageName & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="title">Title</label>
+                    <input type="text" class="form-control form-control-sm" id="title" placeholder="Title" value.bind="title & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="license">License</label>
+                    <select class="form-control form-control-sm" id="license" value.bind="license & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="license of licenses" model.bind="license.id">
+                            ${license.id} - ${license.license.name}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="applicationFramework">Application Framework</label>
+                    <select class="form-control form-control-sm" id="applicationFramework" value.bind="applicationFramework & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="applicationFramework of applicationFrameworks">
+                            ${applicationFramework}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="moduleType">Module Type</label>
+                    <select class="form-control form-control-sm" id="moduleType" value.bind="moduleType & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="moduleType of moduleTypes">
+                            ${moduleType}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="bundler">Bundler</label>
+                    <select class="form-control form-control-sm" id="bundler" value.bind="bundler & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="bundler of bundlers">
+                            ${bundler}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="sourceLanguage">Source Language</label>
+                    <select class="form-control form-control-sm" id="sourceLanguage" value.bind="sourceLanguage & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="sourceLanguage of sourceLanguages">
+                            ${sourceLanguage}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="linter">Linter</label>
+                    <select class="form-control form-control-sm" id="linter" value.bind="linter & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="linter of linters">
+                            ${linter}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="unitTestRunner">Unit Test Runner</label>
+                    <select class="form-control form-control-sm" id="unitTestRunner" value.bind="unitTestRunner & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="unitTestRunner of unitTestRunners">
+                            ${unitTestRunner}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="unitTestFramework">Unit Test Framework</label>
+                    <select class="form-control form-control-sm" id="unitTestFramework" value.bind="unitTestFramework & validate" disabled.bind="!unitTestFrameworkEnabled">
+                        <option model.bind="undefined">${unitTestFrameworkEnabled ? 'Choose...' : ''}</option>
+                        <option repeat.for="unitTestFramework of unitTestFrameworks">
+                            ${unitTestFramework}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="unitTestEngine">Unit Test Engine</label>
+                    <select class="form-control form-control-sm" id="unitTestEngine" value.bind="unitTestEngine & validate" disabled.bind="!unitTestEngineEnabled">
+                        <option model.bind="undefined">${unitTestEngineEnabled ? 'Choose...' : ''}</option>
+                        <option repeat.for="unitTestEngine of unitTestEngines">
+                            ${unitTestEngine}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="e2eTestRunner">E2E Test Runner</label>
+                    <select class="form-control form-control-sm" id="e2eTestRunner" value.bind="e2eTestRunner & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="e2eTestRunner of e2eTestRunners">
+                            ${e2eTestRunner}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="e2eTestFramework">E2E Test Framework</label>
+                    <select class="form-control form-control-sm" id="e2eTestFramework" value.bind="e2eTestFramework & validate" disabled.bind="!e2eTestFrameworkEnabled">
+                        <option model.bind="undefined">${e2eTestFrameworkEnabled ? 'Choose...' : ''}</option>
+                        <option repeat.for="e2eTestFramework of e2eTestFrameworks">
+                            ${e2eTestFramework}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="cssPre">CSS Pre-Processor</label>
+                    <select class="form-control form-control-sm" id="cssPre" value.bind="cssPre & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="cssPre of cssPres">
+                            ${cssPre}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="cssPost">CSS Post-Processor</label>
+                    <select class="form-control form-control-sm" id="cssPost" value.bind="cssPost & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="cssPost of cssPosts">
+                            ${cssPost}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="packageManager">Package Manager</label>
+                    <select class="form-control form-control-sm" id="packageManager" value.bind="packageManager & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="packageManager of packageManagers">
+                            ${packageManager}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="outputDirectory">Output Directory</label>
+                    <input type="text" class="form-control form-control-sm" id="outputDirectory" placeholder="Output Directory" value.bind="outputDirectory">
+                </div>
+
+                <button class="btn btn-primary" click.trigger="generate()">Generate</button>
+                <button class="btn btn-secondary" click.trigger="clear()">Clear</button>
+
+                <br/>
+                <br/>
+
+                <div class="card" if.bind="commandLine">
+                    <div class="card-header">Command Line</div>
+                    <div class="card-body">
+                        <samp class="card-text">${commandLine}</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-primary btn-sm pull-right" click.trigger="copyToClipboard()" if.bind="commandLine">Copy</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>

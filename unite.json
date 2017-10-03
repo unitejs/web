@@ -352,8 +352,8 @@
 	"platforms": {
 		"Web": {}
 	},
-	"srcDistReplace": "(define)*?(../src/)",
-	"srcDistReplaceWith": "../dist/",
+	"srcDistReplace": "(define.*?)(../src/)",
+	"srcDistReplaceWith": "$1../dist/",
 	"dirs": {
 		"wwwRoot": "./www/",
 		"packagedRoot": "./packaged/",
@@ -375,7 +375,7 @@
 			"assetsSrc": "./assetsSrc/"
 		}
 	},
-	"uniteVersion": "1.2.1",
+	"uniteVersion": "1.2.2",
 	"sourceExtensions": [
 		"ts"
 	],

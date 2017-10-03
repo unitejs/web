@@ -24,7 +24,7 @@ exports.config = {
 		showColors: true
 	}
 };
-const files = fs.readdirSync((webDriverPath));
+const files = fs.readdirSync(webDriverPath);
 const jvmArgs = [];
 files.forEach(file => {
     const lowerFile = file.toLowerCase();

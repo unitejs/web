@@ -136,17 +136,29 @@ export class Generator {
 
         ValidationRules.customRule("requireJsModuleTypeRule", (value: string, obj: Generator) => {
             return obj.moduleType !== "AMD" || obj.bundler === "RequireJS";
-        }, `You can only use AMD modules with RequireJS`);
+        }, `You can only use AMD modules with RequireJS Bundler`);
 
         ValidationRules.customRule("webpackBrowserifyModuleTypeRule", (value: string, obj: Generator) => {
             return obj.moduleType !== "CommonJS" || (obj.bundler === "Webpack" || obj.bundler === "Browserify");
-        }, `You can only use CommonJS modules with Webpack or Browserify.`);
+        }, `You can only use CommonJS modules with Webpack or Browserify Bundlers.`);
+
+        ValidationRules.customRule("jestModuleTypeRule", (value: string, obj: Generator) => {
+            return obj.unitTestRunner !== "Jest" || obj.moduleType === "CommonJS";
+        }, `You can only use CommonJS Module Type when the Unit Test Runner is Jest.`);
 
         ValidationRules.customRule("unitTestFrameworkRule", (value: string, obj: Generator) => {
             return (((obj.unitTestRunner === undefined || obj.unitTestRunner === "None") &&
                 obj.unitTestFramework === undefined)) ||
                 obj.unitTestFramework !== undefined;
         }, `Unit Test Runner is required.`);
+
+        ValidationRules.customRule("jestJasmineRule", (value: string, obj: Generator) => {
+            return obj.unitTestRunner !== "Jest" || obj.unitTestFramework === "Jasmine";
+        }, `You can only use Jasmine Unit Test Framework when the Unit Test Runner is Jest.`);
+
+        ValidationRules.customRule("jestJSDomRule", (value: string, obj: Generator) => {
+            return obj.unitTestRunner !== "Jest" || obj.unitTestEngine === "JSDom";
+        }, `You can only use JSDom Unit Test Engine when the Unit Test Runner is Jest.`);
 
         ValidationRules.customRule("unitTestEngineRule", (value: string, obj: Generator) => {
             return (((obj.unitTestRunner === undefined || obj.unitTestRunner === "None") &&
@@ -183,6 +195,8 @@ export class Generator {
             .satisfiesRule("requireJsModuleTypeRule")
             .then()
             .satisfiesRule("webpackBrowserifyModuleTypeRule")
+            .then()
+            .satisfiesRule("jestModuleTypeRule")
             .ensure((m: Generator) => m.bundler).displayName("Bundler").required()
             .then()
             .satisfiesRule("aureliaBundlingRule")
@@ -198,8 +212,12 @@ export class Generator {
             .ensure((m: Generator) => m.unitTestRunner).displayName("Unit Test Runner").required()
             .ensure((m: Generator) => m.unitTestFramework).displayName("Unit Test Framework")
             .satisfiesRule("unitTestFrameworkRule")
+            .then()
+            .satisfiesRule("jestJasmineRule")
             .ensure((m: Generator) => m.unitTestEngine).displayName("Unit Test Engine")
             .satisfiesRule("unitTestEngineRule")
+            .then()
+            .satisfiesRule("jestJSDomRule")
             .ensure((m: Generator) => m.e2eTestRunner).displayName("E2E Test Runner").required()
             .ensure((m: Generator) => m.e2eTestFramework).displayName("E2E Test Framework")
             .satisfiesRule("e2eTestFrameworkRule")
@@ -258,9 +276,9 @@ export class Generator {
         this.moduleTypes = ["AMD", "CommonJS", "SystemJS"];
         this.bundlers = ["Browserify", "RequireJS", "SystemJSBuilder", "Webpack"];
         this.linters = ["ESLint", "TSLint", "None"];
-        this.unitTestRunners = ["Karma", "None"];
+        this.unitTestRunners = ["Jest", "Karma", "None"];
         this.unitTestFrameworks = ["Jasmine", "MochaChai"];
-        this.unitTestEngines = ["PhantomJS", "ChromeHeadless"];
+        this.unitTestEngines = ["PhantomJS", "JSDom", "ChromeHeadless"];
         this.e2eTestRunners = ["Protractor", "WebdriverIO", "None"];
         this.e2eTestFrameworks = ["Jasmine", "MochaChai"];
         this.cssPres = ["Css", "Less", "Sass", "Stylus"];
@@ -322,6 +340,7 @@ export class Generator {
 
     public moduleTypeChanged(): void {
         this.controller.validate({ object: this, propertyName: "bundler" });
+        this.controller.validate({ object: this, propertyName: "unitTestRunner" });
     }
 
     public bundlerChanged(): void {
@@ -349,6 +368,15 @@ export class Generator {
         }
         this.controller.validate({ object: this, propertyName: "unitTestFramework" });
         this.controller.validate({ object: this, propertyName: "unitTestEngine" });
+        this.controller.validate({ object: this, propertyName: "moduleType" });
+    }
+
+    public unitTestFrameworkChanged(): void {
+        this.controller.validate({ object: this, propertyName: "unitTestRunner" });
+    }
+
+    public unitTestEngineChanged(): void {
+        this.controller.validate({ object: this, propertyName: "unitTestRunner" });
     }
 
     public e2eTestRunnerChanged(): void {
