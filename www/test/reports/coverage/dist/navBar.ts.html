@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/12</span>
+        <span class='fraction'>0/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/9</span>
+        <span class='fraction'>0/5</span>
       </div>
     </div>
   </div>
@@ -71,8 +71,11 @@
 26
 27
 28
-29</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+29
+30
+31
+32
+33</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -87,11 +90,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -102,7 +110,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
  * NavBar class.
  */
-import { HttpClient } from "aurelia-fetch-client";
 import { Router } from "aurelia-router";
 import { bindable, customElement } from "aurelia-templating";
 &nbsp;
@@ -113,18 +120,23 @@ import { bindable, customElement } from "aurelia-templating";
 &nbsp;
     public version: string;
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >attached(): void {</span></span></span>
-<span class="cstat-no" title="statement not covered" >        const httpClient = new HttpClient();</span>
-<span class="cstat-no" title="statement not covered" >        httpClient.fetch("https://registry.npmjs.org/unitejs-cli/")</span>
-            .then(<span class="fstat-no" title="function not covered" >(response)</span> =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
-            .then(<span class="fstat-no" title="function not covered" >(json)</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >                if (json &amp;&amp; json["dist-tags"] &amp;&amp; json["dist-tags"].latest) {</span>
-<span class="cstat-no" title="statement not covered" >                    this.version = "v" + json["dist-tags"].latest;</span>
-                }
-            })
-            .catch(<span class="fstat-no" title="function not covered" >(err)</span> =&gt; {
-                // Just don't display the version
-            });
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >attached(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.version = "Engine v1.2.2";</span>
+        // registry.npmjs.org CORS fails
+        // const httpClient = new HttpClient();
+        // httpClient.get("https://registry.npmjs.org/unitejs-cli/")
+        //     .then((response) =&gt; {
+        //         if (response.statusCode === 200) {
+        //             if (response.content &amp;&amp;
+        //                 response.content["dist-tags"] &amp;&amp;
+        //                 response.content["dist-tags"].latest) {
+        //                 this.version = "v" + response.content["dist-tags"].latest;
+        //             }
+        //         }
+        //     })
+        //     .catch((err) =&gt; {
+        //         // Just don't display the version its not critical
+        //     });
     }
 <span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;</pre></td></tr>
@@ -133,7 +145,7 @@ import { bindable, customElement } from "aurelia-templating";
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Sep 06 2017 16:09:33 GMT+0300 (Turkey Standard Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 05 2017 11:36:28 GMT+0300 (Turkey Standard Time)
 </div>
 </div>
 <script src="../prettify.js"></script>

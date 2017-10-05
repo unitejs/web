@@ -9,7 +9,13 @@ exports.config = {
 		'./test/e2e/dist/**/*.spec.js'
 	],
 	capabilities: {
-		browserName: 'chrome'
+		browserName: 'chrome',
+		chromeOptions: {
+			args: [
+				'--headless',
+				'--disable-gpu'
+			]
+		}
 	},
 	plugins: [
 		{

@@ -25,8 +25,7 @@ require.config({
 		"aurelia-templating": "./node_modules/aurelia-templating/dist/amd/aurelia-templating",
 		"aurelia-templating-binding": "./node_modules/aurelia-templating-binding/dist/amd/aurelia-templating-binding",
 		"whatwg-fetch": "./node_modules/whatwg-fetch/fetch",
-		"requirejs-text": "./node_modules/requirejs-text/text",
-		"moment": "./node_modules/moment/moment"
+		"requirejs-text": "./node_modules/requirejs-text/text"
 	},
 	"packages": [
 		{
@@ -54,6 +53,7 @@ require.config({
 		"*": {
 			"text": "requirejs-text"
 		}
-	}
+	},
+	"baseUrl": "/base/"
 });
 preloadModules = [];
