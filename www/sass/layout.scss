@@ -18,6 +18,9 @@ html, body, #root {
     &.padding-bottom {
         padding-bottom: 50px;
     }
+    a {
+        word-break: break-word;
+    }
 }
 
 .scroll-to-top {

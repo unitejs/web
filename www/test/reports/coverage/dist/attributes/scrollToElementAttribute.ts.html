@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\attributes\scrollToElementAttribute.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">dist/attributes/</a> scrollToElementAttribute.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/18</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Scroll To Element class.
+ */
+import { bindingMode } from "aurelia-binding";
+import { inject } from "aurelia-dependency-injection";
+import { DOM } from "aurelia-pal";
+import { bindable, customAttribute } from "aurelia-templating";
+import { Scroll } from "../domHelpers/scroll";
+import { Style } from "../domHelpers/style";
+&nbsp;
+@customAttribute("au-scroll-to-element")
+@inject(DOM.Element)
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >export class <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >ScrollToElementAttribute </span>{</span></span></span>
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public id: string;</span>
+&nbsp;
+    @bindable({defaultBindingMode: bindingMode.twoWay})
+<span class="cstat-no" title="statement not covered" >    public yOffset: number;</span>
+&nbsp;
+    private _element: HTMLLinkElement;
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    constructor(element: HTMLLinkElement)</span> {</span>
+<span class="cstat-no" title="statement not covered" >        this._element = element;</span>
+<span class="cstat-no" title="statement not covered" >        this._element.href = "javascript:;";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.yOffset = 0;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >bind(): void {</span></span></span>
+<span class="cstat-no" title="statement not covered" >        this._element.addEventListener("click", <span class="fstat-no" title="function not covered" >(e)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.clickEvent(),</span> false);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >unbind(): void {</span></span></span>
+<span class="cstat-no" title="statement not covered" >        this._element.removeEventListener("click", <span class="fstat-no" title="function not covered" >(e)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.clickEvent())</span>;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    private <span class="cstat-no" title="statement not covered" >clickEvent(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (this.id) {</span>
+<span class="cstat-no" title="statement not covered" >            const elem = document.getElementById(this.id);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (elem) {</span>
+<span class="cstat-no" title="statement not covered" >                const offset = elem.getBoundingClientRect();</span>
+<span class="cstat-no" title="statement not covered" >                Scroll.smoothScroll(window, 0, elem.offsetTop - this.yOffset);</span>
+            }
+        }
+    }
+<span class="cstat-no" title="statement not covered" >}</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 05 2017 11:36:28 GMT+0300 (Turkey Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -12,7 +12,7 @@ export class NavBar {
     public version: string;
 
     public attached(): void {
-        this.version = "Engine v1.2.1";
+        this.version = "Engine v1.2.2";
         // registry.npmjs.org CORS fails
         // const httpClient = new HttpClient();
         // httpClient.get("https://registry.npmjs.org/unitejs-cli/")

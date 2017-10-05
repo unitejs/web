@@ -85,7 +85,11 @@
                         </tr>
                         <tr>
                             <td>appFramework</td>
-                            <td><a href="#ng">Angular</a>/<a href="#au">Aurelia</a>/<a href="#pa">PlainApp</a>/<a href="#re">React</a></td>
+                            <td><a au-scroll-to-element="id: angular; y-offset.bind: topOffset" href="#">Angular</a> /
+                                <a au-scroll-to-element="id: aurelia; y-offset.bind: topOffset" href="#">Aurelia</a> /
+                                <a au-scroll-to-element="id: plainApp; y-offset.bind: topOffset" href="#">PlainApp</a> /
+                                <a au-scroll-to-element="id: react; y-offset.bind: topOffset" href="#">React</a>
+                            </td>
                             <td>The application framework to use</td>
                         </tr>
                         <tr>
@@ -110,7 +114,9 @@
                         </tr>
                         <tr>
                             <td>unitTestRunner</td>
-                            <td>Karma/None</td>
+                            <td><a au-scroll-to-element="id: jest; y-offset.bind: topOffset" href="#">Jest</a> /
+                                <a au-scroll-to-element="id: karma; y-offset.bind: topOffset" href="#">Karma </a> /
+                                None</td>
                             <td>The unit test runner<br/>None - means no unit testing</td>
                         </tr>
                         <tr>
@@ -120,7 +126,7 @@
                         </tr>
                         <tr>
                             <td>unitTestEngine</td>
-                            <td>PhantomJS/ChromeHeadless</td>
+                            <td>JSDom/PhantomJS/ChromeHeadless</td>
                             <td>The unit test engine to execute tests</td>
                         </tr>
                         <tr>
@@ -195,22 +201,36 @@
                 <p>Although we try to support all the different framework and tool combinations this is not always possible.
                 </p>
 
-                <h3><a name="ng"></a>Angular</h3>
+                <h3><a id="angular"></a>Angular</h3>
 
                 <p>Angular does not currently support bundling with RequireJS because there is no longer an AMD build of RXJS
                     in modular form.</p>
 
-                <h3><a name="au"></a>Aurelia</h3>
+                <h3><a id="aurelia"></a>Aurelia</h3>
 
                 <p>Aurelia does not currently support bundling with Browserify or Webpack.</p>
 
-                <h3><a name="pa"></a>Plain App</h3>
+                <h3><a id="plainApp"></a>Plain App</h3>
 
                 <p>This is a vanilla app with no framework libraries included.</p>
 
-                <h3><a name="re"></a>React</h3>
+                <h3><a id="react"></a>React</h3>
 
                 <p>Nothing else to mention at the moment.</p>
+
+                <hr/>
+                
+                <h2>Unit Test Runners</h2>
+
+                <h3><a id="jest"></a>Jest</h3>
+
+                <p>Jest currently only supports projects using CommonJS as the module type and Jasmine as the unit test framework.</p>
+
+                <h3><a id="karma"></a>Karma</h3>
+
+                <p>Although JSDom can be used with Karma there are limitations, see the <a href="https://github.com/tmpvar/jsdom#readme" target="_blank"
+                        rel="noopener" aria-label="JSDom">JSDom</a> home page for more info.</p>
+
             </div>
 
             <div if.bind="commandDisplay === 'buildConfiguration'">

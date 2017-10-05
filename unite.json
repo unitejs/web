@@ -22,7 +22,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-animator-css.js",
 			"isPackage": false,
-			"version": "^1.0.2",
+			"version": "^1.0.3",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-binding": {
@@ -31,7 +31,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-binding.js",
 			"isPackage": false,
-			"version": "^1.2.2",
+			"version": "^1.3.0",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-bootstrapper": {
@@ -76,7 +76,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-http-client.js",
 			"isPackage": false,
-			"version": "^1.1.1",
+			"version": "^1.2.0",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-framework": {
@@ -85,7 +85,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-framework.js",
 			"isPackage": false,
-			"version": "^1.1.4",
+			"version": "^1.1.5",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-history": {
@@ -94,7 +94,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-history.js",
 			"isPackage": false,
-			"version": "^1.0.0",
+			"version": "^1.1.0",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-history-browser": {
@@ -103,7 +103,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-history-browser.js",
 			"isPackage": false,
-			"version": "^1.0.0",
+			"version": "^1.1.0",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-loader": {
@@ -121,7 +121,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-loader-default.js",
 			"isPackage": false,
-			"version": "^1.0.2",
+			"version": "^1.0.3",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-logging": {
@@ -193,7 +193,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-route-recognizer.js",
 			"isPackage": false,
-			"version": "^1.1.0",
+			"version": "^1.1.1",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-router": {
@@ -202,7 +202,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-router.js",
 			"isPackage": false,
-			"version": "^1.3.0",
+			"version": "^1.4.0",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-task-queue": {
@@ -211,7 +211,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-task-queue.js",
 			"isPackage": false,
-			"version": "^1.2.0",
+			"version": "^1.2.1",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-templating": {
@@ -220,7 +220,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-templating.js",
 			"isPackage": false,
-			"version": "^1.4.2",
+			"version": "^1.5.0",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-templating-binding": {
@@ -229,7 +229,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-templating-binding.js",
 			"isPackage": false,
-			"version": "^1.3.0",
+			"version": "^1.4.0",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-dialog": {
@@ -247,7 +247,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-templating-resources.js",
 			"isPackage": true,
-			"version": "^1.4.0",
+			"version": "^1.5.1",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-templating-router": {
@@ -256,7 +256,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-templating-router.js",
 			"isPackage": true,
-			"version": "^1.1.0",
+			"version": "^1.2.0",
 			"scriptIncludeMode": "none"
 		},
 		"aurelia-validation": {
@@ -265,7 +265,7 @@
 			"preload": false,
 			"main": "dist/amd/aurelia-validation.js",
 			"isPackage": true,
-			"version": "^1.1.1",
+			"version": "^1.1.2",
 			"scriptIncludeMode": "none"
 		},
 		"whatwg-fetch": {
@@ -352,8 +352,8 @@
 	"platforms": {
 		"Web": {}
 	},
-	"srcDistReplace": "(define)*?(../src/)",
-	"srcDistReplaceWith": "../dist/",
+	"srcDistReplace": "(define.*?)(../src/)",
+	"srcDistReplaceWith": "$1../dist/",
 	"dirs": {
 		"wwwRoot": "./www/",
 		"packagedRoot": "./packaged/",
@@ -375,7 +375,7 @@
 			"assetsSrc": "./assetsSrc/"
 		}
 	},
-	"uniteVersion": "1.2.1",
+	"uniteVersion": "1.2.2",
 	"sourceExtensions": [
 		"ts"
 	],

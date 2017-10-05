@@ -9,7 +9,13 @@ exports.config = {
 		'./test/e2e/dist/**/*.spec.js'
 	],
 	capabilities: {
-		browserName: 'chrome'
+		browserName: 'chrome',
+		chromeOptions: {
+			args: [
+				'--headless',
+				'--disable-gpu'
+			]
+		}
 	},
 	plugins: [
 		{
@@ -24,7 +30,7 @@ exports.config = {
 		showColors: true
 	}
 };
-const files = fs.readdirSync((webDriverPath));
+const files = fs.readdirSync(webDriverPath);
 const jvmArgs = [];
 files.forEach(file => {
     const lowerFile = file.toLowerCase();

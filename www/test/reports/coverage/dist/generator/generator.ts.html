@@ -1,0 +1,1511 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\generator\generator.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">dist/generator/</a> generator.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/236</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/122</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/58</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/227</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Generator class.
+ */
+import { inject, NewInstance } from "aurelia-dependency-injection";
+import { HttpClient } from "aurelia-http-client";
+import { bindable } from "aurelia-templating";
+import { validateTrigger, ValidationController, ValidationRules } from "aurelia-validation";
+import { Clipboard } from "../domHelpers/clipboard";
+import { LocalStorage } from "../domHelpers/localStorage";
+import { Style } from "../domHelpers/style";
+import { ISpdx } from "../models/ISpdx";
+import { ISpdxLicense } from "../models/ISpdxLicense";
+import { UniteConfiguration } from "../models/uniteConfiguration";
+import { BootstrapFormRenderer } from "../validation/bootstrapFormRenderer";
+&nbsp;
+@inject(NewInstance.of(ValidationController))
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >export class <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >Generator </span>{</span></span></span>
+    public controller: ValidationController;
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public packageName: string;</span>
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public title: string;</span>
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public profile: string;</span>
+    public profiles: { id: string; config: UniteConfiguration }[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public license: string;</span>
+    public licenses: { id: string; license: ISpdxLicense }[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public applicationFramework: string;</span>
+    public applicationFrameworks: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public sourceLanguage: string;</span>
+    public sourceLanguages: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public linter: string;</span>
+    public linters: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public moduleType: string;</span>
+    public moduleTypes: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public bundler: string;</span>
+    public bundlers: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public unitTestRunner: string;</span>
+    public unitTestRunners: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public unitTestFramework: string;</span>
+    public unitTestFrameworks: string[];
+    public unitTestFrameworkEnabled: boolean;
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public unitTestEngine: string;</span>
+    public unitTestEngines: string[];
+    public unitTestEngineEnabled: boolean;
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public e2eTestRunner: string;</span>
+    public e2eTestRunners: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public e2eTestFramework: string;</span>
+    public e2eTestFrameworks: string[];
+    public e2eTestFrameworkEnabled: boolean;
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public cssPre: string;</span>
+    public cssPres: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public cssPost: string;</span>
+    public cssPosts: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public packageManager: string;</span>
+    public packageManagers: string[];
+&nbsp;
+    @bindable
+<span class="cstat-no" title="statement not covered" >    public outputDirectory: string;</span>
+&nbsp;
+    public commandLine: string;
+&nbsp;
+    public status: string;
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    constructor(controller: ValidationController)</span> {</span>
+<span class="cstat-no" title="statement not covered" >        this.controller = controller;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.controller.addRenderer(new BootstrapFormRenderer());</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.controller.validateTrigger = validateTrigger.changeOrBlur;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("packageNameLowerCaseRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return value === undefined || value === null ||</span>
+                value.toLowerCase() === value;
+        }, `\${$displayName} must not have uppercase letters in it.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("packageNameStartRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return value === undefined || value === null ||</span>
+                !(value[0] === "." || value[0] === "-" || value[0] === "_");
+        }, `\${$displayName} must not start with a dot, hyphen or underscore.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("packageNameSpecialCharactersRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return value === undefined || value === null ||</span>
+                !value.match(/[\/\\\(\)&amp;\?#\|&lt;&gt;@:%\s\*'"!~`]/);
+        }, `\${$displayName} must not have any special characters.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("packageNameNonUrlSafeRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return value === undefined || value === null ||</span>
+                encodeURIComponent(value) === value;
+        }, `\${$displayName} can't contain any non-URL-safe characters.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("languageLintRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return obj.linter === "None" ||</span>
+                (obj.linter === "ESLint" &amp;&amp; obj.sourceLanguage === "JavaScript") ||
+                (obj.linter === "TSLint" &amp;&amp; obj.sourceLanguage === "TypeScript");
+        }, `The combination of sourceLanguage and linter is not valid.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("aureliaBundlingRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return obj.applicationFramework !== "Aurelia" ||</span>
+                !(obj.bundler === "Browserify" || obj.bundler === "Webpack");
+        }, `Aurelia does not currently support bundling with Browserify or Webpack.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("angularBundlingRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return obj.applicationFramework !== "Angular" || obj.bundler !== "RequireJS";</span>
+        }, `Angular does not currently support bundling with RequireJS.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("requireJsModuleTypeRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return obj.moduleType !== "AMD" || obj.bundler === "RequireJS";</span>
+        }, `You can only use AMD modules with RequireJS Bundler`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("webpackBrowserifyModuleTypeRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return obj.moduleType !== "CommonJS" || (obj.bundler === "Webpack" || obj.bundler === "Browserify");</span>
+        }, `You can only use CommonJS modules with Webpack or Browserify Bundlers.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("jestModuleTypeRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return obj.unitTestRunner !== "Jest" || obj.moduleType === "CommonJS";</span>
+        }, `You can only use CommonJS Module Type when the Unit Test Runner is Jest.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("unitTestFrameworkRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return (((obj.unitTestRunner === undefined || obj.unitTestRunner === "None") &amp;&amp;</span>
+                obj.unitTestFramework === undefined)) ||
+                obj.unitTestFramework !== undefined;
+        }, `Unit Test Runner is required.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("jestJasmineRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return obj.unitTestRunner !== "Jest" || obj.unitTestFramework === "Jasmine";</span>
+        }, `You can only use Jasmine Unit Test Framework when the Unit Test Runner is Jest.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("jestJSDomRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return obj.unitTestRunner !== "Jest" || obj.unitTestEngine === "JSDom";</span>
+        }, `You can only use JSDom Unit Test Engine when the Unit Test Runner is Jest.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("unitTestEngineRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return (((obj.unitTestRunner === undefined || obj.unitTestRunner === "None") &amp;&amp;</span>
+                obj.unitTestFramework === undefined)) ||
+                obj.unitTestFramework !== undefined;
+        }, `Unit Test Engine is required.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("e2eTestFrameworkRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return (((obj.e2eTestRunner === undefined || obj.e2eTestRunner === "None") &amp;&amp;</span>
+                obj.e2eTestFramework === undefined)) ||
+                obj.e2eTestFramework !== undefined;
+        }, `E2E Test Framework is required.`);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules</span>
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.packageName)</span>.displayName("Package Name")
+            .required()
+            .maxLength(214)
+            .satisfiesRule("packageNameLowerCaseRule")
+            .satisfiesRule("packageNameStartRule")
+            .satisfiesRule("packageNameSpecialCharactersRule")
+            .satisfiesRule("packageNameNonUrlSafeRule")
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.title)</span>.displayName("Title").required()
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.license)</span>.displayName("License").required()
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.applicationFramework)</span>.displayName("Application Framework").required()
+            .then()
+            .satisfiesRule("aureliaBundlingRule")
+            .then()
+            .satisfiesRule("angularBundlingRule")
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.sourceLanguage)</span>.displayName("Source Language").required()
+            .then()
+            .satisfiesRule("languageLintRule")
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.moduleType)</span>.displayName("Module Type").required()
+            .then()
+            .satisfiesRule("requireJsModuleTypeRule")
+            .then()
+            .satisfiesRule("webpackBrowserifyModuleTypeRule")
+            .then()
+            .satisfiesRule("jestModuleTypeRule")
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.bundler)</span>.displayName("Bundler").required()
+            .then()
+            .satisfiesRule("aureliaBundlingRule")
+            .then()
+            .satisfiesRule("angularBundlingRule")
+            .then()
+            .satisfiesRule("requireJsModuleTypeRule")
+            .then()
+            .satisfiesRule("webpackBrowserifyModuleTypeRule")
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.linter)</span>.displayName("Linter").required()
+            .then()
+            .satisfiesRule("languageLintRule")
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.unitTestRunner)</span>.displayName("Unit Test Runner").required()
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.unitTestFramework)</span>.displayName("Unit Test Framework")
+            .satisfiesRule("unitTestFrameworkRule")
+            .then()
+            .satisfiesRule("jestJasmineRule")
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.unitTestEngine)</span>.displayName("Unit Test Engine")
+            .satisfiesRule("unitTestEngineRule")
+            .then()
+            .satisfiesRule("jestJSDomRule")
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.e2eTestRunner)</span>.displayName("E2E Test Runner").required()
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.e2eTestFramework)</span>.displayName("E2E Test Framework")
+            .satisfiesRule("e2eTestFrameworkRule")
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.cssPre)</span>.displayName("CSS Pre-Processor").required()
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.cssPost)</span>.displayName("CSS Post-Processor").required()
+            .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.packageManager)</span>.displayName("Package Manager").required()
+            .on(this);
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >attached(): void {</span></span></span>
+<span class="cstat-no" title="statement not covered" >        const httpClient = new HttpClient();</span>
+<span class="cstat-no" title="statement not covered" >        httpClient.get("./assets/spdx-lite.json")</span>
+            .then(<span class="fstat-no" title="function not covered" >(response)</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                if (response.statusCode === 200) {</span>
+<span class="cstat-no" title="statement not covered" >                    const licenses: ISpdx = response.content;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    this.licenses = [];</span>
+<span class="cstat-no" title="statement not covered" >                    Object.keys(licenses).forEach(<span class="fstat-no" title="function not covered" >(licenseKey)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                        this.licenses.push({ id: licenseKey, license: licenses[licenseKey] });</span>
+                    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    const httpClient2 = new HttpClient();</span>
+<span class="cstat-no" title="statement not covered" >                    httpClient.get("./assets/profiles/configure.json")</span>
+                        .then(<span class="fstat-no" title="function not covered" >(response2)</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                            if (response2.statusCode === 200) {</span>
+<span class="cstat-no" title="statement not covered" >                                const profiles: { [id: string]: UniteConfiguration } = response2.content;</span>
+<span class="cstat-no" title="statement not covered" >                                this.profiles = [];</span>
+<span class="cstat-no" title="statement not covered" >                                Object.keys(profiles).forEach(<span class="fstat-no" title="function not covered" >(profileKey)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                                    this.profiles.push({ id: profileKey, config: profiles[profileKey] });</span>
+                                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                const uniteConfiguration = LocalStorage.get&lt;UniteConfiguration&gt;("uniteConfiguration");</span>
+<span class="cstat-no" title="statement not covered" >                                const profile = LocalStorage.get&lt;string&gt;("profile");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                this.defaultValues(uniteConfiguration, profile);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                if (uniteConfiguration) {</span>
+<span class="cstat-no" title="statement not covered" >                                    this.generate();</span>
+                                }
+                            } else {
+<span class="cstat-no" title="statement not covered" >                                this.status = "Unable to load the profile configurations so can not continue.";</span>
+                            }
+                        });
+                } else {
+<span class="cstat-no" title="statement not covered" >                    this.status = "Unable to load the SPDX licenses so can not continue.";</span>
+                }
+            })
+            .catch(<span class="fstat-no" title="function not covered" >(err)</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                this.status = "Unable to load the SPDX licenses so can not continue.";</span>
+            });
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >defaultValues(uniteConfiguration?: UniteConfiguration, profile?: string)</span>: void {</span>
+<span class="cstat-no" title="statement not covered" >        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "React"];</span>
+<span class="cstat-no" title="statement not covered" >        this.sourceLanguages = ["JavaScript", "TypeScript"];</span>
+<span class="cstat-no" title="statement not covered" >        this.moduleTypes = ["AMD", "CommonJS", "SystemJS"];</span>
+<span class="cstat-no" title="statement not covered" >        this.bundlers = ["Browserify", "RequireJS", "SystemJSBuilder", "Webpack"];</span>
+<span class="cstat-no" title="statement not covered" >        this.linters = ["ESLint", "TSLint", "None"];</span>
+<span class="cstat-no" title="statement not covered" >        this.unitTestRunners = ["Jest", "Karma", "None"];</span>
+<span class="cstat-no" title="statement not covered" >        this.unitTestFrameworks = ["Jasmine", "MochaChai"];</span>
+<span class="cstat-no" title="statement not covered" >        this.unitTestEngines = ["PhantomJS", "JSDom", "ChromeHeadless"];</span>
+<span class="cstat-no" title="statement not covered" >        this.e2eTestRunners = ["Protractor", "WebdriverIO", "None"];</span>
+<span class="cstat-no" title="statement not covered" >        this.e2eTestFrameworks = ["Jasmine", "MochaChai"];</span>
+<span class="cstat-no" title="statement not covered" >        this.cssPres = ["Css", "Less", "Sass", "Stylus"];</span>
+<span class="cstat-no" title="statement not covered" >        this.cssPosts = ["None", "PostCss"];</span>
+<span class="cstat-no" title="statement not covered" >        this.packageManagers = ["Npm", "Yarn"];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.profile = profile;</span>
+<span class="cstat-no" title="statement not covered" >        this.packageName = uniteConfiguration ? uniteConfiguration.packageName : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.title = uniteConfiguration ? uniteConfiguration.title : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.license = uniteConfiguration ? uniteConfiguration.license : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.applicationFramework = uniteConfiguration ? uniteConfiguration.applicationFramework : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.sourceLanguage = uniteConfiguration ? uniteConfiguration.sourceLanguage : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.moduleType = uniteConfiguration ? uniteConfiguration.moduleType : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.bundler = uniteConfiguration ? uniteConfiguration.bundler : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.linter = uniteConfiguration ? uniteConfiguration.linter : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.unitTestRunner = uniteConfiguration ? uniteConfiguration.unitTestRunner : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.unitTestFramework = uniteConfiguration ? uniteConfiguration.unitTestFramework : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.unitTestFrameworkEnabled = this.unitTestFramework !== undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.unitTestEngine = uniteConfiguration ? uniteConfiguration.unitTestEngine : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.unitTestEngineEnabled = this.unitTestEngine !== undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.e2eTestRunner = uniteConfiguration ? uniteConfiguration.e2eTestRunner : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.e2eTestFramework = uniteConfiguration ? uniteConfiguration.e2eTestFramework : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.e2eTestFrameworkEnabled = this.e2eTestFramework !== undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.cssPre = uniteConfiguration ? uniteConfiguration.cssPre : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.cssPost = uniteConfiguration ? uniteConfiguration.cssPost : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.packageManager = uniteConfiguration ? uniteConfiguration.packageManager : undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.outputDirectory = uniteConfiguration ? uniteConfiguration.outputDirectory : undefined;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >profileChanged(): void {</span></span></span>
+<span class="cstat-no" title="statement not covered" >        if (this.profile) {</span>
+<span class="cstat-no" title="statement not covered" >            const profile = this.profiles.find(<span class="fstat-no" title="function not covered" >(p)</span> =&gt; <span class="cstat-no" title="statement not covered" >p.id === this.profile)</span>;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (profile) {</span>
+<span class="cstat-no" title="statement not covered" >                this.license = profile.config.license;</span>
+<span class="cstat-no" title="statement not covered" >                this.applicationFramework = profile.config.applicationFramework;</span>
+<span class="cstat-no" title="statement not covered" >                this.sourceLanguage = profile.config.sourceLanguage;</span>
+<span class="cstat-no" title="statement not covered" >                this.moduleType = profile.config.moduleType;</span>
+<span class="cstat-no" title="statement not covered" >                this.bundler = profile.config.bundler;</span>
+<span class="cstat-no" title="statement not covered" >                this.linter = profile.config.linter;</span>
+<span class="cstat-no" title="statement not covered" >                this.unitTestRunner = profile.config.unitTestRunner;</span>
+<span class="cstat-no" title="statement not covered" >                this.unitTestFramework = profile.config.unitTestFramework;</span>
+<span class="cstat-no" title="statement not covered" >                this.unitTestFrameworkEnabled = this.unitTestFramework !== undefined;</span>
+<span class="cstat-no" title="statement not covered" >                this.unitTestEngine = profile.config.unitTestEngine;</span>
+<span class="cstat-no" title="statement not covered" >                this.unitTestEngineEnabled = this.unitTestEngine !== undefined;</span>
+<span class="cstat-no" title="statement not covered" >                this.e2eTestRunner = profile.config.e2eTestRunner;</span>
+<span class="cstat-no" title="statement not covered" >                this.e2eTestFramework = profile.config.e2eTestFramework;</span>
+<span class="cstat-no" title="statement not covered" >                this.e2eTestFrameworkEnabled = this.e2eTestFramework !== undefined;</span>
+<span class="cstat-no" title="statement not covered" >                this.cssPre = profile.config.cssPre;</span>
+<span class="cstat-no" title="statement not covered" >                this.cssPost = profile.config.cssPost;</span>
+<span class="cstat-no" title="statement not covered" >                this.packageManager = profile.config.packageManager;</span>
+            }
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >applicationFrameworkChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "bundler" });</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >moduleTypeChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "bundler" });</span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "unitTestRunner" });</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >bundlerChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "applicationFramework" });</span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "moduleType" });</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >sourceLanguageChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "linter" });</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >linterChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "sourceLanguage" });</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >unitTestRunnerChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (this.unitTestRunner === undefined || this.unitTestRunner === "None") {</span>
+<span class="cstat-no" title="statement not covered" >            this.unitTestFramework = undefined;</span>
+<span class="cstat-no" title="statement not covered" >            this.unitTestEngine = undefined;</span>
+<span class="cstat-no" title="statement not covered" >            this.unitTestFrameworkEnabled = false;</span>
+<span class="cstat-no" title="statement not covered" >            this.unitTestEngineEnabled = false;</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.unitTestFrameworkEnabled = true;</span>
+<span class="cstat-no" title="statement not covered" >            this.unitTestEngineEnabled = true;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "unitTestFramework" });</span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "unitTestEngine" });</span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "moduleType" });</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >unitTestFrameworkChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "unitTestRunner" });</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >unitTestEngineChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "unitTestRunner" });</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >e2eTestRunnerChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (this.e2eTestRunner === undefined || this.e2eTestRunner === "None") {</span>
+<span class="cstat-no" title="statement not covered" >            this.e2eTestFramework = undefined;</span>
+<span class="cstat-no" title="statement not covered" >            this.e2eTestFrameworkEnabled = false;</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.e2eTestFrameworkEnabled = true;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "e2eTestFramework" });</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >generate(): void {</span></span></span>
+<span class="cstat-no" title="statement not covered" >        const uniteConfiguration = new UniteConfiguration();</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.packageName = this.packageName;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.title = this.title;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.license = this.license;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.applicationFramework = this.applicationFramework;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.moduleType = this.moduleType;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.bundler = this.bundler;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.sourceLanguage = this.sourceLanguage;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.linter = this.linter;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.unitTestRunner = this.unitTestRunner;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.unitTestFramework = this.unitTestFramework;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.unitTestEngine = this.unitTestEngine;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.e2eTestRunner = this.e2eTestRunner;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.e2eTestFramework = this.e2eTestFramework;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.cssPre = this.cssPre;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.cssPost = this.cssPost;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.packageManager = this.packageManager;</span>
+<span class="cstat-no" title="statement not covered" >        uniteConfiguration.outputDirectory = this.outputDirectory;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        let profile: UniteConfiguration;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (this.profile) {</span>
+<span class="cstat-no" title="statement not covered" >            const item = this.profiles.find(<span class="fstat-no" title="function not covered" >(p)</span> =&gt; <span class="cstat-no" title="statement not covered" >p.id === this.profile)</span>;</span>
+<span class="cstat-no" title="statement not covered" >            if (item) {</span>
+<span class="cstat-no" title="statement not covered" >                profile = item.config;</span>
+            }
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        LocalStorage.set("uniteConfiguration", uniteConfiguration);</span>
+<span class="cstat-no" title="statement not covered" >        LocalStorage.set("profile", this.profile);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.controller.validate()</span>
+            .then(<span class="fstat-no" title="function not covered" >(result)</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                if (result.valid) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.commandLine = `unite configure` +</span>
+                        ` --packageName=${this.packageName}` +
+                        ` --title="${this.title}"` +
+                        (this.profile === undefined
+                            ? "" : ` --profile=${this.profile}`) +
+                        this.generateArg(profile, uniteConfiguration, "license") +
+                        this.generateArg(profile, uniteConfiguration, "applicationFramework", "appFramework") +
+                        this.generateArg(profile, uniteConfiguration, "moduleType") +
+                        this.generateArg(profile, uniteConfiguration, "bundler") +
+                        this.generateArg(profile, uniteConfiguration, "sourceLanguage") +
+                        this.generateArg(profile, uniteConfiguration, "linter") +
+                        this.generateArg(profile, uniteConfiguration, "unitTestRunner") +
+                        this.generateArg(profile, uniteConfiguration, "unitTestFramework") +
+                        this.generateArg(profile, uniteConfiguration, "unitTestEngine") +
+                        this.generateArg(profile, uniteConfiguration, "e2eTestRunner") +
+                        this.generateArg(profile, uniteConfiguration, "e2eTestFramework") +
+                        this.generateArg(profile, uniteConfiguration, "cssPre") +
+                        this.generateArg(profile, uniteConfiguration, "cssPost") +
+                        this.generateArg(profile, uniteConfiguration, "packageManager") +
+                        (this.outputDirectory === undefined ||
+                            this.outputDirectory === null ||
+                            this.outputDirectory.length === 0
+                            ? "" : ` --outputDirectory=${this.outputDirectory}`);
+                } else {
+<span class="cstat-no" title="statement not covered" >                    this.commandLine = "The parameter choices are not all valid.";</span>
+                }
+            });
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >generateArg(profile: UniteConfiguration,</span></span>
+                       uniteConfiguration: UniteConfiguration,
+                       propertyName: keyof UniteConfiguration,
+                       argName?: string): string {
+<span class="cstat-no" title="statement not covered" >        if (profile &amp;&amp; profile[propertyName] === uniteConfiguration[propertyName]) {</span>
+<span class="cstat-no" title="statement not covered" >            return "";</span>
+        } else <span class="cstat-no" title="statement not covered" >if (uniteConfiguration[propertyName] === undefined) {</span>
+<span class="cstat-no" title="statement not covered" >            return "";</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            return ` --${argName ? argName : propertyName}=${uniteConfiguration[propertyName]}`;</span>
+        }
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >clear(): void {</span></span></span>
+<span class="cstat-no" title="statement not covered" >        LocalStorage.remove("uniteConfiguration");</span>
+<span class="cstat-no" title="statement not covered" >        LocalStorage.remove("profile");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.defaultValues();</span>
+<span class="cstat-no" title="statement not covered" >        this.commandLine = undefined;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.controller.reset(),</span> 0);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >copyToClipboard(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        Clipboard.copyTo(this.commandLine);</span>
+    }
+<span class="cstat-no" title="statement not covered" >}</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 05 2017 11:36:28 GMT+0300 (Turkey Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">57.14% </span>
+        <span class="strong">44.44% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/7</span>
+        <span class='fraction'>4/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,13 +35,13 @@
         <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">37.5% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/6</span>
+        <span class='fraction'>3/8</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -81,7 +81,54 @@
 36
 37
 38
-39</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -92,6 +139,49 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,14 +213,31 @@
  * Main application class.
  */
 import { Router, RouterConfiguration } from "aurelia-router";
+import { GoogleAnalyticsStep } from "./pipelineSteps/googleAnalyticsStep";
+import { ScrollToTopPipelineStep } from "./pipelineSteps/scrollToTopPipelineStep";
 &nbsp;
 export class App {
     public router: Router;
 &nbsp;
 <span class="fstat-no" title="function not covered" >    public configureRouter(config: RouterConfiguration, router: Router)</span>: any {
 <span class="cstat-no" title="statement not covered" >        config.title = "UniteJS";</span>
+<span class="cstat-no" title="statement not covered" >        config.addPostRenderStep(ScrollToTopPipelineStep);</span>
+<span class="cstat-no" title="statement not covered" >        config.addPostRenderStep(GoogleAnalyticsStep);</span>
 <span class="cstat-no" title="statement not covered" >        config.map([</span>
-            { route: ["", "home"], name: "home", moduleId: "./home/home", nav: true, title: "Home" },
+            {
+                route: ["", "home"],
+                name: "home",
+                moduleId: "./home/home",
+                nav: true,
+                title: "Home"
+            },
+            {
+                route: "whatsnew",
+                name: "whatsnew",
+                moduleId: "./whatsNew/whatsNew",
+                nav: true,
+                title: "What's New"
+            },
             {
                 route: "documentation",
                 name: "documentation",
@@ -139,11 +246,11 @@ export class App {
                 title: "Documentation"
             },
             {
-                route: "gettingStarted",
-                name: "gettingStarted",
-                moduleId: "./gettingStarted/gettingStarted",
+                route: "generator",
+                name: "generator",
+                moduleId: "./generator/generator",
                 nav: true,
-                title: "Getting Started"
+                title: "Generator"
             },
             {
                 route: "examples",
@@ -151,6 +258,34 @@ export class App {
                 moduleId: "./examples/examples",
                 nav: true,
                 title: "Examples"
+            },
+            {
+                route: "about",
+                name: "about",
+                moduleId: "./info/about",
+                nav: false,
+                title: "About"
+            },
+            {
+                route: "the-team",
+                name: "the-team",
+                moduleId: "./info/theTeam",
+                nav: false,
+                title: "The Team"
+            },
+            {
+                route: "license",
+                name: "license",
+                moduleId: "./info/license",
+                nav: false,
+                title: "License"
+            },
+            {
+                route: "media",
+                name: "media",
+                moduleId: "./info/media",
+                nav: false,
+                title: "Media"
             }
         ]);
 &nbsp;
@@ -163,7 +298,7 @@ export class App {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Sep 06 2017 16:09:33 GMT+0300 (Turkey Standard Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 05 2017 11:36:28 GMT+0300 (Turkey Standard Time)
 </div>
 </div>
 <script src="../prettify.js"></script>
