@@ -130,6 +130,11 @@ export class Generator {
                 !(obj.bundler === "Browserify" || obj.bundler === "Webpack");
         }, `Aurelia does not currently support bundling with Browserify or Webpack.`);
 
+        ValidationRules.customRule("preactModuleTypeRule", (value: string, obj: Generator) => {
+            return obj.applicationFramework !== "Preact" ||
+                !(obj.moduleType === "AMD" || obj.moduleType === "SystemJS");
+        }, `Preact does not support moduleType AMD or SystemJS.`);
+
         ValidationRules.customRule("angularBundlingRule", (value: string, obj: Generator) => {
             return obj.applicationFramework !== "Angular" || obj.bundler !== "RequireJS";
         }, `Angular does not currently support bundling with RequireJS.`);
@@ -185,6 +190,7 @@ export class Generator {
             .ensure((m: Generator) => m.applicationFramework).displayName("Application Framework").required()
             .then()
             .satisfiesRule("aureliaBundlingRule")
+            .satisfiesRule("preactModuleTypeRule")
             .then()
             .satisfiesRule("angularBundlingRule")
             .ensure((m: Generator) => m.sourceLanguage).displayName("Source Language").required()
@@ -271,7 +277,7 @@ export class Generator {
     }
 
     public defaultValues(uniteConfiguration?: UniteConfiguration, profile?: string): void {
-        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "React"];
+        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "Preact", "React"];
         this.sourceLanguages = ["JavaScript", "TypeScript"];
         this.moduleTypes = ["AMD", "CommonJS", "SystemJS"];
         this.bundlers = ["Browserify", "RequireJS", "SystemJSBuilder", "Webpack"];
@@ -339,6 +345,7 @@ export class Generator {
     }
 
     public moduleTypeChanged(): void {
+        this.controller.validate({ object: this, propertyName: "applicationFramework" });
         this.controller.validate({ object: this, propertyName: "bundler" });
         this.controller.validate({ object: this, propertyName: "unitTestRunner" });
     }

@@ -13,13 +13,27 @@
 
             <pre><code au-prism="nix">unite command --argName&lt;0&gt;=argValue&lt;0&gt; ... --argName&lt;n&gt;=argValue&lt;n&gt;</code></pre>
             <p>where command is one of the following:
-                <li><a href="#" click.trigger="displayDocumentation('help')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">help</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('version')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">version</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('configure')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">configure</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('buildConfiguration')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">buildConfiguration</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('generate')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">generate</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('clientPackage')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">clientPackage</a></li>
-                <li><a href="#" click.trigger="displayDocumentation('platform')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">platform</a></li>
+                <li>
+                    <a href="#" click.trigger="displayDocumentation('help')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">help</a>
+                </li>
+                <li>
+                    <a href="#" click.trigger="displayDocumentation('version')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">version</a>
+                </li>
+                <li>
+                    <a href="#" click.trigger="displayDocumentation('configure')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">configure</a>
+                </li>
+                <li>
+                    <a href="#" click.trigger="displayDocumentation('buildConfiguration')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">buildConfiguration</a>
+                </li>
+                <li>
+                    <a href="#" click.trigger="displayDocumentation('generate')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">generate</a>
+                </li>
+                <li>
+                    <a href="#" click.trigger="displayDocumentation('clientPackage')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">clientPackage</a>
+                </li>
+                <li>
+                    <a href="#" click.trigger="displayDocumentation('platform')" au-scroll-to-element="id: helpContent; y-offset.bind: topOffset">platform</a>
+                </li>
             </p>
 
             <p>Argument names are case sensitive but values are case insensitive, argument values with spaces should be enclosed
@@ -70,8 +84,10 @@
                         <tr>
                             <td>packageName</td>
                             <td>plain text, package.json name rules apply</td>
-                            <td>Name to be used for your package<br/>See <a href="https://docs.npmjs.com/files/package.json"
-                                    target="_blank" rel="noopener" aria-label="NPMJS Documentation">NPMJS Documentation</a></td>
+                            <td>Name to be used for your package
+                                <br/>See
+                                <a href="https://docs.npmjs.com/files/package.json" target="_blank" rel="noopener" aria-label="NPMJS Documentation">NPMJS Documentation</a>
+                            </td>
                         </tr>
                         <tr>
                             <td>title</td>
@@ -81,13 +97,16 @@
                         <tr>
                             <td>license</td>
                             <td>plain text</td>
-                            <td>See <a href="https://spdx.org/licenses/" target="_blank" rel="noopener" aria-label="SPDX">SPDX</a>                                for options</td>
+                            <td>See
+                                <a href="https://spdx.org/licenses/" target="_blank" rel="noopener" aria-label="SPDX">SPDX</a> for options</td>
                         </tr>
                         <tr>
                             <td>appFramework</td>
-                            <td><a au-scroll-to-element="id: angular; y-offset.bind: topOffset" href="#">Angular</a> /
+                            <td>
+                                <a au-scroll-to-element="id: angular; y-offset.bind: topOffset" href="#">Angular</a> /
                                 <a au-scroll-to-element="id: aurelia; y-offset.bind: topOffset" href="#">Aurelia</a> /
                                 <a au-scroll-to-element="id: plainApp; y-offset.bind: topOffset" href="#">PlainApp</a> /
+                                <a au-scroll-to-element="id: preact; y-offset.bind: topOffset" href="#">Preact</a> /
                                 <a au-scroll-to-element="id: react; y-offset.bind: topOffset" href="#">React</a>
                             </td>
                             <td>The application framework to use</td>
@@ -114,10 +133,12 @@
                         </tr>
                         <tr>
                             <td>unitTestRunner</td>
-                            <td><a au-scroll-to-element="id: jest; y-offset.bind: topOffset" href="#">Jest</a> /
-                                <a au-scroll-to-element="id: karma; y-offset.bind: topOffset" href="#">Karma </a> /
-                                None</td>
-                            <td>The unit test runner<br/>None - means no unit testing</td>
+                            <td>
+                                <a au-scroll-to-element="id: jest; y-offset.bind: topOffset" href="#">Jest</a> /
+                                <a au-scroll-to-element="id: karma; y-offset.bind: topOffset" href="#">Karma </a> / None
+                            </td>
+                            <td>The unit test runner
+                                <br/>None - means no unit testing</td>
                         </tr>
                         <tr>
                             <td>unitTestFramework</td>
@@ -147,36 +168,43 @@
                         <tr>
                             <td>cssPost</td>
                             <td>PostCss/None</td>
-                            <td>The css postprocessor to use<br/>None - means no css post processor</td>
+                            <td>The css postprocessor to use
+                                <br/>None - means no css post processor</td>
                         </tr>
                         <tr>
                             <td>packageManager</td>
                             <td>Npm/Yarn</td>
-                            <td>The package manager to use<br/>optional - defaults to Npm if not already set</td>
+                            <td>The package manager to use
+                                <br/>optional - defaults to Npm if not already set</td>
                         </tr>
                         <tr>
                             <td>profile</td>
-                            <td><a au-scroll-to-element="id: configProfiles; y-offset.bind: topOffset" href="#">See Profiles</a></td>
-                            <td>The profile to use<br/>optional - defaults to none</td>
+                            <td>
+                                <a au-scroll-to-element="id: configProfiles; y-offset.bind: topOffset" href="#">See Profiles</a>
+                            </td>
+                            <td>The profile to use
+                                <br/>optional - defaults to none</td>
                         </tr>
                         <tr>
                             <td>force</td>
                             <td></td>
-                            <td>Force overwrite of all existing configuration<br/>optional - defaults to off</td>
+                            <td>Force overwrite of all existing configuration
+                                <br/>optional - defaults to off</td>
                         </tr>
                         <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
-                            <td>The location that you want the project generated<br/>optional - defaults to current directory</td>
+                            <td>The location that you want the project generated
+                                <br/>optional - defaults to current directory</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <p>See the <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how
-                    to use the command.</p>
+                <p>See the
+                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
 
-                <p>Or jump to the <a href="#" route-href="route: generator">Generator</a> to generate a command line script
-                    ready to run.</p>
+                <p>Or jump to the
+                    <a href="#" route-href="route: generator">Generator</a> to generate a command line script ready to run.</p>
 
                 <hr id="configProfiles" />
 
@@ -190,6 +218,8 @@
                     <li>AngularTypeScript</li>
                     <li>AureliaJavaScript</li>
                     <li>AureliaTypeScript</li>
+                    <li>PreactJavaScript</li>
+                    <li>PreactTypeScript</li>
                     <li>ReactJavaScript</li>
                     <li>ReactTypeScript</li>
                 </ul>
@@ -201,43 +231,55 @@
                 <p>Although we try to support all the different framework and tool combinations this is not always possible.
                 </p>
 
-                <h3><a id="angular"></a>Angular</h3>
+                <h3>
+                    <a id="angular"></a>Angular</h3>
 
                 <p>Angular does not currently support bundling with RequireJS because there is no longer an AMD build of RXJS
                     in modular form.</p>
 
-                <h3><a id="aurelia"></a>Aurelia</h3>
+                <h3>
+                    <a id="aurelia"></a>Aurelia</h3>
 
                 <p>Aurelia does not currently support bundling with Browserify or Webpack.</p>
 
-                <h3><a id="plainApp"></a>Plain App</h3>
+                <h3>
+                    <a id="plainApp"></a>Plain App</h3>
 
                 <p>This is a vanilla app with no framework libraries included.</p>
 
-                <h3><a id="react"></a>React</h3>
+                <h3>
+                    <a id="preact"></a>Preact</h3>
+
+                <p>Preact can only be used with CommonJS module type as there is currently no UMD build of the library.</p>
+
+                <h3>
+                    <a id="react"></a>React</h3>
 
                 <p>Nothing else to mention at the moment.</p>
 
                 <hr/>
-                
+
                 <h2>Unit Test Runners</h2>
 
-                <h3><a id="jest"></a>Jest</h3>
+                <h3>
+                    <a id="jest"></a>Jest</h3>
 
                 <p>Jest currently only supports projects using CommonJS as the module type and Jasmine as the unit test framework.</p>
 
-                <h3><a id="karma"></a>Karma</h3>
+                <h3>
+                    <a id="karma"></a>Karma</h3>
 
-                <p>Although JSDom can be used with Karma there are limitations, see the <a href="https://github.com/tmpvar/jsdom#readme" target="_blank"
-                        rel="noopener" aria-label="JSDom">JSDom</a> home page for more info.</p>
+                <p>Although JSDom can be used with Karma there are limitations, see the
+                    <a href="https://github.com/tmpvar/jsdom#readme"
+                        target="_blank" rel="noopener" aria-label="JSDom">JSDom</a> home page for more info.</p>
 
             </div>
 
             <div if.bind="commandDisplay === 'buildConfiguration'">
                 <h2>buildConfiguration</h2>
                 <br/>
-                <p>By default you are created dev and prod configurations with sensible defaults.<br/>You can add or remove
-                    configurations with this command.</p>
+                <p>By default you are created dev and prod configurations with sensible defaults.
+                    <br/>You can add or remove configurations with this command.</p>
 
                 <h3>--operation=add</h3>
                 <br/>
@@ -265,22 +307,26 @@
                         <tr>
                             <td>bundle</td>
                             <td></td>
-                            <td>Should the final output be bundled<br/>optional - defaults to off</td>
+                            <td>Should the final output be bundled
+                                <br/>optional - defaults to off</td>
                         </tr>
                         <tr>
                             <td>minify</td>
                             <td></td>
-                            <td>Should the final output be minified<br/>optional - defaults to off</td>
+                            <td>Should the final output be minified
+                                <br/>optional - defaults to off</td>
                         </tr>
                         <tr>
                             <td>sourcemaps</td>
                             <td></td>
-                            <td>Should the final output include sourcemaps<br/>optional - defaults to on</td>
+                            <td>Should the final output include sourcemaps
+                                <br/>optional - defaults to on</td>
                         </tr>
                         <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
-                            <td>Location of the unite.json from configure<br/>optional - defaults to current directory</td>
+                            <td>Location of the unite.json from configure
+                                <br/>optional - defaults to current directory</td>
                         </tr>
                     </tbody>
                 </table>
@@ -312,7 +358,8 @@
                         <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
-                            <td>Location of the unite.json from configure<br/>optional - defaults to current directory</td>
+                            <td>Location of the unite.json from configure
+                                <br/>optional - defaults to current directory</td>
                         </tr>
                     </tbody>
                 </table>
@@ -322,7 +369,8 @@
                 <p>The configuration sections created in unite.json have a variables property which you can modify manually
                     to add your own values that will be include in the build. The values are then available in the window.unite.config
                     namespace at runtime. As this is just JSON your value can be any data that can be JSON serialized. The
-                    TypeScript definitions for this object are in this repo <a href="https://github.com/unitejs/types" target="_blank"
+                    TypeScript definitions for this object are in this repo
+                    <a href="https://github.com/unitejs/types" target="_blank"
                         rel="noopener" aria-label="UniteJS Types">UniteJS Types</a> and can be reference in TypeScript using:</p>
 
                 <pre><code au-prism="typecript">/// &lt;reference types="unitejs-types" /&gt;</code></pre>
@@ -343,8 +391,8 @@
                 <pre><code au-prism="javascript">console.log(window.unite.config["value1"]);
 console.log(window.unite.config["someFlag"]);</code></pre>
 
-                <p>See the <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how
-                    to use the command.</p>
+                <p>See the
+                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
             </div>
 
             <div if.bind="commandDisplay === 'generate'">
@@ -381,7 +429,8 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                         <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
-                            <td>Location of the unite.json from configure<br/>optional - defaults to current directory</td>
+                            <td>Location of the unite.json from configure
+                                <br/>optional - defaults to current directory</td>
                         </tr>
                     </tbody>
                 </table>
@@ -395,8 +444,8 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                     <li>React - class, component, enum, interface</li>
                 </ul>
 
-                <p>See the <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how
-                    to use the command.</p>
+                <p>See the
+                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
             </div>
 
             <div if.bind="commandDisplay === 'clientPackage'">
@@ -437,44 +486,52 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                         <tr>
                             <td>version</td>
                             <td>1.23.4</td>
-                            <td>Fixed version to install<br/>optional - defaults to latest version</td>
+                            <td>Fixed version to install
+                                <br/>optional - defaults to latest version</td>
                         </tr>
                         <tr>
                             <td>preload</td>
                             <td></td>
-                            <td>Should the package be preloaded at app startup<br/>optional - defaults to not preload</td>
+                            <td>Should the package be preloaded at app startup
+                                <br/>optional - defaults to not preload</td>
                         </tr>
                         <tr>
                             <td>main</td>
                             <td>'path'</td>
-                            <td>The path to the main js file in the package<br/>optional - defaults to looking it up<br/>use
-                                * to mean all files to be mapped</td>
+                            <td>The path to the main js file in the package
+                                <br/>optional - defaults to looking it up
+                                <br/>use * to mean all files to be mapped</td>
                         </tr>
 
                         <tr>
                             <td>mainMinified</td>
                             <td>'path'</td>
-                            <td>The path to the minified main js file<br/>optional - defaults to using main</td>
+                            <td>The path to the minified main js file
+                                <br/>optional - defaults to using main</td>
                         </tr>
                         <tr>
                             <td>noScript</td>
                             <td></td>
-                            <td>Don't include any scripts from the package<br/>optional - defaults to false</td>
+                            <td>Don't include any scripts from the package
+                                <br/>optional - defaults to false</td>
                         </tr>
                         <tr>
                             <td>includeMode</td>
                             <td>app/test/both</td>
-                            <td>When should the package be loaded as a module<br/>optional - defaults to both</td>
+                            <td>When should the package be loaded as a module
+                                <br/>optional - defaults to both</td>
                         </tr>
                         <tr>
                             <td>scriptIncludeMode</td>
                             <td>none/bundled/notBundled/both</td>
-                            <td>When should the package be included as a script<br/>optional - defaults to none</td>
+                            <td>When should the package be included as a script
+                                <br/>optional - defaults to none</td>
                         </tr>
                         <tr>
                             <td>isPackage</td>
                             <td></td>
-                            <td>This is included as a package in module loaders<br/>optional - defaults to not package</td>
+                            <td>This is included as a package in module loaders
+                                <br/>optional - defaults to not package</td>
                         </tr>
                         <tr>
                             <td>assets</td>
@@ -484,7 +541,8 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                         <tr>
                             <td>testingAdditions</td>
                             <td>key1=value1;key2=value2</td>
-                            <td>Additional scripts for testing<br/>optional - defaults to empty</td>
+                            <td>Additional scripts for testing
+                                <br/>optional - defaults to empty</td>
                         </tr>
                         <tr>
                             <td>map</td>
@@ -494,22 +552,28 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                         <tr>
                             <td>loaders</td>
                             <td>key1=value1;key2=value2</td>
-                            <td>Additional module config loaders<br/>optional - defaults to empty</td>
+                            <td>Additional module config loaders
+                                <br/>optional - defaults to empty</td>
                         </tr>
                         <tr>
                             <td>packageManager</td>
                             <td>npm/yarn</td>
-                            <td>The package manager to use for the add<br/>optional - defaults to npm if not already set</td>
+                            <td>The package manager to use for the add
+                                <br/>optional - defaults to npm if not already set</td>
                         </tr>
                         <tr>
                             <td>profile</td>
-                            <td><a au-scroll-to-element="id: clientPackageProfiles; y-offset.bind: topOffset" href="#">See Profiles</a></td>
-                            <td>The profile to use<br/>optional - defaults to none</td>
+                            <td>
+                                <a au-scroll-to-element="id: clientPackageProfiles; y-offset.bind: topOffset" href="#">See Profiles</a>
+                            </td>
+                            <td>The profile to use
+                                <br/>optional - defaults to none</td>
                         </tr>
                         <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
-                            <td>Location of the unite.json from configure<br/>optional - defaults to current directory</td>
+                            <td>Location of the unite.json from configure
+                                <br/>optional - defaults to current directory</td>
                         </tr>
                     </tbody>
                 </table>
@@ -541,18 +605,20 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                         <tr>
                             <td>packageManager</td>
                             <td>npm/yarn</td>
-                            <td>The package manager to use for the remove<br/>optional - defaults to npm if not already set</td>
+                            <td>The package manager to use for the remove
+                                <br/>optional - defaults to npm if not already set</td>
                         </tr>
                         <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
-                            <td>Location of the unite.json from configure<br/>optional - defaults to current directory</td>
+                            <td>Location of the unite.json from configure
+                                <br/>optional - defaults to current directory</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <p>See the <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how
-                    to use the command.</p>
+                <p>See the
+                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
 
                 <hr id="clientPackageProfiles" />
 
@@ -601,7 +667,8 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                         <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
-                            <td>Location of the unite.json from configure<br/>optional - defaults to current directory</td>
+                            <td>Location of the unite.json from configure
+                                <br/>optional - defaults to current directory</td>
                         </tr>
                     </tbody>
                 </table>
@@ -634,7 +701,8 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                         <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
-                            <td>Location of the unite.json from configure<br/>optional - defaults to current directory</td>
+                            <td>Location of the unite.json from configure
+                                <br/>optional - defaults to current directory</td>
                         </tr>
                     </tbody>
                 </table>
@@ -649,18 +717,22 @@ console.log(window.unite.config["someFlag"]);</code></pre>
                 <p>There are currently no other options for this platform.</p>
 
                 <h4>Electron</h4>
-                <p>For more information about the options see the <a href="https://github.com/electron-userland/electron-packager#readme"
-                        target="_blank" rel="noopener" aria-label="Electron Documentation">Electron Documentation</a></p>
+                <p>For more information about the options see the
+                    <a href="https://github.com/electron-userland/electron-packager#readme"
+                        target="_blank" rel="noopener" aria-label="Electron Documentation">Electron Documentation</a>
+                </p>
 
                 <p>You can choose to use a specific version of the Electron runtime, if not specified it defaults to the most
-                    recent stable version see <a href="https://github.com/electron/electron/releases" target="_blank" rel="noopener"
+                    recent stable version see
+                    <a href="https://github.com/electron/electron/releases" target="_blank" rel="noopener"
                         aria-label="Electron Releases">Electron Releases</a>.
 
                     <p>You can specify one or more of the platform architecture combinations, if this is not specified it defaults
                         to win32/ia32.</p>
 
                     <p>Any others keys in the Electron settings will be converted into -- params and passed to the packager,
-                        this allows for other options like those specific to the darwin/mas or win32 targets <a href="https://github.com/electron-userland/electron-packager/blob/master/usage.txt"
+                        this allows for other options like those specific to the darwin/mas or win32 targets
+                        <a href="https://github.com/electron-userland/electron-packager/blob/master/usage.txt"
                             target="_blank" rel="noopener" aria-label="Electron Usage">Electron Usage</a> to be used.
 
 
@@ -680,8 +752,8 @@ console.log(window.unite.config["someFlag"]);</code></pre>
     }
 }                
 </code></pre>
-                        <p>See the <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration
-                            on how to use the command.</p>
+                        <p>See the
+                            <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
             </div>
         </div>
     </div>
