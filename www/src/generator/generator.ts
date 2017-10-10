@@ -277,7 +277,7 @@ export class Generator {
     }
 
     public defaultValues(uniteConfiguration?: UniteConfiguration, profile?: string): void {
-        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "Preact", "React"];
+        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "Preact", "React", "Vue"];
         this.sourceLanguages = ["JavaScript", "TypeScript"];
         this.moduleTypes = ["AMD", "CommonJS", "SystemJS"];
         this.bundlers = ["Browserify", "RequireJS", "SystemJSBuilder", "Webpack"];

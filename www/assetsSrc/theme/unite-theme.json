@@ -36,6 +36,7 @@
         "aurelia",
         "preact",
         "react",
+        "vue",
         "web",
         "electron",
         "vscode",
