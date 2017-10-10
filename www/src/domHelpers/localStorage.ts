@@ -4,7 +4,11 @@
 export class LocalStorage {
     public static set(name: string, obj: any): void {
         if (window.localStorage) {
-            window.localStorage.setItem(name, JSON.stringify(obj));
+            if (obj === null || obj === undefined) {
+                window.localStorage.removeItem(name);
+            } else {
+                window.localStorage.setItem(name, JSON.stringify(obj));
+            }
         }
     }
 
@@ -12,7 +16,11 @@ export class LocalStorage {
         if (window.localStorage) {
             const obj = window.localStorage.getItem(name);
             if (obj) {
-                return JSON.parse(obj) as T;
+                try {
+                    return JSON.parse(obj) as T;
+                } catch (e) {
+                    return undefined;
+                }
             } else {
                 return undefined;
             }

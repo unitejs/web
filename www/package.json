@@ -1,6 +1,6 @@
 {
 	"name": "unitejs-web",
-	"version": "1.0.8",
+	"version": "1.0.10",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/google.analytics": "^0.0.35",
