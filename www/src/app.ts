@@ -28,6 +28,13 @@ export class App {
                 title: "What's New"
             },
             {
+                route: "articles",
+                name: "articles",
+                moduleId: "./articles/articles",
+                nav: true,
+                title: "Articles"
+            },
+            {
                 route: "documentation",
                 name: "documentation",
                 moduleId: "./documentation/documentation",
