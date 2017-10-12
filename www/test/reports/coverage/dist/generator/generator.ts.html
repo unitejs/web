@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/236</span>
+        <span class='fraction'>0/239</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/122</span>
+        <span class='fraction'>0/126</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/58</span>
+        <span class='fraction'>0/59</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/227</span>
+        <span class='fraction'>0/230</span>
       </div>
     </div>
   </div>
@@ -525,7 +525,14 @@
 480
 481
 482
-483</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+483
+484
+485
+486
+487
+488
+489
+490</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -661,6 +668,11 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -714,6 +726,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -865,6 +878,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -1139,6 +1153,11 @@ import { BootstrapFormRenderer } from "../validation/bootstrapFormRenderer";
                 !(obj.bundler === "Browserify" || obj.bundler === "Webpack");
         }, `Aurelia does not currently support bundling with Browserify or Webpack.`);
 &nbsp;
+<span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("preactModuleTypeRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            return obj.applicationFramework !== "Preact" ||</span>
+                !(obj.moduleType === "AMD" || obj.moduleType === "SystemJS");
+        }, `Preact does not support moduleType AMD or SystemJS.`);
+&nbsp;
 <span class="cstat-no" title="statement not covered" >        ValidationRules.customRule("angularBundlingRule", <span class="fstat-no" title="function not covered" >(value: string, obj: Generator)</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >            return obj.applicationFramework !== "Angular" || obj.bundler !== "RequireJS";</span>
         }, `Angular does not currently support bundling with RequireJS.`);
@@ -1194,6 +1213,7 @@ import { BootstrapFormRenderer } from "../validation/bootstrapFormRenderer";
             .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.applicationFramework)</span>.displayName("Application Framework").required()
             .then()
             .satisfiesRule("aureliaBundlingRule")
+            .satisfiesRule("preactModuleTypeRule")
             .then()
             .satisfiesRule("angularBundlingRule")
             .ensure(<span class="fstat-no" title="function not covered" >(m: Generator)</span> =&gt; <span class="cstat-no" title="statement not covered" >m.sourceLanguage)</span>.displayName("Source Language").required()
@@ -1280,7 +1300,7 @@ import { BootstrapFormRenderer } from "../validation/bootstrapFormRenderer";
     }
 &nbsp;
 <span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >defaultValues(uniteConfiguration?: UniteConfiguration, profile?: string)</span>: void {</span>
-<span class="cstat-no" title="statement not covered" >        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "React"];</span>
+<span class="cstat-no" title="statement not covered" >        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "Preact", "React", "Vue"];</span>
 <span class="cstat-no" title="statement not covered" >        this.sourceLanguages = ["JavaScript", "TypeScript"];</span>
 <span class="cstat-no" title="statement not covered" >        this.moduleTypes = ["AMD", "CommonJS", "SystemJS"];</span>
 <span class="cstat-no" title="statement not covered" >        this.bundlers = ["Browserify", "RequireJS", "SystemJSBuilder", "Webpack"];</span>
@@ -1348,6 +1368,7 @@ import { BootstrapFormRenderer } from "../validation/bootstrapFormRenderer";
     }
 &nbsp;
 <span class="fstat-no" title="function not covered" >    public <span class="cstat-no" title="statement not covered" >moduleTypeChanged(): void {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "applicationFramework" });</span>
 <span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "bundler" });</span>
 <span class="cstat-no" title="statement not covered" >        this.controller.validate({ object: this, propertyName: "unitTestRunner" });</span>
     }
@@ -1495,7 +1516,7 @@ import { BootstrapFormRenderer } from "../validation/bootstrapFormRenderer";
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 05 2017 11:36:28 GMT+0300 (Turkey Standard Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 12 2017 08:41:13 GMT+0300 (Turkey Standard Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

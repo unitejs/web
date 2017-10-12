@@ -263,15 +263,39 @@
                 <h3>
                     <a id="vue"></a>Vue</h3>
 
-                <p>
-                    The recommended way of combining all your source/view/style in to one vue file is
-                    <b>not</b> currently supported, due to the granular way in which the build is carried out. Instead you can
-                    import your .css files, and the templates are included using the
-                    <b>url:</b> syntax from the
-                    <a href="https://www.npmjs.com/package/gulp-inline-vue" target="_blank" rel="noopener" aria-label="JSDom">gulp-inline-vue</a>
-                    plugin.</p>
-                <p>All the content in your .vue files apart from that enclosed in the &lt;template&gt;...&lt;/template&gt; tags
-                    will be ignored by the inlining process.</p>
+                <p>The recommended way of combining all your source/view/style in to one vue file is
+                    <b>not</b> currently supported due to the granular way in which the build is performed. Instead you should
+                    import your .css and .vue files as shown below:</p>
+
+                <pre><code au-prism="javacript">import "./my-component.css";
+import importedTemplate from "./my-component.vue";
+
+@Component({
+    "template": importedTemplate
+})
+export class MyComponent extends Vue {
+}
+                </code></pre>
+
+                <p>The .vue import must be named
+                    <b>importedTemplate</b> and all the content in your .vue file apart from that enclosed in the &lt;template&gt;...&lt;/template&gt;
+                    tags will be ignored by the build process.</p>
+
+                <p>Regular inline templates will also still work:</p>
+                <pre><code au-prism="javacript">import "./my-component.css";
+
+@Component({
+    "template": "&lt;span&gt;hello&lt;/span&gt;"
+})
+export class MyComponent extends Vue {
+}
+                </code></pre>
+
+
+                <p>Scoped css is
+                    <b>not</b> supported due to the different loading mechanism. Other style formats less, sass and stylus are
+                    built to a css file for the component during the normal build process so you should always import the
+                    .css file in your code file.</p>
 
                 <hr/>
 
