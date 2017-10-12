@@ -107,7 +107,8 @@
                                 <a au-scroll-to-element="id: aurelia; y-offset.bind: topOffset" href="#">Aurelia</a> /
                                 <a au-scroll-to-element="id: plainApp; y-offset.bind: topOffset" href="#">PlainApp</a> /
                                 <a au-scroll-to-element="id: preact; y-offset.bind: topOffset" href="#">Preact</a> /
-                                <a au-scroll-to-element="id: react; y-offset.bind: topOffset" href="#">React</a>
+                                <a au-scroll-to-element="id: react; y-offset.bind: topOffset" href="#">React</a> /
+                                <a au-scroll-to-element="id: vue; y-offset.bind: topOffset" href="#">Vue</a>
                             </td>
                             <td>The application framework to use</td>
                         </tr>
@@ -222,6 +223,8 @@
                     <li>PreactTypeScript</li>
                     <li>ReactJavaScript</li>
                     <li>ReactTypeScript</li>
+                    <li>VueJavaScript</li>
+                    <li>VueTypeScript</li>
                 </ul>
 
                 <hr/>
@@ -257,6 +260,43 @@
 
                 <p>Nothing else to mention at the moment.</p>
 
+                <h3>
+                    <a id="vue"></a>Vue</h3>
+
+                <p>The recommended way of combining all your source/view/style in to one vue file is
+                    <b>not</b> currently supported due to the granular way in which the build is performed. Instead you should
+                    import your .css and .vue files as shown below:</p>
+
+                <pre><code au-prism="javacript">import "./my-component.css";
+import importedTemplate from "./my-component.vue";
+
+@Component({
+    "template": importedTemplate
+})
+export class MyComponent extends Vue {
+}
+                </code></pre>
+
+                <p>The .vue import must be named
+                    <b>importedTemplate</b> and all the content in your .vue file apart from that enclosed in the &lt;template&gt;...&lt;/template&gt;
+                    tags will be ignored by the build process.</p>
+
+                <p>Regular inline templates will also still work:</p>
+                <pre><code au-prism="javacript">import "./my-component.css";
+
+@Component({
+    "template": "&lt;span&gt;hello&lt;/span&gt;"
+})
+export class MyComponent extends Vue {
+}
+                </code></pre>
+
+
+                <p>Scoped css is
+                    <b>not</b> supported due to the different loading mechanism. Other style formats less, sass and stylus are
+                    built to a css file for the component during the normal build process so you should always import the
+                    .css file in your code file.</p>
+
                 <hr/>
 
                 <h2>Unit Test Runners</h2>
@@ -270,8 +310,7 @@
                     <a id="karma"></a>Karma</h3>
 
                 <p>Although JSDom can be used with Karma there are limitations, see the
-                    <a href="https://github.com/tmpvar/jsdom#readme"
-                        target="_blank" rel="noopener" aria-label="JSDom">JSDom</a> home page for more info.</p>
+                    <a href="https://github.com/tmpvar/jsdom#readme" target="_blank" rel="noopener" aria-label="JSDom">JSDom</a> home page for more info.</p>
 
             </div>
 
@@ -370,8 +409,7 @@
                     to add your own values that will be include in the build. The values are then available in the window.unite.config
                     namespace at runtime. As this is just JSON your value can be any data that can be JSON serialized. The
                     TypeScript definitions for this object are in this repo
-                    <a href="https://github.com/unitejs/types" target="_blank"
-                        rel="noopener" aria-label="UniteJS Types">UniteJS Types</a> and can be reference in TypeScript using:</p>
+                    <a href="https://github.com/unitejs/types" target="_blank" rel="noopener" aria-label="UniteJS Types">UniteJS Types</a> and can be reference in TypeScript using:</p>
 
                 <pre><code au-prism="typecript">/// &lt;reference types="unitejs-types" /&gt;</code></pre>
 
@@ -718,22 +756,19 @@ console.log(window.unite.config["someFlag"]);</code></pre>
 
                 <h4>Electron</h4>
                 <p>For more information about the options see the
-                    <a href="https://github.com/electron-userland/electron-packager#readme"
-                        target="_blank" rel="noopener" aria-label="Electron Documentation">Electron Documentation</a>
+                    <a href="https://github.com/electron-userland/electron-packager#readme" target="_blank" rel="noopener" aria-label="Electron Documentation">Electron Documentation</a>
                 </p>
 
                 <p>You can choose to use a specific version of the Electron runtime, if not specified it defaults to the most
                     recent stable version see
-                    <a href="https://github.com/electron/electron/releases" target="_blank" rel="noopener"
-                        aria-label="Electron Releases">Electron Releases</a>.
+                    <a href="https://github.com/electron/electron/releases" target="_blank" rel="noopener" aria-label="Electron Releases">Electron Releases</a>.
 
                     <p>You can specify one or more of the platform architecture combinations, if this is not specified it defaults
                         to win32/ia32.</p>
 
                     <p>Any others keys in the Electron settings will be converted into -- params and passed to the packager,
                         this allows for other options like those specific to the darwin/mas or win32 targets
-                        <a href="https://github.com/electron-userland/electron-packager/blob/master/usage.txt"
-                            target="_blank" rel="noopener" aria-label="Electron Usage">Electron Usage</a> to be used.
+                        <a href="https://github.com/electron-userland/electron-packager/blob/master/usage.txt" target="_blank" rel="noopener" aria-label="Electron Usage">Electron Usage</a> to be used.
 
 
                         <pre><code au-prism="json">"platforms": {

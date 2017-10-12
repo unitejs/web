@@ -375,7 +375,7 @@
 			"assetsSrc": "./assetsSrc/"
 		}
 	},
-	"uniteVersion": "1.2.2",
+	"uniteVersion": "1.2.4",
 	"sourceExtensions": [
 		"ts"
 	],
