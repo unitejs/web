@@ -96,9 +96,9 @@
                         </tr>
                         <tr>
                             <td>license</td>
-                            <td>plain text</td>
-                            <td>See
-                                <a href="https://spdx.org/licenses/" target="_blank" rel="noopener" aria-label="SPDX">SPDX</a> for options</td>
+                            <td>None/{See
+                                <a href="https://spdx.org/licenses/" target="_blank" rel="noopener" aria-label="SPDX">SPDX</a> for options}</td>
+                            <td>The license file to generate if required</td>
                         </tr>
                         <tr>
                             <td>appFramework</td>
@@ -263,34 +263,24 @@
                 <h3>
                     <a id="vue"></a>Vue</h3>
 
-                <p>The recommended way of combining all your source/view/style in to one vue file is
+                <p>The 'Vue' way of combining all your source/view/style in to one .vue file is
                     <b>not</b> currently supported due to the granular way in which the build is performed. Instead you should
                     import your .css and .vue files as shown below:</p>
 
                 <pre><code au-prism="javacript">import "./my-component.css";
-import importedTemplate from "./my-component.vue";
 
 @Component({
-    "template": importedTemplate
+    "template": ./my-component.vue
 })
 export class MyComponent extends Vue {
 }
                 </code></pre>
 
-                <p>The .vue import must be named
-                    <b>importedTemplate</b> and all the content in your .vue file apart from that enclosed in the &lt;template&gt;...&lt;/template&gt;
-                    tags will be ignored by the build process.</p>
+                <p>If the template property looks like a file path the .vue file will be imported and compiled, all the content
+                    in your .vue file apart from that enclosed in the &lt;template&gt;...&lt;/template&gt; tags will be ignored
+                    by the build process.</p>
 
-                <p>Regular inline templates will also still work:</p>
-                <pre><code au-prism="javacript">import "./my-component.css";
-
-@Component({
-    "template": "&lt;span&gt;hello&lt;/span&gt;"
-})
-export class MyComponent extends Vue {
-}
-                </code></pre>
-
+                <p>Regular inline templates of course will also still work and will be compiled as well.</p>
 
                 <p>Scoped css is
                     <b>not</b> supported due to the different loading mechanism. Other style formats less, sass and stylus are
@@ -403,31 +393,40 @@ export class MyComponent extends Vue {
                     </tbody>
                 </table>
 
-                <h3>Configuration Variables</h3>
+                <h3>Build Configuration Variables</h3>
                 <br/>
-                <p>The configuration sections created in unite.json have a variables property which you can modify manually
-                    to add your own values that will be include in the build. The values are then available in the window.unite.config
-                    namespace at runtime. As this is just JSON your value can be any data that can be JSON serialized. The
-                    TypeScript definitions for this object are in this repo
+                <p>With each configuration that is created a .json file is created in the configuration folder with the same
+                    name. The values that you store in the config files are then available in the window.unite.config namespace
+                    at runtime depending on the type of build you create. Also in the configuration folder is a common.json
+                    file which you can use to store any values common to all configurations. The TypeScript definitions for
+                    this object are in this repo
                     <a href="https://github.com/unitejs/types" target="_blank" rel="noopener" aria-label="UniteJS Types">UniteJS Types</a> and can be reference in TypeScript using:</p>
 
                 <pre><code au-prism="typecript">/// &lt;reference types="unitejs-types" /&gt;</code></pre>
 
-                <p>The untite.json section could look something like this </p>
-                <pre><code au-prism="json">"buildConfigurations": {
-        "myconfiguration": {
-            ...
-            "variables": {
-                "value1": 12345,
-                "someFlag: true
-            }
-        }
-    }</code></pre>
+                <p>configuration/common.json</p>
+                <pre><code au-prism="json">{
+    "myCommonVariable": "myValue"
+}</code></pre>
+
+                <p>configuration/dev.json</p>
+                <pre><code au-prism="json">{
+    "myApiKey": "--dev-key--"
+}</code></pre>
+
+                <p>configuration/prod.json</p>
+                <pre><code au-prism="json">{
+    "myApiKey": "--prod-key--"
+}</code></pre>
 
 
-                <p>At runtime you can access the variables as follows:</p>
-                <pre><code au-prism="javascript">console.log(window.unite.config["value1"]);
-console.log(window.unite.config["someFlag"]);</code></pre>
+                <p>At runtime a dev build would allow you to access the variables as follows:</p>
+                <pre><code au-prism="javascript">console.log(window.unite.config["myCommonVariable"]); // myValue
+console.log(window.unite.config["myApiKey"]); // --dev-key--</code></pre>
+
+                <p>At runtime a prod build would allow you to access the variables as follows:</p>
+                <pre><code au-prism="javascript">console.log(window.unite.config["myCommonVariable"]); // myValue
+console.log(window.unite.config["myApiKey"]); // --prod-key--</code></pre>
 
                 <p>See the
                     <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
