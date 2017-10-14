@@ -240,7 +240,13 @@ export class Generator {
                 if (response.statusCode === 200) {
                     const licenses: ISpdx = response.content;
 
-                    this.licenses = [];
+                    this.licenses = [ { id: "None", license: {
+                        name: "No License",
+                        osiApproved: false,
+                         licenseText: "",
+                         url: ""
+                        }
+                    }];
                     Object.keys(licenses).forEach((licenseKey) => {
                         this.licenses.push({ id: licenseKey, license: licenses[licenseKey] });
                     });

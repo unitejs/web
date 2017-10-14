@@ -372,10 +372,11 @@
 			"package": "./node_modules/",
 			"build": "./build/",
 			"assets": "./assets/",
-			"assetsSrc": "./assetsSrc/"
+			"assetsSrc": "./assetsSrc/",
+			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.2.4",
+	"uniteVersion": "1.2.6",
 	"sourceExtensions": [
 		"ts"
 	],

@@ -30,13 +30,13 @@ gulp.task("build-transpile", async () => {
         .pipe(buildConfiguration.sourcemaps ? sourcemaps.init() : gutil.noop())
         
         .pipe(tsProject(typescript.reporter.nullReporter()))
-        
         .on("error", (err) => {
             display.error(err.message);
             errorCount++;
         })
         .on("error", errorUtil.handleErrorEvent)
         .js
+        
         .pipe(buildConfiguration.minify ? uglify()
             .on("error", (err) => {
                 display.error(err.toString());
