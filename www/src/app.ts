@@ -35,11 +35,18 @@ export class App {
                 title: "Articles"
             },
             {
-                route: "documentation",
-                name: "documentation",
-                moduleId: "./documentation/documentation",
+                route: "cli",
+                name: "cli",
+                moduleId: "./cli/cli",
                 nav: true,
-                title: "Documentation"
+                title: "CLI"
+            },
+            {
+                route: "generatedapp",
+                name: "generatedapp",
+                moduleId: "./generatedApp/generatedApp",
+                nav: true,
+                title: "Generated App"
             },
             {
                 route: "generator",

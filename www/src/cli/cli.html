@@ -287,6 +287,13 @@ export class MyComponent extends Vue {
                     built to a css file for the component during the normal build process so you should always import the
                     .css file in your code file.</p>
 
+                <hr>
+                <p>
+                    Vue 2.5.0 can not yet be used due to the way the module compilation has changed, although this change was to improve TypeScript
+                    support it also breaks the behaviour of default exports when used with other module formats/loaders.
+                    This is actually an issue with the TypeScript compiler which should be addressed in the TypeScript 2.7
+                    release [https://github.com/Microsoft/TypeScript/issues/19168](https://github.com/Microsoft/TypeScript/issues/19168)
+                    and more specifically Issue [#16093](https://github.com/Microsoft/TypeScript/issues/16093).</p>
                 <hr/>
 
                 <h2>Unit Test Runners</h2>
@@ -746,51 +753,10 @@ console.log(window.unite.config["myApiKey"]); // --prod-key--</code></pre>
                     </tbody>
                 </table>
 
-                <h3>Platform Options</h3>
+                <p>For more information on configuring the Platforms see the <a href="#" route-href="route: generatedapp">Generated App</a> documentation.</p>
 
-                <p>Once you have added a platform you can manually edit your unite.json to specify other options for the platform
-                    packaging. If you don't specify any platforms the packager will try and identify your current platform/architecture
-                    and create a package accordingly.
-                </p>
-
-                <h4>Web</h4>
-                <p>There are currently no other options for this platform.</p>
-
-                <h4>Electron</h4>
-                <p>For more information about the options see the
-                    <a href="https://github.com/electron-userland/electron-packager#readme" target="_blank" rel="noopener" aria-label="Electron Documentation">Electron Documentation</a>
-                </p>
-
-                <p>You can choose to use a specific version of the Electron runtime, if not specified it defaults to the most
-                    recent stable version see
-                    <a href="https://github.com/electron/electron/releases" target="_blank" rel="noopener" aria-label="Electron Releases">Electron Releases</a>.
-
-                    <p>You can specify one or more of the platform architecture combinations, if this is not specified it defaults
-                        to win32/ia32.</p>
-
-                    <p>Any others keys in the Electron settings will be converted into -- params and passed to the packager,
-                        this allows for other options like those specific to the darwin/mas or win32 targets
-                        <a href="https://github.com/electron-userland/electron-packager/blob/master/usage.txt" target="_blank" rel="noopener" aria-label="Electron Usage">Electron Usage</a> to be used.
-
-
-                        <pre><code au-prism="json">"platforms": {
-    "Electron": {
-        "runtimeVersion": "1.7.5",
-        "platformArch" : [
-            "win32/ia32",
-            "win32/x64",
-            "darwin/x64",
-            "mas/x64",
-            "linux/ia32",
-            "linux/x64",
-            "linux/armv7l"
-        ]
-        ...
-    }
-}                
-</code></pre>
-                        <p>See the
-                            <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
+                <p>See the
+                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
             </div>
         </div>
     </div>

@@ -357,6 +357,7 @@
 	"dirs": {
 		"wwwRoot": "./www/",
 		"packagedRoot": "./packaged/",
+		"platformRoot": "./platform/",
 		"www": {
 			"src": "./src/",
 			"dist": "./dist/",
@@ -376,7 +377,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.2.6",
+	"uniteVersion": "1.2.7",
 	"sourceExtensions": [
 		"ts"
 	],
