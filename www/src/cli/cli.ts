@@ -1,10 +1,10 @@
 /**
- * Documentation class.
+ * CLI class.
  */
 import { bindable } from "aurelia-templating";
 import { Scroll } from "../domHelpers/scroll";
 
-export class Documentation {
+export class CLI {
     @bindable
     public commandDisplay: string;
 
