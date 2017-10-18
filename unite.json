@@ -377,7 +377,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.2.7",
+	"uniteVersion": "1.4.0",
 	"sourceExtensions": [
 		"ts"
 	],
