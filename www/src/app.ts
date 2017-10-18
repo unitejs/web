@@ -35,6 +35,10 @@ export class App {
                 title: "Articles"
             },
             {
+                route: "documentation",
+                redirect: "cli"
+            },
+            {
                 route: "cli",
                 name: "cli",
                 moduleId: "./cli/cli",
