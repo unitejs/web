@@ -75,7 +75,7 @@ gulp unit --grep=app
 Or run in a browser (this will only work if the unit test runner is Karma) using:
 
 ``` shell
-gulp unit --browser=[chrome/firefox/ie/safari]
+gulp unit --browser=[chrome/chromeheadless/edge/firefox/ie/phantomjs/safari]
 ```
 
 If you don't want to keep running the full unit command you can add the watch switch, this will monitor for changes in source/views/styling and build whatever is required.
@@ -115,7 +115,7 @@ gulp e2e --secure --port=5000
 You can also run the tests on a different browser from the default chrome by using:
 
 ``` shell
-gulp e2e --browser=[chrome/firefox/ie/edge]
+gulp e2e --browser=[chrome/edge/firefox/ie/]
 ```
 
 ### serve
@@ -161,6 +161,12 @@ This task will create development versions of the electron runtime that will wra
 gulp platform-electron-dev
 ```
 
+Optionally specify the platform architectures and runtime version to override the defaults. If you also specify the --save options the values will be saved as the default for future runs of all the platform-electron-* tasks.
+
+``` shell
+gulp platform-electron-dev --platformArch=win32/ia32,win32/x64 --runtimeVersion=1.7.9 --save
+```
+
 The platform development versions will be created in the ./platform/electron/{platform}-{architecture} folder, where the platforms and architectures are either read from your unite.json or automatically determined from you system.
 
 ### platform-web-package
@@ -185,6 +191,12 @@ This task will gather all the necessary components of the application and create
 gulp platform-electron-package
 ```
 
+Optionally specify the platform architectures and runtime version to override the defaults. If you also specify the --save options the values will be saved as the default for future runs of all the platform-electron-* tasks.
+
+``` shell
+gulp platform-electron-package --platformArch=win32/ia32,win32/x64 --runtimeVersion=1.7.9 --save
+```
+
 This folder will then be used to create a set of platform/architecture electron packages in folders named {version}/electron_{platform}_{architecture} and a corresponding zip file in the packaged root folder.
 
 To see which file are included in a packaged version see the [Platform Packaged Files](#platformpackagedfiles) section.
@@ -199,10 +211,10 @@ This task will package your web app into the docker image that you choose, if yo
 gulp platform-docker-package
 ```
 
-Optionally specify the docker base image and where you want the web content within that image.
+Optionally specify the docker base image and where you want the web content within that image. If you also specify the --save options the values will be saved as the default for future runs of all the platform-docker-* tasks.
 
 ``` shell
-gulp platform-docker-package --image=httpd --www=/usr/local/apache2/htdocs/
+gulp platform-docker-package --image=httpd --www=/usr/local/apache2/htdocs/ --save
 ```
 
 Alternatively you can set the defaults as values in the unite.json platforms section:

@@ -81,7 +81,7 @@
 
             <p>Or run in a browser (this will only work if the unit test runner is Karma) using:</p>
 
-            <pre><code au-prism="nix">gulp unit --browser=[chrome/firefox/ie/safari]</code></pre>
+            <pre><code au-prism="nix">gulp unit --browser=[chrome/chromeheadless/edge/firefox/ie/phantomjs/safari]</code></pre>
 
             <p>If you don't want to keep running the full unit command you can add the watch switch, this will monitor for changes
                 in source/views/styling and build whatever is required.</p>
@@ -112,7 +112,7 @@
 
             <p>You can also run the tests on a different browser from the default chrome by using:</p>
 
-            <pre><code au-prism="nix">gulp e2e --browser=[chrome/firefox/ie/edge]</code></pre>
+            <pre><code au-prism="nix">gulp e2e --browser=[chrome/edge/firefox/ie]</code></pre>
 
             <h3>serve</h3>
 
@@ -151,6 +151,13 @@
 
             <pre><code au-prism="nix">gulp platform-electron-dev</code></pre>
 
+            <p>Optionally specify the platform architectures and runtime version to override the defaults. If you also specify
+                the --save options the values will be saved as the default for future runs of all the platform-electron-*
+                tasks.
+            </p>
+
+            <pre><code au-prism="nix">gulp platform-electron-dev --platformArch=win32/ia32,win32/x64 --runtimeVersion=1.7.9 --save</code></pre>
+
             <p>The platform development versions will be created in the ./platform/electron/{platform}-{architecture} folder,
                 where the platforms and architectures are either read from your unite.json or automatically determined from
                 you system.</p>
@@ -180,6 +187,13 @@
 
             <pre><code au-prism="nix">gulp platform-electron-package</code></pre>
 
+            <p>Optionally specify the platform architectures and runtime version to override the defaults. If you also specify
+                the --save options the values will be saved as the default for future runs of all the platform-electron-*
+                tasks.
+            </p>
+
+            <pre><code au-prism="nix">gulp platform-electron-package --platformArch=win32/ia32,win32/x64 --runtimeVersion=1.7.9 --save</code></pre>
+
             <p>This folder will then be used to create a set of platform/architecture electron packages in folders named {version}/electron_{platform}_{architecture}
                 and a corresponding zip file in the packaged root folder.</p>
 
@@ -198,9 +212,10 @@
 
             <pre><code au-prism="nix">gulp platform-docker-package</code></pre>
 
-            <p>Optionally specify the docker base image and where you want the web content within that image.</p>
+            <p>Optionally specify the docker base image and where you want the web content within that image. If you also specify
+                the --save options the values will be saved as the default for future runs of all the platform-docker-* tasks.</p>
 
-            <pre><code au-prism="nix">gulp platform-docker-package --image=httpd --www=/usr/local/apache2/htdocs/</code></pre>
+            <pre><code au-prism="nix">gulp platform-docker-package --image=httpd --www=/usr/local/apache2/htdocs/ --save</code></pre>
 
             <p>Alternatively you can set the defaults as values in the unite.json platforms section:</p>
 

@@ -73,7 +73,7 @@ function addClientPackageTestFiles (uniteConfig, files) {
         if (testPackages[key].assets !== undefined &&
             testPackages[key].assets !== null &&
             testPackages[key].assets.length > 0) {
-            const cas = testPackages[key].assets.split(";");
+            const cas = testPackages[key].assets.split(",");
             cas.forEach((ca) => {
                 addArray.push({
                     "pattern": `./${path.join(uniteConfig.dirs.www.package, `${key}/${ca}`)
@@ -147,7 +147,17 @@ gulp.task("unit-run-test", async () => {
 
     if (options.browser) {
         karmaConf.singleRun = false;
-        karmaConf.browsers = options.browser.split(",");
+        karmaConf.browsers = [];
+        const overrideBrowsers = options.browser.split(",");
+        const allOptions = ["Chrome", "ChromeHeadless", "Edge", "Firefox", "IE", "PhantomJS", "Safari"];
+
+        overrideBrowsers.forEach(browser => {
+            const bLower = browser.toLowerCase();
+            const found = allOptions.find(option => option.toLowerCase() === bLower);
+            if (found) {
+                karmaConf.browsers.push(found);
+            }
+        });
     }
 
     if (options.watch) {

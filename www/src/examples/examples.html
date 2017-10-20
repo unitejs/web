@@ -39,9 +39,9 @@ unite clientPackage --operation=add --packageName=sinon --includeMode=test
 
 unite clientPackage --operation=add --packageName=@angular/core --includeMode=both --testingAdditions=@angular/core/testing=bundles/core-testing.umd.js
 
-unite clientPackage --operation=add --packageName=requirejs-text --includeMode=both --map=text=requirejs-text --loaders=*.html=text;*.css=text
+unite clientPackage --operation=add --packageName=requirejs-text --includeMode=both --map=text=requirejs-text --loaders=*.html=text,*.css=text
 
-unite clientPackage --operation=add --packageName=font-awesome --assets=css/**/*;fonts/**/*
+unite clientPackage --operation=add --packageName=font-awesome --assets=css/**/*,fonts/**/*
 
 unite clientPackage --operation=add --packageName=bootstrap --version=4.0.0-beta --noScript</code></pre>
 
