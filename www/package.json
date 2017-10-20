@@ -1,7 +1,6 @@
 {
 	"name": "unitejs-web",
-	"version": "1.2.0",
-	"license": "MIT",
+	"version": "1.2.1",
 	"devDependencies": {
 		"@types/google.analytics": "^0.0.35",
 		"@types/jasmine": "^2.6.0",
@@ -35,6 +34,7 @@
 		"karma-chrome-launcher": "^2.2.0",
 		"karma-coverage": "^1.1.1",
 		"karma-coverage-allsources": "^0.0.4",
+		"karma-edge-launcher": "^0.4.2",
 		"karma-firefox-launcher": "^1.0.1",
 		"karma-html-reporter": "^0.2.7",
 		"karma-ie-launcher": "^1.0.0",
@@ -103,6 +103,7 @@
 	"engines": {
 		"node": ">=8.0.0"
 	},
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/unitejs/web.git"
