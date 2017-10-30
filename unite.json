@@ -18,286 +18,222 @@
 	"clientPackages": {
 		"aurelia-animator-css": {
 			"name": "aurelia-animator-css",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-animator-css.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.0.3",
-			"scriptIncludeMode": "none"
+			"version": "^1.0.4"
 		},
 		"aurelia-binding": {
 			"name": "aurelia-binding",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-binding.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.3.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.5.0"
 		},
 		"aurelia-bootstrapper": {
 			"name": "aurelia-bootstrapper",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-bootstrapper.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^2.1.1",
-			"scriptIncludeMode": "none"
+			"version": "^2.1.1"
 		},
 		"aurelia-dependency-injection": {
 			"name": "aurelia-dependency-injection",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-dependency-injection.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.3.2",
-			"scriptIncludeMode": "none"
+			"version": "^1.3.2"
 		},
 		"aurelia-event-aggregator": {
 			"name": "aurelia-event-aggregator",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-event-aggregator.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.0.1",
-			"scriptIncludeMode": "none"
+			"version": "^1.0.1"
 		},
 		"aurelia-fetch-client": {
 			"name": "aurelia-fetch-client",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-fetch-client.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.1.3",
-			"scriptIncludeMode": "none"
+			"version": "^1.1.3"
 		},
 		"aurelia-http-client": {
 			"name": "aurelia-http-client",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-http-client.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.2.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.2.1"
 		},
 		"aurelia-framework": {
 			"name": "aurelia-framework",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-framework.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.1.5",
-			"scriptIncludeMode": "none"
+			"version": "^1.1.5"
 		},
 		"aurelia-history": {
 			"name": "aurelia-history",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-history.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.1.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.1.0"
 		},
 		"aurelia-history-browser": {
 			"name": "aurelia-history-browser",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-history-browser.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.1.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.1.0"
 		},
 		"aurelia-loader": {
 			"name": "aurelia-loader",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-loader.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.0.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.0.0"
 		},
 		"aurelia-loader-default": {
 			"name": "aurelia-loader-default",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-loader-default.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.0.3",
-			"scriptIncludeMode": "none"
+			"version": "^1.0.3"
 		},
 		"aurelia-logging": {
 			"name": "aurelia-logging",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-logging.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.3.1",
-			"scriptIncludeMode": "none"
+			"version": "^1.3.1"
 		},
 		"aurelia-logging-console": {
 			"name": "aurelia-logging-console",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-logging-console.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.0.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.0.0"
 		},
 		"aurelia-metadata": {
 			"name": "aurelia-metadata",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-metadata.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.0.3",
-			"scriptIncludeMode": "none"
+			"version": "^1.0.3"
 		},
 		"aurelia-pal": {
 			"name": "aurelia-pal",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-pal.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.4.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.4.0"
 		},
 		"aurelia-pal-browser": {
 			"name": "aurelia-pal-browser",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-pal-browser.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.3.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.3.0"
 		},
 		"aurelia-path": {
 			"name": "aurelia-path",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-path.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.1.1",
-			"scriptIncludeMode": "none"
+			"version": "^1.1.1"
 		},
 		"aurelia-polyfills": {
 			"name": "aurelia-polyfills",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-polyfills.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.2.2",
-			"scriptIncludeMode": "none"
+			"version": "^1.2.2"
 		},
 		"aurelia-route-recognizer": {
 			"name": "aurelia-route-recognizer",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-route-recognizer.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.1.1",
-			"scriptIncludeMode": "none"
+			"version": "^1.1.1"
 		},
 		"aurelia-router": {
 			"name": "aurelia-router",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-router.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.4.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.4.0"
 		},
 		"aurelia-task-queue": {
 			"name": "aurelia-task-queue",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-task-queue.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.2.1",
-			"scriptIncludeMode": "none"
+			"version": "^1.2.1"
 		},
 		"aurelia-templating": {
 			"name": "aurelia-templating",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-templating.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.5.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.6.0"
 		},
 		"aurelia-templating-binding": {
 			"name": "aurelia-templating-binding",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-templating-binding.js",
+			"includeMode": "both",
 			"isPackage": false,
-			"version": "^1.4.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.4.0"
 		},
 		"aurelia-dialog": {
 			"name": "aurelia-dialog",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-dialog.js",
+			"includeMode": "both",
 			"isPackage": true,
-			"version": "^1.0.0-rc.1.0.3",
-			"scriptIncludeMode": "none"
+			"version": "^1.0.0-rc.1.0.3"
 		},
 		"aurelia-templating-resources": {
 			"name": "aurelia-templating-resources",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-templating-resources.js",
+			"includeMode": "both",
 			"isPackage": true,
-			"version": "^1.5.1",
-			"scriptIncludeMode": "none"
+			"version": "^1.5.3"
 		},
 		"aurelia-templating-router": {
 			"name": "aurelia-templating-router",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-templating-router.js",
+			"includeMode": "both",
 			"isPackage": true,
-			"version": "^1.2.0",
-			"scriptIncludeMode": "none"
+			"version": "^1.2.0"
 		},
 		"aurelia-validation": {
 			"name": "aurelia-validation",
-			"includeMode": "both",
-			"preload": false,
 			"main": "dist/amd/aurelia-validation.js",
+			"includeMode": "both",
 			"isPackage": true,
-			"version": "^1.1.2",
-			"scriptIncludeMode": "none"
+			"version": "^1.1.2"
 		},
 		"whatwg-fetch": {
 			"name": "whatwg-fetch",
-			"includeMode": "both",
-			"preload": false,
 			"main": "fetch.js",
-			"isPackage": false,
-			"version": "^2.0.3",
-			"scriptIncludeMode": "none"
+			"includeMode": "both",
+			"version": "^2.0.3"
 		},
 		"requirejs-text": {
 			"name": "requirejs-text",
-			"includeMode": "both",
-			"preload": false,
 			"main": "text.js",
-			"isPackage": false,
-			"version": "^2.0.15",
+			"includeMode": "both",
 			"map": {
 				"text": "requirejs-text"
 			},
-			"scriptIncludeMode": "none"
+			"version": "^2.0.15"
 		},
 		"requirejs": {
 			"name": "requirejs",
-			"includeMode": "both",
-			"preload": false,
 			"main": "require.js",
-			"isPackage": false,
-			"version": "^2.3.5",
+			"includeMode": "both",
 			"scriptIncludeMode": "both",
-			"isModuleLoader": true
+			"isModuleLoader": true,
+			"version": "^2.3.5"
 		},
 		"font-awesome": {
 			"version": "^4.7.0",
@@ -305,14 +241,16 @@
 			"isPackage": false,
 			"includeMode": "both",
 			"scriptIncludeMode": "none",
-			"assets": "fonts/**/*"
+			"assets": ["fonts/**/*"],
+			"name": "font-awesome"
 		},
 		"bootstrap": {
 			"version": "4.0.0-beta",
 			"preload": false,
 			"isPackage": false,
 			"includeMode": "both",
-			"scriptIncludeMode": "none"
+			"scriptIncludeMode": "none",
+			"name": "bootstrap"
 		},
 		"bluebird": {
 			"version": "^3.5.0",
@@ -321,7 +259,8 @@
 			"preload": false,
 			"isPackage": false,
 			"includeMode": "app",
-			"scriptIncludeMode": "both"
+			"scriptIncludeMode": "both",
+			"name": "bluebird"
 		},
 		"prismjs": {
 			"version": "^1.6.0",
@@ -330,7 +269,8 @@
 			"isPackage": false,
 			"includeMode": "app",
 			"scriptIncludeMode": "none",
-			"assets": "components/prism-javascript.min.js;components/prism-typescript.min.js;components/prism-json.min.js;components/prism-nix.min.js"
+			"assets": ["components/prism-javascript.min.js;components/prism-typescript.min.js;components/prism-json.min.js;components/prism-nix.min.js"],
+			"name": "prismjs"
 		}
 	},
 	"cssPre": "Sass",
@@ -377,7 +317,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.5.1",
+	"uniteVersion": "1.6.0",
 	"sourceExtensions": [
 		"ts"
 	],

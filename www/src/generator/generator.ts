@@ -130,14 +130,14 @@ export class Generator {
                 !(obj.bundler === "Browserify" || obj.bundler === "Webpack");
         }, `Aurelia does not currently support bundling with Browserify or Webpack.`);
 
-        ValidationRules.customRule("preactModuleTypeRule", (value: string, obj: Generator) => {
-            return obj.applicationFramework !== "Preact" ||
-                !(obj.moduleType === "AMD" || obj.moduleType === "SystemJS");
-        }, `Preact does not support moduleType AMD or SystemJS.`);
-
         ValidationRules.customRule("angularBundlingRule", (value: string, obj: Generator) => {
             return obj.applicationFramework !== "Angular" || obj.bundler !== "RequireJS";
         }, `Angular does not currently support bundling with RequireJS.`);
+
+        ValidationRules.customRule("polymerUnitTestEngineRule", (value: string, obj: Generator) => {
+            return obj.applicationFramework !== "Polymer" ||
+                !(obj.unitTestEngine === "PhantomJS" || obj.unitTestEngine === "JSDom");
+        }, `Polymer does not currently support testing using PhantomJS or JSDom.`);
 
         ValidationRules.customRule("requireJsModuleTypeRule", (value: string, obj: Generator) => {
             return obj.moduleType !== "AMD" || obj.bundler === "RequireJS";
@@ -190,7 +190,6 @@ export class Generator {
             .ensure((m: Generator) => m.applicationFramework).displayName("Application Framework").required()
             .then()
             .satisfiesRule("aureliaBundlingRule")
-            .satisfiesRule("preactModuleTypeRule")
             .then()
             .satisfiesRule("angularBundlingRule")
             .ensure((m: Generator) => m.sourceLanguage).displayName("Source Language").required()
@@ -224,6 +223,8 @@ export class Generator {
             .satisfiesRule("unitTestEngineRule")
             .then()
             .satisfiesRule("jestJSDomRule")
+            .then()
+            .satisfiesRule("polymerUnitTestEngineRule")
             .ensure((m: Generator) => m.e2eTestRunner).displayName("E2E Test Runner").required()
             .ensure((m: Generator) => m.e2eTestFramework).displayName("E2E Test Framework")
             .satisfiesRule("e2eTestFrameworkRule")
@@ -283,7 +284,7 @@ export class Generator {
     }
 
     public defaultValues(uniteConfiguration?: UniteConfiguration, profile?: string): void {
-        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "Preact", "React", "Vue"];
+        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "Polymer", "Preact", "React", "Vue"];
         this.sourceLanguages = ["JavaScript", "TypeScript"];
         this.moduleTypes = ["AMD", "CommonJS", "SystemJS"];
         this.bundlers = ["Browserify", "RequireJS", "SystemJSBuilder", "Webpack"];
@@ -348,6 +349,7 @@ export class Generator {
 
     public applicationFrameworkChanged(): void {
         this.controller.validate({ object: this, propertyName: "bundler" });
+        this.controller.validate({ object: this, propertyName: "unitTestEngine" });
     }
 
     public moduleTypeChanged(): void {
