@@ -241,7 +241,9 @@
 			"isPackage": false,
 			"includeMode": "both",
 			"scriptIncludeMode": "none",
-			"assets": ["fonts/**/*"],
+			"assets": [
+				"fonts/**/*"
+			],
 			"name": "font-awesome"
 		},
 		"bootstrap": {
@@ -269,7 +271,9 @@
 			"isPackage": false,
 			"includeMode": "app",
 			"scriptIncludeMode": "none",
-			"assets": ["components/prism-javascript.min.js;components/prism-typescript.min.js;components/prism-json.min.js;components/prism-nix.min.js"],
+			"assets": [
+				"components/prism-javascript.min.js;components/prism-typescript.min.js;components/prism-json.min.js;components/prism-nix.min.js"
+			],
 			"name": "prismjs"
 		}
 	},
