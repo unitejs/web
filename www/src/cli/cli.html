@@ -37,7 +37,7 @@
             </p>
 
             <p>Argument names are case sensitive but values are case insensitive, argument values with spaces should be enclosed
-                in quotes.</p>
+                in double quotes, single quotes or backticks.</p>
 
             <hr id="helpContent" />
 
@@ -106,6 +106,7 @@
                                 <a au-scroll-to-element="id: angular; y-offset.bind: topOffset" href="#">Angular</a> /
                                 <a au-scroll-to-element="id: aurelia; y-offset.bind: topOffset" href="#">Aurelia</a> /
                                 <a au-scroll-to-element="id: plainApp; y-offset.bind: topOffset" href="#">PlainApp</a> /
+                                <a au-scroll-to-element="id: polymer; y-offset.bind: topOffset" href="#">Polymer</a> /
                                 <a au-scroll-to-element="id: preact; y-offset.bind: topOffset" href="#">Preact</a> /
                                 <a au-scroll-to-element="id: react; y-offset.bind: topOffset" href="#">React</a> /
                                 <a au-scroll-to-element="id: vue; y-offset.bind: topOffset" href="#">Vue</a>
@@ -201,11 +202,18 @@
                     </tbody>
                 </table>
 
-                <p>See the
-                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
-
-                <p>Or jump to the
+                <p>Jump to the
                     <a href="#" route-href="route: generator">Generator</a> to generate a command line script ready to run.</p>
+
+                <hr/>
+                <h2>Examples</h2>
+
+                <pre><code au-prism="nix">unite configure --packageName=test-project --title="Test TypeScript Jasmine RequireJS" --license=MIT --sourceLanguage=TypeScript --moduleType=AMD --bundler=RequireJS --unitTestRunner=Karma --unitTestFramework=Jasmine --unitTestEngine=PhantomJS --e2eTestRunner=Protractor --e2eTestFramework=Jasmine --linter=TSLint --cssPre=Sass --cssPost=PostCss --appFramework=PlainApp --packageManager=Yarn --outputDirectory=/unite/test-project
+
+unite configure --packageName=test-project --title="Test JavaScript Mocha Chai SystemJS" --license=Apache-2.0 --sourceLanguage=JavaScript --moduleType=SystemJS --bundler=SystemJSBuilder --unitTestRunner=Karma --unitTestFramework=MochaChai --unitTestEngine=ChromeHeadless --e2eTestRunner=None --linter=ESLint --cssPre=Css --cssPost=None --appFramework=Aurelia --packageManager=Npm --force=true --outputDirectory=/unite/test-project
+
+unite configure --packageName=test-angular --title="Test Angular" --profile=AngularTypeScript --outputDirectory=/unite/test-project
+</code></pre>
 
                 <hr id="configProfiles" />
 
@@ -219,6 +227,10 @@
                     <li>AngularTypeScript</li>
                     <li>AureliaJavaScript</li>
                     <li>AureliaTypeScript</li>
+                    <li>PlainAppJavaScript</li>
+                    <li>PlainAppTypeScript</li>
+                    <li>PolymerJavaScript</li>
+                    <li>PolymerTypeScript</li>
                     <li>PreactJavaScript</li>
                     <li>PreactTypeScript</li>
                     <li>ReactJavaScript</li>
@@ -237,8 +249,8 @@
                 <h3>
                     <a id="angular"></a>Angular</h3>
 
-                <p>Angular does not currently support bundling with RequireJS because there is no longer an AMD build of RXJS
-                    in modular form.</p>
+                <p>AMD/RequireJS can not be used as the module type/bundler due to the way the libraries are utilised (RequireJS
+                    does not support wildcard bundling).</p>
 
                 <h3>
                     <a id="aurelia"></a>Aurelia</h3>
@@ -251,9 +263,22 @@
                 <p>This is a vanilla app with no framework libraries included.</p>
 
                 <h3>
+                    <a id="polymer"></a>Polymer</h3>
+
+                <p>This is based on the polymer 3 preview so likely to be quite unstable.</p>
+                <p>Also @polymer/decorators is based on a fork so that it will work using npm as your package manager on windows
+                    until
+                    <a href="https://github.com/Polymer/polymer-decorators/issues/16" target="_blank" rel="noopener" aria-label="Issue #16">Issue #16</a> is fixed or an official package is published.</p>
+
+                <p>AMD/RequireJS can not be used as the module type/bundler due to the way the libraries are utilised (RequireJS
+                    does not support wildcard bundling).</p>
+                <p>Jest (and more specifically JSDOM) and PhantomJS can not be used as unit test runners as they lack some of
+                    the JavaScript features required.</p>
+
+                <h3>
                     <a id="preact"></a>Preact</h3>
 
-                <p>Preact can only be used with CommonJS module type as there is currently no UMD build of the library.</p>
+                <p>Nothing else to mention at the moment.</p>
 
                 <h3>
                     <a id="react"></a>React</h3>
@@ -292,8 +317,10 @@ export class MyComponent extends Vue {
                     Vue 2.5.0 can not yet be used due to the way the module compilation has changed, although this change was to improve TypeScript
                     support it also breaks the behaviour of default exports when used with other module formats/loaders.
                     This is actually an issue with the TypeScript compiler which should be addressed in the TypeScript 2.7
-                    release [https://github.com/Microsoft/TypeScript/issues/19168](https://github.com/Microsoft/TypeScript/issues/19168)
-                    and more specifically Issue [#16093](https://github.com/Microsoft/TypeScript/issues/16093).</p>
+                    release
+                    <a href="https://github.com/Microsoft/TypeScript/issues/19168" target="_blank" rel="noopener" aria-label="Issue #19168">Issue #19168</a>
+                    and more specifically Issue
+                    <a href="https://github.com/Microsoft/TypeScript/issues/16093" target="_blank" rel="noopener" aria-label="Issue #19168">Issue #16093</a>.</p>
                 <hr/>
 
                 <h2>Unit Test Runners</h2>
@@ -400,7 +427,18 @@ export class MyComponent extends Vue {
                     </tbody>
                 </table>
 
-                <h3>Build Configuration Variables</h3>
+                    <hr/>
+                    <h2>Examples</h2>
+                    <pre><code au-prism="nix">unite buildConfiguration --operation=add --configurationName=dev --sourcemaps
+
+unite buildConfiguration --operation=add --configurationName=prod --bundle --minify
+
+unite buildConfiguration --operation=add --configurationName=prod-debug --bundle --minify --sourcemaps</code></pre>
+
+                    <pre><code au-prism="nix">unite buildConfiguration --operation=remove --configurationName=prod-debug</code></pre>
+                
+                <hr/>
+                <h2>Build Configuration Variables</h2>
                 <br/>
                 <p>With each configuration that is created a .json file is created in the configuration folder with the same
                     name. The values that you store in the config files are then available in the window.unite.config namespace
@@ -435,8 +473,6 @@ console.log(window.unite.config["myApiKey"]); // --dev-key--</code></pre>
                 <pre><code au-prism="javascript">console.log(window.unite.config["myCommonVariable"]); // myValue
 console.log(window.unite.config["myApiKey"]); // --prod-key--</code></pre>
 
-                <p>See the
-                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
             </div>
 
             <div if.bind="commandDisplay === 'generate'">
@@ -479,19 +515,24 @@ console.log(window.unite.config["myApiKey"]); // --prod-key--</code></pre>
                     </tbody>
                 </table>
 
+                <hr/>
+                <h2>Examples</h2>
+                <pre><code au-prism="nix">unite generate --name=thing --type=component
+unite generate --name="My Thing" --type=class --subFolder=./myClasses/sub2</code></pre>
+
+                <hr/>
                 <h3>Application Framework Generation Types</h3>
                 <br/>
                 <ul>
                     <li>Angular - class, component, directive, enum, guard, interface, module, pipe, service</li>
                     <li>Aurelia - attribute, binding-behavior, class, component, element, enum, interface, pipeline-step, value-converter</li>
                     <li>PlainApp - class, enum, interface</li>
+                    <li>Polymer - class, component, enum, interface</li>
                     <li>Preact - class, component, enum, interface</li>
                     <li>React - class, component, enum, interface</li>
                     <li>Vue - class, component, enum, interface</li>
                 </ul>
 
-                <p>See the
-                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
             </div>
 
             <div if.bind="commandDisplay === 'clientPackage'">
@@ -548,12 +589,17 @@ console.log(window.unite.config["myApiKey"]); // --prod-key--</code></pre>
                                 <br/>optional - defaults to looking it up
                                 <br/>use * to mean all files to be mapped</td>
                         </tr>
-
                         <tr>
                             <td>mainMinified</td>
                             <td>'path'</td>
                             <td>The path to the minified main js file
                                 <br/>optional - defaults to using main</td>
+                        </tr>
+                        <tr>
+                            <td>mainLib</td>
+                            <td>comma separated globs</td>
+                            <td>A specific set of files to include when main=*
+                                <br/>optional - defaults to all js in the package</td>
                         </tr>
                         <tr>
                             <td>noScript</td>
@@ -599,6 +645,42 @@ console.log(window.unite.config["myApiKey"]); // --prod-key--</code></pre>
                             <td>loaders</td>
                             <td>key1=value1,key2=value2</td>
                             <td>Additional module config loaders
+                                <br/>optional - defaults to empty</td>
+                        </tr>
+                        <tr>
+                            <td>transpileAlias</td>
+                            <td>'path'</td>
+                            <td>The location to build a transpiled version
+                                <br/>optional - defaults to empty</td>
+                        </tr>
+                        <tr>
+                            <td>transpileLanguage</td>
+                            <td>JavaScript/TypeScript</td>
+                            <td>The source language to transpile from
+                                <br/>optional - defaults to empty</td>
+                        </tr>
+                        <tr>
+                            <td>transpileSources</td>
+                            <td>comma separated globs</td>
+                            <td>The source files to transpile
+                                <br/>optional - defaults to empty</td>
+                        </tr>
+                        <tr>
+                            <td>transpileModules</td>
+                            <td>comma separated module names</td>
+                            <td>Relative module name imports to replace with map
+                                <br/>optional - defaults to empty</td>
+                        </tr>
+                        <tr>
+                            <td>transpileStripExt</td>
+                            <td></td>
+                            <td>Should we strip extensions from imports
+                                <br/>optional - defaults to false</td>
+                        </tr>
+                        <tr>
+                            <td>transpileTransforms</td>
+                            <td>from1,to1,from2,to2...</td>
+                            <td>Regex transforms to apply during transpilation
                                 <br/>optional - defaults to empty</td>
                         </tr>
                         <tr>
@@ -663,8 +745,30 @@ console.log(window.unite.config["myApiKey"]); // --prod-key--</code></pre>
                     </tbody>
                 </table>
 
-                <p>See the
-                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
+                <hr/>
+                <h2>Examples</h2>
+                <pre><code au-prism="nix">unite clientPackage --operation=add --packageName=moment
+
+unite clientPackage --operation=add --profile=bluebird
+
+unite clientPackage --operation=add --packageName=moment --version=2.0.0 --preload
+
+unite clientPackage --operation=add --packageName=rxjs --main=*
+
+unite clientPackage --operation=add --packageName=sinon --includeMode=test
+
+unite clientPackage --operation=add --packageName=@angular/core --includeMode=both --testingAdditions=@angular/core/testing=bundles/core-testing.umd.js
+
+unite clientPackage --operation=add --packageName=requirejs-text --includeMode=both --map=text=requirejs-text --loaders=*.html=text,*.css=text
+
+unite clientPackage --operation=add --packageName=font-awesome --assets=css/**/*,fonts/**/*
+
+unite clientPackage --operation=add --packageName=bootstrap --version=4.0.0-beta --noScript
+
+unite clientPackage --operation=add --packageName=@polymer/polymer --transpileAlias=@polymer-transpiled/polymer --transpileLanguage=JavaScript --transpileSources=polymer.js,polymer-element.js,lib/**/*.js --transpileModules=@webcomponents --transpileStripExt
+</code></pre>
+
+                <pre><code au-prism="nix">unite clientPackage --operation=remove --packageName=moment</code></pre>
 
                 <hr id="clientPackageProfiles" />
 
@@ -679,6 +783,7 @@ console.log(window.unite.config["myApiKey"]); // --prod-key--</code></pre>
                     <li>primsjs</li>
                     <li>rxjs</li>
                 </ul>
+
             </div>
 
             <div if.bind="commandDisplay === 'platform'">
@@ -753,10 +858,14 @@ console.log(window.unite.config["myApiKey"]); // --prod-key--</code></pre>
                     </tbody>
                 </table>
 
-                <p>For more information on configuring the Platforms see the <a href="#" route-href="route: generatedapp">Generated App</a> documentation.</p>
+                <p>For more information on configuring the Platforms see the
+                    <a href="#" route-href="route: generatedapp">Generated App</a> documentation.</p>
 
-                <p>See the
-                    <a href="#" route-href="route: examples">Examples</a> page for a more detailed demonstration on how to use the command.</p>
+                <hr/>
+                <h2>Examples</h2>
+                <pre><code au-prism="nix">unite platform --operation=add --platformName=Web</code></pre>
+
+                <pre><code au-prism="nix">unite platform --operation=remove --platformName=Electron</code></pre>
             </div>
         </div>
     </div>

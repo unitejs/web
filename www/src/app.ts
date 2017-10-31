@@ -61,10 +61,7 @@ export class App {
             },
             {
                 route: "examples",
-                name: "examples",
-                moduleId: "./examples/examples",
-                nav: true,
-                title: "Examples"
+                redirect: "cli"
             },
             {
                 route: "about",
