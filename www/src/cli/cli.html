@@ -386,6 +386,12 @@ export class MyComponent extends Vue {
                                 <br/>optional - defaults to on</td>
                         </tr>
                         <tr>
+                            <td>pwa</td>
+                            <td></td>
+                            <td>Include Progressive Web App functionality
+                                <br/>optional - defaults to off</td>
+                        </tr>
+                        <tr>
                             <td>outputDirectory</td>
                             <td>'path'</td>
                             <td>Location of the unite.json from configure
@@ -433,7 +439,9 @@ export class MyComponent extends Vue {
 
 unite buildConfiguration --operation=add --configurationName=prod --bundle --minify
 
-unite buildConfiguration --operation=add --configurationName=prod-debug --bundle --minify --sourcemaps</code></pre>
+unite buildConfiguration --operation=add --configurationName=prod-debug --bundle --minify --sourcemaps
+
+unite buildConfiguration --operation=add --configurationName=prod-pwa --bundle --minify --pwa</code></pre>
 
                     <pre><code au-prism="nix">unite buildConfiguration --operation=remove --configurationName=prod-debug</code></pre>
                 
@@ -445,7 +453,7 @@ unite buildConfiguration --operation=add --configurationName=prod-debug --bundle
                     at runtime depending on the type of build you create. Also in the configuration folder is a common.json
                     file which you can use to store any values common to all configurations. The TypeScript definitions for
                     this object are in this repo
-                    <a href="https://github.com/unitejs/types" target="_blank" rel="noopener" aria-label="UniteJS Types">UniteJS Types</a> and can be reference in TypeScript using:</p>
+                    <a href="https://github.com/unitejs/types" target="_blank" rel="noopener" aria-label="UniteJS Types">UniteJS Types</a> and can be referenced in TypeScript using:</p>
 
                 <pre><code au-prism="typecript">/// &lt;reference types="unitejs-types" /&gt;</code></pre>
 

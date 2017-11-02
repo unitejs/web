@@ -275,6 +275,15 @@
 				"components/prism-javascript.min.js;components/prism-typescript.min.js;components/prism-json.min.js;components/prism-nix.min.js"
 			],
 			"name": "prismjs"
+		},
+		"moment": {
+			"name": "moment",
+			"version": "^2.19.1",
+			"preload": false,
+			"includeMode": "both",
+			"scriptIncludeMode": "none",
+			"main": "/moment.js",
+			"isPackage": false
 		}
 	},
 	"cssPre": "Sass",
@@ -321,7 +330,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.6.0",
+	"uniteVersion": "1.6.1",
 	"sourceExtensions": [
 		"ts"
 	],

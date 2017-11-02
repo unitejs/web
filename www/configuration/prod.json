@@ -1,3 +1,4 @@
 {
-	"name": "prod"
+    "name": "prod",
+    "googleAnalyticsId": "UA-106048607-1"
 }
