@@ -12,17 +12,51 @@
             <pre><code au-prism="nix">npm -g install unitejs-cli [or] yarn global add unitejs-cli
 unite configure</code></pre>
 
+            <h2>v1.6.1</h2>
+            <p>Added Progressive Web App (PWA) support, you can enable it by setting the flag in one of your build configurations
+                e.g.
+            </p>
+            <pre><code au-prism="nix">unite buildConfiguration --operation=add --configurationName=dev --pwa</code></pre>
+            <p>The PWA additions include ./build/assets/pwa/service-worker-template.js which is used as the basis for the service
+                worker, the service worker cache name and contents are automatically populated based on your project contents
+                during the new build-create-pwa tasks.</p>
+            <p>The manifest file in ./assets/favicon/manifest.json which already existed has some additional fields, this file
+                is automatically generated based on your project with additional information pulled from ./assetsSrc/theme/unite.json.</p>
+            <p>You must have the theme assets built before doing a PWA build, so don't forget to run gulp theme-build.</p>
+
+            <hr/>
+
+            <p>Added a default loading spinner to the index page, which is automatically removed when the application is loaded.</p>
+            <p>You can customize the spinner style and content by modifying the appLoaderStyle and appLoader properties in the
+                ./assetsSrc/theme/unite.json file, or remove it entirely.</p>
+
+            <hr/>
+
+            <p>Added bundle, minify, pwas, buildDateTime and buildNumber to the window.unite runtime variables</p>
+
+            <hr/>
+
+            <p>Added version check to interrogate the npm registry and notifiy you if a new version of the CLI is available.</p>
+
+            <hr/>
+
+            <p>If you build configuration contains a googleAnalyticsId your index page will have the GA script auto injected.</p>
+
             <h2>v1.6.0</h2>
 
             <p>Added support for
-                <a href="https://www.polymer-project.org/" target="_blank" rel="noopener" aria-label="Polymer">Polymer</a> as an application framework, this is based on the Polymer 3 preview so could see changes in future releases.
+                <a href="https://www.polymer-project.org/" target="_blank" rel="noopener" aria-label="Polymer">Polymer</a> as an application framework, this is based on the Polymer 3 preview so could see changes in future
+                releases.
                 <br/>Also @polymer/decorators is based on a
                 <a href="https://github.com/unitejs-forks/polymer-decorators" target="_blank" rel="noopener" aria-label="Polymer Decorators Fork">fork</a> so that it will work using npm as your package manager on windows (temporary until
                 <a href="https://github.com/Polymer/polymer-decorators/issues/16" target="_blank" rel="noopener" aria-label="Issue #16">Issue #16</a> is fixed or an official package is published).
                 <br/>Jest (and more specifically JSDOM) and PhantomJS can not be used as unit test runners with Polymer as they
                 lack some of the JavaScript features required.</p>
 
-            <p>Added support for transpilation of client packages, which means Preact can now support using AMD and SystemJS as module types.</p>
+            <hr/>
+
+            <p>Added support for transpilation of client packages, which means Preact can now support using AMD and SystemJS
+                as module types.</p>
 
             <h2>v1.5.1</h2>
 

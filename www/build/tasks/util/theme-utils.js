@@ -14,19 +14,29 @@ const asyncUtil = require("./async-util");
 const clientPackages = require("./client-packages");
 const configUtil = require("./config-utils");
 const mkdirp = require("mkdirp");
+const glob = require("glob");
 
-function writeIndex (templateName, cacheBust, config, headers, scriptIncludes) {
+function writeIndex (minify, templateName, cacheBust, config, headers, scriptIncludes, appLoader, bodyEnd) {
+    const join = minify ? "" : "\r\n        ";
     const formattedHeaders = headers
         .filter(header => header.trim().length > 0)
-        .join("\r\n        ");
+        .join(join);
     const formattedScriptIncludes = scriptIncludes
         .filter(scriptInclude => scriptInclude.trim().length > 0)
-        .join("\r\n        ");
+        .join(join);
+    const formattedBodyEnd = bodyEnd
+        .filter(be => be.trim().length > 0)
+        .join(join);
+    const formattedAppLoader = appLoader
+        .filter(al => al.trim().length > 0)
+        .join(join);
     return asyncUtil.stream(gulp.src(templateName)
         .pipe(replace("{THEME}", `        ${formattedHeaders}`))
         .pipe(replace("{SCRIPTINCLUDE}", `        ${formattedScriptIncludes}`))
         .pipe(replace("{CACHEBUST}", cacheBust))
         .pipe(replace("{UNITECONFIG}", config))
+        .pipe(replace("{APPLOADER}", formattedAppLoader))
+        .pipe(replace("{BODYEND}", `        ${formattedBodyEnd}`))
         .pipe(rename("index.html"))
         .pipe(gulp.dest("./")));
 }
@@ -60,14 +70,44 @@ async function buildIndex (uniteConfig, uniteThemeConfig, buildConfiguration, pa
         headers = headers.concat(uniteThemeConfig.customHeaders);
     }
 
+    headers.push("<link rel=\"manifest\" href=\"./assets/favicon/manifest.json\">");
+
+    const substTheme = line => {
+        return line.replace("{THEME_COLOR}", uniteThemeConfig.themeColor)
+            .replace("{THEME_BACKGROUND_COLOR}", uniteThemeConfig.backgroundColor);
+    };
+
+    if (uniteThemeConfig.appLoaderStyle && uniteThemeConfig.appLoaderStyle.length > 0) {
+        headers = headers.concat(uniteThemeConfig.appLoaderStyle.map(line => substTheme(line)));
+    }
+
+    let appLoader = "";
+    if (uniteThemeConfig.appLoader) {
+        appLoader = uniteThemeConfig.appLoader.map(line => substTheme(line));
+    }
+
     const scriptIncludes = clientPackages.getScriptIncludes(uniteConfig, buildConfiguration.bundle);
+    const bodyEnd = [];
+
+    if (uniteJs.config.googleAnalyticsId) {
+        bodyEnd.push(`<script async src="https://www.googletagmanager.com/gtag/js?id=${uniteJs.config.googleAnalyticsId}"></script>`);
+        bodyEnd.push("<script>");
+        bodyEnd.push("window.dataLayer=window.dataLayer||[];");
+        bodyEnd.push("function gtag(){dataLayer.push(arguments)};");
+        bodyEnd.push("gtag('js',new Date());");
+        bodyEnd.push(`gtag('config','${uniteJs.config.googleAnalyticsId}');`);
+        bodyEnd.push("</script>");
+    }
 
     return writeIndex(
+        buildConfiguration.minify,
         buildConfiguration.bundle ? "./index-bundle.html" : "./index-no-bundle.html",
         cacheBust,
         config,
         headers,
-        scriptIncludes.map(scriptInclude => `<script src="${scriptInclude}"></script>`)
+        scriptIncludes.map(scriptInclude => `<script src="${scriptInclude}"></script>`),
+        appLoader,
+        bodyEnd
     );
 }
 
@@ -104,13 +144,18 @@ async function buildBrowserConfig (uniteConfig, uniteThemeConfig) {
     }
 }
 
-async function buildManifestJson (uniteConfig, uniteThemeConfig) {
+async function buildManifestJson (uniteConfig, uniteThemeConfig, packageJson) {
     const manifest = {
         "name": uniteConfig.title,
+        "short_name": uniteThemeConfig.shortName || uniteConfig.title,
+        "description": uniteThemeConfig.metaDescription,
+        "version": packageJson.version,
+        "author": uniteThemeConfig.metaAuthor,
         "icons": [],
         "theme_color": uniteThemeConfig.themeColor,
         "background_color": uniteThemeConfig.backgroundColor,
-        "display": "standalone"
+        "display": "standalone",
+        "start_url": "../../index.html"
     };
 
     const sizes = [192, 512];
@@ -125,7 +170,7 @@ async function buildManifestJson (uniteConfig, uniteThemeConfig) {
         const imageExists = await asyncUtil.fileExists(fname);
         if (imageExists) {
             manifest.icons.push({
-                "src": `./${fname.replace(/\\/g, "/")}`,
+                "src": `../../${fname.replace(/\\/g, "/")}`,
                 "sizes": `${sizes[i]}x${sizes[i]}`,
                 "type": "image/png"
             });
@@ -334,10 +379,43 @@ async function generateFavIcons (uniteConfig, uniteThemeConfig, favIconDirectory
     }
 }
 
+async function buildPwa (uniteConfig, buildConfiguration, packageJson, files, dest, includeRoot) {
+    const cacheName = `${packageJson.name}-${packageJson.version}-${buildConfiguration.name}`;
+    let cacheFiles = ["./"];
+
+    const globAsync = util.promisify(glob);
+    for (let i = 0; i < files.length; i++) {
+        let globFiles = await globAsync(files[i].src);
+
+        if (files[i].moveToRoot) {
+            if (includeRoot) {
+                const root = files[i].src
+                    .replace(/(.*?)\*(?:.*)/, "$1")
+                    .replace(/\\/g, "/");
+                globFiles = globFiles.map(file => `./${file.replace(root, "")}`);
+                cacheFiles = cacheFiles.concat(globFiles);
+            }
+        } else {
+            globFiles = globFiles.map(file => `./${file}`);
+            cacheFiles = cacheFiles.concat(globFiles);
+        }
+    }
+
+    return asyncUtil.stream(gulp.src(path.join(
+        uniteConfig.dirs.www.build,
+        "assets/pwa/service-worker-template.js"
+    ))
+        .pipe(replace("{CACHE_NAME}", cacheName))
+        .pipe(replace("{CACHE_URLS}", JSON.stringify(cacheFiles, undefined, "\t")))
+        .pipe(rename("service-worker.js"))
+        .pipe(gulp.dest(dest)));
+}
+
 module.exports = {
     buildBrowserConfig,
     buildIndex,
     buildManifestJson,
+    buildPwa,
     buildThemeHeaders,
     callUniteImage,
     generateFavIcons
