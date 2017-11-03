@@ -196,7 +196,7 @@
 			"main": "dist/amd/aurelia-templating-resources.js",
 			"includeMode": "both",
 			"isPackage": true,
-			"version": "^1.5.3"
+			"version": "^1.5.4"
 		},
 		"aurelia-templating-router": {
 			"name": "aurelia-templating-router",
@@ -217,15 +217,6 @@
 			"main": "fetch.js",
 			"includeMode": "both",
 			"version": "^2.0.3"
-		},
-		"requirejs-text": {
-			"name": "requirejs-text",
-			"main": "text.js",
-			"includeMode": "both",
-			"map": {
-				"text": "requirejs-text"
-			},
-			"version": "^2.0.15"
 		},
 		"requirejs": {
 			"name": "requirejs",
@@ -284,6 +275,15 @@
 			"scriptIncludeMode": "none",
 			"main": "/moment.js",
 			"isPackage": false
+		},
+		"requirejs-text": {
+			"name": "requirejs-text",
+			"main": "text.js",
+			"includeMode": "both",
+			"map": {
+				"text": "requirejs-text"
+			},
+			"version": "^2.0.15"
 		}
 	},
 	"cssPre": "Sass",
@@ -330,7 +330,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.6.1",
+	"uniteVersion": "1.6.2",
 	"sourceExtensions": [
 		"ts"
 	],
