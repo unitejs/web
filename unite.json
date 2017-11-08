@@ -1,6 +1,5 @@
 {
 	"packageName": "unitejs-web",
-	"title": "UniteJS",
 	"license": "MIT",
 	"sourceLanguage": "TypeScript",
 	"moduleType": "Amd",
@@ -330,7 +329,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.6.2",
+	"uniteVersion": "1.6.4",
 	"sourceExtensions": [
 		"ts"
 	],

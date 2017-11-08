@@ -90,11 +90,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>title</td>
-                            <td>plain text</td>
-                            <td>Used on the web index page</td>
-                        </tr>
-                        <tr>
                             <td>license</td>
                             <td>None/{See
                                 <a href="https://spdx.org/licenses/" target="_blank" rel="noopener" aria-label="SPDX">SPDX</a> for options}</td>
@@ -198,6 +193,80 @@
                             <td>'path'</td>
                             <td>The location that you want the project generated
                                 <br/>optional - defaults to current directory</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Meta Data</b>
+                            </td>
+                            <td>
+                                <b>All optional</b>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>title</td>
+                            <td>plain text</td>
+                            <td>Used on the web index page</td>
+                        </tr>
+                        <tr>
+                            <td>description </td>
+                            <td>plain text </td>
+                            <td>Meta data description
+                                <br/>optional - defaults to title </td>
+                        </tr>
+                        <tr>
+                            <td>shortName </td>
+                            <td>plain text (usually &lt;=1 2 chars) </td>
+                            <td>Meta data short name
+                                <br/>optional - defaults to title </td>
+                        </tr>
+                        <tr>
+                            <td>keywords </td>
+                            <td>comma separated plain text </td>
+                            <td>Meta data keywords
+                                <br/>optional - defaults to title split on space </td>
+                        </tr>
+                        <tr>
+                            <td>organization </td>
+                            <td>plain text </td>
+                            <td>Meta data organization
+                                <br/>optional - defaults to empty </td>
+                        </tr>
+                        <tr>
+                            <td>webSite </td>
+                            <td>url </td>
+                            <td>Url for web site associated with organization
+                                <br/>optional - defaults to empty </td>
+                        </tr>
+                        <tr>
+                            <td>copyright </td>
+                            <td>plain text </td>
+                            <td>Copyright notice for application
+                                <br/>optional - defaults to empty </td>
+                        </tr>
+                        <tr>
+                            <td>namespace </td>
+                            <td>dotted name </td>
+                            <td>Namespace to use in packaging e.g. org.myorg
+                                <br/>optional - defaults to empty </td>
+                        </tr>
+                        <tr>
+                            <td>author </td>
+                            <td>plain text </td>
+                            <td>Name of the app author
+                                <br/>optional - defaults to empty </td>
+                        </tr>
+                        <tr>
+                            <td>authorEmail </td>
+                            <td>email address </td>
+                            <td>E-mail of the app author
+                                <br/>optional - defaults to empty </td>
+                        </tr>
+                        <tr>
+                            <td>authorWebSite </td>
+                            <td>url </td>
+                            <td>Web Site of the app author
+                                <br/>optional - defaults to empty </td>
                         </tr>
                     </tbody>
                 </table>
@@ -433,9 +502,9 @@ export class MyComponent extends Vue {
                     </tbody>
                 </table>
 
-                    <hr/>
-                    <h2>Examples</h2>
-                    <pre><code au-prism="nix">unite buildConfiguration --operation=add --configurationName=dev --sourcemaps
+                <hr/>
+                <h2>Examples</h2>
+                <pre><code au-prism="nix">unite buildConfiguration --operation=add --configurationName=dev --sourcemaps
 
 unite buildConfiguration --operation=add --configurationName=prod --bundle --minify
 
@@ -443,8 +512,8 @@ unite buildConfiguration --operation=add --configurationName=prod-debug --bundle
 
 unite buildConfiguration --operation=add --configurationName=prod-pwa --bundle --minify --pwa</code></pre>
 
-                    <pre><code au-prism="nix">unite buildConfiguration --operation=remove --configurationName=prod-debug</code></pre>
-                
+                <pre><code au-prism="nix">unite buildConfiguration --operation=remove --configurationName=prod-debug</code></pre>
+
                 <hr/>
                 <h2>Build Configuration Variables</h2>
                 <br/>

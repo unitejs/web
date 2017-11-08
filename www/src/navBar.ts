@@ -12,6 +12,6 @@ export class NavBar {
     public version: string;
 
     public attached(): void {
-        this.version = "Engine v1.6.2";
+        this.version = "Engine v1.6.4";
     }
 }

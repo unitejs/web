@@ -21,6 +21,26 @@ export class Generator {
     public packageName: string;
     @bindable
     public title: string;
+    @bindable
+    public shortName: string;
+    @bindable
+    public description: string;
+    @bindable
+    public keywords: string;
+    @bindable
+    public organization: string;
+    @bindable
+    public webSite: string;
+    @bindable
+    public copyright: string;
+    @bindable
+    public namespace: string;
+    @bindable
+    public author: string;
+    @bindable
+    public authorEmail: string;
+    @bindable
+    public authorWebSite: string;
 
     @bindable
     public profile: string;
@@ -185,7 +205,6 @@ export class Generator {
             .satisfiesRule("packageNameStartRule")
             .satisfiesRule("packageNameSpecialCharactersRule")
             .satisfiesRule("packageNameNonUrlSafeRule")
-            .ensure((m: Generator) => m.title).displayName("Title").required()
             .ensure((m: Generator) => m.license).displayName("License").required()
             .ensure((m: Generator) => m.applicationFramework).displayName("Application Framework").required()
             .then()
@@ -300,7 +319,6 @@ export class Generator {
 
         this.profile = profile;
         this.packageName = uniteConfiguration ? uniteConfiguration.packageName : undefined;
-        this.title = uniteConfiguration ? uniteConfiguration.title : undefined;
         this.license = uniteConfiguration ? uniteConfiguration.license : undefined;
         this.applicationFramework = uniteConfiguration ? uniteConfiguration.applicationFramework : undefined;
         this.sourceLanguage = uniteConfiguration ? uniteConfiguration.sourceLanguage : undefined;
@@ -319,6 +337,18 @@ export class Generator {
         this.cssPost = uniteConfiguration ? uniteConfiguration.cssPost : undefined;
         this.packageManager = uniteConfiguration ? uniteConfiguration.packageManager : undefined;
         this.outputDirectory = uniteConfiguration ? uniteConfiguration.outputDirectory : undefined;
+
+        this.title = uniteConfiguration ? uniteConfiguration.title : undefined;
+        this.shortName = uniteConfiguration ? uniteConfiguration.shortName : undefined;
+        this.description = uniteConfiguration ? uniteConfiguration.description : undefined;
+        this.keywords = uniteConfiguration ? uniteConfiguration.keywords.join(",") : undefined;
+        this.organization = uniteConfiguration ? uniteConfiguration.organization : undefined;
+        this.copyright = uniteConfiguration ? uniteConfiguration.copyright : undefined;
+        this.webSite = uniteConfiguration ? uniteConfiguration.webSite : undefined;
+        this.namespace = uniteConfiguration ? uniteConfiguration.namespace : undefined;
+        this.author = uniteConfiguration ? uniteConfiguration.author : undefined;
+        this.authorEmail = uniteConfiguration ? uniteConfiguration.authorEmail : undefined;
+        this.authorWebSite = uniteConfiguration ? uniteConfiguration.authorWebSite : undefined;
     }
 
     public profileChanged(): void {
@@ -407,7 +437,6 @@ export class Generator {
     public generate(): void {
         const uniteConfiguration = new UniteConfiguration();
         uniteConfiguration.packageName = this.packageName;
-        uniteConfiguration.title = this.title;
         uniteConfiguration.license = this.license;
         uniteConfiguration.applicationFramework = this.applicationFramework;
         uniteConfiguration.moduleType = this.moduleType;
@@ -423,6 +452,18 @@ export class Generator {
         uniteConfiguration.cssPost = this.cssPost;
         uniteConfiguration.packageManager = this.packageManager;
         uniteConfiguration.outputDirectory = this.outputDirectory;
+
+        uniteConfiguration.title = this.title;
+        uniteConfiguration.shortName = this.shortName;
+        uniteConfiguration.description = this.description;
+        uniteConfiguration.keywords = this.keywords.split(",");
+        uniteConfiguration.organization = this.organization;
+        uniteConfiguration.copyright = this.copyright;
+        uniteConfiguration.webSite = this.webSite;
+        uniteConfiguration.namespace = this.namespace;
+        uniteConfiguration.author = this.author;
+        uniteConfiguration.authorEmail = this.authorEmail;
+        uniteConfiguration.authorWebSite = this.authorWebSite;
 
         let profile: UniteConfiguration;
 
@@ -441,7 +482,6 @@ export class Generator {
                 if (result.valid) {
                     this.commandLine = `unite configure` +
                         ` --packageName=${this.packageName}` +
-                        ` --title="${this.title}"` +
                         (this.profile === undefined
                             ? "" : ` --profile=${this.profile}`) +
                         this.generateArg(profile, uniteConfiguration, "license") +
@@ -458,6 +498,17 @@ export class Generator {
                         this.generateArg(profile, uniteConfiguration, "cssPre") +
                         this.generateArg(profile, uniteConfiguration, "cssPost") +
                         this.generateArg(profile, uniteConfiguration, "packageManager") +
+                        this.generateArg(profile, uniteConfiguration, "title") +
+                        this.generateArg(profile, uniteConfiguration, "shortName") +
+                        this.generateArg(profile, uniteConfiguration, "description") +
+                        this.generateArg(profile, uniteConfiguration, "keywords") +
+                        this.generateArg(profile, uniteConfiguration, "organization") +
+                        this.generateArg(profile, uniteConfiguration, "copyright") +
+                        this.generateArg(profile, uniteConfiguration, "webSite") +
+                        this.generateArg(profile, uniteConfiguration, "namespace") +
+                        this.generateArg(profile, uniteConfiguration, "author") +
+                        this.generateArg(profile, uniteConfiguration, "authorEmail") +
+                        this.generateArg(profile, uniteConfiguration, "authorWebSite") +
                         (this.outputDirectory === undefined ||
                             this.outputDirectory === null ||
                             this.outputDirectory.length === 0
@@ -477,7 +528,8 @@ export class Generator {
         } else if (uniteConfiguration[propertyName] === undefined) {
             return "";
         } else {
-            return ` --${argName ? argName : propertyName}=${uniteConfiguration[propertyName]}`;
+            const delim = uniteConfiguration[propertyName].indexOf(" ") >= 0 ? "\"" : "";
+            return ` --${argName ? argName : propertyName}=${delim}${uniteConfiguration[propertyName]}${delim}`;
         }
     }
 
