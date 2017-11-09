@@ -75,6 +75,12 @@ module.exports = function(config) {
 			included: false,
 			watched: true,
 			includeType: 'fixed'
+		},
+		{
+			pattern: './assetsSrc/theme/unite-theme.json',
+			included: false,
+			watched: true,
+			includeType: 'fixed'
 		}
 	]
 });

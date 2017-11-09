@@ -26,11 +26,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="title">Title</label>
-                    <input type="text" class="form-control form-control-sm" id="title" placeholder="Title" value.bind="title & validate">
-                </div>
-
-                <div class="form-group">
                     <label class="control-label" for="license">License</label>
                     <select class="form-control form-control-sm" id="license" value.bind="license & validate">
                         <option model.bind="undefined">Choose...</option>
@@ -173,6 +168,62 @@
                 <div class="form-group">
                     <label class="control-label" for="outputDirectory">Output Directory</label>
                     <input type="text" class="form-control form-control-sm" id="outputDirectory" placeholder="Output Directory" value.bind="outputDirectory">
+                </div>
+
+                <h2>Meta Data</h2>
+                <div class="form-group">
+                    <label class="control-label" for="title">Title</label>
+                    <input type="text" class="form-control form-control-sm" id="title" placeholder="Title" value.bind="title & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="shortName">Short Name</label>
+                    <input type="text" class="form-control form-control-sm" id="shortName" placeholder="Short Name (usually &lt; 21 chars)" value.bind="shortName & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="description">Description</label>
+                    <input type="text" class="form-control form-control-sm" id="description" placeholder="Description" value.bind="description & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="keywords">Keywords</label>
+                    <input type="text" class="form-control form-control-sm" id="keywords" placeholder="Comma separated keywords" value.bind="keywords & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="organization">Organization</label>
+                    <input type="text" class="form-control form-control-sm" id="organization" placeholder="Organization" value.bind="organization & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="copyright">Copyright</label>
+                    <input type="text" class="form-control form-control-sm" id="copyright" placeholder="Copyright" value.bind="copyright & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="webSite">Web Site</label>
+                    <input type="text" class="form-control form-control-sm" id="webSite" placeholder="Web Site" value.bind="webSite & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="namespace">Namespace</label>
+                    <input type="text" class="form-control form-control-sm" id="namespace" placeholder="e.g. unitejs.com" value.bind="namespace & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="author">Author</label>
+                    <input type="text" class="form-control form-control-sm" id="author" placeholder="Author" value.bind="author & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="authorEmail">Author E-mail</label>
+                    <input type="text" class="form-control form-control-sm" id="authorEmail" placeholder="Author E-mail" value.bind="authorEmail & validate">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="authorWebSite">Author Web Site</label>
+                    <input type="text" class="form-control form-control-sm" id="authorWebSite" placeholder="Author Web Site" value.bind="authorWebSite & validate">
                 </div>
 
                 <button class="btn btn-primary" click.trigger="generate()">Generate</button>

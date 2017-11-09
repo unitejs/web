@@ -12,6 +12,34 @@
             <pre><code au-prism="nix">npm -g install unitejs-cli [or] yarn global add unitejs-cli
 unite configure</code></pre>
 
+            <h2>v1.6.4</h2>
+            <p>Added support for cordova for platform generation, allows you to target an app as native android/ios/windows and more.</p>
+            <p>Cordova supports generation of platform assets for icons and screen shots.</p>
+            <p>First make sure you have cordova installed:</p>
+            <pre><code au-prism="nix">npm -g install cordova [or] yarn global add cordova/code></pre>
+            <p>Now add the new platform:</p>
+            <pre><code au-prism="nix">unite platform --operation=add --platformName=Cordova
+npm install</code></pre>
+            <p>Generate the theme assets:</p>
+            <pre><code au-prism="nix">gulp platform-cordova-theme</code></pre>
+            <p>Now create the cordova platform projects:</p>
+            <pre><code au-prism="nix">gulp platform-cordova-dev</code></pre>
+            <p>Now your ./platform/cordova/platforms/ folder will contain builds for android/ios/windows by default.</p>
+            <hr/>
+            <p>Added additional optional arguments for configure command to provide more meta data for use in application packaging.<br/>These properties can be modified manually by editing www/assetsSrc/theme/unite-theme.json</p>
+            <ul>
+                <li>title</li>
+                <li>shortName</li>
+                <li>description</li>
+                <li>keywords</li>
+                <li>webSite</li>
+                <li>namespace</li>
+                <li>copyright</li>
+                <li>author</li>
+                <li>authorEmail</li>
+                <li>authorWebSite</li>
+            </ul>
+
             <h2>v1.6.2</h2>
             <p>Updated Angular to v5
             </p>

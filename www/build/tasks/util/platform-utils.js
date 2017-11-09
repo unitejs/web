@@ -13,10 +13,14 @@ async function listFiles (uniteConfig, buildConfiguration) {
     if (buildConfiguration.bundle && !bundleExists) {
         display.error(`You have specified configuration '${buildConfiguration.name}' which is bundled,` +
             " but the dist folder contains a non bundled build.");
+        display.error("Please add the --buildConfiguration argument to this task," +
+            " or rebuild the app with a different configuration.");
         process.exit(1);
     } else if (!buildConfiguration.bundle && bundleExists) {
         display.error(`You have specified configuration '${buildConfiguration.name}' which is not bundled,` +
             " but the dist folder contains a bundled build.");
+        display.error("Please add the --buildConfiguration argument to this task," +
+            " or rebuild the app with a different configuration.");
         process.exit(1);
     }
 
@@ -46,24 +50,17 @@ async function listFiles (uniteConfig, buildConfiguration) {
     return files;
 }
 
-async function gatherFiles (uniteConfig, buildConfiguration, packageJson, platformName, wwwRootFolder) {
+async function gatherFiles (uniteConfig, buildConfiguration, packageJson, platformName, gatherRoot) {
     display.info("Gathering Files", platformName);
 
     const files = await listFiles(uniteConfig, buildConfiguration);
 
-    const platformRoot = path.join(
-        "../",
-        uniteConfig.dirs.packagedRoot,
-        `/${packageJson.version}/${platformName.toLowerCase()}/`
-    );
-
-    const dest = wwwRootFolder ? path.join(platformRoot, wwwRootFolder) : platformRoot;
-    display.info("Destination", dest);
+    display.info("Destination", gatherRoot);
 
     for (let i = 0; i < files.length; i++) {
-        const fileDest = files[i].moveToRoot ? dest
+        const fileDest = files[i].moveToRoot ? gatherRoot
             : path.join(
-                dest,
+                gatherRoot,
                 files[i].src.indexOf("**") > 0
                     ? files[i].src.replace(/\*\*[/\\]\*(.*)/, "") : path.dirname(files[i].src)
             );
@@ -76,10 +73,8 @@ async function gatherFiles (uniteConfig, buildConfiguration, packageJson, platfo
     }
 
     if (buildConfiguration.pwa) {
-        await themeUtils.buildPwa(uniteConfig, buildConfiguration, packageJson, files, dest, true);
+        await themeUtils.buildPwa(uniteConfig, buildConfiguration, packageJson, files, gatherRoot, true);
     }
-
-    return platformRoot;
 }
 
 function getConfig (uniteConfig, platformName) {
