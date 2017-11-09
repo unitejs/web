@@ -148,13 +148,14 @@
 
             <h3>platform-cordova-dev</h3>
 
-            <p>This task will create a cordova development setup in the ./platform/cordova folder. It defaults to adding the cordova
-                platforms android, ios and windows. You can run this task multiple times without losing any changes you have
-                made to the cordova projects, in fact <b>you must</b> run this again if your web app changes so that it copies
-                accross the new content into the ./platform/cordova/www folder.</p>
+            <p>This task will create a cordova development setup in the ./platform/cordova folder. It defaults to adding the
+                cordova platforms android, ios and windows. You can run this task multiple times without losing any changes
+                you have made to the cordova projects, in fact
+                <b>you must</b> run this again if your web app changes so that it copies accross the new content into the ./platform/cordova/www
+                folder.</p>
 
-            <p>The meta data used to generate the configurations is all picked up from ./www/assetsSrc/unite-theme.json such as
-                title, description, organization, namespace, author. The version is read from your ./www/package.json</p>
+            <p>The meta data used to generate the configurations is all picked up from ./www/assetsSrc/unite-theme.json such
+                as title, description, organization, namespace, author. The version is read from your ./www/package.json</p>
 
             <p>There are no packaging tasks available for cordova as the build processes are platform specific. Once you have
                 generated the projects you can use all the regular cordova commands, see
@@ -165,6 +166,11 @@
             <p>You can override the default platforms and save them as follows:</p>
 
             <pre><code au-prism="nix">gulp platform-cordova-dev --platforms=android,windows --save</code></pre>
+
+            <p>You will also need to match the configuration used by the build, you can do this with the buildConfiguration
+                argument.</p>
+
+            <pre><code au-prism="nix">gulp platform-cordova-dev --buildConfiguration=prod</code></pre>
 
             <h3>platform-cordova-theme</h3>
 
@@ -184,6 +190,11 @@
 
             <pre><code au-prism="nix">gulp platform-docker-package</code></pre>
 
+            <p>You will also need to match the configuration used by the build, you can do this with the buildConfiguration
+                argument.</p>
+
+            <pre><code au-prism="nix">gulp platform-docker-package --buildConfiguration=prod</code></pre>
+            
             <p>Optionally specify the docker base image and where you want the web content within that image. If you also specify
                 the --save options the values will be saved as the default for future runs of all the platform-docker-* tasks.</p>
 
@@ -233,6 +244,11 @@
 
             <pre><code au-prism="nix">gulp platform-electron-package</code></pre>
 
+            <p>You will also need to match the configuration used by the build, you can do this with the buildConfiguration
+                argument.</p>
+
+            <pre><code au-prism="nix">gulp platform-electron-package --buildConfiguration=prod</code></pre>
+            
             <p>Optionally specify the platform architectures and runtime version to override the defaults. If you also specify
                 the --save options the values will be saved as the default for future runs of all the platform-electron-*
                 tasks.
@@ -261,6 +277,11 @@
             <p>This folder contains a complete set of web deployable files for the application. A zip file named packaged/{version}_web.zip
                 will also be created in the packaged directory.</p>
 
+            <p>You will also need to match the configuration used by the build, you can do this with the buildConfiguration
+                argument.</p>
+
+            <pre><code au-prism="nix">gulp platform-web-package --buildConfiguration=prod</code></pre>
+                
             <p>To see which file are included in a packaged version see the
                 <a href="#" au-scroll-to-element="id: platformPackagedFiles; y-offset.bind: topOffset">Platform Packaged Files</a>
                 section.
