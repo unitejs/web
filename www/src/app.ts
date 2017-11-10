@@ -60,6 +60,13 @@ export class App {
                 title: "Generator"
             },
             {
+                route: "status",
+                name: "status",
+                moduleId: "./status/status",
+                nav: true,
+                title: "Status"
+            },
+            {
                 route: "examples",
                 redirect: "cli"
             },
