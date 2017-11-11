@@ -13,7 +13,8 @@ exports.config = {
 		chromeOptions: {
 			args: [
 				'--headless',
-				'--disable-gpu'
+				'--disable-gpu',
+				'--no-sandbox'
 			]
 		}
 	},

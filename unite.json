@@ -237,7 +237,7 @@
 			"name": "font-awesome"
 		},
 		"bootstrap": {
-			"version": "4.0.0-beta",
+			"version": "4.0.0-beta.2",
 			"preload": false,
 			"isPackage": false,
 			"includeMode": "both",
@@ -329,7 +329,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.6.5",
+	"uniteVersion": "1.6.8",
 	"sourceExtensions": [
 		"ts"
 	],
