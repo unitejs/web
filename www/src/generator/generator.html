@@ -21,11 +21,6 @@
                 <hr/>
 
                 <div class="form-group">
-                    <label class="control-label" for="packageName">Package Name</label>
-                    <input type="text" class="form-control form-control-sm" id="packageName" placeholder="Package Name" value.bind="packageName & validate">
-                </div>
-
-                <div class="form-group">
                     <label class="control-label" for="license">License</label>
                     <select class="form-control form-control-sm" id="license" value.bind="license & validate">
                         <option model.bind="undefined">Choose...</option>
@@ -165,12 +160,12 @@
                     </select>
                 </div>
 
+                <h2>Meta Data</h2>
                 <div class="form-group">
-                    <label class="control-label" for="outputDirectory">Output Directory</label>
-                    <input type="text" class="form-control form-control-sm" id="outputDirectory" placeholder="Output Directory" value.bind="outputDirectory">
+                    <label class="control-label" for="packageName">Package Name</label>
+                    <input type="text" class="form-control form-control-sm" id="packageName" placeholder="Package Name" value.bind="packageName & validate">
                 </div>
 
-                <h2>Meta Data</h2>
                 <div class="form-group">
                     <label class="control-label" for="title">Title</label>
                     <input type="text" class="form-control form-control-sm" id="title" placeholder="Title" value.bind="title & validate">
@@ -224,6 +219,13 @@
                 <div class="form-group">
                     <label class="control-label" for="authorWebSite">Author Web Site</label>
                     <input type="text" class="form-control form-control-sm" id="authorWebSite" placeholder="Author Web Site" value.bind="authorWebSite & validate">
+                </div>
+
+                <hr/>
+
+                <div class="form-group">
+                    <label class="control-label" for="outputDirectory">Output Directory</label>
+                    <input type="text" class="form-control form-control-sm" id="outputDirectory" placeholder="Output Directory" value.bind="outputDirectory">
                 </div>
 
                 <button class="btn btn-primary" click.trigger="generate()">Generate</button>

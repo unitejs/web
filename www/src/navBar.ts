@@ -23,7 +23,7 @@ export class NavBar {
             }
         })
         .catch(() => {
-            // ignoer error we just wont display version
+            // ignore error we just wont display version
         });
     }
 }

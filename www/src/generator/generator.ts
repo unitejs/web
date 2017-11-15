@@ -341,7 +341,8 @@ export class Generator {
         this.title = uniteConfiguration ? uniteConfiguration.title : undefined;
         this.shortName = uniteConfiguration ? uniteConfiguration.shortName : undefined;
         this.description = uniteConfiguration ? uniteConfiguration.description : undefined;
-        this.keywords = uniteConfiguration ? uniteConfiguration.keywords.join(",") : undefined;
+        this.keywords = uniteConfiguration && uniteConfiguration.keywords
+                                    ? uniteConfiguration.keywords.join(",") : undefined;
         this.organization = uniteConfiguration ? uniteConfiguration.organization : undefined;
         this.copyright = uniteConfiguration ? uniteConfiguration.copyright : undefined;
         this.webSite = uniteConfiguration ? uniteConfiguration.webSite : undefined;
@@ -456,7 +457,7 @@ export class Generator {
         uniteConfiguration.title = this.title;
         uniteConfiguration.shortName = this.shortName;
         uniteConfiguration.description = this.description;
-        uniteConfiguration.keywords = this.keywords.split(",");
+        uniteConfiguration.keywords = this.keywords ? this.keywords.split(",") : undefined;
         uniteConfiguration.organization = this.organization;
         uniteConfiguration.copyright = this.copyright;
         uniteConfiguration.webSite = this.webSite;
