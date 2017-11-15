@@ -1,6 +1,6 @@
 {
 	"name": "unitejs-web",
-	"version": "1.5.1",
+	"version": "1.5.2",
 	"devDependencies": {
 		"@types/google.analytics": "^0.0.35",
 		"@types/jasmine": "^2.6.2",

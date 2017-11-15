@@ -48,8 +48,8 @@ files.forEach(file => {
     }
 });
 exports.config.localSeleniumStandaloneOpts.jvmArgs = jvmArgs;
+exports.config.jasmineNodeOpts.print = function() {};
 exports.config.onPrepare = () => {
-    jasmine.getEnv().clearReporters();
     jasmine.getEnv().addReporter(
         new Jasmine2HtmlReporter({
             savePath: './test/reports/e2e/',
