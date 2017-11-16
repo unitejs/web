@@ -323,7 +323,7 @@ The logo-transparent.svg image should be a normal colored icon also on a transpa
 
 The fields in the unite-theme.json should be self explanatory in terms of what they generate in the index.html page. The themeHeaders will get overwritten when you run theme-build again so any custom headers you want should go in the customHeaders property. The backgroundColor is used for tile backgrounds and the themeColor is used to color the safari pinned icon mask, as well as during asset generation from your svg icons.
 
-Some of the fields are used to generate the ./assets/favicon/manifest.json which is used by some browsers when the web site is pinned, other are used during platform generation e.g. PWAs, Cordova.
+Some of the fields are used to generate the ./assets/favicon/manifest.json which is used by some browsers when the web site is pinned, others are used during platform generation e.g. PWAs, Cordova.
 
 Information tags passed as args into the unite configure command are stored in unite-theme.json and are mapped to other properties i.e. title, shortName, description, keywords, organization, copyright, webSite, author, authorEmail, authorWebSite, namespace.
 

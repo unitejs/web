@@ -102,6 +102,10 @@ export class Generator {
     public cssPosts: string[];
 
     @bindable
+    public cssLinter: string;
+    public cssLinters: string[];
+
+    @bindable
     public packageManager: string;
     public packageManagers: string[];
 
@@ -143,7 +147,16 @@ export class Generator {
             return obj.linter === "None" ||
                 (obj.linter === "ESLint" && obj.sourceLanguage === "JavaScript") ||
                 (obj.linter === "TSLint" && obj.sourceLanguage === "TypeScript");
-        }, `The combination of sourceLanguage and linter is not valid.`);
+        }, `The combination of Source Language and Linter is not valid.`);
+
+        ValidationRules.customRule("cssLintRule", (value: string, obj: Generator) => {
+            return obj.cssLinter === "None" ||
+                (obj.cssLinter === "LessHint" && obj.cssPre === "Less") ||
+                (obj.cssLinter === "SassLint" && obj.cssPre === "Sass") ||
+                (obj.cssLinter === "Stylint" && obj.cssPre === "Stylus") ||
+                (obj.cssLinter === "StyleLint" &&
+                    (obj.cssPre === "Css" || obj.cssPre === "Less" || obj.cssPre === "Sass"));
+        }, `The combination of Css Preprocessor and Css Linter is not valid.`);
 
         ValidationRules.customRule("aureliaBundlingRule", (value: string, obj: Generator) => {
             return obj.applicationFramework !== "Aurelia" ||
@@ -248,7 +261,12 @@ export class Generator {
             .ensure((m: Generator) => m.e2eTestFramework).displayName("E2E Test Framework")
             .satisfiesRule("e2eTestFrameworkRule")
             .ensure((m: Generator) => m.cssPre).displayName("CSS Pre-Processor").required()
+            .then()
+            .satisfiesRule("cssLintRule")
             .ensure((m: Generator) => m.cssPost).displayName("CSS Post-Processor").required()
+            .ensure((m: Generator) => m.cssLinter).displayName("CSS Linter").required()
+            .then()
+            .satisfiesRule("cssLintRule")
             .ensure((m: Generator) => m.packageManager).displayName("Package Manager").required()
             .on(this);
     }
@@ -315,6 +333,7 @@ export class Generator {
         this.e2eTestFrameworks = ["Jasmine", "MochaChai"];
         this.cssPres = ["Css", "Less", "Sass", "Stylus"];
         this.cssPosts = ["None", "PostCss"];
+        this.cssLinters = ["LessHint", "None", "SassLint", "Stylint", "StyleLint"];
         this.packageManagers = ["Npm", "Yarn"];
 
         this.profile = profile;
@@ -335,6 +354,7 @@ export class Generator {
         this.e2eTestFrameworkEnabled = this.e2eTestFramework !== undefined;
         this.cssPre = uniteConfiguration ? uniteConfiguration.cssPre : undefined;
         this.cssPost = uniteConfiguration ? uniteConfiguration.cssPost : undefined;
+        this.cssLinter = uniteConfiguration ? uniteConfiguration.cssLinter : undefined;
         this.packageManager = uniteConfiguration ? uniteConfiguration.packageManager : undefined;
         this.outputDirectory = uniteConfiguration ? uniteConfiguration.outputDirectory : undefined;
 
@@ -373,6 +393,7 @@ export class Generator {
                 this.e2eTestFrameworkEnabled = this.e2eTestFramework !== undefined;
                 this.cssPre = profile.config.cssPre;
                 this.cssPost = profile.config.cssPost;
+                this.cssLinter = profile.config.cssLinter;
                 this.packageManager = profile.config.packageManager;
             }
         }
@@ -435,6 +456,14 @@ export class Generator {
         this.controller.validate({ object: this, propertyName: "e2eTestFramework" });
     }
 
+    public cssPreChanged(): void {
+        this.controller.validate({ object: this, propertyName: "cssLinter" });
+    }
+
+    public cssLinterChanged(): void {
+        this.controller.validate({ object: this, propertyName: "cssPre" });
+    }
+
     public generate(): void {
         const uniteConfiguration = new UniteConfiguration();
         uniteConfiguration.packageName = this.packageName;
@@ -451,6 +480,7 @@ export class Generator {
         uniteConfiguration.e2eTestFramework = this.e2eTestFramework;
         uniteConfiguration.cssPre = this.cssPre;
         uniteConfiguration.cssPost = this.cssPost;
+        uniteConfiguration.cssLinter = this.cssLinter;
         uniteConfiguration.packageManager = this.packageManager;
         uniteConfiguration.outputDirectory = this.outputDirectory;
 
@@ -498,6 +528,7 @@ export class Generator {
                         this.generateArg(profile, uniteConfiguration, "e2eTestFramework") +
                         this.generateArg(profile, uniteConfiguration, "cssPre") +
                         this.generateArg(profile, uniteConfiguration, "cssPost") +
+                        this.generateArg(profile, uniteConfiguration, "cssLinter") +
                         this.generateArg(profile, uniteConfiguration, "packageManager") +
                         this.generateArg(profile, uniteConfiguration, "title") +
                         this.generateArg(profile, uniteConfiguration, "shortName") +

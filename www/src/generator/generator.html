@@ -151,6 +151,16 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="control-label" for="cssLinter">CSS Linter</label>
+                    <select class="form-control form-control-sm" id="cssLinter" value.bind="cssLinter & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="cssLinter of cssLinters">
+                            ${cssLinter}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label class="control-label" for="packageManager">Package Manager</label>
                     <select class="form-control form-control-sm" id="packageManager" value.bind="packageManager & validate">
                         <option model.bind="undefined">Choose...</option>

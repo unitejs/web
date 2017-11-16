@@ -16,6 +16,7 @@ export class UniteConfiguration {
     public e2eTestFramework: string;
     public cssPre: string;
     public cssPost: string;
+    public cssLinter: string;
     public packageManager: string;
     public outputDirectory: string;
 
