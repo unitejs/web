@@ -329,7 +329,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.7.0",
+	"uniteVersion": "1.7.1",
 	"sourceExtensions": [
 		"ts"
 	],
@@ -337,5 +337,6 @@
 		"html"
 	],
 	"styleExtension": "scss",
-	"ides": []
+	"ides": [],
+	"cssLinter": "StyleLint"
 }

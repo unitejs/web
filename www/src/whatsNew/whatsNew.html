@@ -12,6 +12,20 @@
             <pre><code au-prism="nix">npm -g install unitejs-cli [or] yarn global add unitejs-cli
 unite configure</code></pre>
 
+            <h2>v1.7.1</h2>
+            <p>Added support for style linting.</p>
+            <p>The following style linters are supported but are dependent on the cssPreprocessor configured.</p>
+            <ul>
+                <li>LessHint - Can be used with .less files</li>
+                <li>None - Disable style linting</li>
+                <li>SassLint - Can be used with .scss files</li>
+                <li>Stylint - Can be used with .styl files</li>
+                <li>StyleLint - Can be used with .css, .less, .scss files</li>
+            </ul>
+            <p>As an example to add StyleLint to an already existing project just run.</p>
+            <pre><code au-prism="nix">unite configure --cssLinter=StyleLint
+npm install [or] yarn install</code></pre>
+
             <h2>v1.7.0</h2>
             <p>Gulp tasks have been rewritten in TypeScript and transpiled to JavaScript to provide more resiliency.</p>
             <p>Loading spinner separated into ./assetsSrc/theme/loader.html and ./assetsSrc/theme/loader.css to make
