@@ -1,0 +1,4005 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/app.ts",
+    "content": "/**\n * Main application class.\n */\nimport { Router, RouterConfiguration } from \"aurelia-router\";\nimport { GoogleAnalyticsStep } from \"./pipelineSteps/googleAnalyticsStep\";\nimport { ScrollToTopPipelineStep } from \"./pipelineSteps/scrollToTopPipelineStep\";\n\nexport class App {\n    public router: Router;\n\n    public configureRouter(config: RouterConfiguration, router: Router): any {\n        config.title = \"UniteJS\";\n        config.addPostRenderStep(ScrollToTopPipelineStep);\n        config.addPostRenderStep(GoogleAnalyticsStep);\n        config.map([\n            {\n                route: [\"\", \"home\"],\n                name: \"home\",\n                moduleId: \"./home/home\",\n                nav: true,\n                title: \"Home\"\n            },\n            {\n                route: \"whatsnew\",\n                name: \"whatsnew\",\n                moduleId: \"./whatsNew/whatsNew\",\n                nav: true,\n                title: \"What's New\"\n            },\n            {\n                route: \"articles\",\n                name: \"articles\",\n                moduleId: \"./articles/articles\",\n                nav: true,\n                title: \"Articles\"\n            },\n            {\n                route: \"documentation\",\n                redirect: \"cli\"\n            },\n            {\n                route: \"cli\",\n                name: \"cli\",\n                moduleId: \"./cli/cli\",\n                nav: true,\n                title: \"CLI\"\n            },\n            {\n                route: \"generatedapp\",\n                name: \"generatedapp\",\n                moduleId: \"./generatedApp/generatedApp\",\n                nav: true,\n                title: \"Generated App\"\n            },\n            {\n                route: \"generator\",\n                name: \"generator\",\n                moduleId: \"./generator/generator\",\n                nav: true,\n                title: \"Generator\"\n            },\n            {\n                route: \"status\",\n                name: \"status\",\n                moduleId: \"./status/status\",\n                nav: true,\n                title: \"Status\"\n            },\n            {\n                route: \"examples\",\n                redirect: \"cli\"\n            },\n            {\n                route: \"about\",\n                name: \"about\",\n                moduleId: \"./info/about\",\n                nav: false,\n                title: \"About\"\n            },\n            {\n                route: \"the-team\",\n                name: \"the-team\",\n                moduleId: \"./info/theTeam\",\n                nav: false,\n                title: \"The Team\"\n            },\n            {\n                route: \"license\",\n                name: \"license\",\n                moduleId: \"./info/license\",\n                nav: false,\n                title: \"License\"\n            },\n            {\n                route: \"media\",\n                name: \"media\",\n                moduleId: \"./info/media\",\n                nav: false,\n                title: \"Media\"\n            }\n        ]);\n\n        this.router = router;\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/app.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "App",
+    "memberof": "src/app.ts",
+    "static": true,
+    "longname": "src/app.ts~App",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/app.ts",
+    "importStyle": "{App}",
+    "description": "",
+    "lineNumber": 8,
+    "interface": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "method",
+    "name": "configureRouter",
+    "memberof": "src/app.ts~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/app.ts~App#configureRouter",
+    "access": "public",
+    "description": "",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "RouterConfiguration"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "config",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Router"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "router",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "router",
+    "memberof": "src/app.ts~App",
+    "static": false,
+    "longname": "src/app.ts~App#router",
+    "access": "public",
+    "description": null,
+    "lineNumber": 111,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "name": "src/articles/articles.ts",
+    "content": "/**\n * Articles class.\n */\nexport class Articles {\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/articles/articles.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "class",
+    "name": "Articles",
+    "memberof": "src/articles/articles.ts",
+    "static": true,
+    "longname": "src/articles/articles.ts~Articles",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/articles/articles.ts",
+    "importStyle": "{Articles}",
+    "description": "Articles class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "src/attributes/prismAttribute.ts",
+    "content": "/**\n * Prism Attibute class.\n */\nimport { inject } from \"aurelia-dependency-injection\";\nimport { DOM } from \"aurelia-pal\";\nimport { customAttribute } from \"aurelia-templating\";\nimport \"prismjs\";\n\ndeclare var Prism: any;\n\n@customAttribute(\"au-prism\")\n@inject(DOM.Element)\nexport class PrismAttribute {\n    private _element: HTMLElement;\n\n    constructor(element: HTMLElement) {\n        this._element = element;\n    }\n\n    public valueChanged(newValue: string, oldValue: string): void {\n        setTimeout(() => {\n            this._element.className = \"language-\" + newValue;\n            Prism.highlightElement(this._element, false);\n        }, 0);\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/attributes/prismAttribute.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "variable",
+    "name": "__decorate",
+    "memberof": "src/attributes/prismAttribute.ts",
+    "static": true,
+    "longname": "src/attributes/prismAttribute.ts~__decorate",
+    "access": "private",
+    "export": false,
+    "importPath": "unitejs-web/src/attributes/prismAttribute.ts",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "class",
+    "name": "PrismAttribute",
+    "memberof": "src/attributes/prismAttribute.ts",
+    "static": true,
+    "longname": "src/attributes/prismAttribute.ts~PrismAttribute",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/attributes/prismAttribute.ts",
+    "importStyle": "{PrismAttribute}",
+    "description": "",
+    "lineNumber": 13,
+    "interface": false
+  },
+  {
+    "__docId__": 57,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/attributes/prismAttribute.ts~PrismAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/prismAttribute.ts~PrismAttribute#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true
+  },
+  {
+    "__docId__": 58,
+    "kind": "member",
+    "name": "_element",
+    "memberof": "src/attributes/prismAttribute.ts~PrismAttribute",
+    "static": false,
+    "longname": "src/attributes/prismAttribute.ts~PrismAttribute#_element",
+    "access": "private",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "valueChanged",
+    "memberof": "src/attributes/prismAttribute.ts~PrismAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/prismAttribute.ts~PrismAttribute#valueChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 20,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "newValue",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "oldValue",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 60,
+    "kind": "file",
+    "name": "src/attributes/scrollToElementAttribute.ts",
+    "content": "/**\n * Scroll To Element class.\n */\nimport { bindingMode } from \"aurelia-binding\";\nimport { inject } from \"aurelia-dependency-injection\";\nimport { DOM } from \"aurelia-pal\";\nimport { bindable, customAttribute } from \"aurelia-templating\";\nimport { Scroll } from \"../domHelpers/scroll\";\nimport { Style } from \"../domHelpers/style\";\n\n@customAttribute(\"au-scroll-to-element\")\n@inject(DOM.Element)\nexport class ScrollToElementAttribute {\n    @bindable\n    public id: string;\n\n    @bindable({defaultBindingMode: bindingMode.twoWay})\n    public yOffset: number;\n\n    private _element: HTMLLinkElement;\n\n    constructor(element: HTMLLinkElement) {\n        this._element = element;\n        this._element.href = \"javascript:;\";\n\n        this.yOffset = 0;\n    }\n\n    public bind(): void {\n        this._element.addEventListener(\"click\", (e) => this.clickEvent(), false);\n    }\n\n    public unbind(): void {\n        this._element.removeEventListener(\"click\", (e) => this.clickEvent());\n    }\n\n    private clickEvent(): void {\n        if (this.id) {\n            const elem = document.getElementById(this.id);\n\n            if (elem) {\n                const offset = elem.getBoundingClientRect();\n                Scroll.smoothScroll(window, 0, elem.offsetTop - this.yOffset);\n            }\n        }\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/attributes/scrollToElementAttribute.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 61,
+    "kind": "variable",
+    "name": "__decorate",
+    "memberof": "src/attributes/scrollToElementAttribute.ts",
+    "static": true,
+    "longname": "src/attributes/scrollToElementAttribute.ts~__decorate",
+    "access": "private",
+    "export": false,
+    "importPath": "unitejs-web/src/attributes/scrollToElementAttribute.ts",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "class",
+    "name": "ScrollToElementAttribute",
+    "memberof": "src/attributes/scrollToElementAttribute.ts",
+    "static": true,
+    "longname": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/attributes/scrollToElementAttribute.ts",
+    "importStyle": "{ScrollToElementAttribute}",
+    "description": "",
+    "lineNumber": 13,
+    "interface": false
+  },
+  {
+    "__docId__": 63,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "member",
+    "name": "_element",
+    "memberof": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute",
+    "static": false,
+    "longname": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute#_element",
+    "access": "private",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "member",
+    "name": "yOffset",
+    "memberof": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute",
+    "static": false,
+    "longname": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute#yOffset",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "bind",
+    "memberof": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute#bind",
+    "access": "public",
+    "description": "",
+    "lineNumber": 29,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "unbind",
+    "memberof": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute#unbind",
+    "access": "public",
+    "description": "",
+    "lineNumber": 33,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "clickEvent",
+    "memberof": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute#clickEvent",
+    "access": "public",
+    "description": "",
+    "lineNumber": 37,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 69,
+    "kind": "file",
+    "name": "src/attributes/scrollToTopAttribute.ts",
+    "content": "/**\n * Scroll To Top class.\n */\nimport { inject } from \"aurelia-dependency-injection\";\nimport { DOM } from \"aurelia-pal\";\nimport { customAttribute } from \"aurelia-templating\";\nimport { Scroll } from \"../domHelpers/scroll\";\nimport { Style } from \"../domHelpers/style\";\n\n@customAttribute(\"au-scroll-to-top\")\n@inject(DOM.Element)\nexport class ScrollToTopAttribute {\n    private _element: HTMLElement;\n\n    constructor(element: HTMLElement) {\n        this._element = element;\n    }\n\n    public bind(): void {\n        window.addEventListener(\"scroll\", (e) => this.scrollEvent(), false);\n        this._element.addEventListener(\"click\", (e) => this.clickEvent(), false);\n        this.scrollEvent();\n    }\n\n    public unbind(): void {\n        window.removeEventListener(\"scroll\", (e) => this.scrollEvent());\n        this._element.removeEventListener(\"click\", (e) => this.clickEvent());\n    }\n\n    private scrollEvent(): void {\n        Style.toggle(this._element, \"hidden\", Scroll.getOffset(window).y < 10);\n    }\n\n    private clickEvent(): void {\n        Scroll.smoothScroll(window, 0, 0);\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/attributes/scrollToTopAttribute.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 70,
+    "kind": "variable",
+    "name": "__decorate",
+    "memberof": "src/attributes/scrollToTopAttribute.ts",
+    "static": true,
+    "longname": "src/attributes/scrollToTopAttribute.ts~__decorate",
+    "access": "private",
+    "export": false,
+    "importPath": "unitejs-web/src/attributes/scrollToTopAttribute.ts",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 71,
+    "kind": "class",
+    "name": "ScrollToTopAttribute",
+    "memberof": "src/attributes/scrollToTopAttribute.ts",
+    "static": true,
+    "longname": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/attributes/scrollToTopAttribute.ts",
+    "importStyle": "{ScrollToTopAttribute}",
+    "description": "",
+    "lineNumber": 12,
+    "interface": false
+  },
+  {
+    "__docId__": 72,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true
+  },
+  {
+    "__docId__": 73,
+    "kind": "member",
+    "name": "_element",
+    "memberof": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute",
+    "static": false,
+    "longname": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute#_element",
+    "access": "private",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "name": "bind",
+    "memberof": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute#bind",
+    "access": "public",
+    "description": "",
+    "lineNumber": 19,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 75,
+    "kind": "method",
+    "name": "unbind",
+    "memberof": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute#unbind",
+    "access": "public",
+    "description": "",
+    "lineNumber": 25,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "scrollEvent",
+    "memberof": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute#scrollEvent",
+    "access": "public",
+    "description": "",
+    "lineNumber": 30,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "clickEvent",
+    "memberof": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute#clickEvent",
+    "access": "public",
+    "description": "",
+    "lineNumber": 34,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 78,
+    "kind": "file",
+    "name": "src/bootstrapper.ts",
+    "content": "/**\n * Main entry point for app.\n */\n/// <reference types=\"unitejs-types\" />\nimport { bootstrap as abootstrap } from \"aurelia-bootstrapper\";\nimport { Aurelia } from \"aurelia-framework\";\n\n/**\n * Bootstrap the application.\n * @returns {Promise<void>}\n * @export\n */\nexport function bootstrap(): Promise<void> {\n    return abootstrap((aurelia: Aurelia) => {\n        aurelia.use\n            .standardConfiguration()\n            .plugin(\"aurelia-dialog\")\n            .plugin(\"aurelia-validation\");\n\n        if (!window.unite.bundle) {\n            aurelia.use.developmentLogging();\n        }\n\n        return aurelia.start()\n            .then(() => {\n                const root = document.getElementById(\"root\");\n                aurelia.setRoot(\"dist/app\", root);\n                root.setAttribute(\"aurelia-app\", \"\");\n                return aurelia;\n            });\n    });\n}\n\n// Generated by UniteJS\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/bootstrapper.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 79,
+    "kind": "function",
+    "name": "bootstrap",
+    "memberof": "src/bootstrapper.ts",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/bootstrapper.ts~bootstrap",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/bootstrapper.ts",
+    "importStyle": "{bootstrap}",
+    "description": "Bootstrap the application.",
+    "lineNumber": 13,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 80,
+    "kind": "file",
+    "name": "src/cli/cli.ts",
+    "content": "/**\n * CLI class.\n */\nimport { bindable } from \"aurelia-templating\";\nimport { Scroll } from \"../domHelpers/scroll\";\n\nexport class CLI {\n    @bindable\n    public commandDisplay: string;\n\n    @bindable\n    public topOffset: number;\n\n    constructor() {\n        this.commandDisplay = \"intro\";\n    }\n\n    public attached(): void {\n        const navBars = document.getElementsByTagName(\"nav-bar\");\n\n        if (navBars.length > 0) {\n            const navBarRect = navBars[0].getBoundingClientRect();\n            this.topOffset = navBarRect.height;\n        }\n    }\n\n    public displayDocumentation(which: string): void {\n        this.commandDisplay = which;\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/cli/cli.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 81,
+    "kind": "variable",
+    "name": "__decorate",
+    "memberof": "src/cli/cli.ts",
+    "static": true,
+    "longname": "src/cli/cli.ts~__decorate",
+    "access": "private",
+    "export": false,
+    "importPath": "unitejs-web/src/cli/cli.ts",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "class",
+    "name": "CLI",
+    "memberof": "src/cli/cli.ts",
+    "static": true,
+    "longname": "src/cli/cli.ts~CLI",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/cli/cli.ts",
+    "importStyle": "{CLI}",
+    "description": "",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 83,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/cli/cli.ts~CLI",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cli/cli.ts~CLI#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "member",
+    "name": "commandDisplay",
+    "memberof": "src/cli/cli.ts~CLI",
+    "static": false,
+    "longname": "src/cli/cli.ts~CLI#commandDisplay",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "method",
+    "name": "attached",
+    "memberof": "src/cli/cli.ts~CLI",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cli/cli.ts~CLI#attached",
+    "access": "public",
+    "description": "",
+    "lineNumber": 18,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 86,
+    "kind": "member",
+    "name": "topOffset",
+    "memberof": "src/cli/cli.ts~CLI",
+    "static": false,
+    "longname": "src/cli/cli.ts~CLI#topOffset",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "displayDocumentation",
+    "memberof": "src/cli/cli.ts~CLI",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cli/cli.ts~CLI#displayDocumentation",
+    "access": "public",
+    "description": "",
+    "lineNumber": 27,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "which",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 89,
+    "kind": "file",
+    "name": "src/domHelpers/clipboard.ts",
+    "content": "/**\n * Clipboard class.\n */\nexport class Clipboard {\n    public static copyTo(text: string): void {\n        const textArea = document.createElement(\"textarea\");\n\n        // Place in top-left corner of screen regardless of scroll position.\n        textArea.style.position = \"fixed\";\n        textArea.style.top = \"0\";\n        textArea.style.left = \"0\";\n\n        // Ensure it has a small width and height. Setting to 1px / 1em\n        // doesn't work as this gives a negative w/h on some browsers.\n        textArea.style.width = \"2em\";\n        textArea.style.height = \"2em\";\n\n        // We don't need padding, reducing the size if it does flash render.\n        textArea.style.padding = \"0\";\n\n        // Clean up any borders.\n        textArea.style.border = \"none\";\n        textArea.style.outline = \"none\";\n        textArea.style.boxShadow = \"none\";\n\n        // Avoid flash of white box if rendered for any reason.\n        textArea.style.background = \"transparent\";\n\n        textArea.value = text;\n\n        document.body.appendChild(textArea);\n\n        textArea.select();\n\n        try {\n            document.execCommand(\"copy\");\n        } catch (err) {\n            /* didn't copy must be an old browser */\n        }\n\n        document.body.removeChild(textArea);\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/domHelpers/clipboard.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 90,
+    "kind": "class",
+    "name": "Clipboard",
+    "memberof": "src/domHelpers/clipboard.ts",
+    "static": true,
+    "longname": "src/domHelpers/clipboard.ts~Clipboard",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/domHelpers/clipboard.ts",
+    "importStyle": "{Clipboard}",
+    "description": "Clipboard class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 91,
+    "kind": "method",
+    "name": "copyTo",
+    "memberof": "src/domHelpers/clipboard.ts~Clipboard",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/clipboard.ts~Clipboard.copyTo",
+    "access": "public",
+    "description": "",
+    "lineNumber": 5,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "text",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 92,
+    "kind": "file",
+    "name": "src/domHelpers/localStorage.ts",
+    "content": "/**\n * Cookie class.\n */\nexport class LocalStorage {\n    public static set(name: string, obj: any): void {\n        if (window.localStorage) {\n            if (obj === null || obj === undefined) {\n                window.localStorage.removeItem(name);\n            } else {\n                window.localStorage.setItem(name, JSON.stringify(obj));\n            }\n        }\n    }\n\n    public static get<T>(name: string): T {\n        if (window.localStorage) {\n            const obj = window.localStorage.getItem(name);\n            if (obj) {\n                try {\n                    return JSON.parse(obj) as T;\n                } catch (e) {\n                    return undefined;\n                }\n            } else {\n                return undefined;\n            }\n        } else {\n            return undefined;\n        }\n    }\n\n    public static remove(name: string): void {\n        if (window.localStorage) {\n            window.localStorage.removeItem(name);\n        }\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/domHelpers/localStorage.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 93,
+    "kind": "class",
+    "name": "LocalStorage",
+    "memberof": "src/domHelpers/localStorage.ts",
+    "static": true,
+    "longname": "src/domHelpers/localStorage.ts~LocalStorage",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/domHelpers/localStorage.ts",
+    "importStyle": "{LocalStorage}",
+    "description": "Cookie class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 94,
+    "kind": "method",
+    "name": "set",
+    "memberof": "src/domHelpers/localStorage.ts~LocalStorage",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/localStorage.ts~LocalStorage.set",
+    "access": "public",
+    "description": "",
+    "lineNumber": 5,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "undefined"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 95,
+    "kind": "method",
+    "name": "get",
+    "memberof": "src/domHelpers/localStorage.ts~LocalStorage",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/localStorage.ts~LocalStorage.get",
+    "access": "public",
+    "description": "",
+    "lineNumber": 15,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "T"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 96,
+    "kind": "method",
+    "name": "remove",
+    "memberof": "src/domHelpers/localStorage.ts~LocalStorage",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/localStorage.ts~LocalStorage.remove",
+    "access": "public",
+    "description": "",
+    "lineNumber": 32,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 97,
+    "kind": "file",
+    "name": "src/domHelpers/scroll.ts",
+    "content": "/**\n * Scroll class.\n */\nexport class Scroll {\n    public static getOffset(element: HTMLElement | Window): { x: number; y: number } {\n        if (element) {\n            if (element instanceof Window) {\n                return { x: element.scrollX | element.pageXOffset, y: element.scrollY | element.pageYOffset };\n            } else {\n                return { x: element.scrollLeft, y: element.scrollTop };\n            }\n        } else {\n            return undefined;\n        }\n    }\n\n    public static smoothScroll(element: HTMLElement | Window, x: number, y: number): void {\n        if (element) {\n            if (element instanceof Window) {\n                Scroll.step(element, Scroll.now(),\n                    element.scrollX | element.pageXOffset,\n                    element.scrollY | element.pageYOffset, x, y);\n            } else {\n                Scroll.step(element, Scroll.now(), element.scrollLeft, element.scrollTop, x, y);\n            }\n        }\n    }\n\n    private static step(element: HTMLElement | Window,\n                        startTime: number,\n                        startX: number,\n                        startY: number,\n                        x: number,\n                        y: number): void {\n        const time = this.now();\n        let elapsed = (time - startTime) / 468;\n\n        elapsed = elapsed > 1 ? 1 : elapsed;\n\n        const value = this.ease(elapsed);\n\n        const currentX = startX + (x - startX) * value;\n        const currentY = startY + (y - startY) * value;\n\n        element.scroll(currentX, currentY);\n\n        if (currentX !== x || currentY !== y) {\n            window.requestAnimationFrame(() => Scroll.step(element, startTime, startX, startY, x, y));\n        }\n    }\n\n    private static now(): number {\n        return window.performance && window.performance.now\n            ? window.performance.now() : Date.now();\n    }\n\n    private static ease(k: number): number {\n        return 0.5 * (1 - Math.cos(Math.PI * k));\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/domHelpers/scroll.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 98,
+    "kind": "class",
+    "name": "Scroll",
+    "memberof": "src/domHelpers/scroll.ts",
+    "static": true,
+    "longname": "src/domHelpers/scroll.ts~Scroll",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/domHelpers/scroll.ts",
+    "importStyle": "{Scroll}",
+    "description": "Scroll class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "getOffset",
+    "memberof": "src/domHelpers/scroll.ts~Scroll",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/scroll.ts~Scroll.getOffset",
+    "access": "public",
+    "description": "",
+    "lineNumber": 5,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "undefined"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "method",
+    "name": "smoothScroll",
+    "memberof": "src/domHelpers/scroll.ts~Scroll",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/scroll.ts~Scroll.smoothScroll",
+    "access": "public",
+    "description": "",
+    "lineNumber": 17,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "undefined"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "y",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 101,
+    "kind": "method",
+    "name": "step",
+    "memberof": "src/domHelpers/scroll.ts~Scroll",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/scroll.ts~Scroll.step",
+    "access": "public",
+    "description": "",
+    "lineNumber": 29,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "undefined"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "startTime",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "startX",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "startY",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "x",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "y",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 102,
+    "kind": "method",
+    "name": "now",
+    "memberof": "src/domHelpers/scroll.ts~Scroll",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/scroll.ts~Scroll.now",
+    "access": "public",
+    "description": "",
+    "lineNumber": 52,
+    "return": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 103,
+    "kind": "method",
+    "name": "ease",
+    "memberof": "src/domHelpers/scroll.ts~Scroll",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/scroll.ts~Scroll.ease",
+    "access": "public",
+    "description": "",
+    "lineNumber": 57,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "k",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "file",
+    "name": "src/domHelpers/style.ts",
+    "content": "/**\n * Style class.\n */\nexport class Style {\n    public static toggle(element: Element, classStyle: string, add: boolean): void {\n        if (add) {\n            if (!element.classList.contains(classStyle)) {\n                element.classList.add(classStyle);\n            }\n        } else {\n            if (element.classList.contains(classStyle)) {\n                element.classList.remove(classStyle);\n            }\n        }\n    }\n\n    public static has(element: Element, classStyle: string): boolean {\n        return element.classList.contains(classStyle);\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/domHelpers/style.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 105,
+    "kind": "class",
+    "name": "Style",
+    "memberof": "src/domHelpers/style.ts",
+    "static": true,
+    "longname": "src/domHelpers/style.ts~Style",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/domHelpers/style.ts",
+    "importStyle": "{Style}",
+    "description": "Style class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 106,
+    "kind": "method",
+    "name": "toggle",
+    "memberof": "src/domHelpers/style.ts~Style",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/style.ts~Style.toggle",
+    "access": "public",
+    "description": "",
+    "lineNumber": 5,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Element"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "classStyle",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "add",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "has",
+    "memberof": "src/domHelpers/style.ts~Style",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/domHelpers/style.ts~Style.has",
+    "access": "public",
+    "description": "",
+    "lineNumber": 17,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Element"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "classStyle",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "file",
+    "name": "src/elements/aureliaSvg.ts",
+    "content": "/**\n * Aurelia SVG class.\n */\nimport { inject } from \"aurelia-dependency-injection\";\nimport { HttpClient } from \"aurelia-http-client\";\nimport { DOM } from \"aurelia-pal\";\nimport { bindable, customElement } from \"aurelia-templating\";\n\n@customElement(\"au-svg\")\n@inject(DOM.Element)\nexport class AureliaSvg {\n    @bindable\n    public width: string;\n    @bindable\n    public height: string;\n    @bindable\n    public src: string;\n\n    private _element: HTMLElement;\n\n    constructor(element: HTMLElement) {\n        this._element = element;\n    }\n\n    public srcChanged(): void {\n        if (this.src && this.src.length > 0) {\n            const httpClient = new HttpClient();\n            httpClient.get(this.src)\n                .then((response) => {\n                    if (response.statusCode === 200) {\n                        let svg = response.content;\n                        if (this.width) {\n                            svg = svg.replace(/width=\\\"(.*?)\\\"/, `width=\\\"${this.width}\\\"`);\n                        }\n                        if (this.height) {\n                            svg = svg.replace(/height=\\\"(.*?)\\\"/, `height=\\\"${this.height}\\\"`);\n                        }\n                        this._element.innerHTML = response.content;\n                    }\n                })\n                .catch((err) => {\n                    // Just don't display the version its not critical\n                });\n        }\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/elements/aureliaSvg.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 109,
+    "kind": "variable",
+    "name": "__decorate",
+    "memberof": "src/elements/aureliaSvg.ts",
+    "static": true,
+    "longname": "src/elements/aureliaSvg.ts~__decorate",
+    "access": "private",
+    "export": false,
+    "importPath": "unitejs-web/src/elements/aureliaSvg.ts",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 110,
+    "kind": "class",
+    "name": "AureliaSvg",
+    "memberof": "src/elements/aureliaSvg.ts",
+    "static": true,
+    "longname": "src/elements/aureliaSvg.ts~AureliaSvg",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/elements/aureliaSvg.ts",
+    "importStyle": "{AureliaSvg}",
+    "description": "",
+    "lineNumber": 11,
+    "interface": false
+  },
+  {
+    "__docId__": 111,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/elements/aureliaSvg.ts~AureliaSvg",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/elements/aureliaSvg.ts~AureliaSvg#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true
+  },
+  {
+    "__docId__": 112,
+    "kind": "member",
+    "name": "_element",
+    "memberof": "src/elements/aureliaSvg.ts~AureliaSvg",
+    "static": false,
+    "longname": "src/elements/aureliaSvg.ts~AureliaSvg#_element",
+    "access": "private",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 113,
+    "kind": "method",
+    "name": "srcChanged",
+    "memberof": "src/elements/aureliaSvg.ts~AureliaSvg",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/elements/aureliaSvg.ts~AureliaSvg#srcChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 25,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 114,
+    "kind": "file",
+    "name": "src/entryPoint.ts",
+    "content": "/**\n * Entry point for app.\n */\n/// <reference types=\"unitejs-types\" />\nimport { bootstrap } from \"./bootstrapper\";\n\nif (window.unite.pwa && \"serviceWorker\" in navigator) {\n    navigator.serviceWorker.register(\"./service-worker.js\")\n        .then(\n            (registration) => {\n                if (!window.unite.bundle) {\n                    // tslint:disable-next-line:no-console\n                    console.log(\"ServiceWorker registration successful with scope: \", registration.scope);\n                }\n                return registration;\n            },\n            (err) => {\n                if (!window.unite.bundle) {\n                    // tslint:disable-next-line:no-console\n                    console.error(\"ServiceWorker registration failed: \", err);\n                }\n            })\n        .catch((err) => {\n            if (!window.unite.bundle) {\n                // tslint:disable-next-line:no-console\n                console.error(err);\n            }\n        });\n}\n\n/**\n * @ignore\n * @hidden\n */\nconst rootElement = document.getElementById(\"root\");\n/**\n * @ignore\n * @hidden\n */\nconst loaderHideId = setInterval(\n    () => {\n        if ((rootElement.innerText && rootElement.innerText.length > 0) ||\n            (rootElement.children && rootElement.children.length > 0)) {\n            clearInterval(loaderHideId);\n            const loaderElement = document.getElementById(\"app-loader\");\n            if (loaderElement) {\n                loaderElement.parentNode.removeChild(loaderElement);\n            }\n        }\n    },\n    10);\n\nif ((window as any).cordova) {\n    document.addEventListener(\"deviceready\", () => {\n        bootstrap();\n    });\n} else {\n    bootstrap();\n}\n\n// Generated by UniteJS\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/entryPoint.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 115,
+    "kind": "variable",
+    "name": "rootElement",
+    "memberof": "src/entryPoint.ts",
+    "static": true,
+    "longname": "src/entryPoint.ts~rootElement",
+    "access": "public",
+    "export": false,
+    "importPath": "unitejs-web/src/entryPoint.ts",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 31,
+    "ignore": true,
+    "unknown": [
+      {
+        "tagName": "@hidden",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 116,
+    "kind": "variable",
+    "name": "loaderHideId",
+    "memberof": "src/entryPoint.ts",
+    "static": true,
+    "longname": "src/entryPoint.ts~loaderHideId",
+    "access": "public",
+    "export": false,
+    "importPath": "unitejs-web/src/entryPoint.ts",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 36,
+    "ignore": true,
+    "unknown": [
+      {
+        "tagName": "@hidden",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "file",
+    "name": "src/generatedApp/generatedApp.ts",
+    "content": "/**\n * GeneratedApp class.\n */\nimport { bindable } from \"aurelia-templating\";\n\nexport class GeneratedApp {\n    @bindable\n    public topOffset: number;\n\n    public attached(): void {\n        const navBars = document.getElementsByTagName(\"nav-bar\");\n\n        if (navBars.length > 0) {\n            const navBarRect = navBars[0].getBoundingClientRect();\n            this.topOffset = navBarRect.height;\n        }\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/generatedApp/generatedApp.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 118,
+    "kind": "variable",
+    "name": "__decorate",
+    "memberof": "src/generatedApp/generatedApp.ts",
+    "static": true,
+    "longname": "src/generatedApp/generatedApp.ts~__decorate",
+    "access": "private",
+    "export": false,
+    "importPath": "unitejs-web/src/generatedApp/generatedApp.ts",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 119,
+    "kind": "class",
+    "name": "GeneratedApp",
+    "memberof": "src/generatedApp/generatedApp.ts",
+    "static": true,
+    "longname": "src/generatedApp/generatedApp.ts~GeneratedApp",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/generatedApp/generatedApp.ts",
+    "importStyle": "{GeneratedApp}",
+    "description": "",
+    "lineNumber": 6,
+    "interface": false
+  },
+  {
+    "__docId__": 120,
+    "kind": "method",
+    "name": "attached",
+    "memberof": "src/generatedApp/generatedApp.ts~GeneratedApp",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generatedApp/generatedApp.ts~GeneratedApp#attached",
+    "access": "public",
+    "description": "",
+    "lineNumber": 10,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 121,
+    "kind": "member",
+    "name": "topOffset",
+    "memberof": "src/generatedApp/generatedApp.ts~GeneratedApp",
+    "static": false,
+    "longname": "src/generatedApp/generatedApp.ts~GeneratedApp#topOffset",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 122,
+    "kind": "file",
+    "name": "src/generator/generator.ts",
+    "content": "/**\n * Generator class.\n */\nimport { inject, NewInstance } from \"aurelia-dependency-injection\";\nimport { HttpClient } from \"aurelia-http-client\";\nimport { bindable } from \"aurelia-templating\";\nimport { validateTrigger, ValidationController, ValidationRules } from \"aurelia-validation\";\nimport { Clipboard } from \"../domHelpers/clipboard\";\nimport { LocalStorage } from \"../domHelpers/localStorage\";\nimport { Style } from \"../domHelpers/style\";\nimport { ISpdx } from \"../models/ISpdx\";\nimport { ISpdxLicense } from \"../models/ISpdxLicense\";\nimport { UniteConfiguration } from \"../models/uniteConfiguration\";\nimport { BootstrapFormRenderer } from \"../validation/bootstrapFormRenderer\";\n\n@inject(NewInstance.of(ValidationController))\nexport class Generator {\n    public controller: ValidationController;\n\n    @bindable\n    public packageName: string;\n    @bindable\n    public title: string;\n    @bindable\n    public shortName: string;\n    @bindable\n    public description: string;\n    @bindable\n    public keywords: string;\n    @bindable\n    public organization: string;\n    @bindable\n    public webSite: string;\n    @bindable\n    public copyright: string;\n    @bindable\n    public namespace: string;\n    @bindable\n    public author: string;\n    @bindable\n    public authorEmail: string;\n    @bindable\n    public authorWebSite: string;\n\n    @bindable\n    public profile: string;\n    public profiles: { id: string; config: UniteConfiguration }[];\n\n    @bindable\n    public license: string;\n    public licenses: { id: string; license: ISpdxLicense }[];\n\n    @bindable\n    public applicationFramework: string;\n    public applicationFrameworks: string[];\n\n    @bindable\n    public sourceLanguage: string;\n    public sourceLanguages: string[];\n\n    @bindable\n    public linter: string;\n    public linters: string[];\n\n    @bindable\n    public moduleType: string;\n    public moduleTypes: string[];\n\n    @bindable\n    public bundler: string;\n    public bundlers: string[];\n\n    @bindable\n    public unitTestRunner: string;\n    public unitTestRunners: string[];\n\n    @bindable\n    public unitTestFramework: string;\n    public unitTestFrameworks: string[];\n    public unitTestFrameworkEnabled: boolean;\n\n    @bindable\n    public unitTestEngine: string;\n    public unitTestEngines: string[];\n    public unitTestEngineEnabled: boolean;\n\n    @bindable\n    public e2eTestRunner: string;\n    public e2eTestRunners: string[];\n\n    @bindable\n    public e2eTestFramework: string;\n    public e2eTestFrameworks: string[];\n    public e2eTestFrameworkEnabled: boolean;\n\n    @bindable\n    public cssPre: string;\n    public cssPres: string[];\n\n    @bindable\n    public cssPost: string;\n    public cssPosts: string[];\n\n    @bindable\n    public cssLinter: string;\n    public cssLinters: string[];\n\n    @bindable\n    public documenter: string;\n    public documenters: string[];\n\n    @bindable\n    public packageManager: string;\n    public packageManagers: string[];\n\n    @bindable\n    public outputDirectory: string;\n\n    public commandLine: string;\n\n    public status: string;\n\n    constructor(controller: ValidationController) {\n        this.controller = controller;\n\n        this.controller.addRenderer(new BootstrapFormRenderer());\n\n        this.controller.validateTrigger = validateTrigger.changeOrBlur;\n\n        ValidationRules.customRule(\"packageNameLowerCaseRule\", (value: string, obj: Generator) => {\n            return value === undefined || value === null ||\n                value.toLowerCase() === value;\n        }, `\\${$displayName} must not have uppercase letters in it.`);\n\n        ValidationRules.customRule(\"packageNameStartRule\", (value: string, obj: Generator) => {\n            return value === undefined || value === null ||\n                !(value[0] === \".\" || value[0] === \"-\" || value[0] === \"_\");\n        }, `\\${$displayName} must not start with a dot, hyphen or underscore.`);\n\n        ValidationRules.customRule(\"packageNameSpecialCharactersRule\", (value: string, obj: Generator) => {\n            return value === undefined || value === null ||\n                !value.match(/[\\/\\\\\\(\\)&\\?#\\|<>@:%\\s\\*'\"!~`]/);\n        }, `\\${$displayName} must not have any special characters.`);\n\n        ValidationRules.customRule(\"packageNameNonUrlSafeRule\", (value: string, obj: Generator) => {\n            return value === undefined || value === null ||\n                encodeURIComponent(value) === value;\n        }, `\\${$displayName} can't contain any non-URL-safe characters.`);\n\n        ValidationRules.customRule(\"languageLintRule\", (value: string, obj: Generator) => {\n            return obj.linter === \"None\" ||\n                (obj.linter === \"ESLint\" && obj.sourceLanguage === \"JavaScript\") ||\n                (obj.linter === \"TSLint\" && obj.sourceLanguage === \"TypeScript\");\n        }, `The combination of Source Language and Linter is not valid.`);\n\n        ValidationRules.customRule(\"cssLintRule\", (value: string, obj: Generator) => {\n            return obj.cssLinter === \"None\" ||\n                (obj.cssLinter === \"LessHint\" && obj.cssPre === \"Less\") ||\n                (obj.cssLinter === \"SassLint\" && obj.cssPre === \"Sass\") ||\n                (obj.cssLinter === \"Stylint\" && obj.cssPre === \"Stylus\") ||\n                (obj.cssLinter === \"StyleLint\" &&\n                    (obj.cssPre === \"Css\" || obj.cssPre === \"Less\" || obj.cssPre === \"Sass\"));\n        }, `The combination of Css Preprocessor and Css Linter is not valid.`);\n\n        ValidationRules.customRule(\"documenterRule\", (value: string, obj: Generator) => {\n            return obj.documenter === \"None\" ||\n                (obj.documenter === \"JSDoc\" && obj.sourceLanguage === \"JavaScript\") ||\n                (obj.documenter === \"TypeDoc\" && obj.sourceLanguage === \"TypeScript\") ||\n                (obj.documenter === \"ESDoc\" &&\n                    (obj.sourceLanguage === \"JavaScript\" || obj.sourceLanguage === \"TypeScript\"));\n        }, `The combination of Source Language and Documenter is not valid.`);\n\n        ValidationRules.customRule(\"aureliaBundlingRule\", (value: string, obj: Generator) => {\n            return obj.applicationFramework !== \"Aurelia\" ||\n                !(obj.bundler === \"Browserify\" || obj.bundler === \"Webpack\");\n        }, `Aurelia does not currently support bundling with Browserify or Webpack.`);\n\n        ValidationRules.customRule(\"angularBundlingRule\", (value: string, obj: Generator) => {\n            return obj.applicationFramework !== \"Angular\" || obj.bundler !== \"RequireJS\";\n        }, `Angular does not currently support bundling with RequireJS.`);\n\n        ValidationRules.customRule(\"polymerUnitTestEngineRule\", (value: string, obj: Generator) => {\n            return obj.applicationFramework !== \"Polymer\" ||\n                !(obj.unitTestEngine === \"PhantomJS\" || obj.unitTestEngine === \"JSDom\");\n        }, `Polymer does not currently support testing using PhantomJS or JSDom.`);\n\n        ValidationRules.customRule(\"requireJsModuleTypeRule\", (value: string, obj: Generator) => {\n            return obj.moduleType !== \"AMD\" || obj.bundler === \"RequireJS\";\n        }, `You can only use AMD modules with RequireJS Bundler`);\n\n        ValidationRules.customRule(\"webpackBrowserifyModuleTypeRule\", (value: string, obj: Generator) => {\n            return obj.moduleType !== \"CommonJS\" || (obj.bundler === \"Webpack\" || obj.bundler === \"Browserify\");\n        }, `You can only use CommonJS modules with Webpack or Browserify Bundlers.`);\n\n        ValidationRules.customRule(\"jestModuleTypeRule\", (value: string, obj: Generator) => {\n            return obj.unitTestRunner !== \"Jest\" || obj.moduleType === \"CommonJS\";\n        }, `You can only use CommonJS Module Type when the Unit Test Runner is Jest.`);\n\n        ValidationRules.customRule(\"unitTestFrameworkRule\", (value: string, obj: Generator) => {\n            return (((obj.unitTestRunner === undefined || obj.unitTestRunner === \"None\") &&\n                obj.unitTestFramework === undefined)) ||\n                obj.unitTestFramework !== undefined;\n        }, `Unit Test Runner is required.`);\n\n        ValidationRules.customRule(\"jestJasmineRule\", (value: string, obj: Generator) => {\n            return obj.unitTestRunner !== \"Jest\" || obj.unitTestFramework === \"Jasmine\";\n        }, `You can only use Jasmine Unit Test Framework when the Unit Test Runner is Jest.`);\n\n        ValidationRules.customRule(\"jestJSDomRule\", (value: string, obj: Generator) => {\n            return obj.unitTestRunner !== \"Jest\" || obj.unitTestEngine === \"JSDom\";\n        }, `You can only use JSDom Unit Test Engine when the Unit Test Runner is Jest.`);\n\n        ValidationRules.customRule(\"unitTestEngineRule\", (value: string, obj: Generator) => {\n            return (((obj.unitTestRunner === undefined || obj.unitTestRunner === \"None\") &&\n                obj.unitTestFramework === undefined)) ||\n                obj.unitTestFramework !== undefined;\n        }, `Unit Test Engine is required.`);\n\n        ValidationRules.customRule(\"e2eTestFrameworkRule\", (value: string, obj: Generator) => {\n            return (((obj.e2eTestRunner === undefined || obj.e2eTestRunner === \"None\") &&\n                obj.e2eTestFramework === undefined)) ||\n                obj.e2eTestFramework !== undefined;\n        }, `E2E Test Framework is required.`);\n\n        ValidationRules\n            .ensure((m: Generator) => m.packageName).displayName(\"Package Name\")\n            .required()\n            .maxLength(214)\n            .satisfiesRule(\"packageNameLowerCaseRule\")\n            .satisfiesRule(\"packageNameStartRule\")\n            .satisfiesRule(\"packageNameSpecialCharactersRule\")\n            .satisfiesRule(\"packageNameNonUrlSafeRule\")\n            .ensure((m: Generator) => m.license).displayName(\"License\").required()\n            .ensure((m: Generator) => m.applicationFramework).displayName(\"Application Framework\").required()\n            .then()\n            .satisfiesRule(\"aureliaBundlingRule\")\n            .then()\n            .satisfiesRule(\"angularBundlingRule\")\n            .ensure((m: Generator) => m.sourceLanguage).displayName(\"Source Language\").required()\n            .then()\n            .satisfiesRule(\"languageLintRule\")\n            .ensure((m: Generator) => m.moduleType).displayName(\"Module Type\").required()\n            .then()\n            .satisfiesRule(\"requireJsModuleTypeRule\")\n            .then()\n            .satisfiesRule(\"webpackBrowserifyModuleTypeRule\")\n            .then()\n            .satisfiesRule(\"jestModuleTypeRule\")\n            .ensure((m: Generator) => m.bundler).displayName(\"Bundler\").required()\n            .then()\n            .satisfiesRule(\"aureliaBundlingRule\")\n            .then()\n            .satisfiesRule(\"angularBundlingRule\")\n            .then()\n            .satisfiesRule(\"requireJsModuleTypeRule\")\n            .then()\n            .satisfiesRule(\"webpackBrowserifyModuleTypeRule\")\n            .ensure((m: Generator) => m.linter).displayName(\"Linter\").required()\n            .then()\n            .satisfiesRule(\"languageLintRule\")\n            .ensure((m: Generator) => m.unitTestRunner).displayName(\"Unit Test Runner\").required()\n            .ensure((m: Generator) => m.unitTestFramework).displayName(\"Unit Test Framework\")\n            .satisfiesRule(\"unitTestFrameworkRule\")\n            .then()\n            .satisfiesRule(\"jestJasmineRule\")\n            .ensure((m: Generator) => m.unitTestEngine).displayName(\"Unit Test Engine\")\n            .satisfiesRule(\"unitTestEngineRule\")\n            .then()\n            .satisfiesRule(\"jestJSDomRule\")\n            .then()\n            .satisfiesRule(\"polymerUnitTestEngineRule\")\n            .ensure((m: Generator) => m.e2eTestRunner).displayName(\"E2E Test Runner\").required()\n            .ensure((m: Generator) => m.e2eTestFramework).displayName(\"E2E Test Framework\")\n            .satisfiesRule(\"e2eTestFrameworkRule\")\n            .ensure((m: Generator) => m.cssPre).displayName(\"CSS Pre-Processor\").required()\n            .then()\n            .satisfiesRule(\"cssLintRule\")\n            .ensure((m: Generator) => m.cssPost).displayName(\"CSS Post-Processor\").required()\n            .ensure((m: Generator) => m.cssLinter).displayName(\"CSS Linter\").required()\n            .then()\n            .satisfiesRule(\"cssLintRule\")\n            .ensure((m: Generator) => m.documenter).displayName(\"Documenter\").required()\n            .then()\n            .satisfiesRule(\"documenterRule\")\n            .ensure((m: Generator) => m.packageManager).displayName(\"Package Manager\").required()\n            .on(this);\n    }\n\n    public attached(): void {\n        const httpClient = new HttpClient();\n        httpClient.get(\"./assets/spdx-lite.json\")\n            .then((response) => {\n                if (response.statusCode === 200) {\n                    const licenses: ISpdx = response.content;\n\n                    this.licenses = [ { id: \"None\", license: {\n                        name: \"No License\",\n                        osiApproved: false,\n                         licenseText: \"\",\n                         url: \"\"\n                        }\n                    }];\n                    Object.keys(licenses).forEach((licenseKey) => {\n                        this.licenses.push({ id: licenseKey, license: licenses[licenseKey] });\n                    });\n\n                    const httpClient2 = new HttpClient();\n                    httpClient.get(\"./assets/profiles/configure.json\")\n                        .then((response2) => {\n                            if (response2.statusCode === 200) {\n                                const profiles: { [id: string]: UniteConfiguration } = response2.content;\n                                this.profiles = [];\n                                Object.keys(profiles).forEach((profileKey) => {\n                                    this.profiles.push({ id: profileKey, config: profiles[profileKey] });\n                                });\n\n                                const uniteConfiguration = LocalStorage.get<UniteConfiguration>(\"uniteConfiguration\");\n                                const profile = LocalStorage.get<string>(\"profile\");\n\n                                this.defaultValues(uniteConfiguration, profile);\n\n                                if (uniteConfiguration) {\n                                    this.generate();\n                                }\n                            } else {\n                                this.status = \"Unable to load the profile configurations so can not continue.\";\n                            }\n                        });\n                } else {\n                    this.status = \"Unable to load the SPDX licenses so can not continue.\";\n                }\n            })\n            .catch((err) => {\n                this.status = \"Unable to load the SPDX licenses so can not continue.\";\n            });\n    }\n\n    public defaultValues(uniteConfiguration?: UniteConfiguration, profile?: string): void {\n        this.applicationFrameworks = [\"Angular\", \"Aurelia\", \"Polymer\", \"Preact\", \"React\", \"Vanilla\", \"Vue\"];\n        this.sourceLanguages = [\"JavaScript\", \"TypeScript\"];\n        this.moduleTypes = [\"AMD\", \"CommonJS\", \"SystemJS\"];\n        this.bundlers = [\"Browserify\", \"RequireJS\", \"SystemJSBuilder\", \"Webpack\"];\n        this.linters = [\"ESLint\", \"TSLint\", \"None\"];\n        this.unitTestRunners = [\"Jest\", \"Karma\", \"None\"];\n        this.unitTestFrameworks = [\"Jasmine\", \"MochaChai\"];\n        this.unitTestEngines = [\"PhantomJS\", \"JSDom\", \"ChromeHeadless\"];\n        this.e2eTestRunners = [\"Protractor\", \"WebdriverIO\", \"None\"];\n        this.e2eTestFrameworks = [\"Jasmine\", \"MochaChai\"];\n        this.cssPres = [\"Css\", \"Less\", \"Sass\", \"Stylus\"];\n        this.cssPosts = [\"None\", \"PostCss\"];\n        this.cssLinters = [\"LessHint\", \"None\", \"SassLint\", \"Stylint\", \"StyleLint\"];\n        this.documenters = [\"ESDoc\", \"JSDoc\", \"None\", \"TypeDoc\"];\n        this.packageManagers = [\"Npm\", \"Yarn\"];\n\n        this.profile = profile;\n        this.packageName = uniteConfiguration ? uniteConfiguration.packageName : undefined;\n        this.license = uniteConfiguration ? uniteConfiguration.license : undefined;\n        this.applicationFramework = uniteConfiguration ? uniteConfiguration.applicationFramework : undefined;\n        this.sourceLanguage = uniteConfiguration ? uniteConfiguration.sourceLanguage : undefined;\n        this.moduleType = uniteConfiguration ? uniteConfiguration.moduleType : undefined;\n        this.bundler = uniteConfiguration ? uniteConfiguration.bundler : undefined;\n        this.linter = uniteConfiguration ? uniteConfiguration.linter : undefined;\n        this.unitTestRunner = uniteConfiguration ? uniteConfiguration.unitTestRunner : undefined;\n        this.unitTestFramework = uniteConfiguration ? uniteConfiguration.unitTestFramework : undefined;\n        this.unitTestFrameworkEnabled = this.unitTestFramework !== undefined;\n        this.unitTestEngine = uniteConfiguration ? uniteConfiguration.unitTestEngine : undefined;\n        this.unitTestEngineEnabled = this.unitTestEngine !== undefined;\n        this.e2eTestRunner = uniteConfiguration ? uniteConfiguration.e2eTestRunner : undefined;\n        this.e2eTestFramework = uniteConfiguration ? uniteConfiguration.e2eTestFramework : undefined;\n        this.e2eTestFrameworkEnabled = this.e2eTestFramework !== undefined;\n        this.cssPre = uniteConfiguration ? uniteConfiguration.cssPre : undefined;\n        this.cssPost = uniteConfiguration ? uniteConfiguration.cssPost : undefined;\n        this.cssLinter = uniteConfiguration ? uniteConfiguration.cssLinter : undefined;\n        this.documenter = uniteConfiguration ? uniteConfiguration.documenter : undefined;\n        this.packageManager = uniteConfiguration ? uniteConfiguration.packageManager : undefined;\n        this.outputDirectory = uniteConfiguration ? uniteConfiguration.outputDirectory : undefined;\n\n        this.title = uniteConfiguration ? uniteConfiguration.title : undefined;\n        this.shortName = uniteConfiguration ? uniteConfiguration.shortName : undefined;\n        this.description = uniteConfiguration ? uniteConfiguration.description : undefined;\n        this.keywords = uniteConfiguration && uniteConfiguration.keywords\n                                    ? uniteConfiguration.keywords.join(\",\") : undefined;\n        this.organization = uniteConfiguration ? uniteConfiguration.organization : undefined;\n        this.copyright = uniteConfiguration ? uniteConfiguration.copyright : undefined;\n        this.webSite = uniteConfiguration ? uniteConfiguration.webSite : undefined;\n        this.namespace = uniteConfiguration ? uniteConfiguration.namespace : undefined;\n        this.author = uniteConfiguration ? uniteConfiguration.author : undefined;\n        this.authorEmail = uniteConfiguration ? uniteConfiguration.authorEmail : undefined;\n        this.authorWebSite = uniteConfiguration ? uniteConfiguration.authorWebSite : undefined;\n    }\n\n    public profileChanged(): void {\n        if (this.profile) {\n            const profile = this.profiles.find((p) => p.id === this.profile);\n\n            if (profile) {\n                this.license = profile.config.license;\n                this.applicationFramework = profile.config.applicationFramework;\n                this.sourceLanguage = profile.config.sourceLanguage;\n                this.moduleType = profile.config.moduleType;\n                this.bundler = profile.config.bundler;\n                this.linter = profile.config.linter;\n                this.unitTestRunner = profile.config.unitTestRunner;\n                this.unitTestFramework = profile.config.unitTestFramework;\n                this.unitTestFrameworkEnabled = this.unitTestFramework !== undefined;\n                this.unitTestEngine = profile.config.unitTestEngine;\n                this.unitTestEngineEnabled = this.unitTestEngine !== undefined;\n                this.e2eTestRunner = profile.config.e2eTestRunner;\n                this.e2eTestFramework = profile.config.e2eTestFramework;\n                this.e2eTestFrameworkEnabled = this.e2eTestFramework !== undefined;\n                this.cssPre = profile.config.cssPre;\n                this.cssPost = profile.config.cssPost;\n                this.cssLinter = profile.config.cssLinter;\n                this.documenter = profile.config.documenter;\n                this.packageManager = profile.config.packageManager;\n            }\n        }\n    }\n\n    public applicationFrameworkChanged(): void {\n        this.controller.validate({ object: this, propertyName: \"bundler\" });\n        this.controller.validate({ object: this, propertyName: \"unitTestEngine\" });\n    }\n\n    public moduleTypeChanged(): void {\n        this.controller.validate({ object: this, propertyName: \"applicationFramework\" });\n        this.controller.validate({ object: this, propertyName: \"bundler\" });\n        this.controller.validate({ object: this, propertyName: \"unitTestRunner\" });\n    }\n\n    public bundlerChanged(): void {\n        this.controller.validate({ object: this, propertyName: \"applicationFramework\" });\n        this.controller.validate({ object: this, propertyName: \"moduleType\" });\n    }\n\n    public sourceLanguageChanged(): void {\n        this.controller.validate({ object: this, propertyName: \"linter\" });\n        this.controller.validate({ object: this, propertyName: \"documenter\" });\n    }\n\n    public linterChanged(): void {\n        this.controller.validate({ object: this, propertyName: \"sourceLanguage\" });\n    }\n\n    public unitTestRunnerChanged(): void {\n        if (this.unitTestRunner === undefined || this.unitTestRunner === \"None\") {\n            this.unitTestFramework = undefined;\n            this.unitTestEngine = undefined;\n            this.unitTestFrameworkEnabled = false;\n            this.unitTestEngineEnabled = false;\n        } else {\n            this.unitTestFrameworkEnabled = true;\n            this.unitTestEngineEnabled = true;\n        }\n        this.controller.validate({ object: this, propertyName: \"unitTestFramework\" });\n        this.controller.validate({ object: this, propertyName: \"unitTestEngine\" });\n        this.controller.validate({ object: this, propertyName: \"moduleType\" });\n    }\n\n    public unitTestFrameworkChanged(): void {\n        this.controller.validate({ object: this, propertyName: \"unitTestRunner\" });\n    }\n\n    public unitTestEngineChanged(): void {\n        this.controller.validate({ object: this, propertyName: \"unitTestRunner\" });\n    }\n\n    public e2eTestRunnerChanged(): void {\n        if (this.e2eTestRunner === undefined || this.e2eTestRunner === \"None\") {\n            this.e2eTestFramework = undefined;\n            this.e2eTestFrameworkEnabled = false;\n        } else {\n            this.e2eTestFrameworkEnabled = true;\n        }\n        this.controller.validate({ object: this, propertyName: \"e2eTestFramework\" });\n    }\n\n    public cssPreChanged(): void {\n        this.controller.validate({ object: this, propertyName: \"cssLinter\" });\n    }\n\n    public cssLinterChanged(): void {\n        this.controller.validate({ object: this, propertyName: \"cssPre\" });\n    }\n\n    public generate(): void {\n        const uniteConfiguration = new UniteConfiguration();\n        uniteConfiguration.packageName = this.packageName;\n        uniteConfiguration.license = this.license;\n        uniteConfiguration.applicationFramework = this.applicationFramework;\n        uniteConfiguration.moduleType = this.moduleType;\n        uniteConfiguration.bundler = this.bundler;\n        uniteConfiguration.sourceLanguage = this.sourceLanguage;\n        uniteConfiguration.linter = this.linter;\n        uniteConfiguration.unitTestRunner = this.unitTestRunner;\n        uniteConfiguration.unitTestFramework = this.unitTestFramework;\n        uniteConfiguration.unitTestEngine = this.unitTestEngine;\n        uniteConfiguration.e2eTestRunner = this.e2eTestRunner;\n        uniteConfiguration.e2eTestFramework = this.e2eTestFramework;\n        uniteConfiguration.cssPre = this.cssPre;\n        uniteConfiguration.cssPost = this.cssPost;\n        uniteConfiguration.cssLinter = this.cssLinter;\n        uniteConfiguration.documenter = this.documenter;\n        uniteConfiguration.packageManager = this.packageManager;\n        uniteConfiguration.outputDirectory = this.outputDirectory;\n\n        uniteConfiguration.title = this.title;\n        uniteConfiguration.shortName = this.shortName;\n        uniteConfiguration.description = this.description;\n        uniteConfiguration.keywords = this.keywords ? this.keywords.split(\",\") : undefined;\n        uniteConfiguration.organization = this.organization;\n        uniteConfiguration.copyright = this.copyright;\n        uniteConfiguration.webSite = this.webSite;\n        uniteConfiguration.namespace = this.namespace;\n        uniteConfiguration.author = this.author;\n        uniteConfiguration.authorEmail = this.authorEmail;\n        uniteConfiguration.authorWebSite = this.authorWebSite;\n\n        let profile: UniteConfiguration;\n\n        if (this.profile) {\n            const item = this.profiles.find((p) => p.id === this.profile);\n            if (item) {\n                profile = item.config;\n            }\n        }\n\n        LocalStorage.set(\"uniteConfiguration\", uniteConfiguration);\n        LocalStorage.set(\"profile\", this.profile);\n\n        this.controller.validate()\n            .then((result) => {\n                if (result.valid) {\n                    this.commandLine = `unite configure` +\n                        ` --packageName=${this.packageName}` +\n                        (this.profile === undefined\n                            ? \"\" : ` --profile=${this.profile}`) +\n                        this.generateArg(profile, uniteConfiguration, \"license\") +\n                        this.generateArg(profile, uniteConfiguration, \"applicationFramework\", \"appFramework\") +\n                        this.generateArg(profile, uniteConfiguration, \"moduleType\") +\n                        this.generateArg(profile, uniteConfiguration, \"bundler\") +\n                        this.generateArg(profile, uniteConfiguration, \"sourceLanguage\") +\n                        this.generateArg(profile, uniteConfiguration, \"linter\") +\n                        this.generateArg(profile, uniteConfiguration, \"unitTestRunner\") +\n                        this.generateArg(profile, uniteConfiguration, \"unitTestFramework\") +\n                        this.generateArg(profile, uniteConfiguration, \"unitTestEngine\") +\n                        this.generateArg(profile, uniteConfiguration, \"e2eTestRunner\") +\n                        this.generateArg(profile, uniteConfiguration, \"e2eTestFramework\") +\n                        this.generateArg(profile, uniteConfiguration, \"cssPre\") +\n                        this.generateArg(profile, uniteConfiguration, \"cssPost\") +\n                        this.generateArg(profile, uniteConfiguration, \"cssLinter\") +\n                        this.generateArg(profile, uniteConfiguration, \"documenter\") +\n                        this.generateArg(profile, uniteConfiguration, \"packageManager\") +\n                        this.generateArg(profile, uniteConfiguration, \"title\") +\n                        this.generateArg(profile, uniteConfiguration, \"shortName\") +\n                        this.generateArg(profile, uniteConfiguration, \"description\") +\n                        this.generateArg(profile, uniteConfiguration, \"keywords\") +\n                        this.generateArg(profile, uniteConfiguration, \"organization\") +\n                        this.generateArg(profile, uniteConfiguration, \"copyright\") +\n                        this.generateArg(profile, uniteConfiguration, \"webSite\") +\n                        this.generateArg(profile, uniteConfiguration, \"namespace\") +\n                        this.generateArg(profile, uniteConfiguration, \"author\") +\n                        this.generateArg(profile, uniteConfiguration, \"authorEmail\") +\n                        this.generateArg(profile, uniteConfiguration, \"authorWebSite\") +\n                        (this.outputDirectory === undefined ||\n                            this.outputDirectory === null ||\n                            this.outputDirectory.length === 0\n                            ? \"\" : ` --outputDirectory=${this.outputDirectory}`);\n                } else {\n                    this.commandLine = \"The parameter choices are not all valid.\";\n                }\n            });\n    }\n\n    public generateArg(profile: UniteConfiguration,\n                       uniteConfiguration: UniteConfiguration,\n                       propertyName: keyof UniteConfiguration,\n                       argName?: string): string {\n        if (profile && profile[propertyName] === uniteConfiguration[propertyName]) {\n            return \"\";\n        } else if (uniteConfiguration[propertyName] === undefined ||\n                    uniteConfiguration[propertyName] === null ||\n                    uniteConfiguration[propertyName].length === 0) {\n            return \"\";\n        } else {\n            const delim = uniteConfiguration[propertyName].indexOf(\" \") >= 0 ? \"\\\"\" : \"\";\n            return ` --${argName ? argName : propertyName}=${delim}${uniteConfiguration[propertyName]}${delim}`;\n        }\n    }\n\n    public clear(): void {\n        LocalStorage.remove(\"uniteConfiguration\");\n        LocalStorage.remove(\"profile\");\n\n        this.defaultValues();\n        this.commandLine = undefined;\n\n        setTimeout(() => this.controller.reset(), 0);\n    }\n\n    public copyToClipboard(): void {\n        Clipboard.copyTo(this.commandLine);\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/generator/generator.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 123,
+    "kind": "variable",
+    "name": "__decorate",
+    "memberof": "src/generator/generator.ts",
+    "static": true,
+    "longname": "src/generator/generator.ts~__decorate",
+    "access": "private",
+    "export": false,
+    "importPath": "unitejs-web/src/generator/generator.ts",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 124,
+    "kind": "class",
+    "name": "Generator",
+    "memberof": "src/generator/generator.ts",
+    "static": true,
+    "longname": "src/generator/generator.ts~Generator",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/generator/generator.ts",
+    "importStyle": "{Generator}",
+    "description": "",
+    "lineNumber": 17,
+    "interface": false
+  },
+  {
+    "__docId__": 125,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true
+  },
+  {
+    "__docId__": 126,
+    "kind": "member",
+    "name": "controller",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#controller",
+    "access": "public",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "method",
+    "name": "attached",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#attached",
+    "access": "public",
+    "description": "",
+    "lineNumber": 289,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 128,
+    "kind": "member",
+    "name": "licenses",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#licenses",
+    "access": "public",
+    "description": null,
+    "lineNumber": 181,
+    "undocument": true,
+    "type": {
+      "types": [
+        "undefined[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 129,
+    "kind": "member",
+    "name": "profiles",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#profiles",
+    "access": "public",
+    "description": null,
+    "lineNumber": 196,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 130,
+    "kind": "member",
+    "name": "status",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#status",
+    "access": "public",
+    "description": null,
+    "lineNumber": 208,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "method",
+    "name": "defaultValues",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#defaultValues",
+    "access": "public",
+    "description": "",
+    "lineNumber": 338,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "UniteConfiguration"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "uniteConfiguration",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "profile",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 134,
+    "kind": "member",
+    "name": "applicationFrameworks",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#applicationFrameworks",
+    "access": "public",
+    "description": null,
+    "lineNumber": 231,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 135,
+    "kind": "member",
+    "name": "sourceLanguages",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#sourceLanguages",
+    "access": "public",
+    "description": null,
+    "lineNumber": 232,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 136,
+    "kind": "member",
+    "name": "moduleTypes",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#moduleTypes",
+    "access": "public",
+    "description": null,
+    "lineNumber": 233,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 137,
+    "kind": "member",
+    "name": "bundlers",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#bundlers",
+    "access": "public",
+    "description": null,
+    "lineNumber": 234,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 138,
+    "kind": "member",
+    "name": "linters",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#linters",
+    "access": "public",
+    "description": null,
+    "lineNumber": 235,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 139,
+    "kind": "member",
+    "name": "unitTestRunners",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestRunners",
+    "access": "public",
+    "description": null,
+    "lineNumber": 236,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 140,
+    "kind": "member",
+    "name": "unitTestFrameworks",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestFrameworks",
+    "access": "public",
+    "description": null,
+    "lineNumber": 237,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 141,
+    "kind": "member",
+    "name": "unitTestEngines",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestEngines",
+    "access": "public",
+    "description": null,
+    "lineNumber": 238,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 142,
+    "kind": "member",
+    "name": "e2eTestRunners",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#e2eTestRunners",
+    "access": "public",
+    "description": null,
+    "lineNumber": 239,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 143,
+    "kind": "member",
+    "name": "e2eTestFrameworks",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#e2eTestFrameworks",
+    "access": "public",
+    "description": null,
+    "lineNumber": 240,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 144,
+    "kind": "member",
+    "name": "cssPres",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#cssPres",
+    "access": "public",
+    "description": null,
+    "lineNumber": 241,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 145,
+    "kind": "member",
+    "name": "cssPosts",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#cssPosts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 242,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 146,
+    "kind": "member",
+    "name": "cssLinters",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#cssLinters",
+    "access": "public",
+    "description": null,
+    "lineNumber": 243,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 147,
+    "kind": "member",
+    "name": "documenters",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#documenters",
+    "access": "public",
+    "description": null,
+    "lineNumber": 244,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 148,
+    "kind": "member",
+    "name": "packageManagers",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#packageManagers",
+    "access": "public",
+    "description": null,
+    "lineNumber": 245,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 149,
+    "kind": "member",
+    "name": "profile",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#profile",
+    "access": "public",
+    "description": null,
+    "lineNumber": 246,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 150,
+    "kind": "member",
+    "name": "packageName",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#packageName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 247,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 151,
+    "kind": "member",
+    "name": "license",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#license",
+    "access": "public",
+    "description": null,
+    "lineNumber": 248,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 152,
+    "kind": "member",
+    "name": "applicationFramework",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#applicationFramework",
+    "access": "public",
+    "description": null,
+    "lineNumber": 249,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 153,
+    "kind": "member",
+    "name": "sourceLanguage",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#sourceLanguage",
+    "access": "public",
+    "description": null,
+    "lineNumber": 250,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 154,
+    "kind": "member",
+    "name": "moduleType",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#moduleType",
+    "access": "public",
+    "description": null,
+    "lineNumber": 251,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 155,
+    "kind": "member",
+    "name": "bundler",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#bundler",
+    "access": "public",
+    "description": null,
+    "lineNumber": 252,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 156,
+    "kind": "member",
+    "name": "linter",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#linter",
+    "access": "public",
+    "description": null,
+    "lineNumber": 253,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 157,
+    "kind": "member",
+    "name": "unitTestRunner",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestRunner",
+    "access": "public",
+    "description": null,
+    "lineNumber": 254,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 158,
+    "kind": "member",
+    "name": "unitTestFramework",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestFramework",
+    "access": "public",
+    "description": null,
+    "lineNumber": 255,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 159,
+    "kind": "member",
+    "name": "unitTestFrameworkEnabled",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestFrameworkEnabled",
+    "access": "public",
+    "description": null,
+    "lineNumber": 256,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "member",
+    "name": "unitTestEngine",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestEngine",
+    "access": "public",
+    "description": null,
+    "lineNumber": 257,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 161,
+    "kind": "member",
+    "name": "unitTestEngineEnabled",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestEngineEnabled",
+    "access": "public",
+    "description": null,
+    "lineNumber": 258,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "member",
+    "name": "e2eTestRunner",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#e2eTestRunner",
+    "access": "public",
+    "description": null,
+    "lineNumber": 259,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "member",
+    "name": "e2eTestFramework",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#e2eTestFramework",
+    "access": "public",
+    "description": null,
+    "lineNumber": 260,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 164,
+    "kind": "member",
+    "name": "e2eTestFrameworkEnabled",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#e2eTestFrameworkEnabled",
+    "access": "public",
+    "description": null,
+    "lineNumber": 261,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 165,
+    "kind": "member",
+    "name": "cssPre",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#cssPre",
+    "access": "public",
+    "description": null,
+    "lineNumber": 262,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 166,
+    "kind": "member",
+    "name": "cssPost",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#cssPost",
+    "access": "public",
+    "description": null,
+    "lineNumber": 263,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 167,
+    "kind": "member",
+    "name": "cssLinter",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#cssLinter",
+    "access": "public",
+    "description": null,
+    "lineNumber": 264,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 168,
+    "kind": "member",
+    "name": "documenter",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#documenter",
+    "access": "public",
+    "description": null,
+    "lineNumber": 265,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 169,
+    "kind": "member",
+    "name": "packageManager",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#packageManager",
+    "access": "public",
+    "description": null,
+    "lineNumber": 266,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 170,
+    "kind": "member",
+    "name": "outputDirectory",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#outputDirectory",
+    "access": "public",
+    "description": null,
+    "lineNumber": 267,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 171,
+    "kind": "member",
+    "name": "title",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#title",
+    "access": "public",
+    "description": null,
+    "lineNumber": 268,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 172,
+    "kind": "member",
+    "name": "shortName",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#shortName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 269,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 173,
+    "kind": "member",
+    "name": "description",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#description",
+    "access": "public",
+    "description": null,
+    "lineNumber": 270,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 174,
+    "kind": "member",
+    "name": "keywords",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#keywords",
+    "access": "public",
+    "description": null,
+    "lineNumber": 271,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 175,
+    "kind": "member",
+    "name": "organization",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#organization",
+    "access": "public",
+    "description": null,
+    "lineNumber": 273,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 176,
+    "kind": "member",
+    "name": "copyright",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#copyright",
+    "access": "public",
+    "description": null,
+    "lineNumber": 274,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 177,
+    "kind": "member",
+    "name": "webSite",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#webSite",
+    "access": "public",
+    "description": null,
+    "lineNumber": 275,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 178,
+    "kind": "member",
+    "name": "namespace",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#namespace",
+    "access": "public",
+    "description": null,
+    "lineNumber": 276,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 179,
+    "kind": "member",
+    "name": "author",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#author",
+    "access": "public",
+    "description": null,
+    "lineNumber": 277,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 180,
+    "kind": "member",
+    "name": "authorEmail",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#authorEmail",
+    "access": "public",
+    "description": null,
+    "lineNumber": 278,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 181,
+    "kind": "member",
+    "name": "authorWebSite",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#authorWebSite",
+    "access": "public",
+    "description": null,
+    "lineNumber": 279,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 182,
+    "kind": "method",
+    "name": "profileChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#profileChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 392,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 202,
+    "kind": "method",
+    "name": "applicationFrameworkChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#applicationFrameworkChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 420,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 203,
+    "kind": "method",
+    "name": "moduleTypeChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#moduleTypeChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 425,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 204,
+    "kind": "method",
+    "name": "bundlerChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#bundlerChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 431,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 205,
+    "kind": "method",
+    "name": "sourceLanguageChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#sourceLanguageChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 436,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 206,
+    "kind": "method",
+    "name": "linterChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#linterChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 441,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 207,
+    "kind": "method",
+    "name": "unitTestRunnerChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestRunnerChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 445,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 214,
+    "kind": "method",
+    "name": "unitTestFrameworkChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestFrameworkChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 460,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 215,
+    "kind": "method",
+    "name": "unitTestEngineChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#unitTestEngineChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 464,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 216,
+    "kind": "method",
+    "name": "e2eTestRunnerChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#e2eTestRunnerChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 468,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 220,
+    "kind": "method",
+    "name": "cssPreChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#cssPreChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 478,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 221,
+    "kind": "method",
+    "name": "cssLinterChanged",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#cssLinterChanged",
+    "access": "public",
+    "description": "",
+    "lineNumber": 482,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 222,
+    "kind": "method",
+    "name": "generate",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#generate",
+    "access": "public",
+    "description": "",
+    "lineNumber": 486,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 223,
+    "kind": "member",
+    "name": "commandLine",
+    "memberof": "src/generator/generator.ts~Generator",
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#commandLine",
+    "access": "public",
+    "description": null,
+    "lineNumber": 485,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 225,
+    "kind": "method",
+    "name": "generateArg",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#generateArg",
+    "access": "public",
+    "description": "",
+    "lineNumber": 575,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "UniteConfiguration"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "profile",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "UniteConfiguration"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "uniteConfiguration",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "undefined"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "propertyName",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "argName",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 226,
+    "kind": "method",
+    "name": "clear",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#clear",
+    "access": "public",
+    "description": "",
+    "lineNumber": 591,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 228,
+    "kind": "method",
+    "name": "copyToClipboard",
+    "memberof": "src/generator/generator.ts~Generator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/generator/generator.ts~Generator#copyToClipboard",
+    "access": "public",
+    "description": "",
+    "lineNumber": 601,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 229,
+    "kind": "file",
+    "name": "src/home/home.ts",
+    "content": "/**\n * Home class.\n */\nexport class Home {\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/home/home.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 230,
+    "kind": "class",
+    "name": "Home",
+    "memberof": "src/home/home.ts",
+    "static": true,
+    "longname": "src/home/home.ts~Home",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/home/home.ts",
+    "importStyle": "{Home}",
+    "description": "Home class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 231,
+    "kind": "file",
+    "name": "src/info/about.ts",
+    "content": "/**\n * About class.\n */\nexport class About {\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/info/about.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 232,
+    "kind": "class",
+    "name": "About",
+    "memberof": "src/info/about.ts",
+    "static": true,
+    "longname": "src/info/about.ts~About",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/info/about.ts",
+    "importStyle": "{About}",
+    "description": "About class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 233,
+    "kind": "file",
+    "name": "src/info/license.ts",
+    "content": "/**\n * License class.\n */\nexport class License {\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/info/license.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 234,
+    "kind": "class",
+    "name": "License",
+    "memberof": "src/info/license.ts",
+    "static": true,
+    "longname": "src/info/license.ts~License",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/info/license.ts",
+    "importStyle": "{License}",
+    "description": "License class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 235,
+    "kind": "file",
+    "name": "src/info/media.ts",
+    "content": "/**\n * Media class.\n */\nexport class Media {\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/info/media.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 236,
+    "kind": "class",
+    "name": "Media",
+    "memberof": "src/info/media.ts",
+    "static": true,
+    "longname": "src/info/media.ts~Media",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/info/media.ts",
+    "importStyle": "{Media}",
+    "description": "Media class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 237,
+    "kind": "file",
+    "name": "src/info/theTeam.ts",
+    "content": "/**\n * TheTeam class.\n */\nexport class TheTeam {\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/info/theTeam.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 238,
+    "kind": "class",
+    "name": "TheTeam",
+    "memberof": "src/info/theTeam.ts",
+    "static": true,
+    "longname": "src/info/theTeam.ts~TheTeam",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/info/theTeam.ts",
+    "importStyle": "{TheTeam}",
+    "description": "TheTeam class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 239,
+    "kind": "file",
+    "name": "src/models/ISpdx.ts",
+    "content": "/**\n * Model of spdx.json file.\n */\nimport { ISpdxLicense } from \"./ISpdxLicense\";\n\nexport interface ISpdx {\n    [id: string]: ISpdxLicense;\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/models/ISpdx.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 240,
+    "kind": "file",
+    "name": "src/models/ISpdxLicense.ts",
+    "content": "/**\n * Model of single spdx license file.\n */\nexport interface ISpdxLicense {\n    name: string;\n    url: string;\n    osiApproved: boolean;\n    licenseText: string;\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/models/ISpdxLicense.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 241,
+    "kind": "file",
+    "name": "src/models/uniteConfiguration.ts",
+    "content": "/**\n * Model of Unite Configuration (unite.json) file.\n */\nexport class UniteConfiguration {\n    public packageName: string;\n    public license: string;\n    public applicationFramework: string;\n    public moduleType: string;\n    public bundler: string;\n    public sourceLanguage: string;\n    public linter: string;\n    public unitTestRunner: string;\n    public unitTestFramework: string;\n    public unitTestEngine: string;\n    public e2eTestRunner: string;\n    public e2eTestFramework: string;\n    public cssPre: string;\n    public cssPost: string;\n    public cssLinter: string;\n    public documenter: string;\n    public packageManager: string;\n    public outputDirectory: string;\n\n    public title: string;\n    public shortName: string;\n    public description: string;\n    public keywords: string[];\n    public organization: string;\n    public copyright: string;\n    public webSite: string;\n    public namespace: string;\n    public author: string;\n    public authorEmail: string;\n    public authorWebSite: string;\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/models/uniteConfiguration.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 242,
+    "kind": "class",
+    "name": "UniteConfiguration",
+    "memberof": "src/models/uniteConfiguration.ts",
+    "static": true,
+    "longname": "src/models/uniteConfiguration.ts~UniteConfiguration",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/models/uniteConfiguration.ts",
+    "importStyle": "{UniteConfiguration}",
+    "description": "Model of Unite Configuration (unite.json) file.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 243,
+    "kind": "file",
+    "name": "src/navBar.ts",
+    "content": "/**\n * NavBar class.\n */\nimport { HttpClient } from \"aurelia-fetch-client\";\nimport { Router } from \"aurelia-router\";\nimport { bindable, customElement } from \"aurelia-templating\";\n\n@customElement(\"nav-bar\")\nexport class NavBar {\n    @bindable\n    public router: Router;\n\n    public version: string;\n\n    public attached(): void {\n        const httpClient = new HttpClient();\n        httpClient.fetch(\"https://api.npms.io/v2/package/unitejs-cli\")\n        .then((response) => response.json())\n        .then((json) => {\n            if (json.collected &&\n                json.collected.metadata) {\n                this.version = `v${json.collected.metadata.version}`;\n            }\n        })\n        .catch(() => {\n            // ignore error we just wont display version\n        });\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/navBar.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 244,
+    "kind": "variable",
+    "name": "__decorate",
+    "memberof": "src/navBar.ts",
+    "static": true,
+    "longname": "src/navBar.ts~__decorate",
+    "access": "private",
+    "export": false,
+    "importPath": "unitejs-web/src/navBar.ts",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 245,
+    "kind": "class",
+    "name": "NavBar",
+    "memberof": "src/navBar.ts",
+    "static": true,
+    "longname": "src/navBar.ts~NavBar",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/navBar.ts",
+    "importStyle": "{NavBar}",
+    "description": "",
+    "lineNumber": 9,
+    "interface": false
+  },
+  {
+    "__docId__": 246,
+    "kind": "method",
+    "name": "attached",
+    "memberof": "src/navBar.ts~NavBar",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/navBar.ts~NavBar#attached",
+    "access": "public",
+    "description": "",
+    "lineNumber": 15,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 247,
+    "kind": "member",
+    "name": "version",
+    "memberof": "src/navBar.ts~NavBar",
+    "static": false,
+    "longname": "src/navBar.ts~NavBar#version",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 248,
+    "kind": "file",
+    "name": "src/navFooter.ts",
+    "content": "/**\n * NavFooter class.\n */\n/// <reference types=\"unitejs-types\" />\nimport { customElement } from \"aurelia-templating\";\nimport * as moment from \"moment\";\n\n@customElement(\"nav-footer\")\nexport class NavFooter {\n    public buildDateTime: string;\n    public packageVersion: string;\n\n    constructor() {\n        this.buildDateTime = moment(new Date(window.unite.buildDateTime)).format(\"MMMM Do YYYY, h:mm a\");\n        this.packageVersion = window.unite.packageVersion;\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/navFooter.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 249,
+    "kind": "variable",
+    "name": "__decorate",
+    "memberof": "src/navFooter.ts",
+    "static": true,
+    "longname": "src/navFooter.ts~__decorate",
+    "access": "private",
+    "export": false,
+    "importPath": "unitejs-web/src/navFooter.ts",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 250,
+    "kind": "class",
+    "name": "NavFooter",
+    "memberof": "src/navFooter.ts",
+    "static": true,
+    "longname": "src/navFooter.ts~NavFooter",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/navFooter.ts",
+    "importStyle": "{NavFooter}",
+    "description": "",
+    "lineNumber": 9,
+    "interface": false
+  },
+  {
+    "__docId__": 251,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/navFooter.ts~NavFooter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/navFooter.ts~NavFooter#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true
+  },
+  {
+    "__docId__": 252,
+    "kind": "member",
+    "name": "buildDateTime",
+    "memberof": "src/navFooter.ts~NavFooter",
+    "static": false,
+    "longname": "src/navFooter.ts~NavFooter#buildDateTime",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 253,
+    "kind": "member",
+    "name": "packageVersion",
+    "memberof": "src/navFooter.ts~NavFooter",
+    "static": false,
+    "longname": "src/navFooter.ts~NavFooter#packageVersion",
+    "access": "public",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 254,
+    "kind": "file",
+    "name": "src/pipelineSteps/googleAnalyticsStep.ts",
+    "content": "/**\n * Google Analytics Step class.\n */\n/// <reference types=\"google.analytics\" />\nimport { NavigationInstruction, Next } from \"aurelia-router\";\n\nexport class GoogleAnalyticsStep {\n    public run(navigationInstruction: NavigationInstruction, next: Next): Promise<any> {\n        if ((window as any).ga !== undefined) {\n            ga(\"send\", {\n                hitType: \"pageview\",\n                page: navigationInstruction.fragment,\n                title: navigationInstruction.config.title\n            });\n        }\n        return next();\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/pipelineSteps/googleAnalyticsStep.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 255,
+    "kind": "class",
+    "name": "GoogleAnalyticsStep",
+    "memberof": "src/pipelineSteps/googleAnalyticsStep.ts",
+    "static": true,
+    "longname": "src/pipelineSteps/googleAnalyticsStep.ts~GoogleAnalyticsStep",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/pipelineSteps/googleAnalyticsStep.ts",
+    "importStyle": "{GoogleAnalyticsStep}",
+    "description": "",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 256,
+    "kind": "method",
+    "name": "run",
+    "memberof": "src/pipelineSteps/googleAnalyticsStep.ts~GoogleAnalyticsStep",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/pipelineSteps/googleAnalyticsStep.ts~GoogleAnalyticsStep#run",
+    "access": "public",
+    "description": "",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "NavigationInstruction"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "navigationInstruction",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Next"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "next",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 257,
+    "kind": "file",
+    "name": "src/pipelineSteps/scrollToTopPipelineStep.ts",
+    "content": "/**\n * Scroll To Top Pipeline Step class.\n */\nimport { NavigationInstruction, Next } from \"aurelia-router\";\nimport { Scroll } from \"../domHelpers/scroll\";\n\nexport class ScrollToTopPipelineStep {\n    public run(navigationInstruction: NavigationInstruction, next: Next): Promise<any> {\n        Scroll.smoothScroll(window, 0, 0);\n        return next();\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/pipelineSteps/scrollToTopPipelineStep.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 258,
+    "kind": "class",
+    "name": "ScrollToTopPipelineStep",
+    "memberof": "src/pipelineSteps/scrollToTopPipelineStep.ts",
+    "static": true,
+    "longname": "src/pipelineSteps/scrollToTopPipelineStep.ts~ScrollToTopPipelineStep",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/pipelineSteps/scrollToTopPipelineStep.ts",
+    "importStyle": "{ScrollToTopPipelineStep}",
+    "description": "",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 259,
+    "kind": "method",
+    "name": "run",
+    "memberof": "src/pipelineSteps/scrollToTopPipelineStep.ts~ScrollToTopPipelineStep",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/pipelineSteps/scrollToTopPipelineStep.ts~ScrollToTopPipelineStep#run",
+    "access": "public",
+    "description": "",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "NavigationInstruction"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "navigationInstruction",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Next"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "next",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 260,
+    "kind": "file",
+    "name": "src/status/status.ts",
+    "content": "/**\n * Status class.\n */\nexport class Status {\n    public sections: {\n        name: string;\n        description: string,\n        org: string,\n        items: {\n            name: string;\n            repo: string;\n            branches: string[],\n            hasCoverage?: boolean\n        }[]\n    }[];\n\n    constructor() {\n        this.sections = [\n            {\n                name: \"Application Components\",\n                description: \"Main libraries used by the UniteJS application.\",\n                org: \"unitejs\",\n                items: [\n                    {\n                        name: \"Framework\", repo: \"framework\", branches: [\"master\", \"develop\"],\n                        hasCoverage: true\n                    },\n                    { name: \"CLI-Core\", repo: \"cli-core\", branches: [\"master\", \"develop\"], hasCoverage: true },\n                    { name: \"Engine\", repo: \"engine\", branches: [\"master\", \"develop\"], hasCoverage: true },\n                    { name: \"CLI\", repo: \"cli\", branches: [\"master\", \"develop\"], hasCoverage: true },\n                    { name: \"Image\", repo: \"image\", branches: [\"master\", \"develop\"], hasCoverage: true },\n                    { name: \"Image CLI\", repo: \"image-cli\", branches: [\"master\", \"develop\"], hasCoverage: true }\n                ]\n            },\n            {\n                name: \"Quick Start Examples\",\n                description: \"Quick Start examples used by articles.\",\n                org: \"unitejs-examples\",\n                items: [\n                    { name: \"Cordova\", repo: \"cordova-quickstart\", branches: [\"master\"] },\n                    { name: \"Docker\", repo: \"docker-quickstart\", branches: [\"master\"] },\n                    { name: \"Electron\", repo: \"electron-quickstart\", branches: [\"master\"] }\n                ]\n            },\n            {\n                name: \"Profiles\",\n                description: \"UniteJS standard profiles.\",\n                org: \"unitejs-test\",\n                items: [\n                    { name: \"Angular JavaScript\", repo: \"angular-javascript\", branches: [\"master\"] },\n                    { name: \"Angular TypeScript\", repo: \"angular-typescript\", branches: [\"master\"] },\n                    { name: \"Aurelia JavaScript\", repo: \"aurelia-javascript\", branches: [\"master\"] },\n                    { name: \"Aurelia TypeScript\", repo: \"aurelia-typescript\", branches: [\"master\"] },\n                    { name: \"Polymer JavaScript\", repo: \"polymer-javascript\", branches: [\"master\"] },\n                    { name: \"Polymer TypeScript\", repo: \"polymer-typescript\", branches: [\"master\"] },\n                    { name: \"Preact JavaScript\", repo: \"preact-javascript\", branches: [\"master\"] },\n                    { name: \"Preact TypeScript\", repo: \"preact-typescript\", branches: [\"master\"] },\n                    { name: \"React JavaScript\", repo: \"react-javascript\", branches: [\"master\"] },\n                    { name: \"React TypeScript\", repo: \"react-typescript\", branches: [\"master\"] },\n                    { name: \"Vanilla JavaScript\", repo: \"vanilla-javascript\", branches: [\"master\"] },\n                    { name: \"Vanilla TypeScript\", repo: \"vanilla-typescript\", branches: [\"master\"] },\n                    { name: \"Vue JavaScript\", repo: \"vue-javascript\", branches: [\"master\"] },\n                    { name: \"Vue TypeScript\", repo: \"vue-typescript\", branches: [\"master\"] }\n                ]\n            },\n            {\n                name: \"Matrix\",\n                description: \"Application framework matrix, each repo has multiple configuration combinations. \" +\n                    \"<br/>Check the create-apps.sh in each repo to see the combinations it is testing.\",\n                org: \"unitejs-test-matrix\",\n                items: [\n                    {\n                        name: \"Angular Browserify\", repo: \"ng-browserify-matrix\",\n                        branches: [\"master\"]\n                    },\n                    { name: \"Angular SystemJS\", repo: \"ng-systemjs-matrix\", branches: [\"master\"] },\n                    { name: \"Angular Webpack\", repo: \"ng-webpack-matrix\", branches: [\"master\"] },\n                    {\n                        name: \"Aurelia RequireJS\", repo: \"au-requirejs-matrix\",\n                        branches: [\"master\"]\n                    },\n                    { name: \"Aurelia SystemJS\", repo: \"au-systemjs-matrix\", branches: [\"master\"] },\n                    {\n                        name: \"Polymer Browserify\", repo: \"po-browserify-matrix\",\n                        branches: [\"master\"]\n                    },\n                    { name: \"Polymer SystemJS\", repo: \"po-systemjs-matrix\", branches: [\"master\"] },\n                    { name: \"Polymer Webpack\", repo: \"po-webpack-matrix\", branches: [\"master\"] },\n                    {\n                        name: \"Preact Browserify\", repo: \"pr-browserify-matrix\",\n                        branches: [\"master\"]\n                    },\n                    { name: \"Preact RequireJS\", repo: \"pr-requirejs-matrix\", branches: [\"master\"] },\n                    { name: \"Preact SystemJS\", repo: \"pr-systemjs-matrix\", branches: [\"master\"] },\n                    { name: \"Preact Webpack\", repo: \"pr-webpack-matrix\", branches: [\"master\"] },\n                    {\n                        name: \"React Browserify\", repo: \"re-browserify-matrix\",\n                        branches: [\"master\"]\n                    },\n                    { name: \"React RequireJS\", repo: \"re-requirejs-matrix\", branches: [\"master\"] },\n                    { name: \"React SystemJS\", repo: \"re-systemjs-matrix\", branches: [\"master\"] },\n                    { name: \"React Webpack\", repo: \"re-webpack-matrix\", branches: [\"master\"] },\n                    {\n                        name: \"Vanilla Browserify\", repo: \"va-browserify-matrix\",\n                        branches: [\"master\"]\n                    },\n                    {\n                        name: \"Vanilla RequireJS\", repo: \"va-requirejs-matrix\",\n                        branches: [\"master\"]\n                    },\n                    { name: \"Vanilla SystemJS\", repo: \"pa-systemjs-matrix\", branches: [\"master\"] },\n                    { name: \"Vanilla Webpack\", repo: \"va-webpack-matrix\", branches: [\"master\"] },\n                    { name: \"Vue Browserify\", repo: \"vu-browserify-matrix\", branches: [\"master\"] },\n                    { name: \"Vue RequireJS\", repo: \"vu-requirejs-matrix\", branches: [\"master\"] },\n                    { name: \"Vue SystemJS\", repo: \"vu-systemjs-matrix\", branches: [\"master\"] },\n                    { name: \"Vue Webpack\", repo: \"vu-webpack-matrix\", branches: [\"master\"] },\n                ]\n            }\n        ];\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/status/status.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 261,
+    "kind": "class",
+    "name": "Status",
+    "memberof": "src/status/status.ts",
+    "static": true,
+    "longname": "src/status/status.ts~Status",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/status/status.ts",
+    "importStyle": "{Status}",
+    "description": "Status class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 262,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/status/status.ts~Status",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/status/status.ts~Status#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true
+  },
+  {
+    "__docId__": 263,
+    "kind": "member",
+    "name": "sections",
+    "memberof": "src/status/status.ts~Status",
+    "static": false,
+    "longname": "src/status/status.ts~Status#sections",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "undefined[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 264,
+    "kind": "file",
+    "name": "src/validation/bootstrapFormRenderer.ts",
+    "content": "/**\n * Bootstrap 4 form renderer for Aurelia form validation.\n */\nimport { RenderInstruction, ValidateResult } from \"aurelia-validation\";\nimport { Style } from \"../domHelpers/style\";\n\nexport class BootstrapFormRenderer {\n    public render(instruction: RenderInstruction): void {\n        for (const { result, elements } of instruction.unrender) {\n            for (const element of elements) {\n                this.remove(element, result);\n            }\n        }\n\n        for (const { result, elements } of instruction.render) {\n            for (const element of elements) {\n                this.add(element, result);\n            }\n        }\n    }\n\n    public add(element: Element, result: ValidateResult): void {\n        const formGroup = element.closest(\".form-group\");\n        if (!formGroup) {\n            return;\n        }\n\n        if (result.valid) {\n            if (!Style.has(element, \"is-invalid\")) {\n                Style.toggle(element, \"is-valid\", true);\n            }\n        } else {\n            Style.toggle(element, \"is-valid\", false);\n            Style.toggle(element, \"is-invalid\", true);\n            const message = document.createElement(\"span\");\n            message.className = \"invalid-feedback\";\n            message.textContent = result.message;\n            message.id = `validation-message-${result.id}`;\n            formGroup.appendChild(message);\n        }\n    }\n\n    public remove(element: Element, result: ValidateResult): void {\n        Style.toggle(element, \"is-invalid\", false);\n        Style.toggle(element, \"is-valid\", false);\n\n        const formGroup = element.closest(\".form-group\");\n        if (!formGroup) {\n            return;\n        }\n\n        const message = formGroup.querySelector(`#validation-message-${result.id}`);\n        if (message) {\n            formGroup.removeChild(message);\n        }\n    }\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/validation/bootstrapFormRenderer.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 265,
+    "kind": "class",
+    "name": "BootstrapFormRenderer",
+    "memberof": "src/validation/bootstrapFormRenderer.ts",
+    "static": true,
+    "longname": "src/validation/bootstrapFormRenderer.ts~BootstrapFormRenderer",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/validation/bootstrapFormRenderer.ts",
+    "importStyle": "{BootstrapFormRenderer}",
+    "description": "",
+    "lineNumber": 7,
+    "interface": false
+  },
+  {
+    "__docId__": 266,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/validation/bootstrapFormRenderer.ts~BootstrapFormRenderer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/validation/bootstrapFormRenderer.ts~BootstrapFormRenderer#render",
+    "access": "public",
+    "description": "",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "RenderInstruction"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "instruction",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 267,
+    "kind": "method",
+    "name": "add",
+    "memberof": "src/validation/bootstrapFormRenderer.ts~BootstrapFormRenderer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/validation/bootstrapFormRenderer.ts~BootstrapFormRenderer#add",
+    "access": "public",
+    "description": "",
+    "lineNumber": 22,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Element"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "ValidateResult"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "result",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 268,
+    "kind": "method",
+    "name": "remove",
+    "memberof": "src/validation/bootstrapFormRenderer.ts~BootstrapFormRenderer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/validation/bootstrapFormRenderer.ts~BootstrapFormRenderer#remove",
+    "access": "public",
+    "description": "",
+    "lineNumber": 43,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Element"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "element",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "ValidateResult"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "result",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 269,
+    "kind": "file",
+    "name": "src/whatsNew/whatsNew.ts",
+    "content": "/**\n * WhatsNew class.\n */\nexport class WhatsNew {\n}\n",
+    "static": true,
+    "longname": "D:/Workarea/unitejs/web/www/src/whatsNew/whatsNew.ts",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 270,
+    "kind": "class",
+    "name": "WhatsNew",
+    "memberof": "src/whatsNew/whatsNew.ts",
+    "static": true,
+    "longname": "src/whatsNew/whatsNew.ts~WhatsNew",
+    "access": "public",
+    "export": true,
+    "importPath": "unitejs-web/src/whatsNew/whatsNew.ts",
+    "importStyle": "{WhatsNew}",
+    "description": "WhatsNew class.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "kind": "index",
+    "content": "# UniteJS\r\n\r\nThe main contents of the application are in the www folder, it is created this way to allow for platform and packaged versions folders in the root.\r\n\r\nThe following global pre-requisities are needed\r\n\r\n``` shell\r\nnpm -g install gulp [or] yarn global add gulp\r\n```\r\n\r\nOnce gulp is installed you can install the npm packages for the app by running the gulp commands from the www folder.\r\n\r\n``` shell\r\nnpm install [or] yarn install\r\n```\r\n\r\n## Gulp Tasks\r\n\r\nThe following gulp commands are available for the app.\r\n\r\n* build\r\n* theme-build\r\n* unit [optional - available if you have configured a unit test runner]\r\n* e2e-install [optional - available if you have configured an e2e test runner]\r\n* e2e [optional - available if you have configured an e2e test runner]\r\n* serve\r\n* version\r\n* doc-build [optional - available if you have configured a documenter]\r\n* platform-cordova-dev [optional - requires cordova platform]\r\n* platform-cordova-theme [optional - requires cordova platform]\r\n* platform-docker-package [optional - requires docker platform]\r\n* platform-electron-dev [optional - requires electron platform]\r\n* platform-electron-package [optional - requires electron platform]\r\n* platform-web-package [optional - requires web platform]\r\n\r\n### build\r\n\r\nThis will transpile and build the app ready to run.\r\n\r\n``` shell\r\ngulp build\r\n```\r\n\r\nYou can specify a buildConfiguration (see the buildConfiguration command for details on how to add one) with the following syntax:\r\n\r\n``` shell\r\ngulp build --buildConfiguration=prod\r\n```\r\n\r\nIf you don't want to keep running the build command you can add the watch switch, this will monitor for changes in source/views/styling and build whatever is required. This will perform an initial complete build to make sure it is error free, but will only run some of the sub tasks for changes. You should run a full build again before performing other tasks:\r\n\r\n``` shell\r\ngulp build --watch\r\n```\r\n\r\n### theme-build\r\n\r\nYou will need to run this task at least once to generate the necessary favicon images and meta tags. See [Theme Assets](#themeassets) for more details.\r\n\r\n``` shell\r\ngulp theme-build\r\n```\r\n\r\n### unit\r\n\r\nThis will run unit tests for the app and generate unit and coverage reports in the test/reports folder. This task is only available if you specified a unit test runner, framework and engine during configuration.\r\n\r\n``` shell\r\ngulp unit\r\n```\r\n\r\nYou can run just a subset of tests by providing a source name as follows:\r\n\r\n``` shell\r\ngulp unit --grep=app\r\n```\r\n\r\nOr run in a browser (this will only work if the unit test runner is Karma) using:\r\n\r\n``` shell\r\ngulp unit --browser=[chrome/chromeheadless/edge/firefox/ie/phantomjs/safari]\r\n```\r\n\r\nIf you don't want to keep running the full unit command you can add the watch switch, this will monitor for changes in source/views/styling and build whatever is required.\r\n\r\n``` shell\r\ngulp unit --watch\r\n```\r\n\r\n### e2e-install\r\n\r\nThis will install all the necessary components required for the e2e tests, it need only be run once. This task is only available if you specified an e2e test runner and framework during configuration.\r\n\r\n``` shell\r\ngulp e2e-install\r\n```\r\n\r\nThe Selenium runtime will always be installed, but you can limit the browser driver to only a specific set by supplying a comma separated list as follows.\r\n\r\n``` shell\r\ngulp e2e-install --drivers=chrome,firefox\r\n```\r\n\r\nThe drivers can be any of the following chrome/edge/firefox/ie.\r\n\r\n### e2e\r\n\r\nThis will run e2e tests for the app and generate reports in the test/reports folder. This task is only available if you specified an e2e test runner and framework during configuration.\r\n\r\n``` shell\r\ngulp e2e\r\n```\r\n\r\nYou can run just a subset of tests by providing a source name as follows:\r\n\r\n``` shell\r\ngulp e2e --grep=app\r\n```\r\n\r\nYou can specify that the tests are run over https or on a different port using the switches:\r\n\r\n``` shell\r\ngulp e2e --secure --port=5000\r\n```\r\n\r\nYou can also run the tests on a different browser from the default chrome by using:\r\n\r\n``` shell\r\ngulp e2e --browser=[chrome/edge/firefox/ie/]\r\n```\r\n\r\n### serve\r\n\r\nThis will serve the app for you to view in a browser.\r\n\r\n``` shell\r\ngulp serve\r\n```\r\n\r\nYou can specify that the content is served over https or on a different port using the switches:\r\n\r\n``` shell\r\ngulp serve --secure --port=5000\r\n```\r\n\r\nThis command will also watch for changes in the files being served, rebuild them and then reload the browser.\r\n\r\n### version\r\n\r\nThis will allow you to show or update the package version.\r\n\r\n``` shell\r\ngulp version\r\n```\r\n\r\nRunning this task with no parameters will show the current version, alternatively use the following parameters to update the version:\r\n\r\n* --part=[major, minor, patch] - the part of the version you want to modify\r\n* --mode=[set, inc] - set the part to a specific value or increment the current value\r\n* --value=someValue - required if you use the set mode\r\n\r\n``` shell\r\ngulp version --part=patch --mode=inc\r\ngulp version --part=minor --mode=set --value=1\r\n```\r\n\r\n### doc-build\r\n\r\nThis task will generate documentation from the comments in the source code from your ./www/src folder.\r\n\r\n``` shell\r\ngulp doc-build\r\n```\r\n\r\nThe output is created in ./docs/ folder in the root of your project.\r\n\r\n### platform-cordova-dev\r\n\r\nThis task will create a cordova development setup in the ./platform/cordova folder. It defaults to adding the cordova platforms android, ios and windows. You can run this task multiple times without losing any changes you have made to the cordova projects, in fact **you must** run this again if your web app changes so that it copies accross the new content into the ./platform/cordova/www folder.\r\n\r\nThe meta data used to generate the configurations is all picked up from ./www/assetsSrc/unite-theme.json such as title, description, organization, namespace, author. The version is read from your ./www/package.json\r\n\r\nThere are no packaging tasks available for cordova as the build processes are platform specific. Once you have generated the projects you can use all the regular cordova commands, see [Cordova Project](https://cordova.apache.org/docs/en/latest/) for more details.\r\n\r\n``` shell\r\ngulp platform-cordova-dev\r\n```\r\n\r\nYou can override the default platforms and save them as follows:\r\n\r\n``` shell\r\ngulp platform-cordova-dev --platforms=android,windows --save\r\n```\r\n\r\nYou will also need to match the configuration used by the build, you can do this with the buildConfiguration argument.\r\n\r\n``` shell\r\ngulp platform-cordova-dev --buildConfiguration=prod\r\n```\r\n\r\n### platform-cordova-theme\r\n\r\nThis task will generate all the necessary icons and splash screens for your chosen platforms using the ./www/assetsSrc/ logos and your theme colors from ./www/assetsSrc/theme/unite-theme.json.\r\n\r\n``` shell\r\ngulp platform-cordova-theme\r\n```\r\n\r\nYou can generate the icons for a specific platform as follows:\r\n\r\n``` shell\r\ngulp platform-cordova-theme --platforms=ios\r\n```\r\n\r\n### platform-docker-package\r\n\r\nThis task will package your web app into the docker image that you choose, if you don't supply any parameters it will default to nginx. The output of the task will be written to ./packaged/{version}\\_docker\\_{image}.tar\r\n\r\n``` shell\r\ngulp platform-docker-package\r\n```\r\n\r\nYou will also need to match the configuration used by the build, you can do this with the buildConfiguration argument.\r\n\r\n``` shell\r\ngulp platform-docker-package --buildConfiguration=prod\r\n```\r\n\r\nOptionally specify the docker base image and where you want the web content within that image. If you also specify the --save options the values will be saved as the default for future runs of all the platform-docker-* tasks.\r\n\r\n``` shell\r\ngulp platform-docker-package --image=httpd --www=/usr/local/apache2/htdocs/ --save\r\n```\r\n\r\nAlternatively you can set the defaults as values in the unite.json platforms section:\r\n\r\n``` json\r\n\"platforms\": {\r\n    \"Docker\": {\r\n        \"image\": \"httpd\",\r\n        \"www\": \"/usr/local/apache2/htdocs/\"\r\n    }\r\n}\r\n```\r\n\r\nIf you want to add additional files to the docker image just place them in ./www/assetSrc/docker/{image}/ folder and the structure will be copied recursively to the root of the image.\r\n\r\n**Examples**\r\n\r\nTo replace the default nginx configuration add the following file to ./www/assetSrc/docker/nginx/etc/nginx/nginx.conf\r\n\r\nTo replace the default httpd configuration add the following file to ./www/assetSrc/docker/httpd/usr/local/apache2/conf/httpd.conf\r\n\r\n### platform-electron-dev\r\n\r\nThis task will create development versions of the electron runtime that will wrap your www folder and allow you to develop in-situ.\r\n\r\n``` shell\r\ngulp platform-electron-dev\r\n```\r\n\r\nOptionally specify the platform architectures and runtime version to override the defaults. If you also specify the --save options the values will be saved as the default for future runs of all the platform-electron-* tasks.\r\n\r\n``` shell\r\ngulp platform-electron-dev --platformArch=win32/ia32,win32/x64 --runtimeVersion=1.7.9 --save\r\n```\r\n\r\nThe platform development versions will be created in the ./platform/electron/{platform}-{architecture} folder, where the platforms and architectures are either read from your unite.json or automatically determined from you system.\r\n\r\n### platform-electron-package\r\n\r\nThis task will gather all the necessary components of the application and create a folder in the top level packaged directory named {version}/electron.\r\n\r\n``` shell\r\ngulp platform-electron-package\r\n```\r\n\r\nYou will also need to match the configuration used by the build, you can do this with the buildConfiguration argument.\r\n\r\n``` shell\r\ngulp platform-electron-package --buildConfiguration=prod\r\n```\r\n\r\nOptionally specify the platform architectures and runtime version to override the defaults. If you also specify the --save options the values will be saved as the default for future runs of all the platform-electron-* tasks.\r\n\r\n``` shell\r\ngulp platform-electron-package --platformArch=win32/ia32,win32/x64 --runtimeVersion=1.7.9 --save\r\n```\r\n\r\nThis folder will then be used to create a set of platform/architecture electron packages in folders named {version}/electron_{platform}_{architecture} and a corresponding zip file in the packaged root folder.\r\n\r\nTo see which file are included in a packaged version see the [Platform Packaged Files](#platformpackagedfiles) section.\r\n\r\nFor configuring options for this task see the [Platform Electron](#platformelectron) section.\r\n\r\n### platform-web-package\r\n\r\nThis task will gather all the necessary components of the application and create a folder in the top level packaged directory named {version}/web.\r\n\r\n``` shell\r\ngulp platform-web-package\r\n```\r\n\r\nYou will also need to match the configuration used by the build, you can do this with the buildConfiguration argument.\r\n\r\n``` shell\r\ngulp platform-web-package --buildConfiguration=prod\r\n```\r\n\r\nThis folder contains a complete set of web deployable files for the application. A zip file named packaged/{version}_web.zip will also be created in the packaged directory.\r\n\r\nTo see which file are included in a packaged version see the [Platform Packaged Files](#platformpackagedfiles) section.\r\n\r\nFor configuring options for this task see the [Platform Web](#platformweb) section.\r\n\r\n---\r\n\r\n## <a name=\"themeassets\"></a>Theme Assets\r\n\r\nDuring the app generation 3 files will have been created, if you change any of them then you should run the theme-build task again.\r\n\r\n* assetsSource/theme/logo-tile.svg\r\n* assetsSource/theme/logo-transparent.svg\r\n* assetsSource/theme/unite-theme.json\r\n\r\nIn addition there are 2 more files for the default loader which you can modify, these are absorbed into your index.html during build.\r\n\r\n* assetsSource/theme/loader.css\r\n* assetsSource/theme/loader.html\r\n\r\nThe logo-tile.svg image should have a design that works well on a tile, e.g. a white icon with transparent background (the background color can be specified as part of the unite-theme.json configuration).\r\n\r\nThe logo-transparent.svg image should be a normal colored icon also on a transparent background, mostly used for the .ico image.\r\n\r\nThe fields in the unite-theme.json should be self explanatory in terms of what they generate in the index.html page. The themeHeaders will get overwritten when you run theme-build again so any custom headers you want should go in the customHeaders property. The backgroundColor is used for tile backgrounds and the themeColor is used to color the safari pinned icon mask, as well as during asset generation from your svg icons.\r\n\r\nSome of the fields are used to generate the ./assets/favicon/manifest.json which is used by some browsers when the web site is pinned, others are used during platform generation e.g. PWAs, Cordova.\r\n\r\nInformation tags passed as args into the unite configure command are stored in unite-theme.json and are mapped to other properties i.e. title, shortName, description, keywords, organization, copyright, webSite, author, authorEmail, authorWebSite, namespace.\r\n\r\n``` json\r\n{\r\n    \"title\": \"UniteJS\",\r\n    \"metaDescription\": \"UniteJS Web Site\", // description\r\n    \"metaKeywords\": [ // keywords\r\n        \"UniteJS\",\r\n        \"CLI\"\r\n    ],\r\n    \"customHeaders\": [\r\n        \"<meta property=\\\"twitter:site\\\" content=\\\"@unitejs\\\">\"\r\n    ],\r\n    \"themeHeaders\": [\r\n        ... Generated by theme-build task\r\n    ],\r\n    \"backgroundColor\": \"#339933\",\r\n    \"themeColor\": \"#339933\",\r\n    \"shortName\": \"UJS\",\r\n    \"organization\": \"2017 Obany Ltd\",\r\n    \"copyright\": \"2017 Obany Ltd\",\r\n    \"webSite\": \"http://unitejs.com\",\r\n    \"metaAuthor\": \"Unite JS\", // author\r\n    \"metaAuthorEmail\": \"fake@unitejs.com\", //authorEmail\r\n    \"metaAuthorWebSite\": \"http://unitejs.com\", // authorWebSite\r\n    \"namespace\": \"unitejs.com\"\r\n}\r\n```\r\n\r\n## <a name=\"platformpackagedfiles\"></a>Platform Packaged Files\r\n\r\nThe files included within each package are calculated from the list below:\r\n\r\n* index.html\r\n* service-worker.js (if pwa is enabled)\r\n* dist/**/*\r\n* css/**/*\r\n* assets/**/*\r\n* assetsSrc/root/**/* - These files will be recursively copied to the root of the packaged version\r\n* client packages code that is script included in index.html\r\n* client packages assets defined in unite.json clientPackages section\r\n\r\n## Platforms Options\r\n\r\nIf you manually edit your unite.json, you can add additional options for the platform settings.\r\n\r\n### <a name=\"platformweb\"></a>Web\r\n\r\nThere are currently no other options for this platform.\r\n\r\n### <a name=\"platformelectron\"></a>Electron\r\n\r\nFor more information about the options see the [Electron Documentation](https://github.com/electron-userland/electron-packager#readme)\r\n\r\nYou can choose to use a specific version of the Electron runtime, if not specified it defaults to the most recent stable version see [Electron Releases](https://github.com/electron/electron/releases).\r\n\r\nYou can specify one or more of the platform architecture combinations, if you don't specify any platforms the packager will try and identify your current platform/architecture and create a package accordingly.\r\n\r\nAny others keys in the Electron settings will be converted into -- params and passed to the packager, this allows for other options like those specific to the darwin/mas or win32 targets [Electron Usage](https://github.com/electron-userland/electron-packager/blob/master/usage.txt) to be used.\r\n\r\n``` json\r\n\"platforms\": {\r\n    \"Electron\": {\r\n        \"runtimeVersion\": \"1.7.5\",\r\n        \"platformArch\" : [\r\n            \"win32/ia32\",\r\n            \"win32/x64\",\r\n            \"darwin/x64\",\r\n            \"mas/x64\",\r\n            \"linux/ia32\",\r\n            \"linux/x64\",\r\n            \"linux/armv7l\"\r\n        ]\r\n        ...\r\n    }\r\n}\r\n```\r\n\r\n## Build Configuration Variables\r\n\r\nWith each configuration that is created a .json file is created in the ./configuration folder with the same name. The values that you store in the config files are then available in the window.unite.config namespace at runtime depending on the type of build you create. Also in the configuration folder is a common.json file which you can use to store any values common to all configurations. \r\n\r\nThe TypeScript definitions for this object are in this repo [UniteJS Types](https://github.com/unitejs/types) and can be referenced in TypeScript using:\r\n\r\n``` typescript\r\n/// <reference types=\"unitejs-types\" />\r\n```\r\n\r\nExample configuration files:\r\n\r\nconfiguration/common.json\r\n\r\n``` json\r\n{\r\n    \"myCommonVariable\": \"myValue\"\r\n}\r\n```\r\n\r\nconfiguration/dev.json\r\n\r\n``` json\r\n{\r\n    \"myApiKey\": \"--dev-key--\"\r\n}\r\n```\r\n\r\nconfiguration/prod.json\r\n\r\n``` json\r\n{\r\n    \"myApiKey\": \"--prod-key--\"\r\n}\r\n```\r\n\r\nAt runtime a dev build would allow you to access the variables as follows:\r\n\r\n``` javascript\r\nconsole.log(window.unite.config[\"myCommonVariable\"]); // myValue\r\nconsole.log(window.unite.config[\"myApiKey\"]); // --dev-key--\r\n```\r\n\r\nAt runtime a prod build would allow you to access the variables as follows:\r\n\r\n``` javascript\r\nconsole.log(window.unite.config[\"myCommonVariable\"]); // myValue\r\nconsole.log(window.unite.config[\"myApiKey\"]); // --prod-key--\r\n```\r\n\r\n## Runtime Variables\r\n\r\nIn addition there are some other fields available in the window.unite object which are automatically populated at build time.\r\n\r\n``` json\r\n{\r\n    ...\r\n    \"configName\": \"prod\", // The configuration name used to build this version\r\n    \"bundle\": true, // The buildConfiguration bundle flag\r\n    \"minify\": true, // The buildConfiguration minify flag\r\n    \"pwa\": false, // The buildConfiguration pwa flag\r\n    \"packageVersion\": \"1.3.1\", // The package.json version field\r\n    \"uniteVersion\": \"1.6.1\", // The UniteJS version used to configure the app\r\n    \"buildDateTime\": 1509618433502, // A JavaScript timestamp when the build was created\r\n    \"buildNumber\": \"20171102102713\" // A build number which is automatically picked up from your CI build system\r\n}\r\n```\r\n\r\n## Modifications To Generated Files\r\n\r\nIf you modify any of the files generated by UniteJS then you should remove the *Generated by UniteJS* comment at the bottom of the file. If you then call any of the UniteJS operations again your changes will be retained. Any files which are generated but can not contain comments because of their format (e.g. .json files) will where possible be combined with any changes you have made.\r\n\r\n## Icon Modifications\r\n\r\nOf course you don't need to run the theme-build task you could instead generate your own icons and headers using a site such as [RealFaviconGenerator](https://realfavicongenerator.net/) and copy the headers in to the customHeaders property and the icons wherever you like in your site. All credit goes to RealFaviconGenerator for the inspiration of the minimal set of resources need to satisfy modern browsers.\r\n\r\n---\r\n*Generated by UniteJS* :zap:\r\n",
+    "longname": "D:\\Workarea\\unitejs\\web\\www\\README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n\t\"name\": \"unitejs-web\",\n\t\"version\": \"1.6.0\",\n\t\"devDependencies\": {\n\t\t\"@types/google.analytics\": \"^0.0.35\",\n\t\t\"@types/jasmine\": \"^2.6.2\",\n\t\t\"@types/prismjs\": \"^1.6.3\",\n\t\t\"archiver\": \"^2.1.0\",\n\t\t\"aurelia-protractor-plugin\": \"^1.0.6\",\n\t\t\"autoprefixer\": \"^7.1.6\",\n\t\t\"babel-core\": \"^6.26.0\",\n\t\t\"babel-preset-env\": \"^1.6.1\",\n\t\t\"browser-sync\": \"^2.18.13\",\n\t\t\"cssnano\": \"^3.10.0\",\n\t\t\"del\": \"^3.0.0\",\n\t\t\"delete-empty\": \"^1.0.1\",\n\t\t\"esdoc\": \"1.0.4\",\n\t\t\"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n\t\t\"esdoc-standard-plugin\": \"^1.0.0\",\n\t\t\"esdoc-typescript-plugin\": \"^1.0.0\",\n\t\t\"gulp\": \"^3.9.1\",\n\t\t\"gulp-babel\": \"^7.0.0\",\n\t\t\"gulp-concat\": \"^2.6.1\",\n\t\t\"gulp-cssnano\": \"^2.1.2\",\n\t\t\"gulp-htmlmin\": \"^3.0.0\",\n\t\t\"gulp-insert\": \"^0.5.0\",\n\t\t\"gulp-karma-runner\": \"^1.2.0\",\n\t\t\"gulp-postcss\": \"^7.0.0\",\n\t\t\"gulp-rename\": \"^1.2.2\",\n\t\t\"gulp-replace\": \"^0.6.1\",\n\t\t\"gulp-sass\": \"^3.1.0\",\n\t\t\"gulp-sourcemaps\": \"^2.6.1\",\n\t\t\"gulp-stylelint\": \"^5.0.0\",\n\t\t\"gulp-tslint\": \"^8.1.2\",\n\t\t\"gulp-typescript\": \"^3.2.3\",\n\t\t\"gulp-uglify\": \"^3.0.0\",\n\t\t\"gulp-util\": \"^3.0.8\",\n\t\t\"html-minifier\": \"^3.5.6\",\n\t\t\"jasmine-core\": \"^2.8.0\",\n\t\t\"jasmine-spec-reporter\": \"^4.2.1\",\n\t\t\"karma\": \"^1.7.1\",\n\t\t\"karma-chrome-launcher\": \"^2.2.0\",\n\t\t\"karma-coverage\": \"^1.1.1\",\n\t\t\"karma-coverage-allsources\": \"^0.0.4\",\n\t\t\"karma-edge-launcher\": \"^0.4.2\",\n\t\t\"karma-firefox-launcher\": \"^1.0.1\",\n\t\t\"karma-html-reporter\": \"^0.2.7\",\n\t\t\"karma-ie-launcher\": \"^1.0.0\",\n\t\t\"karma-jasmine\": \"^1.1.0\",\n\t\t\"karma-phantomjs-launcher\": \"^1.0.4\",\n\t\t\"karma-remap-istanbul\": \"^0.6.0\",\n\t\t\"karma-safari-launcher\": \"^1.0.0\",\n\t\t\"karma-sourcemap-loader\": \"^0.3.7\",\n\t\t\"karma-story-reporter\": \"^0.3.1\",\n\t\t\"minimist\": \"^1.2.0\",\n\t\t\"mkdirp\": \"^0.5.1\",\n\t\t\"node-glob\": \"^1.2.0\",\n\t\t\"node-sass\": \"^4.5.3\",\n\t\t\"postcss\": \"^6.0.14\",\n\t\t\"postcss-import\": \"^11.0.0\",\n\t\t\"protractor\": \"^5.2.0\",\n\t\t\"protractor-jasmine2-html-reporter\": \"^0.0.7\",\n\t\t\"remap-istanbul\": \"^0.9.5\",\n\t\t\"require-dir\": \"^0.3.2\",\n\t\t\"run-sequence\": \"^2.2.0\",\n\t\t\"stream-to-promise\": \"^2.2.0\",\n\t\t\"stylelint\": \"^8.0.0\",\n\t\t\"stylelint-config-recommended-scss\": \"^2.0.0\",\n\t\t\"stylelint-scss\": \"^2.1.0\",\n\t\t\"through2\": \"^2.0.3\",\n\t\t\"tslint\": \"^5.8.0\",\n\t\t\"typescript\": \"^2.6.1\",\n\t\t\"uglify-js\": \"^3.1.6\",\n\t\t\"unitejs-image-cli\": \"^1.0.0\",\n\t\t\"unitejs-types\": \"^1.0.3\",\n\t\t\"webdriver-manager\": \"^12.0.6\"\n\t},\n\t\"dependencies\": {\n\t\t\"aurelia-animator-css\": \"^1.0.4\",\n\t\t\"aurelia-binding\": \"^1.5.0\",\n\t\t\"aurelia-bootstrapper\": \"^2.1.1\",\n\t\t\"aurelia-dependency-injection\": \"^1.3.2\",\n\t\t\"aurelia-dialog\": \"^1.0.0-rc.1.0.3\",\n\t\t\"aurelia-event-aggregator\": \"^1.0.1\",\n\t\t\"aurelia-fetch-client\": \"^1.1.3\",\n\t\t\"aurelia-framework\": \"^1.1.5\",\n\t\t\"aurelia-history\": \"^1.1.0\",\n\t\t\"aurelia-history-browser\": \"^1.1.0\",\n\t\t\"aurelia-http-client\": \"^1.2.1\",\n\t\t\"aurelia-loader\": \"^1.0.0\",\n\t\t\"aurelia-loader-default\": \"^1.0.3\",\n\t\t\"aurelia-logging\": \"^1.3.1\",\n\t\t\"aurelia-logging-console\": \"^1.0.0\",\n\t\t\"aurelia-metadata\": \"^1.0.3\",\n\t\t\"aurelia-pal\": \"^1.4.0\",\n\t\t\"aurelia-pal-browser\": \"^1.3.0\",\n\t\t\"aurelia-path\": \"^1.1.1\",\n\t\t\"aurelia-polyfills\": \"^1.2.2\",\n\t\t\"aurelia-route-recognizer\": \"^1.1.1\",\n\t\t\"aurelia-router\": \"^1.4.0\",\n\t\t\"aurelia-task-queue\": \"^1.2.1\",\n\t\t\"aurelia-templating\": \"^1.6.0\",\n\t\t\"aurelia-templating-binding\": \"^1.4.0\",\n\t\t\"aurelia-templating-resources\": \"^1.5.4\",\n\t\t\"aurelia-templating-router\": \"^1.2.0\",\n\t\t\"aurelia-validation\": \"^1.1.2\",\n\t\t\"bluebird\": \"^3.5.0\",\n\t\t\"bootstrap\": \"4.0.0-beta.2\",\n\t\t\"font-awesome\": \"^4.7.0\",\n\t\t\"moment\": \"^2.19.1\",\n\t\t\"prismjs\": \"^1.6.0\",\n\t\t\"requirejs\": \"^2.3.5\",\n\t\t\"requirejs-text\": \"^2.0.15\",\n\t\t\"whatwg-fetch\": \"^2.0.3\"\n\t},\n\t\"engines\": {\n\t\t\"node\": \">=8.0.0\"\n\t},\n\t\"license\": \"MIT\",\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"https://github.com/unitejs/web.git\"\n\t}\n}",
+    "longname": "D:\\Workarea\\unitejs\\web\\www\\package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

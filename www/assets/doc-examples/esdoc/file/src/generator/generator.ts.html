@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/generator/generator.ts | unitejs-web</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/unitejs/web.git"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/app.ts~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/navBar.ts~NavBar.html">NavBar</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/navFooter.ts~NavFooter.html">NavFooter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-bootstrap">bootstrap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#articles">articles</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/articles/articles.ts~Articles.html">Articles</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#attributes">attributes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/attributes/prismAttribute.ts~PrismAttribute.html">PrismAttribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute.html">ScrollToElementAttribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute.html">ScrollToTopAttribute</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#cli">cli</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/cli/cli.ts~CLI.html">CLI</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#domhelpers">domHelpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/domHelpers/clipboard.ts~Clipboard.html">Clipboard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/domHelpers/localStorage.ts~LocalStorage.html">LocalStorage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/domHelpers/scroll.ts~Scroll.html">Scroll</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/domHelpers/style.ts~Style.html">Style</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#elements">elements</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/elements/aureliaSvg.ts~AureliaSvg.html">AureliaSvg</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#generatedapp">generatedApp</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/generatedApp/generatedApp.ts~GeneratedApp.html">GeneratedApp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#generator">generator</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/generator/generator.ts~Generator.html">Generator</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#home">home</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/home/home.ts~Home.html">Home</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#info">info</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/info/about.ts~About.html">About</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/info/license.ts~License.html">License</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/info/media.ts~Media.html">Media</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/info/theTeam.ts~TheTeam.html">TheTeam</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#models">models</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/uniteConfiguration.ts~UniteConfiguration.html">UniteConfiguration</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#pipelinesteps">pipelineSteps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/pipelineSteps/googleAnalyticsStep.ts~GoogleAnalyticsStep.html">GoogleAnalyticsStep</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/pipelineSteps/scrollToTopPipelineStep.ts~ScrollToTopPipelineStep.html">ScrollToTopPipelineStep</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#status">status</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/status/status.ts~Status.html">Status</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#validation">validation</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/validation/bootstrapFormRenderer.ts~BootstrapFormRenderer.html">BootstrapFormRenderer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#whatsnew">whatsNew</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/whatsNew/whatsNew.ts~WhatsNew.html">WhatsNew</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/generator/generator.ts</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Generator class.
+ */
+import { inject, NewInstance } from &quot;aurelia-dependency-injection&quot;;
+import { HttpClient } from &quot;aurelia-http-client&quot;;
+import { bindable } from &quot;aurelia-templating&quot;;
+import { validateTrigger, ValidationController, ValidationRules } from &quot;aurelia-validation&quot;;
+import { Clipboard } from &quot;../domHelpers/clipboard&quot;;
+import { LocalStorage } from &quot;../domHelpers/localStorage&quot;;
+import { Style } from &quot;../domHelpers/style&quot;;
+import { ISpdx } from &quot;../models/ISpdx&quot;;
+import { ISpdxLicense } from &quot;../models/ISpdxLicense&quot;;
+import { UniteConfiguration } from &quot;../models/uniteConfiguration&quot;;
+import { BootstrapFormRenderer } from &quot;../validation/bootstrapFormRenderer&quot;;
+
+@inject(NewInstance.of(ValidationController))
+export class Generator {
+    public controller: ValidationController;
+
+    @bindable
+    public packageName: string;
+    @bindable
+    public title: string;
+    @bindable
+    public shortName: string;
+    @bindable
+    public description: string;
+    @bindable
+    public keywords: string;
+    @bindable
+    public organization: string;
+    @bindable
+    public webSite: string;
+    @bindable
+    public copyright: string;
+    @bindable
+    public namespace: string;
+    @bindable
+    public author: string;
+    @bindable
+    public authorEmail: string;
+    @bindable
+    public authorWebSite: string;
+
+    @bindable
+    public profile: string;
+    public profiles: { id: string; config: UniteConfiguration }[];
+
+    @bindable
+    public license: string;
+    public licenses: { id: string; license: ISpdxLicense }[];
+
+    @bindable
+    public applicationFramework: string;
+    public applicationFrameworks: string[];
+
+    @bindable
+    public sourceLanguage: string;
+    public sourceLanguages: string[];
+
+    @bindable
+    public linter: string;
+    public linters: string[];
+
+    @bindable
+    public moduleType: string;
+    public moduleTypes: string[];
+
+    @bindable
+    public bundler: string;
+    public bundlers: string[];
+
+    @bindable
+    public unitTestRunner: string;
+    public unitTestRunners: string[];
+
+    @bindable
+    public unitTestFramework: string;
+    public unitTestFrameworks: string[];
+    public unitTestFrameworkEnabled: boolean;
+
+    @bindable
+    public unitTestEngine: string;
+    public unitTestEngines: string[];
+    public unitTestEngineEnabled: boolean;
+
+    @bindable
+    public e2eTestRunner: string;
+    public e2eTestRunners: string[];
+
+    @bindable
+    public e2eTestFramework: string;
+    public e2eTestFrameworks: string[];
+    public e2eTestFrameworkEnabled: boolean;
+
+    @bindable
+    public cssPre: string;
+    public cssPres: string[];
+
+    @bindable
+    public cssPost: string;
+    public cssPosts: string[];
+
+    @bindable
+    public cssLinter: string;
+    public cssLinters: string[];
+
+    @bindable
+    public documenter: string;
+    public documenters: string[];
+
+    @bindable
+    public packageManager: string;
+    public packageManagers: string[];
+
+    @bindable
+    public outputDirectory: string;
+
+    public commandLine: string;
+
+    public status: string;
+
+    constructor(controller: ValidationController) {
+        this.controller = controller;
+
+        this.controller.addRenderer(new BootstrapFormRenderer());
+
+        this.controller.validateTrigger = validateTrigger.changeOrBlur;
+
+        ValidationRules.customRule(&quot;packageNameLowerCaseRule&quot;, (value: string, obj: Generator) =&gt; {
+            return value === undefined || value === null ||
+                value.toLowerCase() === value;
+        }, `\${$displayName} must not have uppercase letters in it.`);
+
+        ValidationRules.customRule(&quot;packageNameStartRule&quot;, (value: string, obj: Generator) =&gt; {
+            return value === undefined || value === null ||
+                !(value[0] === &quot;.&quot; || value[0] === &quot;-&quot; || value[0] === &quot;_&quot;);
+        }, `\${$displayName} must not start with a dot, hyphen or underscore.`);
+
+        ValidationRules.customRule(&quot;packageNameSpecialCharactersRule&quot;, (value: string, obj: Generator) =&gt; {
+            return value === undefined || value === null ||
+                !value.match(/[\/\\\(\)&amp;\?#\|&lt;&gt;@:%\s\*&apos;&quot;!~`]/);
+        }, `\${$displayName} must not have any special characters.`);
+
+        ValidationRules.customRule(&quot;packageNameNonUrlSafeRule&quot;, (value: string, obj: Generator) =&gt; {
+            return value === undefined || value === null ||
+                encodeURIComponent(value) === value;
+        }, `\${$displayName} can&apos;t contain any non-URL-safe characters.`);
+
+        ValidationRules.customRule(&quot;languageLintRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.linter === &quot;None&quot; ||
+                (obj.linter === &quot;ESLint&quot; &amp;&amp; obj.sourceLanguage === &quot;JavaScript&quot;) ||
+                (obj.linter === &quot;TSLint&quot; &amp;&amp; obj.sourceLanguage === &quot;TypeScript&quot;);
+        }, `The combination of Source Language and Linter is not valid.`);
+
+        ValidationRules.customRule(&quot;cssLintRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.cssLinter === &quot;None&quot; ||
+                (obj.cssLinter === &quot;LessHint&quot; &amp;&amp; obj.cssPre === &quot;Less&quot;) ||
+                (obj.cssLinter === &quot;SassLint&quot; &amp;&amp; obj.cssPre === &quot;Sass&quot;) ||
+                (obj.cssLinter === &quot;Stylint&quot; &amp;&amp; obj.cssPre === &quot;Stylus&quot;) ||
+                (obj.cssLinter === &quot;StyleLint&quot; &amp;&amp;
+                    (obj.cssPre === &quot;Css&quot; || obj.cssPre === &quot;Less&quot; || obj.cssPre === &quot;Sass&quot;));
+        }, `The combination of Css Preprocessor and Css Linter is not valid.`);
+
+        ValidationRules.customRule(&quot;documenterRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.documenter === &quot;None&quot; ||
+                (obj.documenter === &quot;JSDoc&quot; &amp;&amp; obj.sourceLanguage === &quot;JavaScript&quot;) ||
+                (obj.documenter === &quot;TypeDoc&quot; &amp;&amp; obj.sourceLanguage === &quot;TypeScript&quot;) ||
+                (obj.documenter === &quot;ESDoc&quot; &amp;&amp;
+                    (obj.sourceLanguage === &quot;JavaScript&quot; || obj.sourceLanguage === &quot;TypeScript&quot;));
+        }, `The combination of Source Language and Documenter is not valid.`);
+
+        ValidationRules.customRule(&quot;aureliaBundlingRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.applicationFramework !== &quot;Aurelia&quot; ||
+                !(obj.bundler === &quot;Browserify&quot; || obj.bundler === &quot;Webpack&quot;);
+        }, `Aurelia does not currently support bundling with Browserify or Webpack.`);
+
+        ValidationRules.customRule(&quot;angularBundlingRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.applicationFramework !== &quot;Angular&quot; || obj.bundler !== &quot;RequireJS&quot;;
+        }, `Angular does not currently support bundling with RequireJS.`);
+
+        ValidationRules.customRule(&quot;polymerUnitTestEngineRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.applicationFramework !== &quot;Polymer&quot; ||
+                !(obj.unitTestEngine === &quot;PhantomJS&quot; || obj.unitTestEngine === &quot;JSDom&quot;);
+        }, `Polymer does not currently support testing using PhantomJS or JSDom.`);
+
+        ValidationRules.customRule(&quot;requireJsModuleTypeRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.moduleType !== &quot;AMD&quot; || obj.bundler === &quot;RequireJS&quot;;
+        }, `You can only use AMD modules with RequireJS Bundler`);
+
+        ValidationRules.customRule(&quot;webpackBrowserifyModuleTypeRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.moduleType !== &quot;CommonJS&quot; || (obj.bundler === &quot;Webpack&quot; || obj.bundler === &quot;Browserify&quot;);
+        }, `You can only use CommonJS modules with Webpack or Browserify Bundlers.`);
+
+        ValidationRules.customRule(&quot;jestModuleTypeRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.unitTestRunner !== &quot;Jest&quot; || obj.moduleType === &quot;CommonJS&quot;;
+        }, `You can only use CommonJS Module Type when the Unit Test Runner is Jest.`);
+
+        ValidationRules.customRule(&quot;unitTestFrameworkRule&quot;, (value: string, obj: Generator) =&gt; {
+            return (((obj.unitTestRunner === undefined || obj.unitTestRunner === &quot;None&quot;) &amp;&amp;
+                obj.unitTestFramework === undefined)) ||
+                obj.unitTestFramework !== undefined;
+        }, `Unit Test Runner is required.`);
+
+        ValidationRules.customRule(&quot;jestJasmineRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.unitTestRunner !== &quot;Jest&quot; || obj.unitTestFramework === &quot;Jasmine&quot;;
+        }, `You can only use Jasmine Unit Test Framework when the Unit Test Runner is Jest.`);
+
+        ValidationRules.customRule(&quot;jestJSDomRule&quot;, (value: string, obj: Generator) =&gt; {
+            return obj.unitTestRunner !== &quot;Jest&quot; || obj.unitTestEngine === &quot;JSDom&quot;;
+        }, `You can only use JSDom Unit Test Engine when the Unit Test Runner is Jest.`);
+
+        ValidationRules.customRule(&quot;unitTestEngineRule&quot;, (value: string, obj: Generator) =&gt; {
+            return (((obj.unitTestRunner === undefined || obj.unitTestRunner === &quot;None&quot;) &amp;&amp;
+                obj.unitTestFramework === undefined)) ||
+                obj.unitTestFramework !== undefined;
+        }, `Unit Test Engine is required.`);
+
+        ValidationRules.customRule(&quot;e2eTestFrameworkRule&quot;, (value: string, obj: Generator) =&gt; {
+            return (((obj.e2eTestRunner === undefined || obj.e2eTestRunner === &quot;None&quot;) &amp;&amp;
+                obj.e2eTestFramework === undefined)) ||
+                obj.e2eTestFramework !== undefined;
+        }, `E2E Test Framework is required.`);
+
+        ValidationRules
+            .ensure((m: Generator) =&gt; m.packageName).displayName(&quot;Package Name&quot;)
+            .required()
+            .maxLength(214)
+            .satisfiesRule(&quot;packageNameLowerCaseRule&quot;)
+            .satisfiesRule(&quot;packageNameStartRule&quot;)
+            .satisfiesRule(&quot;packageNameSpecialCharactersRule&quot;)
+            .satisfiesRule(&quot;packageNameNonUrlSafeRule&quot;)
+            .ensure((m: Generator) =&gt; m.license).displayName(&quot;License&quot;).required()
+            .ensure((m: Generator) =&gt; m.applicationFramework).displayName(&quot;Application Framework&quot;).required()
+            .then()
+            .satisfiesRule(&quot;aureliaBundlingRule&quot;)
+            .then()
+            .satisfiesRule(&quot;angularBundlingRule&quot;)
+            .ensure((m: Generator) =&gt; m.sourceLanguage).displayName(&quot;Source Language&quot;).required()
+            .then()
+            .satisfiesRule(&quot;languageLintRule&quot;)
+            .ensure((m: Generator) =&gt; m.moduleType).displayName(&quot;Module Type&quot;).required()
+            .then()
+            .satisfiesRule(&quot;requireJsModuleTypeRule&quot;)
+            .then()
+            .satisfiesRule(&quot;webpackBrowserifyModuleTypeRule&quot;)
+            .then()
+            .satisfiesRule(&quot;jestModuleTypeRule&quot;)
+            .ensure((m: Generator) =&gt; m.bundler).displayName(&quot;Bundler&quot;).required()
+            .then()
+            .satisfiesRule(&quot;aureliaBundlingRule&quot;)
+            .then()
+            .satisfiesRule(&quot;angularBundlingRule&quot;)
+            .then()
+            .satisfiesRule(&quot;requireJsModuleTypeRule&quot;)
+            .then()
+            .satisfiesRule(&quot;webpackBrowserifyModuleTypeRule&quot;)
+            .ensure((m: Generator) =&gt; m.linter).displayName(&quot;Linter&quot;).required()
+            .then()
+            .satisfiesRule(&quot;languageLintRule&quot;)
+            .ensure((m: Generator) =&gt; m.unitTestRunner).displayName(&quot;Unit Test Runner&quot;).required()
+            .ensure((m: Generator) =&gt; m.unitTestFramework).displayName(&quot;Unit Test Framework&quot;)
+            .satisfiesRule(&quot;unitTestFrameworkRule&quot;)
+            .then()
+            .satisfiesRule(&quot;jestJasmineRule&quot;)
+            .ensure((m: Generator) =&gt; m.unitTestEngine).displayName(&quot;Unit Test Engine&quot;)
+            .satisfiesRule(&quot;unitTestEngineRule&quot;)
+            .then()
+            .satisfiesRule(&quot;jestJSDomRule&quot;)
+            .then()
+            .satisfiesRule(&quot;polymerUnitTestEngineRule&quot;)
+            .ensure((m: Generator) =&gt; m.e2eTestRunner).displayName(&quot;E2E Test Runner&quot;).required()
+            .ensure((m: Generator) =&gt; m.e2eTestFramework).displayName(&quot;E2E Test Framework&quot;)
+            .satisfiesRule(&quot;e2eTestFrameworkRule&quot;)
+            .ensure((m: Generator) =&gt; m.cssPre).displayName(&quot;CSS Pre-Processor&quot;).required()
+            .then()
+            .satisfiesRule(&quot;cssLintRule&quot;)
+            .ensure((m: Generator) =&gt; m.cssPost).displayName(&quot;CSS Post-Processor&quot;).required()
+            .ensure((m: Generator) =&gt; m.cssLinter).displayName(&quot;CSS Linter&quot;).required()
+            .then()
+            .satisfiesRule(&quot;cssLintRule&quot;)
+            .ensure((m: Generator) =&gt; m.documenter).displayName(&quot;Documenter&quot;).required()
+            .then()
+            .satisfiesRule(&quot;documenterRule&quot;)
+            .ensure((m: Generator) =&gt; m.packageManager).displayName(&quot;Package Manager&quot;).required()
+            .on(this);
+    }
+
+    public attached(): void {
+        const httpClient = new HttpClient();
+        httpClient.get(&quot;./assets/spdx-lite.json&quot;)
+            .then((response) =&gt; {
+                if (response.statusCode === 200) {
+                    const licenses: ISpdx = response.content;
+
+                    this.licenses = [ { id: &quot;None&quot;, license: {
+                        name: &quot;No License&quot;,
+                        osiApproved: false,
+                         licenseText: &quot;&quot;,
+                         url: &quot;&quot;
+                        }
+                    }];
+                    Object.keys(licenses).forEach((licenseKey) =&gt; {
+                        this.licenses.push({ id: licenseKey, license: licenses[licenseKey] });
+                    });
+
+                    const httpClient2 = new HttpClient();
+                    httpClient.get(&quot;./assets/profiles/configure.json&quot;)
+                        .then((response2) =&gt; {
+                            if (response2.statusCode === 200) {
+                                const profiles: { [id: string]: UniteConfiguration } = response2.content;
+                                this.profiles = [];
+                                Object.keys(profiles).forEach((profileKey) =&gt; {
+                                    this.profiles.push({ id: profileKey, config: profiles[profileKey] });
+                                });
+
+                                const uniteConfiguration = LocalStorage.get&lt;UniteConfiguration&gt;(&quot;uniteConfiguration&quot;);
+                                const profile = LocalStorage.get&lt;string&gt;(&quot;profile&quot;);
+
+                                this.defaultValues(uniteConfiguration, profile);
+
+                                if (uniteConfiguration) {
+                                    this.generate();
+                                }
+                            } else {
+                                this.status = &quot;Unable to load the profile configurations so can not continue.&quot;;
+                            }
+                        });
+                } else {
+                    this.status = &quot;Unable to load the SPDX licenses so can not continue.&quot;;
+                }
+            })
+            .catch((err) =&gt; {
+                this.status = &quot;Unable to load the SPDX licenses so can not continue.&quot;;
+            });
+    }
+
+    public defaultValues(uniteConfiguration?: UniteConfiguration, profile?: string): void {
+        this.applicationFrameworks = [&quot;Angular&quot;, &quot;Aurelia&quot;, &quot;Polymer&quot;, &quot;Preact&quot;, &quot;React&quot;, &quot;Vanilla&quot;, &quot;Vue&quot;];
+        this.sourceLanguages = [&quot;JavaScript&quot;, &quot;TypeScript&quot;];
+        this.moduleTypes = [&quot;AMD&quot;, &quot;CommonJS&quot;, &quot;SystemJS&quot;];
+        this.bundlers = [&quot;Browserify&quot;, &quot;RequireJS&quot;, &quot;SystemJSBuilder&quot;, &quot;Webpack&quot;];
+        this.linters = [&quot;ESLint&quot;, &quot;TSLint&quot;, &quot;None&quot;];
+        this.unitTestRunners = [&quot;Jest&quot;, &quot;Karma&quot;, &quot;None&quot;];
+        this.unitTestFrameworks = [&quot;Jasmine&quot;, &quot;MochaChai&quot;];
+        this.unitTestEngines = [&quot;PhantomJS&quot;, &quot;JSDom&quot;, &quot;ChromeHeadless&quot;];
+        this.e2eTestRunners = [&quot;Protractor&quot;, &quot;WebdriverIO&quot;, &quot;None&quot;];
+        this.e2eTestFrameworks = [&quot;Jasmine&quot;, &quot;MochaChai&quot;];
+        this.cssPres = [&quot;Css&quot;, &quot;Less&quot;, &quot;Sass&quot;, &quot;Stylus&quot;];
+        this.cssPosts = [&quot;None&quot;, &quot;PostCss&quot;];
+        this.cssLinters = [&quot;LessHint&quot;, &quot;None&quot;, &quot;SassLint&quot;, &quot;Stylint&quot;, &quot;StyleLint&quot;];
+        this.documenters = [&quot;ESDoc&quot;, &quot;JSDoc&quot;, &quot;None&quot;, &quot;TypeDoc&quot;];
+        this.packageManagers = [&quot;Npm&quot;, &quot;Yarn&quot;];
+
+        this.profile = profile;
+        this.packageName = uniteConfiguration ? uniteConfiguration.packageName : undefined;
+        this.license = uniteConfiguration ? uniteConfiguration.license : undefined;
+        this.applicationFramework = uniteConfiguration ? uniteConfiguration.applicationFramework : undefined;
+        this.sourceLanguage = uniteConfiguration ? uniteConfiguration.sourceLanguage : undefined;
+        this.moduleType = uniteConfiguration ? uniteConfiguration.moduleType : undefined;
+        this.bundler = uniteConfiguration ? uniteConfiguration.bundler : undefined;
+        this.linter = uniteConfiguration ? uniteConfiguration.linter : undefined;
+        this.unitTestRunner = uniteConfiguration ? uniteConfiguration.unitTestRunner : undefined;
+        this.unitTestFramework = uniteConfiguration ? uniteConfiguration.unitTestFramework : undefined;
+        this.unitTestFrameworkEnabled = this.unitTestFramework !== undefined;
+        this.unitTestEngine = uniteConfiguration ? uniteConfiguration.unitTestEngine : undefined;
+        this.unitTestEngineEnabled = this.unitTestEngine !== undefined;
+        this.e2eTestRunner = uniteConfiguration ? uniteConfiguration.e2eTestRunner : undefined;
+        this.e2eTestFramework = uniteConfiguration ? uniteConfiguration.e2eTestFramework : undefined;
+        this.e2eTestFrameworkEnabled = this.e2eTestFramework !== undefined;
+        this.cssPre = uniteConfiguration ? uniteConfiguration.cssPre : undefined;
+        this.cssPost = uniteConfiguration ? uniteConfiguration.cssPost : undefined;
+        this.cssLinter = uniteConfiguration ? uniteConfiguration.cssLinter : undefined;
+        this.documenter = uniteConfiguration ? uniteConfiguration.documenter : undefined;
+        this.packageManager = uniteConfiguration ? uniteConfiguration.packageManager : undefined;
+        this.outputDirectory = uniteConfiguration ? uniteConfiguration.outputDirectory : undefined;
+
+        this.title = uniteConfiguration ? uniteConfiguration.title : undefined;
+        this.shortName = uniteConfiguration ? uniteConfiguration.shortName : undefined;
+        this.description = uniteConfiguration ? uniteConfiguration.description : undefined;
+        this.keywords = uniteConfiguration &amp;&amp; uniteConfiguration.keywords
+                                    ? uniteConfiguration.keywords.join(&quot;,&quot;) : undefined;
+        this.organization = uniteConfiguration ? uniteConfiguration.organization : undefined;
+        this.copyright = uniteConfiguration ? uniteConfiguration.copyright : undefined;
+        this.webSite = uniteConfiguration ? uniteConfiguration.webSite : undefined;
+        this.namespace = uniteConfiguration ? uniteConfiguration.namespace : undefined;
+        this.author = uniteConfiguration ? uniteConfiguration.author : undefined;
+        this.authorEmail = uniteConfiguration ? uniteConfiguration.authorEmail : undefined;
+        this.authorWebSite = uniteConfiguration ? uniteConfiguration.authorWebSite : undefined;
+    }
+
+    public profileChanged(): void {
+        if (this.profile) {
+            const profile = this.profiles.find((p) =&gt; p.id === this.profile);
+
+            if (profile) {
+                this.license = profile.config.license;
+                this.applicationFramework = profile.config.applicationFramework;
+                this.sourceLanguage = profile.config.sourceLanguage;
+                this.moduleType = profile.config.moduleType;
+                this.bundler = profile.config.bundler;
+                this.linter = profile.config.linter;
+                this.unitTestRunner = profile.config.unitTestRunner;
+                this.unitTestFramework = profile.config.unitTestFramework;
+                this.unitTestFrameworkEnabled = this.unitTestFramework !== undefined;
+                this.unitTestEngine = profile.config.unitTestEngine;
+                this.unitTestEngineEnabled = this.unitTestEngine !== undefined;
+                this.e2eTestRunner = profile.config.e2eTestRunner;
+                this.e2eTestFramework = profile.config.e2eTestFramework;
+                this.e2eTestFrameworkEnabled = this.e2eTestFramework !== undefined;
+                this.cssPre = profile.config.cssPre;
+                this.cssPost = profile.config.cssPost;
+                this.cssLinter = profile.config.cssLinter;
+                this.documenter = profile.config.documenter;
+                this.packageManager = profile.config.packageManager;
+            }
+        }
+    }
+
+    public applicationFrameworkChanged(): void {
+        this.controller.validate({ object: this, propertyName: &quot;bundler&quot; });
+        this.controller.validate({ object: this, propertyName: &quot;unitTestEngine&quot; });
+    }
+
+    public moduleTypeChanged(): void {
+        this.controller.validate({ object: this, propertyName: &quot;applicationFramework&quot; });
+        this.controller.validate({ object: this, propertyName: &quot;bundler&quot; });
+        this.controller.validate({ object: this, propertyName: &quot;unitTestRunner&quot; });
+    }
+
+    public bundlerChanged(): void {
+        this.controller.validate({ object: this, propertyName: &quot;applicationFramework&quot; });
+        this.controller.validate({ object: this, propertyName: &quot;moduleType&quot; });
+    }
+
+    public sourceLanguageChanged(): void {
+        this.controller.validate({ object: this, propertyName: &quot;linter&quot; });
+        this.controller.validate({ object: this, propertyName: &quot;documenter&quot; });
+    }
+
+    public linterChanged(): void {
+        this.controller.validate({ object: this, propertyName: &quot;sourceLanguage&quot; });
+    }
+
+    public unitTestRunnerChanged(): void {
+        if (this.unitTestRunner === undefined || this.unitTestRunner === &quot;None&quot;) {
+            this.unitTestFramework = undefined;
+            this.unitTestEngine = undefined;
+            this.unitTestFrameworkEnabled = false;
+            this.unitTestEngineEnabled = false;
+        } else {
+            this.unitTestFrameworkEnabled = true;
+            this.unitTestEngineEnabled = true;
+        }
+        this.controller.validate({ object: this, propertyName: &quot;unitTestFramework&quot; });
+        this.controller.validate({ object: this, propertyName: &quot;unitTestEngine&quot; });
+        this.controller.validate({ object: this, propertyName: &quot;moduleType&quot; });
+    }
+
+    public unitTestFrameworkChanged(): void {
+        this.controller.validate({ object: this, propertyName: &quot;unitTestRunner&quot; });
+    }
+
+    public unitTestEngineChanged(): void {
+        this.controller.validate({ object: this, propertyName: &quot;unitTestRunner&quot; });
+    }
+
+    public e2eTestRunnerChanged(): void {
+        if (this.e2eTestRunner === undefined || this.e2eTestRunner === &quot;None&quot;) {
+            this.e2eTestFramework = undefined;
+            this.e2eTestFrameworkEnabled = false;
+        } else {
+            this.e2eTestFrameworkEnabled = true;
+        }
+        this.controller.validate({ object: this, propertyName: &quot;e2eTestFramework&quot; });
+    }
+
+    public cssPreChanged(): void {
+        this.controller.validate({ object: this, propertyName: &quot;cssLinter&quot; });
+    }
+
+    public cssLinterChanged(): void {
+        this.controller.validate({ object: this, propertyName: &quot;cssPre&quot; });
+    }
+
+    public generate(): void {
+        const uniteConfiguration = new UniteConfiguration();
+        uniteConfiguration.packageName = this.packageName;
+        uniteConfiguration.license = this.license;
+        uniteConfiguration.applicationFramework = this.applicationFramework;
+        uniteConfiguration.moduleType = this.moduleType;
+        uniteConfiguration.bundler = this.bundler;
+        uniteConfiguration.sourceLanguage = this.sourceLanguage;
+        uniteConfiguration.linter = this.linter;
+        uniteConfiguration.unitTestRunner = this.unitTestRunner;
+        uniteConfiguration.unitTestFramework = this.unitTestFramework;
+        uniteConfiguration.unitTestEngine = this.unitTestEngine;
+        uniteConfiguration.e2eTestRunner = this.e2eTestRunner;
+        uniteConfiguration.e2eTestFramework = this.e2eTestFramework;
+        uniteConfiguration.cssPre = this.cssPre;
+        uniteConfiguration.cssPost = this.cssPost;
+        uniteConfiguration.cssLinter = this.cssLinter;
+        uniteConfiguration.documenter = this.documenter;
+        uniteConfiguration.packageManager = this.packageManager;
+        uniteConfiguration.outputDirectory = this.outputDirectory;
+
+        uniteConfiguration.title = this.title;
+        uniteConfiguration.shortName = this.shortName;
+        uniteConfiguration.description = this.description;
+        uniteConfiguration.keywords = this.keywords ? this.keywords.split(&quot;,&quot;) : undefined;
+        uniteConfiguration.organization = this.organization;
+        uniteConfiguration.copyright = this.copyright;
+        uniteConfiguration.webSite = this.webSite;
+        uniteConfiguration.namespace = this.namespace;
+        uniteConfiguration.author = this.author;
+        uniteConfiguration.authorEmail = this.authorEmail;
+        uniteConfiguration.authorWebSite = this.authorWebSite;
+
+        let profile: UniteConfiguration;
+
+        if (this.profile) {
+            const item = this.profiles.find((p) =&gt; p.id === this.profile);
+            if (item) {
+                profile = item.config;
+            }
+        }
+
+        LocalStorage.set(&quot;uniteConfiguration&quot;, uniteConfiguration);
+        LocalStorage.set(&quot;profile&quot;, this.profile);
+
+        this.controller.validate()
+            .then((result) =&gt; {
+                if (result.valid) {
+                    this.commandLine = `unite configure` +
+                        ` --packageName=${this.packageName}` +
+                        (this.profile === undefined
+                            ? &quot;&quot; : ` --profile=${this.profile}`) +
+                        this.generateArg(profile, uniteConfiguration, &quot;license&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;applicationFramework&quot;, &quot;appFramework&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;moduleType&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;bundler&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;sourceLanguage&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;linter&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;unitTestRunner&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;unitTestFramework&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;unitTestEngine&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;e2eTestRunner&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;e2eTestFramework&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;cssPre&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;cssPost&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;cssLinter&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;documenter&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;packageManager&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;title&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;shortName&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;description&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;keywords&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;organization&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;copyright&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;webSite&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;namespace&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;author&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;authorEmail&quot;) +
+                        this.generateArg(profile, uniteConfiguration, &quot;authorWebSite&quot;) +
+                        (this.outputDirectory === undefined ||
+                            this.outputDirectory === null ||
+                            this.outputDirectory.length === 0
+                            ? &quot;&quot; : ` --outputDirectory=${this.outputDirectory}`);
+                } else {
+                    this.commandLine = &quot;The parameter choices are not all valid.&quot;;
+                }
+            });
+    }
+
+    public generateArg(profile: UniteConfiguration,
+                       uniteConfiguration: UniteConfiguration,
+                       propertyName: keyof UniteConfiguration,
+                       argName?: string): string {
+        if (profile &amp;&amp; profile[propertyName] === uniteConfiguration[propertyName]) {
+            return &quot;&quot;;
+        } else if (uniteConfiguration[propertyName] === undefined ||
+                    uniteConfiguration[propertyName] === null ||
+                    uniteConfiguration[propertyName].length === 0) {
+            return &quot;&quot;;
+        } else {
+            const delim = uniteConfiguration[propertyName].indexOf(&quot; &quot;) &gt;= 0 ? &quot;\&quot;&quot; : &quot;&quot;;
+            return ` --${argName ? argName : propertyName}=${delim}${uniteConfiguration[propertyName]}${delim}`;
+        }
+    }
+
+    public clear(): void {
+        LocalStorage.remove(&quot;uniteConfiguration&quot;);
+        LocalStorage.remove(&quot;profile&quot;);
+
+        this.defaultValues();
+        this.commandLine = undefined;
+
+        setTimeout(() =&gt; this.controller.reset(), 0);
+    }
+
+    public copyToClipboard(): void {
+        Clipboard.copyTo(this.commandLine);
+    }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

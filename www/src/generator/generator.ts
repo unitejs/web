@@ -106,6 +106,10 @@ export class Generator {
     public cssLinters: string[];
 
     @bindable
+    public documenter: string;
+    public documenters: string[];
+
+    @bindable
     public packageManager: string;
     public packageManagers: string[];
 
@@ -157,6 +161,14 @@ export class Generator {
                 (obj.cssLinter === "StyleLint" &&
                     (obj.cssPre === "Css" || obj.cssPre === "Less" || obj.cssPre === "Sass"));
         }, `The combination of Css Preprocessor and Css Linter is not valid.`);
+
+        ValidationRules.customRule("documenterRule", (value: string, obj: Generator) => {
+            return obj.documenter === "None" ||
+                (obj.documenter === "JSDoc" && obj.sourceLanguage === "JavaScript") ||
+                (obj.documenter === "TypeDoc" && obj.sourceLanguage === "TypeScript") ||
+                (obj.documenter === "ESDoc" &&
+                    (obj.sourceLanguage === "JavaScript" || obj.sourceLanguage === "TypeScript"));
+        }, `The combination of Source Language and Documenter is not valid.`);
 
         ValidationRules.customRule("aureliaBundlingRule", (value: string, obj: Generator) => {
             return obj.applicationFramework !== "Aurelia" ||
@@ -267,6 +279,9 @@ export class Generator {
             .ensure((m: Generator) => m.cssLinter).displayName("CSS Linter").required()
             .then()
             .satisfiesRule("cssLintRule")
+            .ensure((m: Generator) => m.documenter).displayName("Documenter").required()
+            .then()
+            .satisfiesRule("documenterRule")
             .ensure((m: Generator) => m.packageManager).displayName("Package Manager").required()
             .on(this);
     }
@@ -321,7 +336,7 @@ export class Generator {
     }
 
     public defaultValues(uniteConfiguration?: UniteConfiguration, profile?: string): void {
-        this.applicationFrameworks = ["Angular", "Aurelia", "PlainApp", "Polymer", "Preact", "React", "Vue"];
+        this.applicationFrameworks = ["Angular", "Aurelia", "Polymer", "Preact", "React", "Vanilla", "Vue"];
         this.sourceLanguages = ["JavaScript", "TypeScript"];
         this.moduleTypes = ["AMD", "CommonJS", "SystemJS"];
         this.bundlers = ["Browserify", "RequireJS", "SystemJSBuilder", "Webpack"];
@@ -334,6 +349,7 @@ export class Generator {
         this.cssPres = ["Css", "Less", "Sass", "Stylus"];
         this.cssPosts = ["None", "PostCss"];
         this.cssLinters = ["LessHint", "None", "SassLint", "Stylint", "StyleLint"];
+        this.documenters = ["ESDoc", "JSDoc", "None", "TypeDoc"];
         this.packageManagers = ["Npm", "Yarn"];
 
         this.profile = profile;
@@ -355,6 +371,7 @@ export class Generator {
         this.cssPre = uniteConfiguration ? uniteConfiguration.cssPre : undefined;
         this.cssPost = uniteConfiguration ? uniteConfiguration.cssPost : undefined;
         this.cssLinter = uniteConfiguration ? uniteConfiguration.cssLinter : undefined;
+        this.documenter = uniteConfiguration ? uniteConfiguration.documenter : undefined;
         this.packageManager = uniteConfiguration ? uniteConfiguration.packageManager : undefined;
         this.outputDirectory = uniteConfiguration ? uniteConfiguration.outputDirectory : undefined;
 
@@ -394,6 +411,7 @@ export class Generator {
                 this.cssPre = profile.config.cssPre;
                 this.cssPost = profile.config.cssPost;
                 this.cssLinter = profile.config.cssLinter;
+                this.documenter = profile.config.documenter;
                 this.packageManager = profile.config.packageManager;
             }
         }
@@ -417,6 +435,7 @@ export class Generator {
 
     public sourceLanguageChanged(): void {
         this.controller.validate({ object: this, propertyName: "linter" });
+        this.controller.validate({ object: this, propertyName: "documenter" });
     }
 
     public linterChanged(): void {
@@ -481,6 +500,7 @@ export class Generator {
         uniteConfiguration.cssPre = this.cssPre;
         uniteConfiguration.cssPost = this.cssPost;
         uniteConfiguration.cssLinter = this.cssLinter;
+        uniteConfiguration.documenter = this.documenter;
         uniteConfiguration.packageManager = this.packageManager;
         uniteConfiguration.outputDirectory = this.outputDirectory;
 
@@ -529,6 +549,7 @@ export class Generator {
                         this.generateArg(profile, uniteConfiguration, "cssPre") +
                         this.generateArg(profile, uniteConfiguration, "cssPost") +
                         this.generateArg(profile, uniteConfiguration, "cssLinter") +
+                        this.generateArg(profile, uniteConfiguration, "documenter") +
                         this.generateArg(profile, uniteConfiguration, "packageManager") +
                         this.generateArg(profile, uniteConfiguration, "title") +
                         this.generateArg(profile, uniteConfiguration, "shortName") +
@@ -557,7 +578,9 @@ export class Generator {
                        argName?: string): string {
         if (profile && profile[propertyName] === uniteConfiguration[propertyName]) {
             return "";
-        } else if (uniteConfiguration[propertyName] === undefined) {
+        } else if (uniteConfiguration[propertyName] === undefined ||
+                    uniteConfiguration[propertyName] === null ||
+                    uniteConfiguration[propertyName].length === 0) {
             return "";
         } else {
             const delim = uniteConfiguration[propertyName].indexOf(" ") >= 0 ? "\"" : "";

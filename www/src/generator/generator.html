@@ -161,6 +161,16 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="control-label" for="documenter">Documenter</label>
+                    <select class="form-control form-control-sm" id="documenter" value.bind="documenter & validate">
+                        <option model.bind="undefined">Choose...</option>
+                        <option repeat.for="documenter of documenters">
+                            ${documenter}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label class="control-label" for="packageManager">Package Manager</label>
                     <select class="form-control form-control-sm" id="packageManager" value.bind="packageManager & validate">
                         <option model.bind="undefined">Choose...</option>

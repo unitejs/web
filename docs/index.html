@@ -1,0 +1,515 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>unitejs-web</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">unitejs-web</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> unitejs-web</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="unitejs">UniteJS</h1>
+				<p>The main contents of the application are in the www folder, it is created this way to allow for platform and packaged versions folders in the root.</p>
+				<p>The following global pre-requisities are needed</p>
+				<pre><code class="lang-shell">npm -g install gulp [or] yarn global add gulp
+</code></pre>
+				<p>Once gulp is installed you can install the npm packages for the app by running the gulp commands from the www folder.</p>
+				<pre><code class="lang-shell">npm install [or] yarn install
+</code></pre>
+				<h2 id="gulp-tasks">Gulp Tasks</h2>
+				<p>The following gulp commands are available for the app.</p>
+				<ul>
+					<li>build</li>
+					<li>theme-build</li>
+					<li>unit [optional - available if you have configured a unit test runner]</li>
+					<li>e2e-install [optional - available if you have configured an e2e test runner]</li>
+					<li>e2e [optional - available if you have configured an e2e test runner]</li>
+					<li>serve</li>
+					<li>version</li>
+					<li>doc-build [optional - available if you have configured a documenter]</li>
+					<li>platform-cordova-dev [optional - requires cordova platform]</li>
+					<li>platform-cordova-theme [optional - requires cordova platform]</li>
+					<li>platform-docker-package [optional - requires docker platform]</li>
+					<li>platform-electron-dev [optional - requires electron platform]</li>
+					<li>platform-electron-package [optional - requires electron platform]</li>
+					<li>platform-web-package [optional - requires web platform]</li>
+				</ul>
+				<h3 id="build">build</h3>
+				<p>This will transpile and build the app ready to run.</p>
+				<pre><code class="lang-shell">gulp build
+</code></pre>
+				<p>You can specify a buildConfiguration (see the buildConfiguration command for details on how to add one) with the following syntax:</p>
+				<pre><code class="lang-shell">gulp build --buildConfiguration=prod
+</code></pre>
+				<p>If you don&#39;t want to keep running the build command you can add the watch switch, this will monitor for changes in source/views/styling and build whatever is required. This will perform an initial complete build to make sure it is error free, but will only run some of the sub tasks for changes. You should run a full build again before performing other tasks:</p>
+				<pre><code class="lang-shell">gulp build --watch
+</code></pre>
+				<h3 id="theme-build">theme-build</h3>
+				<p>You will need to run this task at least once to generate the necessary favicon images and meta tags. See <a href="#themeassets">Theme Assets</a> for more details.</p>
+				<pre><code class="lang-shell">gulp theme-build
+</code></pre>
+				<h3 id="unit">unit</h3>
+				<p>This will run unit tests for the app and generate unit and coverage reports in the test/reports folder. This task is only available if you specified a unit test runner, framework and engine during configuration.</p>
+				<pre><code class="lang-shell">gulp unit
+</code></pre>
+				<p>You can run just a subset of tests by providing a source name as follows:</p>
+				<pre><code class="lang-shell">gulp unit --grep=app
+</code></pre>
+				<p>Or run in a browser (this will only work if the unit test runner is Karma) using:</p>
+				<pre><code class="lang-shell">gulp unit --browser=[chrome/chromeheadless/edge/firefox/ie/phantomjs/safari]
+</code></pre>
+				<p>If you don&#39;t want to keep running the full unit command you can add the watch switch, this will monitor for changes in source/views/styling and build whatever is required.</p>
+				<pre><code class="lang-shell">gulp unit --watch
+</code></pre>
+				<h3 id="e2e-install">e2e-install</h3>
+				<p>This will install all the necessary components required for the e2e tests, it need only be run once. This task is only available if you specified an e2e test runner and framework during configuration.</p>
+				<pre><code class="lang-shell">gulp e2e-install
+</code></pre>
+				<p>The Selenium runtime will always be installed, but you can limit the browser driver to only a specific set by supplying a comma separated list as follows.</p>
+				<pre><code class="lang-shell">gulp e2e-install --drivers=chrome,firefox
+</code></pre>
+				<p>The drivers can be any of the following chrome/edge/firefox/ie.</p>
+				<h3 id="e2e">e2e</h3>
+				<p>This will run e2e tests for the app and generate reports in the test/reports folder. This task is only available if you specified an e2e test runner and framework during configuration.</p>
+				<pre><code class="lang-shell">gulp e2e
+</code></pre>
+				<p>You can run just a subset of tests by providing a source name as follows:</p>
+				<pre><code class="lang-shell">gulp e2e --grep=app
+</code></pre>
+				<p>You can specify that the tests are run over https or on a different port using the switches:</p>
+				<pre><code class="lang-shell">gulp e2e --secure --port=5000
+</code></pre>
+				<p>You can also run the tests on a different browser from the default chrome by using:</p>
+				<pre><code class="lang-shell">gulp e2e --browser=[chrome/edge/firefox/ie/]
+</code></pre>
+				<h3 id="serve">serve</h3>
+				<p>This will serve the app for you to view in a browser.</p>
+				<pre><code class="lang-shell">gulp serve
+</code></pre>
+				<p>You can specify that the content is served over https or on a different port using the switches:</p>
+				<pre><code class="lang-shell">gulp serve --secure --port=5000
+</code></pre>
+				<p>This command will also watch for changes in the files being served, rebuild them and then reload the browser.</p>
+				<h3 id="version">version</h3>
+				<p>This will allow you to show or update the package version.</p>
+				<pre><code class="lang-shell">gulp version
+</code></pre>
+				<p>Running this task with no parameters will show the current version, alternatively use the following parameters to update the version:</p>
+				<ul>
+					<li>--part=[major, minor, patch] - the part of the version you want to modify</li>
+					<li>--mode=[set, inc] - set the part to a specific value or increment the current value</li>
+					<li>--value=someValue - required if you use the set mode</li>
+				</ul>
+				<pre><code class="lang-shell">gulp version --part=patch --mode=inc
+gulp version --part=minor --mode=set --value=1
+</code></pre>
+				<h3 id="doc-build">doc-build</h3>
+				<p>This task will generate documentation from the comments in the source code from your ./www/src folder.</p>
+				<pre><code class="lang-shell">gulp doc-build
+</code></pre>
+				<p>The output is created in ./docs/ folder in the root of your project.</p>
+				<h3 id="platform-cordova-dev">platform-cordova-dev</h3>
+				<p>This task will create a cordova development setup in the ./platform/cordova folder. It defaults to adding the cordova platforms android, ios and windows. You can run this task multiple times without losing any changes you have made to the cordova projects, in fact <strong>you must</strong> run this again if your web app changes so that it copies accross the new content into the ./platform/cordova/www folder.</p>
+				<p>The meta data used to generate the configurations is all picked up from ./www/assetsSrc/unite-theme.json such as title, description, organization, namespace, author. The version is read from your ./www/package.json</p>
+				<p>There are no packaging tasks available for cordova as the build processes are platform specific. Once you have generated the projects you can use all the regular cordova commands, see <a href="https://cordova.apache.org/docs/en/latest/">Cordova Project</a> for more details.</p>
+				<pre><code class="lang-shell">gulp platform-cordova-dev
+</code></pre>
+				<p>You can override the default platforms and save them as follows:</p>
+				<pre><code class="lang-shell">gulp platform-cordova-dev --platforms=android,windows --save
+</code></pre>
+				<p>You will also need to match the configuration used by the build, you can do this with the buildConfiguration argument.</p>
+				<pre><code class="lang-shell">gulp platform-cordova-dev --buildConfiguration=prod
+</code></pre>
+				<h3 id="platform-cordova-theme">platform-cordova-theme</h3>
+				<p>This task will generate all the necessary icons and splash screens for your chosen platforms using the ./www/assetsSrc/ logos and your theme colors from ./www/assetsSrc/theme/unite-theme.json.</p>
+				<pre><code class="lang-shell">gulp platform-cordova-theme
+</code></pre>
+				<p>You can generate the icons for a specific platform as follows:</p>
+				<pre><code class="lang-shell">gulp platform-cordova-theme --platforms=ios
+</code></pre>
+				<h3 id="platform-docker-package">platform-docker-package</h3>
+				<p>This task will package your web app into the docker image that you choose, if you don&#39;t supply any parameters it will default to nginx. The output of the task will be written to ./packaged/{version}_docker_{image}.tar</p>
+				<pre><code class="lang-shell">gulp platform-docker-package
+</code></pre>
+				<p>You will also need to match the configuration used by the build, you can do this with the buildConfiguration argument.</p>
+				<pre><code class="lang-shell">gulp platform-docker-package --buildConfiguration=prod
+</code></pre>
+				<p>Optionally specify the docker base image and where you want the web content within that image. If you also specify the --save options the values will be saved as the default for future runs of all the platform-docker-* tasks.</p>
+				<pre><code class="lang-shell">gulp platform-docker-package --image=httpd --www=/usr/local/apache2/htdocs/ --save
+</code></pre>
+				<p>Alternatively you can set the defaults as values in the unite.json platforms section:</p>
+				<pre><code class="lang-json">&quot;platforms&quot;: {
+    &quot;Docker&quot;: {
+        &quot;image&quot;: &quot;httpd&quot;,
+        &quot;www&quot;: &quot;/usr/local/apache2/htdocs/&quot;
+    }
+}
+</code></pre>
+				<p>If you want to add additional files to the docker image just place them in ./www/assetSrc/docker/{image}/ folder and the structure will be copied recursively to the root of the image.</p>
+				<p><strong>Examples</strong></p>
+				<p>To replace the default nginx configuration add the following file to ./www/assetSrc/docker/nginx/etc/nginx/nginx.conf</p>
+				<p>To replace the default httpd configuration add the following file to ./www/assetSrc/docker/httpd/usr/local/apache2/conf/httpd.conf</p>
+				<h3 id="platform-electron-dev">platform-electron-dev</h3>
+				<p>This task will create development versions of the electron runtime that will wrap your www folder and allow you to develop in-situ.</p>
+				<pre><code class="lang-shell">gulp platform-electron-dev
+</code></pre>
+				<p>Optionally specify the platform architectures and runtime version to override the defaults. If you also specify the --save options the values will be saved as the default for future runs of all the platform-electron-* tasks.</p>
+				<pre><code class="lang-shell">gulp platform-electron-dev --platformArch=win32/ia32,win32/x64 --runtimeVersion=1.7.9 --save
+</code></pre>
+				<p>The platform development versions will be created in the ./platform/electron/{platform}-{architecture} folder, where the platforms and architectures are either read from your unite.json or automatically determined from you system.</p>
+				<h3 id="platform-electron-package">platform-electron-package</h3>
+				<p>This task will gather all the necessary components of the application and create a folder in the top level packaged directory named {version}/electron.</p>
+				<pre><code class="lang-shell">gulp platform-electron-package
+</code></pre>
+				<p>You will also need to match the configuration used by the build, you can do this with the buildConfiguration argument.</p>
+				<pre><code class="lang-shell">gulp platform-electron-package --buildConfiguration=prod
+</code></pre>
+				<p>Optionally specify the platform architectures and runtime version to override the defaults. If you also specify the --save options the values will be saved as the default for future runs of all the platform-electron-* tasks.</p>
+				<pre><code class="lang-shell">gulp platform-electron-package --platformArch=win32/ia32,win32/x64 --runtimeVersion=1.7.9 --save
+</code></pre>
+				<p>This folder will then be used to create a set of platform/architecture electron packages in folders named {version}/electron<em>{platform}</em>{architecture} and a corresponding zip file in the packaged root folder.</p>
+				<p>To see which file are included in a packaged version see the <a href="#platformpackagedfiles">Platform Packaged Files</a> section.</p>
+				<p>For configuring options for this task see the <a href="#platformelectron">Platform Electron</a> section.</p>
+				<h3 id="platform-web-package">platform-web-package</h3>
+				<p>This task will gather all the necessary components of the application and create a folder in the top level packaged directory named {version}/web.</p>
+				<pre><code class="lang-shell">gulp platform-web-package
+</code></pre>
+				<p>You will also need to match the configuration used by the build, you can do this with the buildConfiguration argument.</p>
+				<pre><code class="lang-shell">gulp platform-web-package --buildConfiguration=prod
+</code></pre>
+				<p>This folder contains a complete set of web deployable files for the application. A zip file named packaged/{version}_web.zip will also be created in the packaged directory.</p>
+				<p>To see which file are included in a packaged version see the <a href="#platformpackagedfiles">Platform Packaged Files</a> section.</p>
+				<p>For configuring options for this task see the <a href="#platformweb">Platform Web</a> section.</p>
+				<hr>
+				<h2 id="-a-name-themeassets-a-theme-assets"><a name="themeassets"></a>Theme Assets</h2>
+				<p>During the app generation 3 files will have been created, if you change any of them then you should run the theme-build task again.</p>
+				<ul>
+					<li>assetsSource/theme/logo-tile.svg</li>
+					<li>assetsSource/theme/logo-transparent.svg</li>
+					<li>assetsSource/theme/unite-theme.json</li>
+				</ul>
+				<p>In addition there are 2 more files for the default loader which you can modify, these are absorbed into your index.html during build.</p>
+				<ul>
+					<li>assetsSource/theme/loader.css</li>
+					<li>assetsSource/theme/loader.html</li>
+				</ul>
+				<p>The logo-tile.svg image should have a design that works well on a tile, e.g. a white icon with transparent background (the background color can be specified as part of the unite-theme.json configuration).</p>
+				<p>The logo-transparent.svg image should be a normal colored icon also on a transparent background, mostly used for the .ico image.</p>
+				<p>The fields in the unite-theme.json should be self explanatory in terms of what they generate in the index.html page. The themeHeaders will get overwritten when you run theme-build again so any custom headers you want should go in the customHeaders property. The backgroundColor is used for tile backgrounds and the themeColor is used to color the safari pinned icon mask, as well as during asset generation from your svg icons.</p>
+				<p>Some of the fields are used to generate the ./assets/favicon/manifest.json which is used by some browsers when the web site is pinned, others are used during platform generation e.g. PWAs, Cordova.</p>
+				<p>Information tags passed as args into the unite configure command are stored in unite-theme.json and are mapped to other properties i.e. title, shortName, description, keywords, organization, copyright, webSite, author, authorEmail, authorWebSite, namespace.</p>
+				<pre><code class="lang-json">{
+    "title": "UniteJS",
+    "metaDescription": "UniteJS Web Site", // description
+    "metaKeywords": [ // keywords
+        "UniteJS",
+        "CLI"
+    ],
+    "customHeaders": [
+        "&lt;meta property=\"twitter:site\" content=\"@unitejs\"&gt;"
+    ],
+    "themeHeaders": [
+        ... Generated by theme-build task
+    ],
+    "backgroundColor": "#339933",
+    "themeColor": "#339933",
+    "shortName": "UJS",
+    "organization": "2017 Obany Ltd",
+    "copyright": "2017 Obany Ltd",
+    "webSite": "http://unitejs.com",
+    "metaAuthor": "Unite JS", // author
+    "metaAuthorEmail": "fake@unitejs.com", //authorEmail
+    "metaAuthorWebSite": "http://unitejs.com", // authorWebSite
+    "namespace": "unitejs.com"
+}
+</code></pre>
+				<h2 id="-a-name-platformpackagedfiles-a-platform-packaged-files"><a name="platformpackagedfiles"></a>Platform Packaged Files</h2>
+				<p>The files included within each package are calculated from the list below:</p>
+				<ul>
+					<li>index.html</li>
+					<li>service-worker.js (if pwa is enabled)</li>
+					<li>dist/<em>*/</em></li>
+					<li>css/<em>*/</em></li>
+					<li>assets/<em>*/</em></li>
+					<li>assetsSrc/root/<em>*/</em> - These files will be recursively copied to the root of the packaged version</li>
+					<li>client packages code that is script included in index.html</li>
+					<li>client packages assets defined in unite.json clientPackages section</li>
+				</ul>
+				<h2 id="platforms-options">Platforms Options</h2>
+				<p>If you manually edit your unite.json, you can add additional options for the platform settings.</p>
+				<h3 id="-a-name-platformweb-a-web"><a name="platformweb"></a>Web</h3>
+				<p>There are currently no other options for this platform.</p>
+				<h3 id="-a-name-platformelectron-a-electron"><a name="platformelectron"></a>Electron</h3>
+				<p>For more information about the options see the <a href="https://github.com/electron-userland/electron-packager#readme">Electron Documentation</a></p>
+				<p>You can choose to use a specific version of the Electron runtime, if not specified it defaults to the most recent stable version see <a href="https://github.com/electron/electron/releases">Electron Releases</a>.</p>
+				<p>You can specify one or more of the platform architecture combinations, if you don&#39;t specify any platforms the packager will try and identify your current platform/architecture and create a package accordingly.</p>
+				<p>Any others keys in the Electron settings will be converted into -- params and passed to the packager, this allows for other options like those specific to the darwin/mas or win32 targets <a href="https://github.com/electron-userland/electron-packager/blob/master/usage.txt">Electron Usage</a> to be used.</p>
+				<pre><code class="lang-json">&quot;platforms&quot;: {
+    &quot;Electron&quot;: {
+        &quot;runtimeVersion&quot;: &quot;1.7.5&quot;,
+        &quot;platformArch&quot; : [
+            &quot;win32/ia32&quot;,
+            &quot;win32/x64&quot;,
+            &quot;darwin/x64&quot;,
+            &quot;mas/x64&quot;,
+            &quot;linux/ia32&quot;,
+            &quot;linux/x64&quot;,
+            &quot;linux/armv7l&quot;
+        ]
+        ...
+    }
+}
+</code></pre>
+				<h2 id="build-configuration-variables">Build Configuration Variables</h2>
+				<p>With each configuration that is created a .json file is created in the ./configuration folder with the same name. The values that you store in the config files are then available in the window.unite.config namespace at runtime depending on the type of build you create. Also in the configuration folder is a common.json file which you can use to store any values common to all configurations. </p>
+				<p>The TypeScript definitions for this object are in this repo <a href="https://github.com/unitejs/types">UniteJS Types</a> and can be referenced in TypeScript using:</p>
+				<pre><code class="lang-typescript"><span class="hljs-comment">/// &lt;reference types="unitejs-types" /&gt;</span>
+</code></pre>
+				<p>Example configuration files:</p>
+				<p>configuration/common.json</p>
+				<pre><code class="lang-json">{
+    <span class="hljs-attr">"myCommonVariable"</span>: <span class="hljs-string">"myValue"</span>
+}
+</code></pre>
+				<p>configuration/dev.json</p>
+				<pre><code class="lang-json">{
+    <span class="hljs-attr">"myApiKey"</span>: <span class="hljs-string">"--dev-key--"</span>
+}
+</code></pre>
+				<p>configuration/prod.json</p>
+				<pre><code class="lang-json">{
+    <span class="hljs-attr">"myApiKey"</span>: <span class="hljs-string">"--prod-key--"</span>
+}
+</code></pre>
+				<p>At runtime a dev build would allow you to access the variables as follows:</p>
+				<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.unite.config[<span class="hljs-string">"myCommonVariable"</span>]); <span class="hljs-comment">// myValue</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.unite.config[<span class="hljs-string">"myApiKey"</span>]); <span class="hljs-comment">// --dev-key--</span>
+</code></pre>
+				<p>At runtime a prod build would allow you to access the variables as follows:</p>
+				<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.unite.config[<span class="hljs-string">"myCommonVariable"</span>]); <span class="hljs-comment">// myValue</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.unite.config[<span class="hljs-string">"myApiKey"</span>]); <span class="hljs-comment">// --prod-key--</span>
+</code></pre>
+				<h2 id="runtime-variables">Runtime Variables</h2>
+				<p>In addition there are some other fields available in the window.unite object which are automatically populated at build time.</p>
+				<pre><code class="lang-json">{
+    ...
+    &quot;configName&quot;: &quot;prod&quot;, // The configuration name used to build this version
+    &quot;bundle&quot;: true, // The buildConfiguration bundle flag
+    &quot;minify&quot;: true, // The buildConfiguration minify flag
+    &quot;pwa&quot;: false, // The buildConfiguration pwa flag
+    &quot;packageVersion&quot;: &quot;1.3.1&quot;, // The package.json version field
+    &quot;uniteVersion&quot;: &quot;1.6.1&quot;, // The UniteJS version used to configure the app
+    &quot;buildDateTime&quot;: 1509618433502, // A JavaScript timestamp when the build was created
+    &quot;buildNumber&quot;: &quot;20171102102713&quot; // A build number which is automatically picked up from your CI build system
+}
+</code></pre>
+				<h2 id="modifications-to-generated-files">Modifications To Generated Files</h2>
+				<p>If you modify any of the files generated by UniteJS then you should remove the <em>Generated by UniteJS</em> comment at the bottom of the file. If you then call any of the UniteJS operations again your changes will be retained. Any files which are generated but can not contain comments because of their format (e.g. .json files) will where possible be combined with any changes you have made.</p>
+				<h2 id="icon-modifications">Icon Modifications</h2>
+				<p>Of course you don&#39;t need to run the theme-build task you could instead generate your own icons and headers using a site such as <a href="https://realfavicongenerator.net/">RealFaviconGenerator</a> and copy the headers in to the customHeaders property and the icons wherever you like in your site. All credit goes to RealFaviconGenerator for the inspiration of the minimal set of resources need to satisfy modern browsers.</p>
+				<hr>
+				<p><em>Generated by UniteJS</em> :zap:</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/about.html" class="tsd-kind-icon">About</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/app.html" class="tsd-kind-icon">App</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/articles.html" class="tsd-kind-icon">Articles</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/aureliasvg.html" class="tsd-kind-icon">Aurelia<wbr>Svg</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/cli.html" class="tsd-kind-icon">CLI</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/clipboard.html" class="tsd-kind-icon">Clipboard</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/generatedapp.html" class="tsd-kind-icon">Generated<wbr>App</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/generator.html" class="tsd-kind-icon">Generator</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/home.html" class="tsd-kind-icon">Home</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/license.html" class="tsd-kind-icon">License</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/localstorage.html" class="tsd-kind-icon">Local<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/media.html" class="tsd-kind-icon">Media</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/navbar.html" class="tsd-kind-icon">Nav<wbr>Bar</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/navfooter.html" class="tsd-kind-icon">Nav<wbr>Footer</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/prismattribute.html" class="tsd-kind-icon">Prism<wbr>Attribute</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/scrolltoelementattribute.html" class="tsd-kind-icon">Scroll<wbr>ToElement<wbr>Attribute</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/scrolltotopattribute.html" class="tsd-kind-icon">Scroll<wbr>ToTop<wbr>Attribute</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/status.html" class="tsd-kind-icon">Status</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/theteam.html" class="tsd-kind-icon">The<wbr>Team</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/whatsnew.html" class="tsd-kind-icon">Whats<wbr>New</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#prism" class="tsd-kind-icon">Prism</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#bootstrap" class="tsd-kind-icon">bootstrap</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

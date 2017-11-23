@@ -310,6 +310,7 @@
 		"wwwRoot": "./www/",
 		"packagedRoot": "./packaged/",
 		"platformRoot": "./platform/",
+		"docsRoot": "./docs/",
 		"www": {
 			"src": "./src/",
 			"dist": "./dist/",
@@ -329,7 +330,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.7.1",
+	"uniteVersion": "1.7.2",
 	"sourceExtensions": [
 		"ts"
 	],
@@ -338,5 +339,6 @@
 	],
 	"styleExtension": "scss",
 	"ides": [],
-	"cssLinter": "StyleLint"
+	"cssLinter": "StyleLint",
+	"documenter": "TypeDoc"
 }
