@@ -51,14 +51,14 @@ export class Status {
                     { name: "Angular TypeScript", repo: "angular-typescript", branches: ["master"] },
                     { name: "Aurelia JavaScript", repo: "aurelia-javascript", branches: ["master"] },
                     { name: "Aurelia TypeScript", repo: "aurelia-typescript", branches: ["master"] },
-                    { name: "PlainApp JavaScript", repo: "plainapp-javascript", branches: ["master"] },
-                    { name: "PlainApp TypeScript", repo: "plainapp-typescript", branches: ["master"] },
                     { name: "Polymer JavaScript", repo: "polymer-javascript", branches: ["master"] },
                     { name: "Polymer TypeScript", repo: "polymer-typescript", branches: ["master"] },
                     { name: "Preact JavaScript", repo: "preact-javascript", branches: ["master"] },
                     { name: "Preact TypeScript", repo: "preact-typescript", branches: ["master"] },
                     { name: "React JavaScript", repo: "react-javascript", branches: ["master"] },
                     { name: "React TypeScript", repo: "react-typescript", branches: ["master"] },
+                    { name: "Vanilla JavaScript", repo: "vanilla-javascript", branches: ["master"] },
+                    { name: "Vanilla TypeScript", repo: "vanilla-typescript", branches: ["master"] },
                     { name: "Vue JavaScript", repo: "vue-javascript", branches: ["master"] },
                     { name: "Vue TypeScript", repo: "vue-typescript", branches: ["master"] }
                 ]
@@ -81,16 +81,6 @@ export class Status {
                     },
                     { name: "Aurelia SystemJS", repo: "au-systemjs-matrix", branches: ["master"] },
                     {
-                        name: "PlainApp Browserify", repo: "pa-browserify-matrix",
-                        branches: ["master"]
-                    },
-                    {
-                        name: "PlainApp RequireJS", repo: "pa-requirejs-matrix",
-                        branches: ["master"]
-                    },
-                    { name: "PlainApp SystemJS", repo: "pa-systemjs-matrix", branches: ["master"] },
-                    { name: "PlainApp Webpack", repo: "pa-webpack-matrix", branches: ["master"] },
-                    {
                         name: "Polymer Browserify", repo: "po-browserify-matrix",
                         branches: ["master"]
                     },
@@ -110,6 +100,16 @@ export class Status {
                     { name: "React RequireJS", repo: "re-requirejs-matrix", branches: ["master"] },
                     { name: "React SystemJS", repo: "re-systemjs-matrix", branches: ["master"] },
                     { name: "React Webpack", repo: "re-webpack-matrix", branches: ["master"] },
+                    {
+                        name: "Vanilla Browserify", repo: "va-browserify-matrix",
+                        branches: ["master"]
+                    },
+                    {
+                        name: "Vanilla RequireJS", repo: "va-requirejs-matrix",
+                        branches: ["master"]
+                    },
+                    { name: "Vanilla SystemJS", repo: "pa-systemjs-matrix", branches: ["master"] },
+                    { name: "Vanilla Webpack", repo: "va-webpack-matrix", branches: ["master"] },
                     { name: "Vue Browserify", repo: "vu-browserify-matrix", branches: ["master"] },
                     { name: "Vue RequireJS", repo: "vu-requirejs-matrix", branches: ["master"] },
                     { name: "Vue SystemJS", repo: "vu-systemjs-matrix", branches: ["master"] },

@@ -17,6 +17,7 @@ export class UniteConfiguration {
     public cssPre: string;
     public cssPost: string;
     public cssLinter: string;
+    public documenter: string;
     public packageManager: string;
     public outputDirectory: string;
 

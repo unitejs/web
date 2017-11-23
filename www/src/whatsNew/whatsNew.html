@@ -12,6 +12,27 @@
             <pre><code au-prism="nix">npm -g install unitejs-cli [or] yarn global add unitejs-cli
 unite configure</code></pre>
 
+            <h2>v1.7.2</h2>
+            <p>Added support for documentation generation from your source.</p>
+            <p>The following documenters are supported but are dependent on the sourceLanguage configured.</p>
+            <ul>
+                <li>ESDoc - Can be used with JavaScript and TypeScript (<a href="./assets/doc-examples/esdoc/" target="_blank" rel="noopener" aria-label="ESDoc Example Output">Example Output</a>)</li>
+                <li>None - Disable documentation tasks</li>
+                <li>JSDoc - Can be used with JavaScript (<a href="./assets/doc-examples/jsdoc/" target="_blank" rel="noopener" aria-label="JsDoc Example Output">Example Output</a>)</li>
+                <li>TypeDoc - Can be used with TypeScript (<a href="./assets/doc-examples/typedoc/" target="_blank" rel="noopener" aria-label="TypeDoc Example Output">Example Output</a>)</li>
+            </ul>
+            <p>As an example to add ESDoc to an already existing project just run.</p>
+            <pre><code au-prism="nix">unite configure --documenter=ESDoc
+npm install [or] yarn install</code></pre>
+
+            <p>Once added there is a new task available.</p>
+            <pre><code au-prism="nix">gulp doc-build</code></pre>
+            <p>This will build documentation into the ./docs/ folder.</p>
+            <p>All of the framework generated source has had comments added.</p>
+
+            <hr/>
+            <p>The PlainApp framework type has been renamed to Vanilla.</p>
+
             <h2>v1.7.1</h2>
             <p>Added support for style linting.</p>
             <p>The following style linters are supported but are dependent on the cssPreprocessor configured.</p>
@@ -177,7 +198,7 @@ npm install [or] yarn install</code></pre>
             <ul>
                 <li>Angular - class, component, directive, enum, guard, interface, module, pipe, service</li>
                 <li>Aurelia - attribute, binding-behavior, class, component, element, enum, interface, pipeline-step, value-converter</li>
-                <li>PlainApp - class, enum, interface</li>
+                <li>Vanilla - class, enum, interface</li>
                 <li>React - class, component, enum, interface</li>
             </ul>
 

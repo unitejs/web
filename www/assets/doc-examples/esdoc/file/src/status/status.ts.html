@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/status/status.ts | unitejs-web</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/unitejs/web.git"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/app.ts~App.html">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/navBar.ts~NavBar.html">NavBar</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/navFooter.ts~NavFooter.html">NavFooter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-bootstrap">bootstrap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#articles">articles</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/articles/articles.ts~Articles.html">Articles</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#attributes">attributes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/attributes/prismAttribute.ts~PrismAttribute.html">PrismAttribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/attributes/scrollToElementAttribute.ts~ScrollToElementAttribute.html">ScrollToElementAttribute</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/attributes/scrollToTopAttribute.ts~ScrollToTopAttribute.html">ScrollToTopAttribute</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#cli">cli</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/cli/cli.ts~CLI.html">CLI</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#domhelpers">domHelpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/domHelpers/clipboard.ts~Clipboard.html">Clipboard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/domHelpers/localStorage.ts~LocalStorage.html">LocalStorage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/domHelpers/scroll.ts~Scroll.html">Scroll</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/domHelpers/style.ts~Style.html">Style</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#elements">elements</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/elements/aureliaSvg.ts~AureliaSvg.html">AureliaSvg</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#generatedapp">generatedApp</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/generatedApp/generatedApp.ts~GeneratedApp.html">GeneratedApp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#generator">generator</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/generator/generator.ts~Generator.html">Generator</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#home">home</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/home/home.ts~Home.html">Home</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#info">info</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/info/about.ts~About.html">About</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/info/license.ts~License.html">License</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/info/media.ts~Media.html">Media</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/info/theTeam.ts~TheTeam.html">TheTeam</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#models">models</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/uniteConfiguration.ts~UniteConfiguration.html">UniteConfiguration</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#pipelinesteps">pipelineSteps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/pipelineSteps/googleAnalyticsStep.ts~GoogleAnalyticsStep.html">GoogleAnalyticsStep</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/pipelineSteps/scrollToTopPipelineStep.ts~ScrollToTopPipelineStep.html">ScrollToTopPipelineStep</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#status">status</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/status/status.ts~Status.html">Status</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#validation">validation</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/validation/bootstrapFormRenderer.ts~BootstrapFormRenderer.html">BootstrapFormRenderer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#whatsnew">whatsNew</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/whatsNew/whatsNew.ts~WhatsNew.html">WhatsNew</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/status/status.ts</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Status class.
+ */
+export class Status {
+    public sections: {
+        name: string;
+        description: string,
+        org: string,
+        items: {
+            name: string;
+            repo: string;
+            branches: string[],
+            hasCoverage?: boolean
+        }[]
+    }[];
+
+    constructor() {
+        this.sections = [
+            {
+                name: &quot;Application Components&quot;,
+                description: &quot;Main libraries used by the UniteJS application.&quot;,
+                org: &quot;unitejs&quot;,
+                items: [
+                    {
+                        name: &quot;Framework&quot;, repo: &quot;framework&quot;, branches: [&quot;master&quot;, &quot;develop&quot;],
+                        hasCoverage: true
+                    },
+                    { name: &quot;CLI-Core&quot;, repo: &quot;cli-core&quot;, branches: [&quot;master&quot;, &quot;develop&quot;], hasCoverage: true },
+                    { name: &quot;Engine&quot;, repo: &quot;engine&quot;, branches: [&quot;master&quot;, &quot;develop&quot;], hasCoverage: true },
+                    { name: &quot;CLI&quot;, repo: &quot;cli&quot;, branches: [&quot;master&quot;, &quot;develop&quot;], hasCoverage: true },
+                    { name: &quot;Image&quot;, repo: &quot;image&quot;, branches: [&quot;master&quot;, &quot;develop&quot;], hasCoverage: true },
+                    { name: &quot;Image CLI&quot;, repo: &quot;image-cli&quot;, branches: [&quot;master&quot;, &quot;develop&quot;], hasCoverage: true }
+                ]
+            },
+            {
+                name: &quot;Quick Start Examples&quot;,
+                description: &quot;Quick Start examples used by articles.&quot;,
+                org: &quot;unitejs-examples&quot;,
+                items: [
+                    { name: &quot;Cordova&quot;, repo: &quot;cordova-quickstart&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Docker&quot;, repo: &quot;docker-quickstart&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Electron&quot;, repo: &quot;electron-quickstart&quot;, branches: [&quot;master&quot;] }
+                ]
+            },
+            {
+                name: &quot;Profiles&quot;,
+                description: &quot;UniteJS standard profiles.&quot;,
+                org: &quot;unitejs-test&quot;,
+                items: [
+                    { name: &quot;Angular JavaScript&quot;, repo: &quot;angular-javascript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Angular TypeScript&quot;, repo: &quot;angular-typescript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Aurelia JavaScript&quot;, repo: &quot;aurelia-javascript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Aurelia TypeScript&quot;, repo: &quot;aurelia-typescript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Polymer JavaScript&quot;, repo: &quot;polymer-javascript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Polymer TypeScript&quot;, repo: &quot;polymer-typescript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Preact JavaScript&quot;, repo: &quot;preact-javascript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Preact TypeScript&quot;, repo: &quot;preact-typescript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;React JavaScript&quot;, repo: &quot;react-javascript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;React TypeScript&quot;, repo: &quot;react-typescript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Vanilla JavaScript&quot;, repo: &quot;vanilla-javascript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Vanilla TypeScript&quot;, repo: &quot;vanilla-typescript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Vue JavaScript&quot;, repo: &quot;vue-javascript&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Vue TypeScript&quot;, repo: &quot;vue-typescript&quot;, branches: [&quot;master&quot;] }
+                ]
+            },
+            {
+                name: &quot;Matrix&quot;,
+                description: &quot;Application framework matrix, each repo has multiple configuration combinations. &quot; +
+                    &quot;&lt;br/&gt;Check the create-apps.sh in each repo to see the combinations it is testing.&quot;,
+                org: &quot;unitejs-test-matrix&quot;,
+                items: [
+                    {
+                        name: &quot;Angular Browserify&quot;, repo: &quot;ng-browserify-matrix&quot;,
+                        branches: [&quot;master&quot;]
+                    },
+                    { name: &quot;Angular SystemJS&quot;, repo: &quot;ng-systemjs-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Angular Webpack&quot;, repo: &quot;ng-webpack-matrix&quot;, branches: [&quot;master&quot;] },
+                    {
+                        name: &quot;Aurelia RequireJS&quot;, repo: &quot;au-requirejs-matrix&quot;,
+                        branches: [&quot;master&quot;]
+                    },
+                    { name: &quot;Aurelia SystemJS&quot;, repo: &quot;au-systemjs-matrix&quot;, branches: [&quot;master&quot;] },
+                    {
+                        name: &quot;Polymer Browserify&quot;, repo: &quot;po-browserify-matrix&quot;,
+                        branches: [&quot;master&quot;]
+                    },
+                    { name: &quot;Polymer SystemJS&quot;, repo: &quot;po-systemjs-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Polymer Webpack&quot;, repo: &quot;po-webpack-matrix&quot;, branches: [&quot;master&quot;] },
+                    {
+                        name: &quot;Preact Browserify&quot;, repo: &quot;pr-browserify-matrix&quot;,
+                        branches: [&quot;master&quot;]
+                    },
+                    { name: &quot;Preact RequireJS&quot;, repo: &quot;pr-requirejs-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Preact SystemJS&quot;, repo: &quot;pr-systemjs-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Preact Webpack&quot;, repo: &quot;pr-webpack-matrix&quot;, branches: [&quot;master&quot;] },
+                    {
+                        name: &quot;React Browserify&quot;, repo: &quot;re-browserify-matrix&quot;,
+                        branches: [&quot;master&quot;]
+                    },
+                    { name: &quot;React RequireJS&quot;, repo: &quot;re-requirejs-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;React SystemJS&quot;, repo: &quot;re-systemjs-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;React Webpack&quot;, repo: &quot;re-webpack-matrix&quot;, branches: [&quot;master&quot;] },
+                    {
+                        name: &quot;Vanilla Browserify&quot;, repo: &quot;va-browserify-matrix&quot;,
+                        branches: [&quot;master&quot;]
+                    },
+                    {
+                        name: &quot;Vanilla RequireJS&quot;, repo: &quot;va-requirejs-matrix&quot;,
+                        branches: [&quot;master&quot;]
+                    },
+                    { name: &quot;Vanilla SystemJS&quot;, repo: &quot;pa-systemjs-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Vanilla Webpack&quot;, repo: &quot;va-webpack-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Vue Browserify&quot;, repo: &quot;vu-browserify-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Vue RequireJS&quot;, repo: &quot;vu-requirejs-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Vue SystemJS&quot;, repo: &quot;vu-systemjs-matrix&quot;, branches: [&quot;master&quot;] },
+                    { name: &quot;Vue Webpack&quot;, repo: &quot;vu-webpack-matrix&quot;, branches: [&quot;master&quot;] },
+                ]
+            }
+        ];
+    }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

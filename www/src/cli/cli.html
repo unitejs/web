@@ -100,10 +100,10 @@
                             <td>
                                 <a au-scroll-to-element="id: angular; y-offset.bind: topOffset" href="#">Angular</a> /
                                 <a au-scroll-to-element="id: aurelia; y-offset.bind: topOffset" href="#">Aurelia</a> /
-                                <a au-scroll-to-element="id: plainApp; y-offset.bind: topOffset" href="#">PlainApp</a> /
                                 <a au-scroll-to-element="id: polymer; y-offset.bind: topOffset" href="#">Polymer</a> /
                                 <a au-scroll-to-element="id: preact; y-offset.bind: topOffset" href="#">Preact</a> /
                                 <a au-scroll-to-element="id: react; y-offset.bind: topOffset" href="#">React</a> /
+                                <a au-scroll-to-element="id: vanilla; y-offset.bind: topOffset" href="#">Vanilla</a> /
                                 <a au-scroll-to-element="id: vue; y-offset.bind: topOffset" href="#">Vue</a>
                             </td>
                             <td>The application framework to use</td>
@@ -175,6 +175,12 @@
                                 <br/>None - means no css linter</td>
                         </tr>
                         <tr>
+                            <td>documenter</td>
+                            <td>ESDoc/JSDoc/None/TypeDoc</td>
+                            <td>The documenter to use
+                                <br/>None - means no documenter</td>
+                        </tr>
+                        <tr>
                             <td>packageManager</td>
                             <td>Npm/Yarn</td>
                             <td>The package manager to use
@@ -192,6 +198,12 @@
                             <td>force</td>
                             <td></td>
                             <td>Force overwrite of all existing configuration
+                                <br/>optional - defaults to off</td>
+                        </tr>
+                        <tr>
+                            <td>noCreateSource</td>
+                            <td></td>
+                            <td>Skip source file creation if already deleted
                                 <br/>optional - defaults to off</td>
                         </tr>
                         <tr>
@@ -283,7 +295,7 @@
                 <hr/>
                 <h2>Examples</h2>
 
-                <pre><code au-prism="nix">unite configure --packageName=test-project --title="Test TypeScript Jasmine RequireJS" --license=MIT --sourceLanguage=TypeScript --moduleType=AMD --bundler=RequireJS --unitTestRunner=Karma --unitTestFramework=Jasmine --unitTestEngine=PhantomJS --e2eTestRunner=Protractor --e2eTestFramework=Jasmine --linter=TSLint --cssPre=Sass --cssPost=PostCss --appFramework=PlainApp --packageManager=Yarn --outputDirectory=/unite/test-project
+                <pre><code au-prism="nix">unite configure --packageName=test-project --title="Test TypeScript Jasmine RequireJS" --license=MIT --sourceLanguage=TypeScript --moduleType=AMD --bundler=RequireJS --unitTestRunner=Karma --unitTestFramework=Jasmine --unitTestEngine=PhantomJS --e2eTestRunner=Protractor --e2eTestFramework=Jasmine --linter=TSLint --cssPre=Sass --cssPost=PostCss --appFramework=Vanilla --packageManager=Yarn --outputDirectory=/unite/test-project
 
 unite configure --packageName=test-project --title="Test JavaScript Mocha Chai SystemJS" --license=Apache-2.0 --sourceLanguage=JavaScript --moduleType=SystemJS --bundler=SystemJSBuilder --unitTestRunner=Karma --unitTestFramework=MochaChai --unitTestEngine=ChromeHeadless --e2eTestRunner=None --linter=ESLint --cssPre=Css --cssPost=None --appFramework=Aurelia --packageManager=Npm --force=true --outputDirectory=/unite/test-project
 
@@ -302,14 +314,14 @@ unite configure --packageName=test-angular --title="Test Angular" --profile=Angu
                     <li>AngularTypeScript</li>
                     <li>AureliaJavaScript</li>
                     <li>AureliaTypeScript</li>
-                    <li>PlainAppJavaScript</li>
-                    <li>PlainAppTypeScript</li>
                     <li>PolymerJavaScript</li>
                     <li>PolymerTypeScript</li>
                     <li>PreactJavaScript</li>
                     <li>PreactTypeScript</li>
                     <li>ReactJavaScript</li>
                     <li>ReactTypeScript</li>
+                    <li>VanillaJavaScript</li>
+                    <li>VanillaTypeScript</li>
                     <li>VueJavaScript</li>
                     <li>VueTypeScript</li>
                 </ul>
@@ -333,11 +345,6 @@ unite configure --packageName=test-angular --title="Test Angular" --profile=Angu
                 <p>Aurelia does not currently support bundling with Browserify or Webpack.</p>
 
                 <h3>
-                    <a id="plainApp"></a>Plain App</h3>
-
-                <p>This is a vanilla app with no framework libraries included.</p>
-
-                <h3>
                     <a id="polymer"></a>Polymer</h3>
 
                 <p>This is based on the polymer 3 preview so likely to be quite unstable.</p>
@@ -359,6 +366,11 @@ unite configure --packageName=test-angular --title="Test Angular" --profile=Angu
                     <a id="react"></a>React</h3>
 
                 <p>Nothing else to mention at the moment.</p>
+
+                <h3>
+                    <a id="vanilla"></a>Vanilla</h3>
+
+                <p>This is a vanilla app with no framework libraries included.</p>
 
                 <h3>
                     <a id="vue"></a>Vue</h3>
@@ -609,10 +621,10 @@ unite generate --name="My Thing" --type=class --subFolder=./myClasses/sub2</code
                 <ul>
                     <li>Angular - class, component, directive, enum, guard, interface, module, pipe, service</li>
                     <li>Aurelia - attribute, binding-behavior, class, component, element, enum, interface, pipeline-step, value-converter</li>
-                    <li>PlainApp - class, enum, interface</li>
                     <li>Polymer - class, component, enum, interface</li>
                     <li>Preact - class, component, enum, interface</li>
                     <li>React - class, component, enum, interface</li>
+                    <li>Vanilla - class, enum, interface</li>
                     <li>Vue - class, component, enum, interface</li>
                 </ul>
 

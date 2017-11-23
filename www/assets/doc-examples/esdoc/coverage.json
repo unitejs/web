@@ -1,0 +1,241 @@
+{
+  "coverage": "48.12%",
+  "expectCount": 160,
+  "actualCount": 77,
+  "files": {
+    "src/app.ts": {
+      "expectCount": 3,
+      "actualCount": 2,
+      "undocumentLines": [
+        111
+      ]
+    },
+    "src/articles/articles.ts": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/attributes/prismAttribute.ts": {
+      "expectCount": 5,
+      "actualCount": 2,
+      "undocumentLines": [
+        1,
+        21,
+        22
+      ]
+    },
+    "src/attributes/scrollToElementAttribute.ts": {
+      "expectCount": 8,
+      "actualCount": 4,
+      "undocumentLines": [
+        1,
+        22,
+        23,
+        25
+      ]
+    },
+    "src/attributes/scrollToTopAttribute.ts": {
+      "expectCount": 8,
+      "actualCount": 5,
+      "undocumentLines": [
+        1,
+        22,
+        23
+      ]
+    },
+    "src/bootstrapper.ts": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/cli/cli.ts": {
+      "expectCount": 7,
+      "actualCount": 3,
+      "undocumentLines": [
+        1,
+        18,
+        19,
+        31
+      ]
+    },
+    "src/domHelpers/clipboard.ts": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/domHelpers/localStorage.ts": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/domHelpers/scroll.ts": {
+      "expectCount": 6,
+      "actualCount": 6,
+      "undocumentLines": []
+    },
+    "src/domHelpers/style.ts": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "src/elements/aureliaSvg.ts": {
+      "expectCount": 5,
+      "actualCount": 2,
+      "undocumentLines": [
+        1,
+        21,
+        22
+      ]
+    },
+    "src/entryPoint.ts": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/generatedApp/generatedApp.ts": {
+      "expectCount": 4,
+      "actualCount": 2,
+      "undocumentLines": [
+        1,
+        28
+      ]
+    },
+    "src/generator/generator.ts": {
+      "expectCount": 74,
+      "actualCount": 19,
+      "undocumentLines": [
+        1,
+        25,
+        26,
+        181,
+        196,
+        208,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        485
+      ]
+    },
+    "src/home/home.ts": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/info/about.ts": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/info/license.ts": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/info/media.ts": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/info/theTeam.ts": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/models/uniteConfiguration.ts": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/navBar.ts": {
+      "expectCount": 4,
+      "actualCount": 2,
+      "undocumentLines": [
+        1,
+        32
+      ]
+    },
+    "src/navFooter.ts": {
+      "expectCount": 5,
+      "actualCount": 1,
+      "undocumentLines": [
+        1,
+        20,
+        21,
+        22
+      ]
+    },
+    "src/pipelineSteps/googleAnalyticsStep.ts": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/pipelineSteps/scrollToTopPipelineStep.ts": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/status/status.ts": {
+      "expectCount": 3,
+      "actualCount": 1,
+      "undocumentLines": [
+        8,
+        9
+      ]
+    },
+    "src/validation/bootstrapFormRenderer.ts": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/whatsNew/whatsNew.ts": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    }
+  }
+}
