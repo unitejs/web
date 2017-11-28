@@ -330,7 +330,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.7.2",
+	"uniteVersion": "1.7.4",
 	"sourceExtensions": [
 		"ts"
 	],

@@ -1,4 +1,5 @@
 require.config({
+	"baseUrl": "/base/",
 	"paths": {
 		"aurelia-animator-css": "node_modules/aurelia-animator-css/dist/amd/aurelia-animator-css",
 		"aurelia-binding": "node_modules/aurelia-binding/dist/amd/aurelia-binding",
@@ -54,7 +55,6 @@ require.config({
 		"*": {
 			"text": "requirejs-text"
 		}
-	},
-	"baseUrl": "/base/"
+	}
 });
 preloadModules = [];

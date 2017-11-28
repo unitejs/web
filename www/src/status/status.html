@@ -2,7 +2,7 @@
     <div class="row m-0">
         <div class="container padding-top padding-bottom">
             <h1>Status</h1>
-            <p>All builds are run daily, and additionally when a new build is published.</p>
+            <p>All builds are run daily, and additionally when a new build is published. Master branches should be passing nearly 100% of the time, the develop branches will be more unstable.</p>
 
             <div repeat.for="section of sections">
                 <h2>
@@ -17,7 +17,7 @@
                 <p innerhtml.bind="section.description"></p>
 
                 <div class="row" repeat.for="item of section.items">
-                    <div class="col-3">
+                    <div class="col-4">
                         <a href="https://github.com/${section.org}/${item.repo}" target="_blank" rel="noopener" aria-label.bind="item.name">
                             ${item.name}
                         </a>
@@ -25,20 +25,17 @@
                             <i class="fa fa-github"></i>
                         </a>
                     </div>
-                    <div class="col-9">
-                        <div repeat.for="branch of item.branches">
-                            <a href="https://github.com/${section.org}/${item.repo}/tree/${branch}" target="_blank" rel="noopener" aria-label.bind="item.name">
-                                ${branch}
-                            </a>
-                            <a href="https://travis-ci.org/${section.org}/${item.repo}/branches" target="_blank" rel="noopener" aria-label.bind="item.name">
-                                <img src="https://img.shields.io/travis/${section.org}/${item.repo}/${branch}.svg">
-                            </a>
-                            <a if.bind="item.hasCoverage" href="https://coveralls.io/github/${section.org}/${item.repo}?branch=${branch}" target="_blank"
-                                rel="noopener" aria-label="${item.name} Coverage">
-                                <img src="https://img.shields.io/coveralls/${section.org}/${item.repo}/${branch}.svg">
-                            </a>
-                            <br/>
-                        </div>
+                    <div class="col-4" repeat.for="branch of item.branches">
+                        <a href="https://github.com/${section.org}/${item.repo}/tree/${branch}" target="_blank" rel="noopener" aria-label.bind="item.name">
+                            ${branch}
+                        </a>
+                        <a href="https://travis-ci.org/${section.org}/${item.repo}/branches" target="_blank" rel="noopener" aria-label.bind="item.name">
+                            <img src="https://img.shields.io/travis/${section.org}/${item.repo}/${branch}.svg">
+                        </a>
+                        <a if.bind="item.hasCoverage" href="https://coveralls.io/github/${section.org}/${item.repo}?branch=${branch}" target="_blank"
+                            rel="noopener" aria-label="${item.name} Coverage">
+                            <img src="https://img.shields.io/coveralls/${section.org}/${item.repo}/${branch}.svg">
+                        </a>
                     </div>
                 </div>
                 <hr/>
