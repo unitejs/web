@@ -5,7 +5,7 @@ import { $, browser, by } from "protractor";
 
 describe("App", () => {
     it("the title is set", (done) => {
-        browser.loadAndWaitForAureliaPage("/")
+        browser.uniteLoadAndWaitForPage("/")
             .then(() => {
                 browser.getTitle()
                     .then((title) => {
@@ -16,7 +16,7 @@ describe("App", () => {
     });
 
     it("the router text is set", (done) => {
-        browser.loadAndWaitForAureliaPage("/")
+        browser.uniteLoadAndWaitForPage("/")
             .then(() => {
                 $("router-view").getText()
                     .then((routerContent) => {

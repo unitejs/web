@@ -20,7 +20,7 @@ exports.config = {
 	},
 	plugins: [
 		{
-			path: './node_modules/aurelia-protractor-plugin'
+			path: './node_modules/unitejs-protractor-plugin'
 		}
 	],
 	localSeleniumStandaloneOpts: {

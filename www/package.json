@@ -1,6 +1,6 @@
 {
 	"name": "unitejs-web",
-	"version": "1.6.1",
+	"version": "1.6.2",
 	"devDependencies": {
 		"@types/google.analytics": "^0.0.35",
 		"@types/jasmine": "^2.6.2",
@@ -69,6 +69,7 @@
 		"typescript": "^2.6.1",
 		"uglify-js": "^3.1.6",
 		"unitejs-image-cli": "^1.0.0",
+		"unitejs-protractor-plugin": "^1.0.4",
 		"unitejs-types": "^1.0.3",
 		"webdriver-manager": "^12.0.6"
 	},

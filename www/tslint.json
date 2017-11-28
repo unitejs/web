@@ -12,8 +12,8 @@
 			}
 		],
 		"no-reference": false,
-		"no-bitwise": false,
 		"array-type": false,
+		"no-bitwise": false,
 		"no-empty": {
 			"severity": "warning"
 		},
