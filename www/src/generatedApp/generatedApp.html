@@ -30,20 +30,38 @@
             <p>The following gulp commands are available for the app.</p>
 
             <ul>
-                <li><a href="#" au-scroll-to-element="id: task-build; y-offset.bind: topOffset">build</a></li>
-                <li><a href="#" au-scroll-to-element="id: task-theme-build; y-offset.bind: topOffset">theme-build</a></li>
-                <li><a href="#" au-scroll-to-element="id: task-unit; y-offset.bind: topOffset">unit</a> [optional - available if you have configured a unit test runner]</li>
-                <li><a href="#" au-scroll-to-element="id: task-e2e-install; y-offset.bind: topOffset">e2e-install</a> [optional - available if you have configured an e2e test runner]</li>
-                <li><a href="#" au-scroll-to-element="id: task-e2e; y-offset.bind: topOffset">e2e</a> [optional - available if you have configured an e2e test runner]</li>
-                <li><a href="#" au-scroll-to-element="id: task-serve; y-offset.bind: topOffset">serve</a></li>
-                <li><a href="#" au-scroll-to-element="id: task-version; y-offset.bind: topOffset">version</a></li>
-                <li><a href="#" au-scroll-to-element="id: task-doc-build; y-offset.bind: topOffset">doc-build</a> [optional - available if you have configured a documenter]</li>
-                <li><a href="#" au-scroll-to-element="id: task-platform-cordova-dev; y-offset.bind: topOffset">platform-cordova-dev</a> [optional - requires cordova platform]</li>
-                <li><a href="#" au-scroll-to-element="id: task-platform-cordova-theme; y-offset.bind: topOffset">platform-cordova-theme</a> [optional - requires cordova platform]</li>
-                <li><a href="#" au-scroll-to-element="id: task-platform-docker-package; y-offset.bind: topOffset">platform-docker-package</a> [optional - requires docker platform]</li>
-                <li><a href="#" au-scroll-to-element="id: task-platform-electron-dev; y-offset.bind: topOffset">platform-electron-dev</a> [optional - requires electron platform]</li>
-                <li><a href="#" au-scroll-to-element="id: task-platform-electron-package; y-offset.bind: topOffset">platform-electron-package</a> [optional - requires electron platform]</li>
-                <li><a href="#" au-scroll-to-element="id: task-platform-web-package; y-offset.bind: topOffset">platform-web-package</a> [optional - requires web platform]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-build; y-offset.bind: topOffset">build</a>
+                </li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-theme-build; y-offset.bind: topOffset">theme-build</a>
+                </li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-unit; y-offset.bind: topOffset">unit</a> [optional - available if you have configured a unit test runner]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-e2e-install; y-offset.bind: topOffset">e2e-install</a> [optional - available if you have configured an e2e test runner]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-e2e; y-offset.bind: topOffset">e2e</a> [optional - available if you have configured an e2e test runner]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-serve; y-offset.bind: topOffset">serve</a>
+                </li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-version; y-offset.bind: topOffset">version</a>
+                </li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-doc-build; y-offset.bind: topOffset">doc-build</a> [optional - available if you have configured a documenter]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-platform-cordova-dev; y-offset.bind: topOffset">platform-cordova-dev</a> [optional - requires cordova platform]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-platform-cordova-theme; y-offset.bind: topOffset">platform-cordova-theme</a> [optional - requires cordova platform]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-platform-docker-package; y-offset.bind: topOffset">platform-docker-package</a> [optional - requires docker platform]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-platform-electron-dev; y-offset.bind: topOffset">platform-electron-dev</a> [optional - requires electron platform]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-platform-electron-package; y-offset.bind: topOffset">platform-electron-package</a> [optional - requires electron platform]</li>
+                <li>
+                    <a href="#" au-scroll-to-element="id: task-platform-web-package; y-offset.bind: topOffset">platform-web-package</a> [optional - requires web platform]</li>
             </ul>
 
             <h3 id="task-build">build</h3>
@@ -104,6 +122,10 @@
             <pre><code au-prism="nix">gulp e2e-install --drivers=chrome,firefox</code></pre>
 
             <p>The drivers can be any of the following chrome/edge/firefox/ie.</p>
+
+            <p>You can specify a specfic version of a driver using the @ syntax.</p>
+
+            <pre><code au-prism="nix">gulp e2e-install --drivers=chrome@2.33,firefox</code></pre>
 
             <h3 id="task-e2e">e2e</h3>
 

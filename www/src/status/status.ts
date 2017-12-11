@@ -37,7 +37,7 @@ export class Status {
                 description: "Quick Start examples used by articles.",
                 org: "unitejs-examples",
                 items: [
-                    { name: "Cordova", repo: "cordova-quickstart", branches: ["master"] },
+                    { name: "Cordova", repo: "cordova-quickstart", branches: ["master", ] },
                     { name: "Docker", repo: "docker-quickstart", branches: ["master"] },
                     { name: "Electron", repo: "electron-quickstart", branches: ["master"] }
                 ]
@@ -108,7 +108,7 @@ export class Status {
                         name: "Vanilla RequireJS", repo: "va-requirejs-matrix",
                         branches: ["master", "develop"]
                     },
-                    { name: "Vanilla SystemJS", repo: "pa-systemjs-matrix", branches: ["master", "develop"] },
+                    { name: "Vanilla SystemJS", repo: "va-systemjs-matrix", branches: ["master", "develop"] },
                     { name: "Vanilla Webpack", repo: "va-webpack-matrix", branches: ["master", "develop"] },
                     { name: "Vue Browserify", repo: "vu-browserify-matrix", branches: ["master", "develop"] },
                     { name: "Vue RequireJS", repo: "vu-requirejs-matrix", branches: ["master", "develop"] },
