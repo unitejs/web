@@ -115,6 +115,20 @@ export class Status {
                     { name: "Vue SystemJS", repo: "vu-systemjs-matrix", branches: ["master", "develop"] },
                     { name: "Vue Webpack", repo: "vu-webpack-matrix", branches: ["master", "develop"] },
                 ]
+            },
+            {
+                name: "Packages",
+                description: "UniteJS test packages.",
+                org: "unitejs-test-packages",
+                items: [
+                    { name: "Angular Packages", repo: "angular-packages", branches: ["master", "develop"] },
+                    { name: "Aurelia Packages", repo: "aurelia-packages", branches: ["master", "develop"] },
+                    { name: "Polymer Packages", repo: "polymer-packages", branches: ["master", "develop"] },
+                    { name: "Preact Packages", repo: "preact-packages", branches: ["master", "develop"] },
+                    { name: "React Packages", repo: "react-packages", branches: ["master", "develop"] },
+                    { name: "Vanilla Packages", repo: "vanilla-packages", branches: ["master", "develop"] },
+                    { name: "Vue Packages", repo: "vue-packages", branches: ["master", "develop"] }
+                ]
             }
         ];
     }
