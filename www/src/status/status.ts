@@ -37,7 +37,7 @@ export class Status {
                 description: "Quick Start examples used by articles.",
                 org: "unitejs-examples",
                 items: [
-                    { name: "Cordova", repo: "cordova-quickstart", branches: ["master"] },
+                    { name: "Cordova", repo: "cordova-quickstart", branches: ["master", ] },
                     { name: "Docker", repo: "docker-quickstart", branches: ["master"] },
                     { name: "Electron", repo: "electron-quickstart", branches: ["master"] }
                 ]
