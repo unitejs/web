@@ -30,7 +30,7 @@
                             ${branch}
                         </a>
                         <a href="https://travis-ci.org/${section.org}/${item.repo}/branches" target="_blank" rel="noopener" aria-label.bind="item.name">
-                            <img src="https://img.shields.io/travis/${section.org}/${item.repo}/${branch}.svg">
+                            <img src.bind="item.shieldUrls[branch]" if.bind="item.shieldUrls[branch].length > 0">
                         </a>
                         <a if.bind="item.hasCoverage" href="https://coveralls.io/github/${section.org}/${item.repo}?branch=${branch}" target="_blank"
                             rel="noopener" aria-label="${item.name} Coverage">
