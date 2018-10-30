@@ -10,7 +10,7 @@
 	"e2eTestRunner": "Protractor",
 	"e2eTestFramework": "Jasmine",
 	"linter": "TsLint",
-	"packageManager": "Yarn",
+	"packageManager": "Npm",
 	"taskManager": "Gulp",
 	"server": "BrowserSync",
 	"applicationFramework": "Aurelia",
@@ -19,181 +19,181 @@
 			"name": "aurelia-animator-css",
 			"main": "dist/amd/aurelia-animator-css.js",
 			"isPackage": false,
-			"version": "^1.0.4"
+			"version": "1.0.4"
 		},
 		"aurelia-binding": {
 			"name": "aurelia-binding",
 			"main": "dist/amd/aurelia-binding.js",
 			"isPackage": false,
-			"version": "^1.6.0"
+			"version": "2.1.5"
 		},
 		"aurelia-bootstrapper": {
 			"name": "aurelia-bootstrapper",
 			"main": "dist/amd/aurelia-bootstrapper.js",
 			"isPackage": false,
-			"version": "^2.1.1"
+			"version": "2.3.0"
 		},
 		"aurelia-dependency-injection": {
 			"name": "aurelia-dependency-injection",
 			"main": "dist/amd/aurelia-dependency-injection.js",
 			"isPackage": false,
-			"version": "^1.3.2"
+			"version": "1.4.1"
 		},
 		"aurelia-event-aggregator": {
 			"name": "aurelia-event-aggregator",
 			"main": "dist/amd/aurelia-event-aggregator.js",
 			"isPackage": false,
-			"version": "^1.0.1"
+			"version": "1.0.1"
 		},
 		"aurelia-fetch-client": {
 			"name": "aurelia-fetch-client",
 			"main": "dist/amd/aurelia-fetch-client.js",
 			"isPackage": false,
-			"version": "^1.1.3"
+			"version": "1.6.0"
 		},
 		"aurelia-http-client": {
 			"name": "aurelia-http-client",
 			"main": "dist/amd/aurelia-http-client.js",
 			"isPackage": false,
-			"version": "^1.2.1"
+			"version": "1.3.0"
 		},
 		"aurelia-framework": {
 			"name": "aurelia-framework",
 			"main": "dist/amd/aurelia-framework.js",
 			"isPackage": false,
-			"version": "^1.1.5"
+			"version": "1.3.0"
 		},
 		"aurelia-history": {
 			"name": "aurelia-history",
 			"main": "dist/amd/aurelia-history.js",
 			"isPackage": false,
-			"version": "^1.1.0"
+			"version": "1.1.0"
 		},
 		"aurelia-history-browser": {
 			"name": "aurelia-history-browser",
 			"main": "dist/amd/aurelia-history-browser.js",
 			"isPackage": false,
-			"version": "^1.1.0"
+			"version": "1.2.0"
 		},
 		"aurelia-loader": {
 			"name": "aurelia-loader",
 			"main": "dist/amd/aurelia-loader.js",
 			"isPackage": false,
-			"version": "^1.0.0"
+			"version": "1.0.0"
 		},
 		"aurelia-loader-default": {
 			"name": "aurelia-loader-default",
 			"main": "dist/amd/aurelia-loader-default.js",
 			"isPackage": false,
-			"version": "^1.0.3"
+			"version": "1.0.4"
 		},
 		"aurelia-logging": {
 			"name": "aurelia-logging",
 			"main": "dist/amd/aurelia-logging.js",
 			"isPackage": false,
-			"version": "^1.3.1"
+			"version": "1.5.0"
 		},
 		"aurelia-logging-console": {
 			"name": "aurelia-logging-console",
 			"main": "dist/amd/aurelia-logging-console.js",
 			"isPackage": false,
-			"version": "^1.0.0"
+			"version": "1.0.0"
 		},
 		"aurelia-metadata": {
 			"name": "aurelia-metadata",
 			"main": "dist/amd/aurelia-metadata.js",
 			"isPackage": false,
-			"version": "^1.0.3"
+			"version": "1.0.4"
 		},
 		"aurelia-pal": {
 			"name": "aurelia-pal",
 			"main": "dist/amd/aurelia-pal.js",
 			"isPackage": false,
-			"version": "^1.4.0"
+			"version": "1.8.0"
 		},
 		"aurelia-pal-browser": {
 			"name": "aurelia-pal-browser",
 			"main": "dist/amd/aurelia-pal-browser.js",
 			"isPackage": false,
-			"version": "^1.3.0"
+			"version": "1.8.0"
 		},
 		"aurelia-path": {
 			"name": "aurelia-path",
 			"main": "dist/amd/aurelia-path.js",
 			"isPackage": false,
-			"version": "^1.1.1"
+			"version": "1.1.1"
 		},
 		"aurelia-polyfills": {
 			"name": "aurelia-polyfills",
 			"main": "dist/amd/aurelia-polyfills.js",
 			"isPackage": false,
-			"version": "^1.2.2"
+			"version": "1.3.0"
 		},
 		"aurelia-route-recognizer": {
 			"name": "aurelia-route-recognizer",
 			"main": "dist/amd/aurelia-route-recognizer.js",
 			"isPackage": false,
-			"version": "^1.1.1"
+			"version": "1.2.0"
 		},
 		"aurelia-router": {
 			"name": "aurelia-router",
 			"main": "dist/amd/aurelia-router.js",
 			"isPackage": false,
-			"version": "^1.4.0"
+			"version": "1.6.3"
 		},
 		"aurelia-task-queue": {
 			"name": "aurelia-task-queue",
 			"main": "dist/amd/aurelia-task-queue.js",
 			"isPackage": false,
-			"version": "^1.2.1"
+			"version": "1.3.1"
 		},
 		"aurelia-templating": {
 			"name": "aurelia-templating",
 			"main": "dist/amd/aurelia-templating.js",
 			"isPackage": false,
-			"version": "^1.6.0"
+			"version": "1.10.0"
 		},
 		"aurelia-templating-binding": {
 			"name": "aurelia-templating-binding",
 			"main": "dist/amd/aurelia-templating-binding.js",
 			"isPackage": false,
-			"version": "^1.4.0"
+			"version": "1.5.1"
 		},
 		"aurelia-dialog": {
 			"name": "aurelia-dialog",
 			"main": "dist/amd/aurelia-dialog.js",
 			"isPackage": true,
-			"version": "^1.0.0-rc.1.0.3"
+			"version": "1.0.0"
 		},
 		"aurelia-templating-resources": {
 			"name": "aurelia-templating-resources",
 			"main": "dist/amd/aurelia-templating-resources.js",
 			"isPackage": true,
-			"version": "^1.5.4"
+			"version": "1.7.1"
 		},
 		"aurelia-templating-router": {
 			"name": "aurelia-templating-router",
 			"main": "dist/amd/aurelia-templating-router.js",
 			"isPackage": true,
-			"version": "^1.2.0"
+			"version": "1.3.3"
 		},
 		"aurelia-validation": {
 			"name": "aurelia-validation",
 			"main": "dist/amd/aurelia-validation.js",
 			"isPackage": true,
-			"version": "^1.1.2"
+			"version": "1.2.3"
 		},
 		"whatwg-fetch": {
 			"name": "whatwg-fetch",
-			"main": "fetch.js",
-			"version": "^2.0.3"
+			"main": "dist/fetch.umd.js",
+			"version": "3.0.0"
 		},
 		"requirejs": {
 			"name": "requirejs",
 			"main": "require.js",
 			"scriptIncludeMode": "both",
 			"isModuleLoader": true,
-			"version": "^2.3.5"
+			"version": "2.3.6"
 		},
 		"font-awesome": {
 			"version": "^4.7.0",
@@ -207,7 +207,7 @@
 			"name": "font-awesome"
 		},
 		"bootstrap": {
-			"version": "4.0.0-beta.2",
+			"version": "4.1.3",
 			"preload": false,
 			"isPackage": false,
 			"includeMode": "both",
@@ -224,18 +224,6 @@
 			"scriptIncludeMode": "both",
 			"name": "bluebird"
 		},
-		"prismjs": {
-			"version": "^1.6.0",
-			"main": "prism.js",
-			"preload": false,
-			"isPackage": false,
-			"includeMode": "app",
-			"scriptIncludeMode": "none",
-			"assets": [
-				"components/prism-javascript.min.js;components/prism-typescript.min.js;components/prism-json.min.js;components/prism-nix.min.js"
-			],
-			"name": "prismjs"
-		},
 		"moment": {
 			"name": "moment",
 			"version": "^2.19.1",
@@ -251,7 +239,18 @@
 			"map": {
 				"text": "requirejs-text"
 			},
-			"version": "^2.0.15"
+			"version": "2.0.15"
+		},
+		"prismjs": {
+			"name": "prismjs",
+			"version": "1.6.0",
+			"main": "prism.js",
+			"assets": [
+				"components/prism-javascript.min.js",
+				"components/prism-typescript.min.js",
+				"components/prism-json.min.js",
+				"components/prism-nix.min.js"
+			]
 		}
 	},
 	"cssPre": "Sass",
@@ -299,7 +298,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.7.9",
+	"uniteVersion": "1.8.0",
 	"sourceExtensions": [
 		"ts"
 	],
