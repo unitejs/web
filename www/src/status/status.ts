@@ -10,7 +10,8 @@ export class Status {
             name: string;
             repo: string;
             branches: string[],
-            hasCoverage?: boolean
+            hasCoverage?: boolean,
+            shieldUrls?: { [id: string]: string}
         }[]
     }[];
 
@@ -25,11 +26,16 @@ export class Status {
                         name: "Framework", repo: "framework", branches: ["master", "develop"],
                         hasCoverage: true
                     },
-                    { name: "CLI-Core", repo: "cli-core", branches: ["master", "develop"], hasCoverage: true },
-                    { name: "Engine", repo: "engine", branches: ["master", "develop"], hasCoverage: true },
-                    { name: "CLI", repo: "cli", branches: ["master", "develop"], hasCoverage: true },
-                    { name: "Image", repo: "image", branches: ["master", "develop"], hasCoverage: true },
-                    { name: "Image CLI", repo: "image-cli", branches: ["master", "develop"], hasCoverage: true }
+                    { name: "CLI-Core", repo: "cli-core", branches: ["master", "develop"],
+                    hasCoverage: true },
+                    { name: "Engine", repo: "engine", branches: ["master", "develop"],
+                    hasCoverage: true },
+                    { name: "CLI", repo: "cli", branches: ["master", "develop"],
+                    hasCoverage: true },
+                    { name: "Image", repo: "image", branches: ["master", "develop"],
+                    hasCoverage: true },
+                    { name: "Image CLI", repo: "image-cli", branches: ["master", "develop"],
+                    hasCoverage: true }
                 ]
             },
             {
@@ -37,7 +43,7 @@ export class Status {
                 description: "Quick Start examples used by articles.",
                 org: "unitejs-examples",
                 items: [
-                    { name: "Cordova", repo: "cordova-quickstart", branches: ["master", ] },
+                    { name: "Cordova", repo: "cordova-quickstart", branches: ["master"] },
                     { name: "Docker", repo: "docker-quickstart", branches: ["master"] },
                     { name: "Electron", repo: "electron-quickstart", branches: ["master"] }
                 ]
@@ -47,20 +53,34 @@ export class Status {
                 description: "UniteJS standard profiles.",
                 org: "unitejs-test",
                 items: [
-                    { name: "Angular JavaScript", repo: "angular-javascript", branches: ["master", "develop"] },
-                    { name: "Angular TypeScript", repo: "angular-typescript", branches: ["master", "develop"] },
-                    { name: "Aurelia JavaScript", repo: "aurelia-javascript", branches: ["master", "develop"] },
-                    { name: "Aurelia TypeScript", repo: "aurelia-typescript", branches: ["master", "develop"] },
-                    { name: "Polymer JavaScript", repo: "polymer-javascript", branches: ["master", "develop"] },
-                    { name: "Polymer TypeScript", repo: "polymer-typescript", branches: ["master", "develop"] },
-                    { name: "Preact JavaScript", repo: "preact-javascript", branches: ["master", "develop"] },
-                    { name: "Preact TypeScript", repo: "preact-typescript", branches: ["master", "develop"] },
-                    { name: "React JavaScript", repo: "react-javascript", branches: ["master", "develop"] },
-                    { name: "React TypeScript", repo: "react-typescript", branches: ["master", "develop"] },
-                    { name: "Vanilla JavaScript", repo: "vanilla-javascript", branches: ["master", "develop"] },
-                    { name: "Vanilla TypeScript", repo: "vanilla-typescript", branches: ["master", "develop"] },
-                    { name: "Vue JavaScript", repo: "vue-javascript", branches: ["master", "develop"] },
-                    { name: "Vue TypeScript", repo: "vue-typescript", branches: ["master", "develop"] }
+                    { name: "Angular JavaScript", repo: "angular-javascript",
+                     branches: ["master", "develop"] },
+                    { name: "Angular TypeScript", repo: "angular-typescript",
+                    branches: ["master", "develop"] },
+                    { name: "Aurelia JavaScript", repo: "aurelia-javascript",
+                     branches: ["master", "develop"] },
+                    { name: "Aurelia TypeScript", repo: "aurelia-typescript",
+                     branches: ["master", "develop"] },
+                    { name: "Polymer JavaScript", repo: "polymer-javascript",
+                    branches: ["master", "develop"] },
+                    { name: "Polymer TypeScript", repo: "polymer-typescript",
+                    branches: ["master", "develop"] },
+                    { name: "Preact JavaScript", repo: "preact-javascript",
+                     branches: ["master", "develop"] },
+                    { name: "Preact TypeScript", repo: "preact-typescript",
+                    branches: ["master", "develop"] },
+                    { name: "React JavaScript", repo: "react-javascript",
+                    branches: ["master", "develop"] },
+                    { name: "React TypeScript", repo: "react-typescript",
+                    branches: ["master", "develop"] },
+                    { name: "Vanilla JavaScript", repo: "vanilla-javascript",
+                     branches: ["master", "develop"] },
+                    { name: "Vanilla TypeScript", repo: "vanilla-typescript",
+                     branches: ["master", "develop"] },
+                    { name: "Vue JavaScript", repo: "vue-javascript",
+                    branches: ["master", "develop"] },
+                    { name: "Vue TypeScript", repo: "vue-typescript",
+                    branches: ["master", "develop"] }
                 ]
             },
             {
@@ -73,33 +93,44 @@ export class Status {
                         name: "Angular Browserify", repo: "ng-browserify-matrix",
                         branches: ["master", "develop"]
                     },
-                    { name: "Angular SystemJS", repo: "ng-systemjs-matrix", branches: ["master", "develop"] },
-                    { name: "Angular Webpack", repo: "ng-webpack-matrix", branches: ["master", "develop"] },
+                    { name: "Angular SystemJS", repo: "ng-systemjs-matrix",
+                     branches: ["master", "develop"] },
+                    { name: "Angular Webpack", repo: "ng-webpack-matrix",
+                    branches: ["master", "develop"] },
                     {
                         name: "Aurelia RequireJS", repo: "au-requirejs-matrix",
                         branches: ["master", "develop"]
                     },
-                    { name: "Aurelia SystemJS", repo: "au-systemjs-matrix", branches: ["master", "develop"] },
+                    { name: "Aurelia SystemJS", repo: "au-systemjs-matrix",
+                     branches: ["master", "develop"] },
                     {
                         name: "Polymer Browserify", repo: "po-browserify-matrix",
                         branches: ["master", "develop"]
                     },
-                    { name: "Polymer SystemJS", repo: "po-systemjs-matrix", branches: ["master", "develop"] },
-                    { name: "Polymer Webpack", repo: "po-webpack-matrix", branches: ["master", "develop"] },
+                    { name: "Polymer SystemJS", repo: "po-systemjs-matrix",
+                     branches: ["master", "develop"] },
+                    { name: "Polymer Webpack", repo: "po-webpack-matrix",
+                     branches: ["master", "develop"] },
                     {
                         name: "Preact Browserify", repo: "pr-browserify-matrix",
                         branches: ["master", "develop"]
                     },
-                    { name: "Preact RequireJS", repo: "pr-requirejs-matrix", branches: ["master", "develop"] },
-                    { name: "Preact SystemJS", repo: "pr-systemjs-matrix", branches: ["master", "develop"] },
-                    { name: "Preact Webpack", repo: "pr-webpack-matrix", branches: ["master", "develop"] },
+                    { name: "Preact RequireJS", repo: "pr-requirejs-matrix",
+                     branches: ["master", "develop"] },
+                    { name: "Preact SystemJS", repo: "pr-systemjs-matrix",
+                     branches: ["master", "develop"] },
+                    { name: "Preact Webpack", repo: "pr-webpack-matrix",
+                     branches: ["master", "develop"] },
                     {
                         name: "React Browserify", repo: "re-browserify-matrix",
                         branches: ["master", "develop"]
                     },
-                    { name: "React RequireJS", repo: "re-requirejs-matrix", branches: ["master", "develop"] },
-                    { name: "React SystemJS", repo: "re-systemjs-matrix", branches: ["master", "develop"] },
-                    { name: "React Webpack", repo: "re-webpack-matrix", branches: ["master", "develop"] },
+                    { name: "React RequireJS", repo: "re-requirejs-matrix",
+                     branches: ["master", "develop"] },
+                    { name: "React SystemJS", repo: "re-systemjs-matrix",
+                     branches: ["master", "develop"] },
+                    { name: "React Webpack", repo: "re-webpack-matrix",
+                    branches: ["master", "develop"] },
                     {
                         name: "Vanilla Browserify", repo: "va-browserify-matrix",
                         branches: ["master", "develop"]
@@ -108,14 +139,58 @@ export class Status {
                         name: "Vanilla RequireJS", repo: "va-requirejs-matrix",
                         branches: ["master", "develop"]
                     },
-                    { name: "Vanilla SystemJS", repo: "va-systemjs-matrix", branches: ["master", "develop"] },
-                    { name: "Vanilla Webpack", repo: "va-webpack-matrix", branches: ["master", "develop"] },
-                    { name: "Vue Browserify", repo: "vu-browserify-matrix", branches: ["master", "develop"] },
-                    { name: "Vue RequireJS", repo: "vu-requirejs-matrix", branches: ["master", "develop"] },
-                    { name: "Vue SystemJS", repo: "vu-systemjs-matrix", branches: ["master", "develop"] },
-                    { name: "Vue Webpack", repo: "vu-webpack-matrix", branches: ["master", "develop"] },
+                    { name: "Vanilla SystemJS", repo: "va-systemjs-matrix",
+                     branches: ["master", "develop"] },
+                    { name: "Vanilla Webpack", repo: "va-webpack-matrix",
+                    branches: ["master", "develop"] },
+                    { name: "Vue Browserify", repo: "vu-browserify-matrix",
+                     branches: ["master", "develop"] },
+                    { name: "Vue RequireJS", repo: "vu-requirejs-matrix",
+                     branches: ["master", "develop"] },
+                    { name: "Vue SystemJS", repo: "vu-systemjs-matrix",
+                    branches: ["master", "develop"] },
+                    { name: "Vue Webpack", repo: "vu-webpack-matrix",
+                    branches: ["master", "develop"] },
+                ]
+            },
+            {
+                name: "Packages",
+                description: "UniteJS test packages.",
+                org: "unitejs-test-packages",
+                items: [
+                    { name: "Angular Packages", repo: "angular-packages",
+                    branches: ["master", "develop"] },
+                    { name: "Aurelia Packages", repo: "aurelia-packages",
+                    branches: ["master", "develop"] },
+                    { name: "Polymer Packages", repo: "polymer-packages",
+                    branches: ["master", "develop"] },
+                    { name: "Preact Packages", repo: "preact-packages",
+                    branches: ["master", "develop"] },
+                    { name: "React Packages", repo: "react-packages",
+                    branches: ["master", "develop"] },
+                    { name: "Vanilla Packages", repo: "vanilla-packages",
+                     branches: ["master", "develop"] },
+                    { name: "Vue Packages", repo: "vue-packages",
+                    branches: ["master", "develop"] }
                 ]
             }
         ];
+
+        this.sections.forEach((section) => {
+            section.items.forEach((item) => {
+                item.shieldUrls = {};
+                item.branches.forEach((branch) => {
+                    item.shieldUrls[branch] = "";
+                    this.delayBranch(section, item, branch);
+                });
+            });
+        });
+    }
+
+    private delayBranch(section: any, item: any, branch: any): void {
+        setTimeout(() => {
+            item.shieldUrls[branch] =
+                `https://img.shields.io/travis/${section.org}/${item.repo}/${branch}.svg`;
+        }, Math.random() * 90000);
     }
 }
