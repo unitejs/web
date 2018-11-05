@@ -233,14 +233,6 @@
 			"main": "/moment.js",
 			"isPackage": false
 		},
-		"requirejs-text": {
-			"name": "requirejs-text",
-			"main": "text.js",
-			"map": {
-				"text": "requirejs-text"
-			},
-			"version": "2.0.15"
-		},
 		"prismjs": {
 			"name": "prismjs",
 			"version": "1.6.0",
@@ -251,6 +243,14 @@
 				"components/prism-json.min.js",
 				"components/prism-nix.min.js"
 			]
+		},
+		"requirejs-text": {
+			"name": "requirejs-text",
+			"main": "text.js",
+			"map": {
+				"text": "requirejs-text"
+			},
+			"version": "2.0.15"
 		}
 	},
 	"cssPre": "Sass",
@@ -298,7 +298,7 @@
 			"configuration": "./configuration/"
 		}
 	},
-	"uniteVersion": "1.8.0",
+	"uniteVersion": "1.8.1",
 	"sourceExtensions": [
 		"ts"
 	],

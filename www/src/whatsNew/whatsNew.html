@@ -12,7 +12,18 @@
             <pre><code au-prism="nix">npm -g install unitejs-cli [or] yarn global add unitejs-cli
 unite configure</code></pre>
 
-        <h2>v1.8.0</h2>
+<h2>v1.8.1</h2>
+<p>In this version we concentrate on bringing Polymer up-to-date with latest release versions, instead of the pre-release.</p>
+<p>The transpilation options for client packages that were added in earlier versions have now been removed.</p>
+<p>The options were there mostly to enable Polymer which does not ship with ready to use JavaScript code.</p>
+<p>Instead the transpilation has now been incorporated into module loading and bundling where necessary (SystemJS/Webpack/Browserify).</p>
+
+<hr/>
+<p>The /* Synthetic Import */ template substitutions have been removed. They are no longer necessary as we can now use the esModuleInterop flag in TypeScript to handle this.</p>
+<hr/>
+<p>Preact no longer supports RequireJS as bundler as it requires transpilation, this might be reinstated when preact includes some UMD versions.</p>
+
+<h2>v1.8.0</h2>
         <p>It's been a while since the last update, so for the new release we have major version bumps on lots of the frameworks.</p>
         <p>Plus lot's of minor version increments as well.</p>
         <ul>

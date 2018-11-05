@@ -3,7 +3,7 @@
  */
 /// <reference types="unitejs-types" />
 import { customElement } from "aurelia-templating";
-import * as moment from "moment";
+import moment from "moment";
 
 @customElement("nav-footer")
 export class NavFooter {

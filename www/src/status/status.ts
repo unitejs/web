@@ -115,8 +115,6 @@ export class Status {
                         name: "Preact Browserify", repo: "pr-browserify-matrix",
                         branches: ["master", "develop"]
                     },
-                    { name: "Preact RequireJS", repo: "pr-requirejs-matrix",
-                     branches: ["master", "develop"] },
                     { name: "Preact SystemJS", repo: "pr-systemjs-matrix",
                      branches: ["master", "develop"] },
                     { name: "Preact Webpack", repo: "pr-webpack-matrix",
